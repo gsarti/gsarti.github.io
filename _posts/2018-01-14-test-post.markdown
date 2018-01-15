@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Test post"
+date:   2018-01-14 17:13:46 -0500
+description: "Test post description 2"
+categories: jekyll update
+image: /assets/images/posts/test-post/test.jpg
+---
+
+![image](/assets/images/posts/test-post/test.jpg)
+
+Test!

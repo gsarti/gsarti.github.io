@@ -64,6 +64,9 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
+remote-theme: mmistakes / hpstr-jekyll-theme
+
+
 include: 
   - .htaccess
 exclude: 

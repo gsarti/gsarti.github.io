@@ -1,27 +1,33 @@
----
-layout: default
----
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+</head>
 
-<div class="home">
+<body id="home">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
+{% include browser-upgrade.html %}
+{% include navigation.html %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-        <p class="post-meta">{{ post.description | escape }}</p>
-        <img src="{{post.image}}" alt="">
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+<div class="header-flex" style="background-image:url('{{ site.url }}/images/{{ page.image.feature }}')">
+  <h1>{{ site.title }}</h1>
+  <h2>{{ page.subtitle }}</h2>
 </div>
+
+<div id="main" role="main">
+  {{ content }}
+</div>
+
+<!-- <div class="footer-wrapper">
+  <footer role="contentinfo">
+    {% include footer.html %}
+  </footer>
+</div>/.footer-wrapper -->
+
+{% include scripts.html %}          
+
+</body>
+</html>

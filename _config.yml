@@ -1,5 +1,5 @@
 # Site settings
-title: A blog about lorem ipsum dolor sit amet
+title: Gabriele Sarti
 description: A blog about lorem ipsum dolor sit amet
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
@@ -16,5 +16,10 @@ gplus_username:  lorem_ipsum
 # Google-analytics
 google-analytics:
   id: ""
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+plugins: [jekyll-paginate]
 
 exclude: ['package.json', 'src' , 'node_modules']

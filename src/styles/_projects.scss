@@ -5,7 +5,7 @@
   width: 90%;
   max-width: 960px;
   margin: 0 auto;
-  @media only screen and (min-width: $cut) {
+  @media only screen and (min-width: $cut-body) {
     width: 80%;
   }
 }
@@ -16,6 +16,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    max-height: 550px;    
   }
   h5 {
     margin: 0;
@@ -30,38 +31,43 @@
 }
 
 .contents {
-  @media only screen and (min-width: $cut) {
+  @media only screen and (min-width: $cut-body) {
     margin-left: 0;
     width: 48%;
   }
 }
 
 .contents-right {
-  @media only screen and (min-width: $cut) {
+  @media only screen and (min-width: $cut-body) {
     float: right;
     margin-top: -5%;
     width: 48%;
   }
 }
 .images-right {
-  @media only screen and (min-width: $cut) {
+  text-align: center;
+
+  @media only screen and (min-width: $cut-body) {
     float: right;
     width: 48%;
   }
+
   img {
-    @media only screen and (min-width: $cut) {
+    @media only screen and (min-width: $cut-body) {
       float: right;
     }
   }
 }
 
 .images-left {
-  @media only screen and (min-width: $cut) {
+  text-align: center;
+
+  @media only screen and (min-width: $cut-body) {
     float: left;
     width: 48%;
   }
   img {
-    @media only screen and (min-width: $cut) {
+    @media only screen and (min-width: $cut-body) {
       float: left;
     }
   }

@@ -2,32 +2,104 @@
   width: 90%;
   margin: 0 auto;
   max-width: 960px;
-  @media only screen and (min-width: $cut) {
+
+  @media only screen and (min-width: $cut-body) {
     width: 80%;
   }
-}
 
-.tech {
-  margin: 10px;
-}
-
-.user {
-  text-align: center;
-  font-size: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  p {
-    font-size: 16px;
+  #about-header {
+    text-align: center;
   }
-  @media only screen and (min-width: $cut) {
-    flex-wrap: nowrap;
-    font-size: 75px;
+
+  #about-section {
+    margin: 20px auto;
+  }
+  
+  .about-image {
+    text-align: center;
+  
+    @media only screen and (min-width: $cut-body) {
+      float: left;
+      width: 48%;
+      margin-top: 3%;
+    }
+  
+    @media only screen and (max-width: $cut-body) {
+      margin-bottom: 30px;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      max-height: 550px; 
+  
+      @media only screen and (min-width: $cut-body) {
+        float: left;
+      }
+    }
+  }
+  
+  .about-text {
+    @media only screen and (min-width: $cut-body) {
+      float: right;
+      margin-top: 3%;
+      width: 48%;
+    }
+
+    @media only screen and (max-width: $cut-body) {
+      text-align: center;
+    }
+  
+    p, li {
+      font-size: 15px;
+      margin-right: 5px;
+    }
+  
+    ul {
+      padding-left: 20px;
+    }
+  
+    .sub-header {
+      color:#333
+    }
+  }
+  
+  .curriculum-link {
+    width: 100px;
+    margin: 20px 0px;
+    padding: 8px 15px 8px 15px; 
+    color: $main;
+    background-color: transparent;
+    border: 1px solid $main;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease-out,
+                background-color 0.3s ease-out,
+                border-color 0.3s ease-out;
+    &:hover {
+      background-color: $purple;
+      border-color: $purple;
+      color: #fff;
+      transition: color 0.3s ease-in,
+                  background-color 0.3s ease-in,
+                  border-color 0.3s ease-in;
+    }
+    &:active {
+      background-color: $purple;
+      border-color: $purple;
+      color: #fff;
+      transition: color 0.3s ease-in,
+                  background-color 0.3s ease-in,
+                  border-color 0.3s ease-in;
+    }
+  }
+
+  .button-div {
+    margin-top: 25px;
   }
 }
 
-.user-details {
-  text-align: center;
-  margin: 5px auto;
-}

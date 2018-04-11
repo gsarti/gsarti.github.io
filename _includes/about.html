@@ -1,30 +1,50 @@
- <div class="user-details">
+ <div id="about-header">
   <h1> About Me </h1>
-  <p> {{site.user_description}} </p>
 </div>
-  <div class="user">
-    <div class="tech">
-      <h2>Design</h2>
-      <i class="devicon-html5-plain-wordmark"></i>
-      <i class="devicon-bootstrap-plain-wordmark colored"></i>
-      <i class="devicon-sass-original colored"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
+<div id="about-section">
+  <div class="about-image">
+      <img src="{{ "/assets/img/about.jpg" | prepend: site.baseurl }}"/>
+  </div>
+  <div class="about-text">
+    <p>
+      Italian-born art, science and technology enthusiast, I'm currently doing an internship on a deep learning project 
+      at Skytech Communications Inc., a tech company based in Montreal, Canada.
+    </p>
+    <p class="sub-header">
+      EDUCATION
+    </p>
+    <p>
+      <b>Scientific Lyceum Degree</b>
+      <br/>
+      Liceo Scientifico G.Galilei - Trieste, Italy
+    </p>
+    <p>
+      <b>Collegial Studies Diploma (DEC) - IT Management</b>
+      <br/>
+      Cégep de Saint-Hyacinthe - Saint-Hyacinthe, Québec (CA)
+    </p>
+    <p class="sub-header">
+      EXPERIENCE AND SKILLS
+    </p>
+    <p>
+      Two years of CS internship in a textile research center.
+      <br/>
+      Ten weeks of internship on a text recognition project.
+      <br/>      
+      Data management, machine learning, project planning and software development.
+    </p>
+    <p class="sub-header">
+        AWARDS AND RECOGNITION
+    </p>
+    <p>
+      Online Courses Certificates from MITx and UCI.
+      <br/>
+      Lecturer at the 84th ACFAS congress in Montreal.
+      <br/>
+      President of Cégep of Saint-Hyacinthe Student Union, 2017-2018.
+    </p>
+    <div class="button-div">
+      <a class="curriculum-link" href="#">Curriculum</a>
     </div>
-    <div class="tech">
-      <h2>Code</h2>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-react-original-wordmark colored"></i>
-      <i class="devicon-nodejs-plain-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
-    </div>
-    <div class="tech">
-      <h2>Tools</h2>
-      <i class="devicon-git-plain"></i>
-      <i class="devicon-gulp-plain colored"></i>
-      <i class="devicon-atom-original-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
-    </div>
+  </div>
 </div>

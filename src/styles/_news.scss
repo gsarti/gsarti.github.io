@@ -2,6 +2,9 @@
 
     max-width: 960px;
     margin: 0 auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
 
     @media only screen and (min-width: $cut-body) {
         width: 80%;
@@ -17,16 +20,39 @@
 
     #news-section {
         display: grid;
-        margin-top: 5%;
+
+        .icon {
+            text-align: center;
+            color: $main;
+            width: 35px;
+            height: 35px;
+            font-size: 35px;
+            padding: 10px;
+            margin: 10px 10px 25px 10px;
+            border-radius: 50%;
+            border: 2px solid $main;
+        }
+        
+        div {
+            text-align: center;
+            padding: 20px 20px 20px 20px;
+
+            p {
+                text-align: left;
+                font-size: 16px;
+            }
+        }
 
         @media only screen and (min-width: $cut-body) {
             grid-template-columns: 50% 50%;
-            grid-template-rows: 300px 300px;
+            grid-template-rows: 350px 350px;
         }
     
         @media only screen and (max-width: $cut-body) {
             margin: 0px 10%;
-            grid-template-rows: 300px 300px 300px 300px;
+            grid-template-rows: 350px 350px 350px 350px;
+            max-width: 500px;
+            align-self: center;
         }
 
         #next-events {
@@ -34,13 +60,9 @@
             grid-column-end: 1;
             grid-row-start: 1;
             grid-row-end: 1;
-            border: 2px solid green;
         }
 
         #quora-latest-answer {
-
-            border: 2px solid red;
-
             @media only screen and (min-width: $cut-body) {
                 grid-column-start: 2;
                 grid-column-end: 2;
@@ -57,9 +79,6 @@
         }
 
         #current-project {
-
-            border: 2px solid yellow;            
-
             @media only screen and (min-width: $cut-body) {
                 grid-column-start: 2;
                 grid-column-end: 2;
@@ -76,9 +95,6 @@
         }
 
         #twitter-timeline {
-
-            border: 2px solid turquoise;                        
-
             @media only screen and (min-width: $cut-body) {
                 grid-column-start: 1;
                 grid-column-end: 1;

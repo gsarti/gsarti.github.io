@@ -1,16 +1,15 @@
 # Site settings
-title: Gabriele Sarti - Home
+title: Gabriele Sarti
 description: Gabriele Sarti's Personal Portfolio
 
 # User settings
 username: Gabriele Sarti
-user_description: 
 user_title: Software Developer
-email: anon@anon.com
+email: gabriele.sarti996@gmail.com
 github_username:  gsarti
 
 # Google-analytics
 google-analytics:
-  id: ""
+  id: "105332518"
 
 exclude: ['package.json', 'src' , 'node_modules']

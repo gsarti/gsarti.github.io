@@ -19,7 +19,15 @@
     }
 
     #news-section {
-        display: grid;
+        display: flex;
+        
+        @media only screen and (min-width: $cut-body) {
+            flex-direction: row;
+        }
+    
+        @media only screen and (max-width: $cut-body) {
+            flex-direction: column;
+        }
 
         .icon {
             text-align: center;
@@ -43,70 +51,45 @@
             }
         }
 
-        @media only screen and (min-width: $cut-body) {
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 350px 350px;
-        }
-    
-        @media only screen and (max-width: $cut-body) {
-            margin: 0px 10%;
-            grid-template-rows: 350px 350px 350px 350px;
-            max-width: 500px;
+        #news-section-left {
+            display: flex;
+            flex-direction: column;
             align-self: center;
-        }
 
-        #next-events {
-            grid-column-start: 1;
-            grid-column-end: 1;
-            grid-row-start: 1;
-            grid-row-end: 1;
-        }
+            div {
+                padding:10px 0px 10px 0px;
+            }
 
-        #quora-latest-answer {
+            .event {
+                display: flex;
+            }
+
+            .event-description {
+                padding-left: 20px;
+                text-align: left;
+            }
+            
             @media only screen and (min-width: $cut-body) {
-                grid-column-start: 2;
-                grid-column-end: 2;
-                grid-row-start: 1;
-                grid-row-end: 1;
-            }
-        
+                width: 50%;
+              }
+          
             @media only screen and (max-width: $cut-body) {
-                grid-column-start: 1;
-                grid-column-end: 1;
-                grid-row-start: 2;
-                grid-row-end: 2;
-            }
-        }
-
-        #current-project {
-            @media only screen and (min-width: $cut-body) {
-                grid-column-start: 2;
-                grid-column-end: 2;
-                grid-row-start: 2;
-                grid-row-end: 2;
-            }
-        
-            @media only screen and (max-width: $cut-body) {
-                grid-column-start: 1;
-                grid-column-end: 1;
-                grid-row-start: 3;
-                grid-row-end: 3;
+                max-width: 500px;
             }
         }
 
         #twitter-timeline {
+            align-self: center;
+            height: 90%;
+            
             @media only screen and (min-width: $cut-body) {
-                grid-column-start: 1;
-                grid-column-end: 1;
-                grid-row-start: 2;
-                grid-row-end: 2;
-            }
-        
+                width: 50%;
+              }
+          
             @media only screen and (max-width: $cut-body) {
-                grid-column-start: 1;
-                grid-column-end: 1;
-                grid-row-start: 4;
-                grid-row-end: 4;
+                width: 90%;
+                max-width: 500px;
+                margin-bottom: 30px;
             }
         }
     }

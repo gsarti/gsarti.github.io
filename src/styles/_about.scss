@@ -42,10 +42,17 @@
     }
   
     img {
-      max-width: 100%;
       height: auto;
       border-radius: 5px;
-      max-height: 550px; 
+      max-height: 550px;
+      
+      @media only screen and (min-width: $cut-head) {
+        max-width: 100%;
+      }
+    
+      @media only screen and (max-width: $cut-head) {
+        max-width: 250px;
+      }
     }
   }
   
@@ -60,15 +67,6 @@
       text-align: center;
       max-width: 500px;
       margin-bottom: 30px;
-    }
-  
-    p, li {
-      font-size: 15px;
-      margin-right: 5px;
-    }
-  
-    ul {
-      padding-left: 20px;
     }
   
     .sub-header {

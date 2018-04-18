@@ -78,11 +78,12 @@
 }
 .images-right {
   text-align: center;
-  padding-top: 40px;
+
 
   @media only screen and (min-width: $cut-body) {
     float: right;
     width: 48%;
+    padding-top: 40px;
   }
 
   img {

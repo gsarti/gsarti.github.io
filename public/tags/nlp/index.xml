@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/nlp/</link>
+      <atom:link href="https://gsarti.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <description>NLP</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2019</copyright><lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/profile.jpg</url>
+      <title>NLP</title>
+      <link>https://gsarti.com/tags/nlp/</link>
+    </image>
+    
+    <item>
+      <title>Neural Language Models: the New Frontier of Natural Language Understanding</title>
+      <link>https://gsarti.com/talk/neural-lm/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/neural-lm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Literary Ordnance: When the Writer is an AI</title>
+      <link>https://gsarti.com/talk/literary-ordnance/</link>
+      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
+      <guid>https://gsarti.com/talk/literary-ordnance/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

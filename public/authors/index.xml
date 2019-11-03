@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Gabriele Sarti</title>
+    <link>https://gsarti.com/authors/</link>
+      <atom:link href="https://gsarti.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2019</copyright><lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/profile.jpg</url>
+      <title>Authors</title>
+      <link>https://gsarti.com/authors/</link>
+    </image>
+    
+    <item>
+      <title>Gabriele Sarti</title>
+      <link>https://gsarti.com/authors/gabriele-sarti/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/authors/gabriele-sarti/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cristina Fenu</title>
+      <link>https://gsarti.com/authors/cristina-fenu/</link>
+      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
+      <guid>https://gsarti.com/authors/cristina-fenu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Felice Dell&#39;Orletta</title>
+      <link>https://gsarti.com/authors/felice-dellorletta/</link>
+      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
+      <guid>https://gsarti.com/authors/felice-dellorletta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eric Medvet</title>
+      <link>https://gsarti.com/authors/eric-medvet/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/authors/eric-medvet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrea Lorenzon</title>
+      <link>https://gsarti.com/authors/andrea-lorenzon/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/authors/andrea-lorenzon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leonardo Stincone</title>
+      <link>https://gsarti.com/authors/leonardo-stincone/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/authors/leonardo-stincone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gsarti.com/authors/gsarti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/authors/gsarti/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a Master student in Data Science at &lt;a href=&#34;https://www.units.it/&#34; target=&#34;_blank&#34;&gt;University of Trieste&lt;/a&gt; and &lt;a href=&#34;https://www.sissa.it/&#34; target=&#34;_blank&#34;&gt;SISSA&lt;/a&gt;, currently working at &lt;a href=&#34;http://www.italianlp.it/&#34; target=&#34;_blank&#34;&gt;ItaliaNLP Lab&lt;/a&gt; with Felice Dell&amp;rsquo;Orletta for my thesis project on NLP. My research interests focus on interpreting deep models and understanding their learning dynamics, in particular when dealing with natural language. I am also interested in positive social applications of machine learning and AI ethics.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

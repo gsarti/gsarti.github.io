@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Futurism | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/futurism/</link>
+      <atom:link href="https://gsarti.com/tags/futurism/index.xml" rel="self" type="application/rss+xml" />
+    <description>Futurism</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2019</copyright><lastBuildDate>Thu, 31 Oct 2019 12:00:41 +0100</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/profile.jpg</url>
+      <title>Futurism</title>
+      <link>https://gsarti.com/tags/futurism/</link>
+    </image>
+    
+    <item>
+      <title>The Literary Ordnance: When the Writer is an AI</title>
+      <link>https://gsarti.com/talk/literary-ordnance/</link>
+      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
+      <guid>https://gsarti.com/talk/literary-ordnance/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

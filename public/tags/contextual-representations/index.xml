@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contextual Representations | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/contextual-representations/</link>
+      <atom:link href="https://gsarti.com/tags/contextual-representations/index.xml" rel="self" type="application/rss+xml" />
+    <description>Contextual Representations</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2019</copyright><lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/profile.jpg</url>
+      <title>Contextual Representations</title>
+      <link>https://gsarti.com/tags/contextual-representations/</link>
+    </image>
+    
+    <item>
+      <title>Neural Language Models: the New Frontier of Natural Language Understanding</title>
+      <link>https://gsarti.com/talk/neural-lm/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/neural-lm/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

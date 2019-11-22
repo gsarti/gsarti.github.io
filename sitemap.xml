@@ -18,17 +18,7 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/contextual-representations/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,7 +28,22 @@
   </url>
   
   <url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/language-modeling/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/neural-language-models/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gsarti.com/talk/neural-lm/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/categories/nlp/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/nlp/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,13 +73,8 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/trieste/</loc>
+    <loc>https://gsarti.com/tags/university-of-trieste/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/ai/</loc>
-    <lastmod>2019-10-31T12:00:41+01:00</lastmod>
   </url>
   
   <url>
@@ -118,17 +103,12 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/futurism/</loc>
-    <lastmod>2019-10-31T12:00:41+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gsarti.com/tags/natural-language-generation/</loc>
     <lastmod>2019-10-31T12:00:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/science&#43;fiction/</loc>
+    <loc>https://gsarti.com/tags/science&#43;fiction-festival/</loc>
     <lastmod>2019-10-31T12:00:41+01:00</lastmod>
   </url>
   
@@ -148,17 +128,7 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/gpt-2/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gsarti.com/tags/italian-nlp/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/neural-language-model/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -168,8 +138,23 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/public-workshop/</loc>
+    <loc>https://gsarti.com/tags/trieste-next/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/course-presentation/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/categories/deep-learning/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/talk/lth/</loc>
+    <lastmod>2019-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -188,22 +173,12 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/computer-vision/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gsarti.com/categories/computer-vision/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/densenet/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/dssc-project/</loc>
+    <loc>https://gsarti.com/tags/computer-vision/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
   

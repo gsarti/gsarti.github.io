@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Data Science MSc Student">
+  <meta name="description" content="Is it possible to induce sparseness in neural networks while preserving its performances? An overview of latest advances in making neural approaches more parsimonious">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/authors/gabriele-sarti/">
+  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/talk/lth/">
 
   
 
@@ -93,14 +93,12 @@
 
 
   
-  <link rel="alternate" href="/authors/gabriele-sarti/index.xml" type="application/rss+xml" title="Gabriele Sarti">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://gsarti.com/authors/gabriele-sarti/">
+  <link rel="canonical" href="https://gsarti.com/talk/lth/">
 
   
   
@@ -115,18 +113,63 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="https://gsarti.com/authors/gabriele-sarti/">
-  <meta property="og:title" content="Gabriele Sarti | Gabriele Sarti">
-  <meta property="og:description" content="Data Science MSc Student"><meta property="og:image" content="https://gsarti.com/img/profile.jpg">
+  <meta property="og:url" content="https://gsarti.com/talk/lth/">
+  <meta property="og:title" content="Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks | Gabriele Sarti">
+  <meta property="og:description" content="Is it possible to induce sparseness in neural networks while preserving its performances? An overview of latest advances in making neural approaches more parsimonious"><meta property="og:image" content="https://gsarti.com/img/profile.jpg">
   <meta property="twitter:image" content="https://gsarti.com/img/profile.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-11-22T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-11-22T10:42:03&#43;01:00">
+    
+    <meta property="article:modified_time" content="2019-07-18T00:00:00&#43;00:00">
   
 
   
 
 
 
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gsarti.com/talk/lth/"
+  },
+  "name": "Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Room 4B, Building H2bis, University of Trieste, Italy",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "",
+      "postalCode": "",
+      "addressRegion": "",
+      "addressCountry": ""
+    }
+    
+  },
+  
+  
+  "startDate": "2019-07-18T00:00:00Z",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "description": "Is it possible to induce sparseness in neural networks while preserving its performances? An overview of latest advances in making neural approaches more parsimonious"
+}
+</script>
 
   
 
@@ -134,10 +177,13 @@
   
 
 
+  
 
 
 
-  <title>Gabriele Sarti | Gabriele Sarti</title>
+
+
+  <title>Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks | Gabriele Sarti</title>
 
 </head>
 
@@ -304,50 +350,371 @@
 </nav>
 
 
+  <div class="pub">
+
   
 
-<div class="universal-wrapper pt-3">
-  <h1>Gabriele Sarti</h1>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/deep-learning/">Deep Learning</a>, <a href="/categories/academic/">Academic</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://drive.google.com/open?id=1jXvaUU-mqf3MWqCTNDTjfRsUbOKbozAH" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
 </div>
 
 
-<section id="profile-page" class="pt-5">
-  <div class="container">
+  
+</div>
+
+
+
+  <div class="article-container">
+
     
+      <h3>Abstract</h3>
+      <p class="pub-abstract">Lottery ticket hypothesis is one of the latest and most significant advances in the field of theoretical deep learning, suggesting that sparse yet effective representations can be found inside large overparametrized neural networks. We present a brief introduction to the context of neural network pruning and proceed to present three significant papers discussing the impact of lottery ticket hypothesis in deep learning research.</p>
+    
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Jul 18, 2019
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            Statistical Machine Learning Course Presentation
+            
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
     
 
     
-    
-    
-    <div class="article-widget content-widget-hr">
-      <h3>Latest</h3>
-      <ul>
-        
-        <li>
-          <a href="/talk/neural-lm/">Neural Language Models: the New Frontier of Natural Language Understanding</a>
-        </li>
-        
-        <li>
-          <a href="/talk/literary-ordnance/">The Literary Ordnance: When the Writer is an AI</a>
-        </li>
-        
-        <li>
-          <a href="/project/aitalo-svevo/">AItalo Svevo: Letters from an Artificial Intelligence</a>
-        </li>
-        
-        <li>
-          <a href="/talk/lth/">Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</a>
-        </li>
-        
-        <li>
-          <a href="/project/cancer-detection/">Histopathologic Cancer Detection with Neural Networks</a>
-        </li>
-        
-      </ul>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Room 4B, Building H2bis, University of Trieste, Italy</div>
+          
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-9"></div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
+    <div class="d-md-none space-below"></div>
     
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/deep-learning/">Deep Learning</a>
+  
+  <a class="badge badge-light" href="/tags/course-presentation/">Course Presentation</a>
+  
+  <a class="badge badge-light" href="/tags/university-of-trieste/">University of Trieste</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/talk/lth/&amp;text=Lottery%20Ticket%20Hypothesis:%20Finding%20Sparse,%20Trainable%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/talk/lth/&amp;t=Lottery%20Ticket%20Hypothesis:%20Finding%20Sparse,%20Trainable%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Lottery%20Ticket%20Hypothesis:%20Finding%20Sparse,%20Trainable%20Neural%20Networks&amp;body=https://gsarti.com/talk/lth/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/talk/lth/&amp;title=Lottery%20Ticket%20Hypothesis:%20Finding%20Sparse,%20Trainable%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Lottery%20Ticket%20Hypothesis:%20Finding%20Sparse,%20Trainable%20Neural%20Networks%20https://gsarti.com/talk/lth/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/talk/lth/&amp;title=Lottery%20Ticket%20Hypothesis:%20Finding%20Sparse,%20Trainable%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
   </div>
-</section>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/neural-lm/">Neural Language Models: the New Frontier of Natural Language Understanding</a></li>
+      
+      <li><a href="/project/cancer-detection/">Histopathologic Cancer Detection with Neural Networks</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</div>
 
       
 

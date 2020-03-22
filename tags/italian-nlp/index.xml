@@ -5,7 +5,7 @@
     <link>https://gsarti.com/tags/italian-nlp/</link>
       <atom:link href="https://gsarti.com/tags/italian-nlp/index.xml" rel="self" type="application/rss+xml" />
     <description>Italian NLP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2019</copyright><lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/profile.jpg</url>
       <title>Italian NLP</title>
@@ -17,7 +17,7 @@
       <link>https://gsarti.com/project/aitalo-svevo/</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://gsarti.com/project/aitalo-svevo/</guid>
-      <description>&lt;p&gt;We developed an interactive experience putting together NLP and literature to raise awareness on the latest developments in language modeling and natural language generation. Participants received a printed letter written by a neural language model (GPT-2) fine-tuned on the Italian epistolary corpus of Italo Svevo, an italian writer of the 20th century. Participants could choose among several topics discussed by the author in his letters, and were also given some context on author&amp;rsquo;s life and literary production by Cristina Fenu, a digital humanist working at the &lt;a href=&#34;http://www.museosveviano.it/ar/progetto/archivio-digitale/&#34; target=&#34;_blank&#34;&gt;Svevian Museum of Trieste&lt;/a&gt;. An open-source implementation will soon be available on Github.&lt;/p&gt;
+      <description>&lt;p&gt;We developed an interactive experience putting together NLP and literature to raise awareness on the latest developments in language modeling and natural language generation. Participants received a printed letter written by a neural language model (GPT-2) fine-tuned on the Italian epistolary corpus of Italo Svevo, an italian writer of the 20th century. Participants could choose among several topics discussed by the author in his letters, and were also given some context on author&amp;rsquo;s life and literary production by Cristina Fenu, a digital humanist working at the &lt;a href=&#34;http://www.museosveviano.it/ar/progetto/archivio-digitale/&#34;&gt;Svevian Museum of Trieste&lt;/a&gt;. An open-source implementation will soon be available on Github.&lt;/p&gt;
 </description>
     </item>
     

@@ -5,60 +5,12 @@
     <link>https://gsarti.com/categories/</link>
       <atom:link href="https://gsarti.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2019</copyright><lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/profile.jpg</url>
       <title>Categories</title>
       <link>https://gsarti.com/categories/</link>
     </image>
-    
-    <item>
-      <title>Academic</title>
-      <link>https://gsarti.com/categories/academic/</link>
-      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/categories/academic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Natural Language Processing</title>
-      <link>https://gsarti.com/categories/natural-language-processing/</link>
-      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/categories/natural-language-processing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Digital Humanities</title>
-      <link>https://gsarti.com/categories/digital-humanities/</link>
-      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
-      <guid>https://gsarti.com/categories/digital-humanities/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Divulgative</title>
-      <link>https://gsarti.com/categories/divulgative/</link>
-      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
-      <guid>https://gsarti.com/categories/divulgative/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deep Learning</title>
-      <link>https://gsarti.com/categories/deep-learning/</link>
-      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/categories/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computer Vision</title>
-      <link>https://gsarti.com/categories/computer-vision/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/categories/computer-vision/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Information Extraction | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/information-extraction/</link>
+      <atom:link href="https://gsarti.com/tags/information-extraction/index.xml" rel="self" type="application/rss+xml" />
+    <description>Information Extraction</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/profile.jpg</url>
+      <title>Information Extraction</title>
+      <link>https://gsarti.com/tags/information-extraction/</link>
+    </image>
+    
+    <item>
+      <title>Covid-19 Semantic Browser</title>
+      <link>https://gsarti.com/project/covid-browser/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/project/covid-browser/</guid>
+      <description>&lt;p&gt;In 2020, more than 3,000 scientific studies have been published on the SARS-CoV-2 virus and on the Covid-19 pathology. The total number of articles on the topic of coronaviruses exceeds 40,000 units. Such a volume of scientific production makes it impossible for doctors and researchers to keep up with the latest discoveries without the support of adequate digital platforms that are currently nowhere in sight.&lt;/p&gt;
+&lt;p&gt;To make up for this shortcoming, we propose an artificial intelligence system associated with a web application to perform natural language semantic querying inside the &lt;a href=&#34;https://pages.semanticscholar.org/coronavirus-research&#34;&gt;COVID-19 Open Research Dataset&lt;/a&gt; published by the American nonprofit &lt;a href=&#34;https://allenai.org/&#34;&gt;AllenAI&lt;/a&gt;. The system leverages state-of-the-art neural language models trained on scientific publications in the biomedical domain for optimal retrieval performances. The adoption of the system aims to facilitate knowledge sharing across the scientific community and to accelerate the development of adequate drugs and vaccines to counter the ongoing pandemic.&lt;/p&gt;
+&lt;p&gt;The project is led by Gabriele Sarti in collaboration with &lt;a href=&#34;en.areasciencepark.it&#34;&gt;Area Science Park&lt;/a&gt; and the &lt;a href=&#34;ai-lc.it&#34;&gt;Italian Association of Computational Linguistics&lt;/a&gt;. The project is currently being tested and publicly available at &lt;a href=&#34;covidbrowser.areasciencepark.it&#34;&gt;covidbrowser.areasciencepark.it&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

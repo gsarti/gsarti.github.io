@@ -3,47 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gsarti.com/tags/area-science-park/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/categories/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/project/covid-browser/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/deep-learning/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/francesco-zuppichini/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/information-extraction/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/italian-association-for-computational-linguistics/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/kaggle-competition/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/marco-franzon/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/mirko-lai/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/project/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/tommaso-rodani/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gsarti.com/categories/academic/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gsarti.com/authors/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/categories/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gsarti.com/tags/language-modeling/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -64,11 +119,6 @@
   
   <url>
     <loc>https://gsarti.com/tags/statalk/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -133,11 +183,6 @@
   </url>
   
   <url>
-    <loc>https://gsarti.com/project/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gsarti.com/tags/trieste-next/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
   </url>
@@ -184,11 +229,6 @@
   
   <url>
     <loc>https://gsarti.com/project/cancer-detection/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/kaggle-competition/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
   

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Gabriele Sarti">
+
+  
+  
+  
+    
+  
+  <meta name="description" content=" A summary of promising directions from ICLR 2020 for better and faster pretrained tranformers language models. ">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/post/iclr2020-transformers/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://gsarti.com/post/iclr2020-transformers/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@gsarti_">
+  <meta property="twitter:creator" content="@gsarti_">
+  
+  <meta property="og:site_name" content="Gabriele Sarti">
+  <meta property="og:url" content="https://gsarti.com/post/iclr2020-transformers/">
+  <meta property="og:title" content="ICLR 2020 Trends: Better &amp; Faster Transformers for Natural Language Processing | Gabriele Sarti">
+  <meta property="og:description" content=" A summary of promising directions from ICLR 2020 for better and faster pretrained tranformers language models. "><meta property="og:image" content="https://gsarti.com/img/profile.jpg">
+  <meta property="twitter:image" content="https://gsarti.com/img/profile.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-05-03T19:27:36&#43;02:00">
+    
+    <meta property="article:modified_time" content="2020-05-03T19:27:36&#43;02:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gsarti.com/post/iclr2020-transformers/"
+  },
+  "headline": "ICLR 2020 Trends: Better \u0026 Faster Transformers for Natural Language Processing",
+  
+  "datePublished": "2020-05-03T19:27:36+02:00",
+  "dateModified": "2020-05-03T19:27:36+02:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gabriele Sarti",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gsarti.com/img/icon-512.png"
+    }
+  },
+  "description": " A summary of promising directions from ICLR 2020 for better and faster pretrained tranformers language models. "
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>ICLR 2020 Trends: Better &amp; Faster Transformers for Natural Language Processing | Gabriele Sarti</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Gabriele Sarti</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://www.ai2s.it" target="_blank" rel="noopener"><span>AI2S</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>ICLR 2020 Trends: Better &amp; Faster Transformers for Natural Language Processing</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 3, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    14 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><em>(For an overview of the Transformer, see <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a> by Jay Alammar )</em></p>
+<p>The Transformer architecture was first proposed in <a href="https://arxiv.org/abs/1706.03762">Attention is All you Need</a> as a valid alternative to sequential language modeling approaches like <a href="https://www.researchgate.net/publication/13853244_Long_Short-term_Memory">LSTMs</a> and has since then become ubiquitous in the field of Natural Language Processing, pushing the state-of-the-art in most downstream language-related tasks.</p>
+<p>This year&rsquo;s edition of the <a href="https://iclr.cc/">International Conference on Learning Representation (ICLR)</a> brought a lot of promising revisions to the original Transformer and its more recent variants <a href="https://www.aclweb.org/anthology/N19-1423/">BERT</a> and <a href="https://www.aclweb.org/anthology/P19-1285/">Transformer-XL</a>. Proposed improvements address the well-known weaknesses of Transformers, namely:</p>
+<ul>
+<li>Optimizing the self-attention computation.</li>
+<li>Injecting linguistically-motivated inductive biases in the model architecture.</li>
+<li>Making the model more parameter and data-efficient.</li>
+</ul>
+<p>This post wants to summarize and provide a high-level overview of those contributions, highlighting current trends in the development of better and faster models for Natural Language Processing. All image credits go to their respective paper authors.</p>
+<hr>
+<h2 id="index">Index</h2>
+<ul>
+<li><a href="#self-attention-variants">Self-Attention Variants</a>
+<ul>
+<li><a href="#long-short-range-attention">Long-Short Range Attention</a></li>
+<li><a href="#tree-structured-attention-with-subtree-masking">Tree-Structured Attention with Subtree Masking</a></li>
+<li><a href="#hashed-attention">Hashed Attention</a></li>
+<li><a href="#extra-hop-attention">eXtra Hop Attention</a></li>
+</ul>
+</li>
+<li><a href="#training-objectives">Training Objectives</a>
+<ul>
+<li><a href="#discriminative-replacement-task">Discriminative Replacement Task</a></li>
+<li><a href="#word-and-sentence-structural-tasks">Word and Sentence Structural Tasks</a></li>
+<li><a href="#type-constrained-entity-replacement">Type-Constrained Entity Replacement</a></li>
+</ul>
+</li>
+<li><a href="#embeddings">Embeddings</a>
+<ul>
+<li><a href="#position-aware-complex-word-embeddings">Position-Aware Complex Word Embeddings</a></li>
+<li><a href="#hierarchical-embeddings">Hierarchical Embeddings</a></li>
+<li><a href="#factorized-embedding-parametrization">Factorized Embedding Parametrization</a></li>
+</ul>
+</li>
+<li><a href="#model-architecture">Model Architecture</a>
+<ul>
+<li><a href="#compressive-memory">Compressive Memory</a></li>
+<li><a href="#reversible-layers">Reversible Layers</a></li>
+<li><a href="#cross-layer-parameter-sharing">Cross-Layer Parameter Sharing</a></li>
+<li><a href="#adaptive-depth-estimation">Adaptive Depth Estimation</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<hr>
+<h1 id="self-attention-variants">Self-Attention Variants</h1>
+<p><strong>Scaled dot-product self-attention</strong> is one of the main components in the standard Transformer layer, enabling the modelling of dependencies regardless of their distance in the input. The self-attention operation projects an input activation tensor $\bf A$ to queries $Q$ of dimension $d_k$, keys $K$ of dimension $d_k$ and values $V$ of dimension $d_v$, returning a weighted version of $V$:</p>
+<p>$$\tag{1} \text{Attention}(Q,K,V) = \text{softmax}\Big(\frac{QK^T}{\sqrt d_k}\Big)V$$</p>
+<p>In the <strong>multi-head self-attention</strong> variant, the attention function is applied in parallel to $h$ version of queries, keys and values projected with learned projections $W$, and outputs are finally concatenated and projected again to obtain final values:</p>
+<p>$$\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1,\dots, \text{head}_h)W^O$$</p>
+<p>$$\tag{2} \text{where } \text{head}_i = \text{Attention}(QW_i^Q,KW_i^K,VW_i^V)$$</p>
+<p>This section presents some variants of the self-attention component that make it more efficient and effective in the context of language applications.</p>
+<h3 id="long-short-range-attention">Long-Short Range Attention</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_ByeMPlHKPH.html">Lite Transformer with Long-Short Range Attention</a> by Wu, Liu et al.</p>
+<p><img src="assets/lsra.png" alt=""></p>
+<p>Conventional self-attention is deemed as redundant since it was empirically shown to put excessive emphasis on local relations inside a sentence, which can be modeled more efficiently by a standard convolution, as shown also in <a href="https://iclr.cc/virtual_2020/poster_HJlnC1rKPB.html">On the Relationship between Self-Attention and Convolutional Layers</a>. While the redundancy may help model performances in some cases, it is not suitable for lighter applications.</p>
+<p><strong>Long-Short Range Attention (LSRA)</strong> makes the computation more efficient by splitting the input into two parts along channel dimensions and feeding each to two modules: a <strong>global extractor</strong> using standard self-attention and a <strong>local extractor</strong> using light depth-wise convolutions. Authors report a $2\times$ reduced overall computation for the model, making it suitable for mobile settings.</p>
+<h3 id="tree-structured-attention-with-subtree-masking">Tree-Structured Attention with Subtree Masking</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_HJxK5pEYvr.html">Tree-Structured Attention with Hierarchical Accumulation</a> by Nguyen et al.</p>
+<p><img src="assets/hierarchical_accumulation.png" alt=""></p>
+<p>A weakness of the standard Transformer is the absence of inductive biases to account for the hierarchical structure of language. This is due in part to the difficulty in operating with tree-like structures usually modeled by recurrent or recursive mechanisms while maintaining the constant parallel time complexity of self-attention.</p>
+<p>The proposed solution leverages constituency parses of input text to build a tree of hidden states, using <strong>hierarchical accumulation</strong> to build the value of non-terminals as the aggregation of lower representations in the tree. The final output representation is built by performing a <strong>weighted aggregation</strong> of branch-level representations.</p>
+<p><img src="assets/subtree_masking.png" alt=""></p>
+<p>An interesting addition is the use of <strong>subtree masking</strong> to filter out superfluous noise by constraining the attention of each node query only on its subtree descendants. The cost for this inductive bias is an increased computational and memory cost, which is then mitigated using <a href="#cross-layer-parameter-sharing">parameter sharing</a></p>
+<h3 id="hashed-attention">Hashed Attention</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_rkgNKkHtvB.html">Reformer: The Efficient Transformer</a> by Kitaev et al.</p>
+<p><img src="assets/lsh.png" alt=""></p>
+<p>In the self-attention equation the factor $QK^T$ represents a bottleneck, taking $\mathcal{O}(L^2)$ for input sequences of length $L$ both in computational and memory complexity. This effectively hinders the possibility of modeling long sequences.</p>
+<p><strong>Reformer</strong> proposes to restrict the pool of candidates attended by each query to a small set of neighbors found through <strong>locally-sensitive hashing</strong>. Since LSH bucketing employs random projections, similar vectors may sometimes fall in different neighborhoods; an approach using multiple parallel rounds of hashing is suggested to mitigate this issue. Using LSH attention reduces the computational cost of the self-attention operation to $\mathcal{O}(L \log L)$, allowing the model to operate on longer sequences.</p>
+<h3 id="extra-hop-attention">eXtra Hop Attention</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_r1eIiCNYwS.html">Transformer-XH: Multi-Evidence Reasoning with eXtra Hop Attention</a> by Zhao et al.</p>
+<p><img src="assets/extra_hop.png" alt=""></p>
+<p>While Transformers were optimized to operate on single sequences or pairs of sequences, they can hardly generalize to settings where evidence is scattered in multiple pieces of text, as for the challenging task of <strong>multi-hop question answering</strong>.</p>
+<p><strong>Transformer-XH</strong> introduces a new variant of attention, <strong>eXtra Hop Attention</strong>, that can be applied to a graph of text sequences connected by edges (e.g. hyperlinks). This new attention mechanism uses the special <code>[CLS]</code> token at the beginning of each sequence as an <strong>attention hub</strong> that attends to all other connected sequences in the graph. The resulting representation is then combined to the one obtained by standard self-attention through a linear projection. The resulting model shows significant improvements for tasks requiring reasoning over graphs, at the cost of the extra computations introduced by the new attention mechanism.</p>
+<h1 id="training-objectives">Training Objectives</h1>
+<p>The pre-training of Transformer models is usually achieved by the mean of multiple unsupervised objectives, leverage huge quantities of non-annotated texts. The most common tasks used for this purpose are <strong>autoregressive language modeling</strong>, also known as standard language modeling (LM), and <strong>autoencoding of masked input</strong>, often referred to as <strong>masked language modeling (MLM)</strong>.</p>
+<p>The standard Transformer implementation and its <a href="https://openai.com/blog/better-language-models/">GPT variants</a> adopt the autoregressive approach, leveraging a unidirectional context (forward or backward) inside a sequence $\textbf{x} = (x_1, \dots, x_L)$ to estimate next token probability:</p>
+<p>$$p(\textbf{x}) = \prod_{l=1}^L p(x_l|\textbf{x}_{&lt; or &gt;l})$$</p>
+<p>Instead, BERT-like approaches use a bidirectional context to recover a small fraction of the input that was artificially replaced by special <code>[MASK]</code> tokens. This variant was shown to be especially effective for downstream natural language understanding tasks.</p>
+<p>Besides word-level modeling, a sentence-level classification task like <strong>next sentence prediction (NSP)</strong> is usually added to the training procedure since many important language applications require an understanding of the relationship between two sequences.</p>
+<p>While those tasks seem to induce meaningful token and sentence-level representation, many of the approaches covered in this section suggest better alternatives that make learning more efficient and grounded in the structure and the content of the input.</p>
+<h3 id="discriminative-replacement-task">Discriminative Replacement Task</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_r1xMH1BtvB.html">ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators</a> by Clark et al.</p>
+<p><img src="assets/electra.png" alt=""></p>
+<p>The masking strategy used in BERT-like models is very data inefficient, using only ~15% of the input text to complete the MLM task. However, the percentage of masked data can hardly be increased since having too many masked tokens may degrade the overall context information.</p>
+<p><strong>ELECTRA</strong> proposes a simple yet effective approach to cope with this inefficiency. A small masked language model is trained and then used as a generator to fill the masked tokens in the input with its predictions, as in normal MLM. However, the new task for the main model will be a <strong>discriminative</strong> one: instead of predicting masked tokens, the model has to detect which tokens have been replaced by the generator. This allows leveraging the entire input sequence for training. As mentioned by the authors, this approach consistently outperforms MLM pre-training given the same compute budget.</p>
+<h3 id="word-and-sentence-structural-tasks">Word and Sentence Structural Tasks</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_BJgQ4lSFPH.html">StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding</a> by Wang et al.</p>
+<p><img src="assets/structural_objectives.png" alt=""></p>
+<p>As we saw previously, Transformers do not explicitly account for structures present in the input. While tree-structured attention injects a heavy hierarchical bias in the model architecture, <strong>StructBERT</strong> adopts two lighter but effective approaches to make the resulting representations more aware of the underlying sequentiality of language.</p>
+<p>The first is a <strong>word structural objective</strong> where trigrams inside the inputs are randomly shuffled, and their original position must be reconstructed. This is done in parallel with normal MLM. The <strong>sentence structural objective</strong> is a lighter variant of the sentence reordering introduced in <a href="https://arxiv.org/abs/1907.12412">ERNIE 2.0</a> and equal to the <strong>sentence ordering prediction</strong> introduced in <a href="https://iclr.cc/virtual_2020/poster_H1eA7AEtvS.html">ALBERT</a>: given a pair of sentences $(S_1, S_2)$ as input, we ask the model to discriminate whether $S_2$ precedes, follows or is unrelated to $S_1$. This new task extends the standard NSP, which was deemed as too easy for learning meaningful sentence relations. These additions result in significant improvements over standard benchmarks for natural language understanding.</p>
+<h3 id="type-constrained-entity-replacement">Type-Constrained Entity Replacement</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_BJlzm64tDH.html">Pretrained Encyclopedia: Weakly Supervised Knowledge-Pretrained Language Model</a> by Xiong et al.</p>
+<p><img src="assets/entity_replacement.png" alt=""></p>
+<p>While it was shown that pre-trained Transformer models implicitly capture real-world knowledge, their standard training objectives do not explicitly take into account the entity-centric information needed for robust reasoning over real-world settings.</p>
+<p><strong>Type-constrained entity replacement</strong> is a weakly supervised approach where random entities in the text are replaced with other entities taken from Wikidata that have the same entity type. The model then uses a discriminative objective similar to the one of <a href="#discriminative-replacement-task">ELECTRA</a> to determine which entities were replaced. This is done along with MLM in a multi-task setup, and authors report significant improvements in settings requiring a deeper entity understanding, such as <strong>open-domain QA</strong> and <strong>entity typing</strong>.</p>
+<h1 id="embeddings">Embeddings</h1>
+<p>The original Transformer relies on two sets of embeddings to represent the input sequence:</p>
+<ul>
+<li>
+<p>Learned <strong>word embeddings</strong> for each token present in the vocabulary, used as token vector representations for the model.</p>
+</li>
+<li>
+<p>Fixed <strong>positional embeddings (PE)</strong>, used to inject information about the position of tokens in the sequence. For position $\text{pos}$ and dimension $i$, those correspond to sinusoidal periodic functions that were empirically shown to perform on par with learned embeddings, and were chosen to enable extrapolation for longer sequences:</p>
+</li>
+</ul>
+<p>$$PE_{pos, 2i} = \sin(\text{pos}/10000^{2i/d_{model}})$$</p>
+<p>$$PE_{pos, 2i + 1} = \cos(\text{pos}/10000^{2i/d_{model}})$$</p>
+<p>For BERT-like models able to operate on multiple input segments, a third set of learned <strong>segment embeddings</strong> is used to differentiate tokens belonging to different sentences.</p>
+<p>All those embeddings have the same dimensions and get summed together to obtain an input representation. Approaches introduced in this section aim to inject more structure in the embeddings, or to optimize their dimension for better efficiency.</p>
+<h3 id="position-aware-complex-word-embeddings">Position-Aware Complex Word Embeddings</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_Hke-WTVtwr.html">Encoding word order in complex embeddings</a> by Wang et al.</p>
+<p><img src="assets/complex_embeddings.png" alt="Complex Word Embeddings"></p>
+<p>While PE capture different positions in the input, they do not explicitly take into account the relation between those positions, i.e. ordered relationships such as adjacency or precedence. This problem was already addressed in <a href="https://www.aclweb.org/anthology/P19-1285/">Transformer-XL</a> by leveraging relative distances between words instead of raw position indices.</p>
+<p>A proposed improvement is to generalize word embeddings to continuous functions defined over positions, extending the solutions to the complex-valued domain to benefit from richer representations. The resulting <strong>complex-valued embeddings</strong> introduce new parameters for amplitudes, frequencies and initial phases that determine various properties of the embedding such as position sensitivity. Empirical results show that the complex embeddings with parameter-sharing schemas outperform previous embedding approaches without a significant increase in the number of trainable parameters.</p>
+<h3 id="hierarchical-embeddings">Hierarchical Embeddings</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_HJxK5pEYvr.html">Tree-Structured Attention with Hierarchical Accumulation</a> by Nguyen et al.</p>
+<p><img src="assets/hierarchical_embeddings.png" alt=""></p>
+<p>In the overview of <a href="#tree-structured-attention-with-subtree-masking">tree-structured attention</a>, we saw how hierarchical accumulation is used to form a representation based on descendants for nonterminal nodes. This procedure, however, has the disadvantage of not taking into account the hierarchical structure of descendants.</p>
+<p><strong>Hierarchical embeddings</strong> are used to inject this structural bias by concatenating <strong>vertical</strong> and <strong>horizontal embeddings matrices</strong> representing respectively hierarchical ordering inside branches and relationships between siblings nodes in a subtree. Those embeddings are shared across attention heads, thus accounting only for 0.1% of the total parameters.</p>
+<h3 id="factorized-embedding-parametrization">Factorized Embedding Parametrization</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_H1eA7AEtvS.html">ALBERT: A Lite BERT for Self-supervised Learning of Language Representations</a> by Lan et al.</p>
+<p><img src="assets/factorized_embeddings.png" alt=""></p>
+<p>In recent models based on BERT and Transformer-XL the input embeddings size $E$ is tied with the hidden layer size $H$, i.e. $E \equiv H$. This is very impractical since, to augment the expressivity of hidden representations used to learn <em>context-dependent representation</em>, one should also increase the size of the embedding matrix $\textbf{M} = V \times E$, where $V$ is the vocabulary size. Even for relatively small hidden layer dimensions, this results in billions of parameters that are rarely updated during training.</p>
+<p><strong>ALBERT</strong> authors propose to insert a projection between $E$ and $V$ to make both dimensions independent, an approach that is especially efficient to reduce the parameter count when $H \gg E$. As a result, an ALBERT base with $E = 128$ and $H = 768$ obtains performances comparable with a BERT base with the same configuration on many downstream tasks, using 21M fewer parameters (89M in Table 3 vs 110M for BERT).</p>
+<h1 id="model-architecture">Model Architecture</h1>
+<p>The original Transformer architecture is composed of an encoder and a decoder, each composed by a stacked sequence of identical layers that transform input embeddings in outputs having the same dimension (hence the name Transformer).</p>
+<p>Each layer of the Transformer encoder is composed of two sublayers, a multi-head self-attention mechanism and a feed-forward network, surrounded by residual connections and followed by layer normalization. The decoder adds a third layer that performs multi-head self-attention over the encoder output while modifying the original self-attention sublayer to prevent attending to future context, as required by the autoregressive language modeling objective saw before.</p>
+<p>Bidirectional variants of the Transformer drop the decoder structure and focus solely on the encoder to generate the contextual embeddings needed for various tasks, including MLM.</p>
+<p><a href="https://www.aclweb.org/anthology/P19-1285/">Transformer-XL</a> notably introduces a notion of <strong>memory</strong> for Transformer networks, where hidden states obtained in previous segments are weighted with attention and reused to better model long-term dependencies, preventing <strong>context fragmentation</strong>.</p>
+<p>The following approaches try to build on top of current structures to improve long-range modeling, reduce the parameter count, or optimize the computation performed by the model.</p>
+<h3 id="compressive-memory">Compressive Memory</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_SylKikSYDH.html">Compressive Transformers for Long-Range Sequence Modelling</a> by Rae et al.</p>
+<p><img src="assets/compressive_memory.png" alt=""></p>
+<p>In Transformer-XL&rsquo;s recurrent memory approach, old memories are discarded to enable the storing of new ones in a first-in-first-out fashion. This method accounts only for recency, not taking into account the relevance of information that might get discarded.</p>
+<p><strong>Compressive Transformers</strong> builds upon the memory notion by adding a new <strong>compressed memory</strong> that stores coarse representations of older memories instead of discarding them. Authors try multiple alternatives for the compression function, finally selecting an <strong>attention-reconstruction loss</strong> that discards information that is not attended by the network. The use of compressive memory shows large improvements over the modeling of infrequent words, with empirical evidence of the network learning to preserve salient information through the compression mechanism.</p>
+<h3 id="reversible-layers">Reversible Layers</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_rkgNKkHtvB.html">Reformer: The Efficient Transformer</a> by Kitaev et al.</p>
+<p><img src="assets/reversible.png" alt=""></p>
+<p>The main idea behind <strong>reversibility</strong> is to enable the recovering of activations in any layer of the network by using only activations of the following layer and model parameters. This feature is especially interesting when applied to Transformer models since they are usually composed of a large pile of stacked layers and their memory complexity grows linearly with the layer count.</p>
+<p><strong>Reformer</strong> introduces reversibility in the Transformer architecture by combining attention and feed-forward sublayers into a single reversible layer. This allows to store activations only for the topmost layer and recover all the other ones by reversing layers during back-propagation, making the model depth irrelevant from a memory perspective. Further improvements in memory complexity are achieved by <strong>chunking</strong> independent computations in feed-forward and reversible layers.</p>
+<h3 id="cross-layer-parameter-sharing">Cross-Layer Parameter Sharing</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_H1eA7AEtvS.html">ALBERT: A Lite BERT for Self-supervised Learning of Language Representations</a> by Lan et al.</p>
+<p><img src="assets/albert_distances.png" alt=""></p>
+<p>A simple yet very effective approach to greatly reduce the parameter count inside deep Transformer models is to share parameters across multiple layers, as it was shown in the <a href="https://arxiv.org/abs/1807.03819">Universal Transformer</a> paper at ICLR 2019.</p>
+<p><strong>ALBERT</strong> authors experiment cross-layer parameter sharing for both self-attention and feed-forward sublayers, finding that sharing both weight matrices contributes to bringing down the total parameter count of the model by a factor of $7\times$ (for embedding size $E = 128$) while only slightly affecting final performances. The use of parameter sharing leads to smoother transition across layers and effectively stabilizes network parameters.</p>
+<h3 id="adaptive-depth-estimation">Adaptive Depth Estimation</h3>
+<p><em>Introduced in</em>: <a href="https://iclr.cc/virtual_2020/poster_SJg7KhVKPH.html">Depth-Adaptive Transformer</a> by Elbayad et al.</p>
+<p><img src="assets/depth_adaptive.png" alt=""></p>
+<p>Current models perform a fixed number of computations for each input, regardless of the underlying complexity specific to each sequence. This problem was already highlighted in the <a href="https://arxiv.org/abs/1807.03819">Universal Transformer</a>, which proposes a repeated application of the same layer with <strong>adaptive computation time (ACT)</strong>, but the resulting increase in per-layer weights considerably reduce the overall network speed.</p>
+<p><strong>Depth-adaptive Transformer</strong> solves this issue by encoding a sequence with a standard Transformer encoder and decoding it with a variable number of steps. To do so, a classifier is attached to each repeated layer of the decoder and the whole set is then trained with <strong>aligned</strong> and <strong>mixed training</strong> (see image) using the <strong>anytime prediction</strong> approach first introduced in the field of computer vision. Authors explore different mechanisms to adaptively control the amount of computation both on sequence level and on a per-token basis and conclude that an adaptive reduction of more than 75% of decoder layers can be applied without any loss in accuracy on machine translation tasks.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>As you can see from the sections above, many of these approaches offer widely applicable solutions to specific problems that characterize the original Transformer architecture, ranging from the self-attention computation to the model structure itself.</p>
+<p>Many of these approaches seem promising for future developments of the Transformer and, most importantly, are likely to bring complementary improvements once many of them included in a single architecture.</p>
+<p>In light of this, my wish for ICLR 2021 is to see more incremental work that puts together already-existing strategies to highlight the most effective combinations between them.</p>
+<p><em>See also:</em> <a href="https://towardsdatascience.com/whats-new-for-transformers-at-the-iclr-2020-conference-4285a4294792">What’s new for Transformers at the ICLR 2020 Conference?</a> by Sergi Castella</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/language-modeling/">Language Modeling</a>
+  
+  <a class="badge badge-light" href="/tags/deep-learning/">Deep Learning</a>
+  
+  <a class="badge badge-light" href="/tags/transformers/">Transformers</a>
+  
+  <a class="badge badge-light" href="/tags/iclr2020/">ICLR2020</a>
+  
+  <a class="badge badge-light" href="/tags/word-embeddings/">Word Embeddings</a>
+  
+  <a class="badge badge-light" href="/tags/self-attention/">Self-Attention</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/post/iclr2020-transformers/&amp;text=ICLR%202020%20Trends:%20Better%20&amp;amp;%20Faster%20Transformers%20for%20Natural%20Language%20Processing" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/post/iclr2020-transformers/&amp;t=ICLR%202020%20Trends:%20Better%20&amp;amp;%20Faster%20Transformers%20for%20Natural%20Language%20Processing" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=ICLR%202020%20Trends:%20Better%20&amp;amp;%20Faster%20Transformers%20for%20Natural%20Language%20Processing&amp;body=https://gsarti.com/post/iclr2020-transformers/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/post/iclr2020-transformers/&amp;title=ICLR%202020%20Trends:%20Better%20&amp;amp;%20Faster%20Transformers%20for%20Natural%20Language%20Processing" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=ICLR%202020%20Trends:%20Better%20&amp;amp;%20Faster%20Transformers%20for%20Natural%20Language%20Processing%20https://gsarti.com/post/iclr2020-transformers/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/post/iclr2020-transformers/&amp;title=ICLR%202020%20Trends:%20Better%20&amp;amp;%20Faster%20Transformers%20for%20Natural%20Language%20Processing" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/neural-lm/">Neural Language Models: the New Frontier of Natural Language Understanding</a></li>
+      
+      <li><a href="/project/covid-browser/">Covid-19 Semantic Browser</a></li>
+      
+      <li><a href="/talk/lth/">Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</a></li>
+      
+      <li><a href="/talk/literary-ordnance/">The Literary Ordnance: When the Writer is an AI</a></li>
+      
+      <li><a href="/project/aitalo-svevo/">AItalo Svevo: Letters from an Artificial Intelligence</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js" integrity="sha256-vOIuDSYDirTfyr+S2MjFnhOz6Rgiz4ODFAHATG0rFxw=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © Gabriele Sarti 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

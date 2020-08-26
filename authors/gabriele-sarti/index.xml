@@ -5,12 +5,20 @@
     <link>https://gsarti.com/authors/gabriele-sarti/</link>
       <atom:link href="https://gsarti.com/authors/gabriele-sarti/index.xml" rel="self" type="application/rss+xml" />
     <description>Gabriele Sarti</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sun, 03 May 2020 19:27:36 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Wed, 26 Aug 2020 09:47:38 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/profile.jpg</url>
       <title>Gabriele Sarti</title>
       <link>https://gsarti.com/authors/gabriele-sarti/</link>
     </image>
+    
+    <item>
+      <title>ETC-NLG: End-to-end Topic-Conditioned Natural Language Generation</title>
+      <link>https://gsarti.com/publication/etc-nlg/</link>
+      <pubDate>Wed, 26 Aug 2020 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/etc-nlg/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ICLR 2020 Trends: Better &amp; Faster Transformers for Natural Language Processing</title>

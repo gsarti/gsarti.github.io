@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Felice Dell&#39;Orletta | Gabriele Sarti</title>
+    <title>Felice Dell’Orletta | Gabriele Sarti</title>
     <link>https://gsarti.com/authors/felice-dellorletta/</link>
       <atom:link href="https://gsarti.com/authors/felice-dellorletta/index.xml" rel="self" type="application/rss+xml" />
-    <description>Felice Dell&#39;Orletta</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Thu, 31 Oct 2019 12:00:41 +0100</lastBuildDate>
+    <description>Felice Dell’Orletta</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/profile.jpg</url>
-      <title>Felice Dell&#39;Orletta</title>
+      <title>Felice Dell’Orletta</title>
       <link>https://gsarti.com/authors/felice-dellorletta/</link>
     </image>
+    
+    <item>
+      <title>Italian Transformers Under the Linguistic Lens</title>
+      <link>https://gsarti.com/publication/italian-transformers/</link>
+      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/italian-transformers/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>The Literary Ordnance: When the Writer is an AI</title>

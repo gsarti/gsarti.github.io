@@ -5,7 +5,7 @@
     <link>https://gsarti.com/tags/deep-learning/</link>
       <atom:link href="https://gsarti.com/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep Learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Wed, 26 Aug 2020 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/profile.jpg</url>
       <title>Deep Learning</title>
@@ -13,9 +13,25 @@
     </image>
     
     <item>
+      <title>Italian Transformers Under the Linguistic Lens</title>
+      <link>https://gsarti.com/publication/italian-transformers/</link>
+      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/italian-transformers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UmBERTo-MTSA@ AcCompl-It: Improving Complexity and Acceptability Prediction with Multi-task Learning on Self-Supervised Annotations</title>
+      <link>https://gsarti.com/publication/umberto-mtsa/</link>
+      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/umberto-mtsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ETC-NLG: End-to-end Topic-Conditioned Natural Language Generation</title>
       <link>https://gsarti.com/publication/etc-nlg/</link>
-      <pubDate>Wed, 26 Aug 2020 09:47:38 +0200</pubDate>
+      <pubDate>Wed, 11 Nov 2020 09:47:38 +0200</pubDate>
       <guid>https://gsarti.com/publication/etc-nlg/</guid>
       <description></description>
     </item>

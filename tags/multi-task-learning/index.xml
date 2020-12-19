@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multi-task Learning | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/multi-task-learning/</link>
+      <atom:link href="https://gsarti.com/tags/multi-task-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Multi-task Learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/profile.jpg</url>
+      <title>Multi-task Learning</title>
+      <link>https://gsarti.com/tags/multi-task-learning/</link>
+    </image>
+    
+    <item>
+      <title>UmBERTo-MTSA@ AcCompl-It: Improving Complexity and Acceptability Prediction with Multi-task Learning on Self-Supervised Annotations</title>
+      <link>https://gsarti.com/publication/umberto-mtsa/</link>
+      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/umberto-mtsa/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,73 +3,133 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gsarti.com/publication_types/3/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <loc>https://gsarti.com/publication_types/1/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/alessio-miaschi/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/authors/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gsarti.com/publication/etc-nlg/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <loc>https://gsarti.com/authors/dominique-brunato/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/felice-dellorletta/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gsarti.com/authors/ginevra-carbone/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <loc>https://gsarti.com/authors/giulia-venturi/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gsarti.com/tags/natural-language-generation/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <loc>https://gsarti.com/tags/interpretability/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/italian-language/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/publication/italian-transformers/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/multi-task-learning/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/neural-language-models/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/probing-task/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/publication_types/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/publication/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/self-training/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/tags/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/topic-modeling/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/tags/transformers/</loc>
-    <lastmod>2020-08-26T09:47:38+02:00</lastmod>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/publication/umberto-mtsa/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/publication/etc-nlg/</loc>
+    <lastmod>2020-11-11T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/authors/ginevra-carbone/</loc>
+    <lastmod>2020-11-11T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/natural-language-generation/</loc>
+    <lastmod>2020-11-11T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/topic-modeling/</loc>
+    <lastmod>2020-11-11T09:47:38+02:00</lastmod>
   </url>
   
   <url>
@@ -209,11 +269,6 @@
   
   <url>
     <loc>https://gsarti.com/categories/divulgative/</loc>
-    <lastmod>2019-10-31T12:00:41+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/authors/felice-dellorletta/</loc>
     <lastmod>2019-10-31T12:00:41+01:00</lastmod>
   </url>
   

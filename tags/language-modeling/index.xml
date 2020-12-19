@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/language-modeling/</link>
       <atom:link href="https://gsarti.com/tags/language-modeling/index.xml" rel="self" type="application/rss+xml" />
     <description>Language Modeling</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sun, 03 May 2020 19:27:36 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/profile.jpg</url>
       <title>Language Modeling</title>
       <link>https://gsarti.com/tags/language-modeling/</link>
     </image>
+    
+    <item>
+      <title>Interpreting Neural Language Models for Linguistic Complexity Assessment</title>
+      <link>https://gsarti.com/publication/interpreting-nlms-for-lca/</link>
+      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/interpreting-nlms-for-lca/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ICLR 2020 Trends: Better &amp; Faster Transformers for Natural Language Processing</title>

@@ -8,12 +8,22 @@
   </url>
   
   <url>
+    <loc>https://gsarti.com/publication_types/7/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gsarti.com/authors/alessio-miaschi/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/authors/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/canonical-correlation-analysis/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
@@ -43,6 +53,11 @@
   </url>
   
   <url>
+    <loc>https://gsarti.com/tags/garden-path-sentences/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gsarti.com/authors/giulia-venturi/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
@@ -53,12 +68,22 @@
   </url>
   
   <url>
+    <loc>https://gsarti.com/publication/interpreting-nlms-for-lca/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gsarti.com/tags/italian-language/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://gsarti.com/publication/italian-transformers/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/language-modeling/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
@@ -83,7 +108,17 @@
   </url>
   
   <url>
+    <loc>https://gsarti.com/tags/probing-tasks/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gsarti.com/publication_types/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/representational-similarity-analysis/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
@@ -94,6 +129,16 @@
   
   <url>
     <loc>https://gsarti.com/tags/self-training/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/surprisal/</loc>
+    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gsarti.com/tags/syntaxgym/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url>
   
@@ -139,11 +184,6 @@
   
   <url>
     <loc>https://gsarti.com/tags/iclr2020/</loc>
-    <lastmod>2020-05-03T19:27:36+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gsarti.com/tags/language-modeling/</loc>
     <lastmod>2020-05-03T19:27:36+02:00</lastmod>
   </url>
   

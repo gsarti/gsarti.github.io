@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lucia Busso | Gabriele Sarti</title>
+    <link>https://gsarti.com/authors/lucia-busso/</link>
+      <atom:link href="https://gsarti.com/authors/lucia-busso/index.xml" rel="self" type="application/rss+xml" />
+    <description>Lucia Busso</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Sun, 06 Jun 2021 09:47:38 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Lucia Busso</title>
+      <link>https://gsarti.com/authors/lucia-busso/</link>
+    </image>
+    
+    <item>
+      <title>Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students</title>
+      <link>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</link>
+      <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

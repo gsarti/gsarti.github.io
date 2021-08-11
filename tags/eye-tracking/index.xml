@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eye-tracking | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/eye-tracking/</link>
+      <atom:link href="https://gsarti.com/tags/eye-tracking/index.xml" rel="self" type="application/rss+xml" />
+    <description>Eye-tracking</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Sun, 06 Jun 2021 09:47:38 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Eye-tracking</title>
+      <link>https://gsarti.com/tags/eye-tracking/</link>
+    </image>
+    
+    <item>
+      <title>That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</title>
+      <link>https://gsarti.com/publication/that-looks-hard/</link>
+      <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/that-looks-hard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interpreting Neural Language Models for Linguistic Complexity Assessment</title>
+      <link>https://gsarti.com/publication/interpreting-nlms-for-lca/</link>
+      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/interpreting-nlms-for-lca/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

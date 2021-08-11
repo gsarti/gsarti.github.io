@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multimodality | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/multimodality/</link>
+      <atom:link href="https://gsarti.com/tags/multimodality/index.xml" rel="self" type="application/rss+xml" />
+    <description>Multimodality</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Multimodality</title>
+      <link>https://gsarti.com/tags/multimodality/</link>
+    </image>
+    
+    <item>
+      <title>Contrastive Image-Text Pretraining for Italian</title>
+      <link>https://gsarti.com/project/clip-italian/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/project/clip-italian/</guid>
+      <description>&lt;p&gt;CLIP is a multimodel model that can learn to represent images and text jointly in the same space. In this project, we aim to propose the first CLIP model trained on Italian data, that in this context can be considered a low resource language. Using a few techniques, we have been able to fine-tune a SOTA Italian CLIP model with only 1.4 million training samples.&lt;/p&gt;
+&lt;p&gt;For more information, refer to our &lt;a href=&#34;https://huggingface.co/spaces/clip-italian/clip-italian-demo&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,12 +5,38 @@
     <link>https://gsarti.com/authors/gabriele-sarti/</link>
       <atom:link href="https://gsarti.com/authors/gabriele-sarti/index.xml" rel="self" type="application/rss+xml" />
     <description>Gabriele Sarti</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2020</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/profile.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Gabriele Sarti</title>
       <link>https://gsarti.com/authors/gabriele-sarti/</link>
     </image>
+    
+    <item>
+      <title>Contrastive Image-Text Pretraining for Italian</title>
+      <link>https://gsarti.com/project/clip-italian/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/project/clip-italian/</guid>
+      <description>&lt;p&gt;CLIP is a multimodel model that can learn to represent images and text jointly in the same space. In this project, we aim to propose the first CLIP model trained on Italian data, that in this context can be considered a low resource language. Using a few techniques, we have been able to fine-tune a SOTA Italian CLIP model with only 1.4 million training samples.&lt;/p&gt;
+&lt;p&gt;For more information, refer to our &lt;a href=&#34;https://huggingface.co/spaces/clip-italian/clip-italian-demo&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students</title>
+      <link>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</link>
+      <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</title>
+      <link>https://gsarti.com/publication/that-looks-hard/</link>
+      <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/that-looks-hard/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Interpreting Neural Language Models for Linguistic Complexity Assessment</title>
@@ -215,7 +241,7 @@
       <guid>https://gsarti.com/project/covid-browser/</guid>
       <description>&lt;p&gt;In 2020, more than 3,000 scientific studies have been published on the SARS-CoV-2 virus and on the Covid-19 pathology. The total number of articles on the topic of coronaviruses exceeds 40,000 units. Such a volume of scientific production makes it impossible for doctors and researchers to keep up with the latest discoveries without the support of adequate digital platforms that are currently nowhere in sight.&lt;/p&gt;
 &lt;p&gt;To make up for this shortcoming, we propose an artificial intelligence system associated with a web application to perform natural language semantic querying inside the &lt;a href=&#34;https://pages.semanticscholar.org/coronavirus-research&#34;&gt;COVID-19 Open Research Dataset&lt;/a&gt; published by the American nonprofit &lt;a href=&#34;https://allenai.org/&#34;&gt;AllenAI&lt;/a&gt;. The system leverages state-of-the-art neural language models trained on scientific publications in the biomedical domain for optimal retrieval performances. The adoption of the system aims to facilitate knowledge sharing across the scientific community and to accelerate the development of adequate drugs and vaccines to counter the ongoing pandemic.&lt;/p&gt;
-&lt;p&gt;The project is led by Gabriele Sarti in collaboration with &lt;a href=&#34;en.areasciencepark.it&#34;&gt;Area Science Park&lt;/a&gt; and the &lt;a href=&#34;ai-lc.it&#34;&gt;Italian Association of Computational Linguistics&lt;/a&gt;. The project is currently being tested and publicly available at &lt;a href=&#34;covidbrowser.areasciencepark.it&#34;&gt;covidbrowser.areasciencepark.it&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The project is led by Gabriele Sarti in collaboration with &lt;a href=&#34;en.areasciencepark.it&#34;&gt;Area Science Park&lt;/a&gt; and the &lt;a href=&#34;ai-lc.it&#34;&gt;Italian Association of Computational Linguistics&lt;/a&gt;. The project used to be publicly available at covidbrowser.areasciencepark.it. You can now refer to the code implementation on &lt;a href=&#34;https://github.com/gsarti/covid-papers-browser&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

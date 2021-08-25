@@ -5,12 +5,20 @@
     <link>https://gsarti.com/authors/sri-lakshmi/</link>
       <atom:link href="https://gsarti.com/authors/sri-lakshmi/index.xml" rel="self" type="application/rss+xml" />
     <description>Sri Lakshmi</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Thu, 19 Aug 2021 09:47:38 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Sri Lakshmi</title>
       <link>https://gsarti.com/authors/sri-lakshmi/</link>
     </image>
+    
+    <item>
+      <title>Contrastive Language-Image Pre-training for the Italian Language</title>
+      <link>https://gsarti.com/publication/clip-italian/</link>
+      <pubDate>Thu, 19 Aug 2021 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/clip-italian/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Contrastive Image-Text Pretraining for Italian</title>

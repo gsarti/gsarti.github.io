@@ -5,12 +5,28 @@
     <link>https://gsarti.com/tags/natural-language-processing/</link>
       <atom:link href="https://gsarti.com/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
     <description>Natural Language Processing</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Thu, 19 Aug 2021 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2021</copyright><lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Natural Language Processing</title>
       <link>https://gsarti.com/tags/natural-language-processing/</link>
     </image>
+    
+    <item>
+      <title>Empowering Human Translators via Interpretable Interactive Neural Machine Translation</title>
+      <link>https://gsarti.com/talk/xai4debugging21/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/xai4debugging21/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Characterizing Linguistic Complexity in Humans and Language Models</title>
+      <link>https://gsarti.com/talk/aperitivo-bocconi/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/aperitivo-bocconi/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Contrastive Language-Image Pre-training for the Italian Language</title>

@@ -5,12 +5,20 @@
     <link>https://gsarti.com/authors/gabriele-sarti/</link>
       <atom:link href="https://gsarti.com/authors/gabriele-sarti/index.xml" rel="self" type="application/rss+xml" />
     <description>Gabriele Sarti</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Wed, 09 Mar 2022 01:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Gabriele Sarti</title>
       <link>https://gsarti.com/authors/gabriele-sarti/</link>
     </image>
+    
+    <item>
+      <title>IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation</title>
+      <link>https://gsarti.com/publication/it5/</link>
+      <pubDate>Wed, 09 Mar 2022 01:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/it5/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Empowering Human Translators via Interpretable Interactive Neural Machine Translation</title>

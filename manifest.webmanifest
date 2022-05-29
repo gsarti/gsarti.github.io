@@ -2,8 +2,8 @@
   "name": "Gabriele Sarti",
   "short_name": "Gabriele Sarti",
   "lang": "en-us",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#5872ff",
+  "background_color": "#5872ff",
   "icons": [{
     "src": "../img/icon-192.png",
     "sizes": "192x192",

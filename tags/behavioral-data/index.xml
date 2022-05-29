@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Behavioral Data | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/behavioral-data/</link>
+      <atom:link href="https://gsarti.com/tags/behavioral-data/index.xml" rel="self" type="application/rss+xml" />
+    <description>Behavioral Data</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Behavioral Data</title>
+      <link>https://gsarti.com/tags/behavioral-data/</link>
+    </image>
+    
+    <item>
+      <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>
+      <link>https://gsarti.com/publication/divemt/</link>
+      <pubDate>Tue, 24 May 2022 01:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/divemt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards User-centric Interpretability of NLP Models</title>
+      <link>https://gsarti.com/talk/tech-talk-translated-2022/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/tech-talk-translated-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</title>
+      <link>https://gsarti.com/publication/that-looks-hard/</link>
+      <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/that-looks-hard/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

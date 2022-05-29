@@ -3,24 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gsarti.com/publication_types/3/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/ana-guerberof-arenas/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/antonio-toral/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/arianna-bisazza/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/behavioral-data/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/categories/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/dataset/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication/divemt/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/machine-translation/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/multilingual/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/post-editing/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication_types/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/academic/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/interpretability/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/linguistic-complexity/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/neural-machine-translation/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/tech-talk-translated-2022/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/conditional-language-generation/</loc>
     <lastmod>2022-03-09T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/</loc>
     <lastmod>2022-03-09T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/huggingface/</loc>
@@ -35,46 +98,13 @@
     <loc>https://gsarti.com/authors/malvina-nissim/</loc>
     <lastmod>2022-03-09T01:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/multilingual/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/pre-training/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/publication_types/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/publication/</loc>
     <lastmod>2022-03-09T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/t5/</loc>
     <lastmod>2022-03-09T01:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/academic/</loc>
-    <lastmod>2021-12-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/talk/xai4debugging21/</loc>
-    <lastmod>2021-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/interpretability/</loc>
-    <lastmod>2021-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/neural-machine-translation/</loc>
-    <lastmod>2021-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/talk/</loc>
-    <lastmod>2021-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
     <lastmod>2021-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/talk/aperitivo-bocconi/</loc>
@@ -165,6 +195,9 @@
     <lastmod>2021-06-06T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/activities/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/teaching/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/publication_types/7/</loc>

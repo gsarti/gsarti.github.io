@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post-editing | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/post-editing/</link>
+      <atom:link href="https://gsarti.com/tags/post-editing/index.xml" rel="self" type="application/rss+xml" />
+    <description>Post-editing</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Post-editing</title>
+      <link>https://gsarti.com/tags/post-editing/</link>
+    </image>
+    
+    <item>
+      <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>
+      <link>https://gsarti.com/publication/divemt/</link>
+      <pubDate>Tue, 24 May 2022 01:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/divemt/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

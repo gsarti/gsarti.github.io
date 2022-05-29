@@ -5,12 +5,20 @@
     <link>https://gsarti.com/publication/</link>
       <atom:link href="https://gsarti.com/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Selected Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Wed, 09 Mar 2022 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Selected Publications</title>
       <link>https://gsarti.com/publication/</link>
     </image>
+    
+    <item>
+      <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>
+      <link>https://gsarti.com/publication/divemt/</link>
+      <pubDate>Tue, 24 May 2022 01:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/divemt/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation</title>

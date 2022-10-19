@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/interpretability/</link>
       <atom:link href="https://gsarti.com/tags/interpretability/index.xml" rel="self" type="application/rss+xml" />
     <description>Interpretability</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Interpretability</title>
       <link>https://gsarti.com/tags/interpretability/</link>
     </image>
+    
+    <item>
+      <title>Towards User-centric Interpretability of Machine Translation Models</title>
+      <link>https://gsarti.com/talk/linguistics-lunch/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/linguistics-lunch/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Towards User-centric Interpretability of NLP Models</title>
@@ -53,9 +61,9 @@
     </item>
     
     <item>
-      <title>Italian Transformers Under the Linguistic Lens</title>
+      <title>Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</title>
       <link>https://gsarti.com/publication/italian-transformers/</link>
-      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://gsarti.com/publication/italian-transformers/</guid>
       <description></description>
     </item>

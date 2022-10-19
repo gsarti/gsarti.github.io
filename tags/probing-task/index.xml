@@ -5,7 +5,7 @@
     <link>https://gsarti.com/tags/probing-task/</link>
       <atom:link href="https://gsarti.com/tags/probing-task/index.xml" rel="self" type="application/rss+xml" />
     <description>Probing Task</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Probing Task</title>
@@ -13,9 +13,9 @@
     </image>
     
     <item>
-      <title>Italian Transformers Under the Linguistic Lens</title>
+      <title>Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</title>
       <link>https://gsarti.com/publication/italian-transformers/</link>
-      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://gsarti.com/publication/italian-transformers/</guid>
       <description></description>
     </item>

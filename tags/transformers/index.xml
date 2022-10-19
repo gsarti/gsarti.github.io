@@ -21,14 +21,6 @@
     </item>
     
     <item>
-      <title>Italian Transformers Under the Linguistic Lens</title>
-      <link>https://gsarti.com/publication/italian-transformers/</link>
-      <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/italian-transformers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>UmBERTo-MTSA@ AcCompl-It: Improving Complexity and Acceptability Prediction with Multi-task Learning on Self-Supervised Annotations</title>
       <link>https://gsarti.com/publication/umberto-mtsa/</link>
       <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
@@ -206,6 +198,14 @@
 &lt;p&gt;My hope for ICLR 2021 is to see more incremental work that puts together already-existing strategies to highlight the most effective combinations between them.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;See also:&lt;/em&gt; &lt;a href=&#34;https://towardsdatascience.com/whats-new-for-transformers-at-the-iclr-2020-conference-4285a4294792&#34;&gt;What’s new for Transformers at the ICLR 2020 Conference?&lt;/a&gt; by Sergi Castella&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</title>
+      <link>https://gsarti.com/publication/italian-transformers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/publication/italian-transformers/</guid>
+      <description></description>
     </item>
     
   </channel>

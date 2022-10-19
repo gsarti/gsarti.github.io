@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://gsarti.com/categories/academic/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/behavioral-data/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/interpretability/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/linguistic-complexity/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/neural-machine-translation/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/linguistics-lunch/</loc>
+    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://gsarti.com/publication_types/3/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
@@ -14,37 +59,16 @@
     <loc>https://gsarti.com/authors/arianna-bisazza/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/authors/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/behavioral-data/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/dataset/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/publication/divemt/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/machine-translation/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/multilingual/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/post-editing/</loc>
@@ -55,27 +79,6 @@
   </url><url>
     <loc>https://gsarti.com/publication/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/</loc>
-    <lastmod>2022-05-24T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/academic/</loc>
-    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/interpretability/</loc>
-    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/linguistic-complexity/</loc>
-    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/neural-machine-translation/</loc>
-    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/talk/</loc>
-    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
-    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/talk/tech-talk-translated-2022/</loc>
     <lastmod>2022-05-18T00:00:00+00:00</lastmod>
@@ -206,16 +209,7 @@
     <loc>https://gsarti.com/tags/garden-path-sentences/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/authors/giulia-venturi/</loc>
-    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/publication/interpreting-nlms-for-lca/</loc>
-    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/italian-language/</loc>
-    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/publication/italian-transformers/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/language-modeling/</loc>
@@ -225,9 +219,6 @@
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/neural-language-models/</loc>
-    <lastmod>2020-12-19T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/probing-task/</loc>
     <lastmod>2020-12-19T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/representational-similarity-analysis/</loc>
@@ -375,5 +366,13 @@
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/gsarti/</loc>
+  </url><url>
+    <loc>https://gsarti.com/authors/giulia-venturi/</loc>
+  </url><url>
+    <loc>https://gsarti.com/tags/italian-language/</loc>
+  </url><url>
+    <loc>https://gsarti.com/publication/italian-transformers/</loc>
+  </url><url>
+    <loc>https://gsarti.com/tags/probing-task/</loc>
   </url>
 </urlset>

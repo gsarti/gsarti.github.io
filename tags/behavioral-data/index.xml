@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/behavioral-data/</link>
       <atom:link href="https://gsarti.com/tags/behavioral-data/index.xml" rel="self" type="application/rss+xml" />
     <description>Behavioral Data</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Behavioral Data</title>
       <link>https://gsarti.com/tags/behavioral-data/</link>
     </image>
+    
+    <item>
+      <title>Towards User-centric Interpretability of Machine Translation Models</title>
+      <link>https://gsarti.com/talk/linguistics-lunch/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/linguistics-lunch/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>

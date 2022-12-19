@@ -5,12 +5,20 @@
     <link>https://gsarti.com/publication_types/1/</link>
       <atom:link href="https://gsarti.com/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Sun, 06 Jun 2021 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>1</title>
       <link>https://gsarti.com/publication_types/1/</link>
     </image>
+    
+    <item>
+      <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>
+      <link>https://gsarti.com/publication/divemt/</link>
+      <pubDate>Tue, 24 May 2022 01:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/divemt/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students</title>

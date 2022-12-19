@@ -2,31 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gsarti.com/categories/academic/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/authors/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/deep-learning/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/huggingface/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/project/inseq/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/interpretability/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/interpretability/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/ludwig-sickert/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/nils-feldhus/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/oskar-van-der-waals/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/project/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/academic/</loc>
     <lastmod>2022-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/behavioral-data/</loc>
     <lastmod>2022-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/categories/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/interpretability/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/linguistic-complexity/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
     <lastmod>2022-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/categories/natural-language-processing/</loc>
@@ -41,13 +68,10 @@
     <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
     <lastmod>2022-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/talk/linguistics-lunch/</loc>
     <lastmod>2022-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/publication_types/3/</loc>
+    <loc>https://gsarti.com/publication_types/1/</loc>
     <lastmod>2022-05-24T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/ana-guerberof-arenas/</loc>
@@ -83,13 +107,10 @@
     <loc>https://gsarti.com/talk/tech-talk-translated-2022/</loc>
     <lastmod>2022-05-18T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://gsarti.com/publication_types/3/</loc>
+    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
+  </url><url>
     <loc>https://gsarti.com/tags/conditional-language-generation/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2022-03-09T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/huggingface/</loc>
     <lastmod>2022-03-09T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/publication/it5/</loc>
@@ -157,12 +178,6 @@
   </url><url>
     <loc>https://gsarti.com/authors/dario-balestri/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/project/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/publication_types/1/</loc>
-    <lastmod>2021-06-06T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/alessio-miaschi/</loc>
     <lastmod>2021-06-06T09:47:38+02:00</lastmod>

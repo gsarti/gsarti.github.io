@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Natural Language Processing">
+  <meta name="description" content="An open-source library to democratize access to model interpretability for sequence generation models">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/publication_types/1/">
+  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/project/inseq/">
 
   
 
@@ -91,14 +91,12 @@
 
 
   
-  <link rel="alternate" href="/publication_types/1/index.xml" type="application/rss+xml" title="Gabriele Sarti">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://gsarti.com/publication_types/1/">
+  <link rel="canonical" href="https://gsarti.com/project/inseq/">
 
   
   
@@ -113,30 +111,82 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="https://gsarti.com/publication_types/1/">
-  <meta property="og:title" content="1 | Gabriele Sarti">
-  <meta property="og:description" content="PhD in Natural Language Processing">
-  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/img/avatar.jpg">
-  <meta property="twitter:image" content="https://gsarti.com/img/avatar.jpg"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="https://gsarti.com/project/inseq/">
+  <meta property="og:title" content="Inseq: An Interpretability Toolkit for Sequence Generation Models | Gabriele Sarti">
+  <meta property="og:description" content="An open-source library to democratize access to model interpretability for sequence generation models">
+  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/project/inseq/featured.jpg">
+  <meta property="twitter:image" content="https://gsarti.com/project/inseq/featured.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2022-05-24T01:00:00&#43;02:00">
+    
+      <meta property="article:published_time" content="2022-12-13T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2022-12-13T00:00:00&#43;00:00">
   
-
-  
-
-
-
 
   
 
 
+    
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gsarti.com/project/inseq/"
+  },
+  "headline": "Inseq: An Interpretability Toolkit for Sequence Generation Models",
+  
+  "image": [
+    "https://gsarti.com/project/inseq/featured.jpg"
+  ],
+  
+  "datePublished": "2022-12-13T00:00:00Z",
+  "dateModified": "2022-12-13T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gabriele Sarti",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gsarti.com/img/icon-512.png"
+    }
+  },
+  "description": "An open-source library to democratize access to model interpretability for sequence generation models"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
   
 
 
 
 
 
-  <title>1 | Gabriele Sarti</title>
+  <title>Inseq: An Interpretability Toolkit for Sequence Generation Models | Gabriele Sarti</title>
 
 </head>
 
@@ -433,6 +483,86 @@
 </nav>
 
 
+  <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Inseq: An Interpretability Toolkit for Sequence Generation Models</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>, <span><a href="/authors/nils-feldhus/">Nils Feldhus</a></span>, <span><a href="/authors/oskar-van-der-waals/">Oskar van der Waals</a></span>, <span><a href="/authors/ludwig-sickert/">Ludwig Sickert</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 13, 2022
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/interpretability/">Interpretability</a></span>
+  
+
+</div>
+
   
 
 
@@ -446,68 +576,352 @@
 
 
 
+
+<div class="btn-links mb-3">
   
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>1</h1>
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://inseq.readthedocs.io/en/latest/" target="_blank" rel="noopener">
+    <i class="fas fa-book mr-1"></i>
+    Docs
+  </a>
 
   
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
+    <i class="fab fa-github mr-1"></i>
+    Repository
+  </a>
 
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://pypi.org/project/inseq/" target="_blank" rel="noopener">
+    <i class="fab fa-python mr-1"></i>
+    PyPI
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://twitter.com/InseqDev" target="_blank" rel="noopener">
+    <i class="fab fa-twitter mr-1"></i>
+    Twitter
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    
+      
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/" >
+    <i class="fab fa-mastodon mr-1"></i>
+    Mastodon
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://huggingface.co/inseq" target="_blank" rel="noopener">
+    <i class="fab fa-codepen mr-1"></i>
+    Hugging Face
+  </a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 400px; max-height: 400px;">
+  <div style="position: relative">
+    <img src="/project/inseq/featured.jpg" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Inseq is a Pytorch-based hackable toolkit to democratize the study of interpretability for sequence generation models. Inseq supports a wide set of models from the 🤗 Transformers library and an ever-growing set of feature attribution methods, leveraging in part the widely-used Captum library. For a quick introduction to common use cases, see the <a href="https://inseq.readthedocs.io/examples/quickstart.html">Getting started with Inseq</a> page.</p>
+<p>Using Inseq, feature attribution maps that can be saved, reloaded, aggregated and visualized either as HTMLs (with Jupyter notebook support) or directly in the console using rich. Besides simple attribution, Inseq also supports features like step score extraction, attribution aggregation and attributed functions customization for more advanced use cases.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/huggingface/">HuggingFace</a>
+  
+  <a class="badge badge-light" href="/tags/deep-learning/">Deep Learning</a>
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/publication/divemt/">DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</a></h2>
-    <div class="article-style">
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
       
-      We introduce DivEMT, the first publicly available post-editing study of Neural Machine Translation over a typologically diverse set of target languages.
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/teaching-nlp-bracelets-menus/">Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students</a></h2>
-    <div class="article-style">
       
-      We developed an interactive workshop designed to illustrate the basic principles of NLP and computational linguistics to high school Italian students aged between 13 and 18 years, in the form of a game in which participants play the role of machines needing to solve some of the most common problems a computer faces in understanding language.
+        
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/that-looks-hard/">That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</a></h2>
-    <div class="article-style">
       
-      This paper investigates the relationship between two complementary perspectives in the human assessment of sentence complexity and how they are modeled in a neural language model (NLM), highlighting how linguistic information encoded in representations changes when the model learns to predict complexity.
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/umberto-mtsa/">UmBERTo-MTSA@ AcCompl-It: Improving Complexity and Acceptability Prediction with Multi-task Learning on Self-Supervised Annotations</a></h2>
-    <div class="article-style">
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/project/inseq/&amp;text=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
       
-      This work describes a self-supervised data augmentation approach used to improve learning models' performances when only a moderate amount of labeled data is available.
       
-    </div>
-  </div>
-  
-
-  
-
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/project/inseq/&amp;t=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models&amp;body=https://gsarti.com/project/inseq/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/project/inseq/&amp;title=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models%20https://gsarti.com/project/inseq/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/project/inseq/&amp;title=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/publication/it5/">IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation</a></li>
+      
+      <li><a href="/talk/aperitivo-bocconi/">Characterizing Linguistic Complexity in Humans and Language Models</a></li>
+      
+      <li><a href="/publication/clip-italian/">Contrastive Language-Image Pre-training for the Italian Language</a></li>
+      
+      <li><a href="/project/clip-italian/">Contrastive Image-Text Pretraining for Italian</a></li>
+      
+      <li><a href="/publication/that-looks-hard/">That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
 
       
 

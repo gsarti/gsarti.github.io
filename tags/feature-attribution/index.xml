@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feature Attribution | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/feature-attribution/</link>
+      <atom:link href="https://gsarti.com/tags/feature-attribution/index.xml" rel="self" type="application/rss+xml" />
+    <description>Feature Attribution</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Mon, 27 Feb 2023 09:47:38 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Feature Attribution</title>
+      <link>https://gsarti.com/tags/feature-attribution/</link>
+    </image>
+    
+    <item>
+      <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
+      <link>https://gsarti.com/publication/inseq/</link>
+      <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/inseq/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

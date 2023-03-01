@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/natural-language-generation/</link>
       <atom:link href="https://gsarti.com/tags/natural-language-generation/index.xml" rel="self" type="application/rss+xml" />
     <description>Natural Language Generation</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2022</copyright><lastBuildDate>Tue, 01 Dec 2020 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Mon, 27 Feb 2023 09:47:38 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Natural Language Generation</title>
       <link>https://gsarti.com/tags/natural-language-generation/</link>
     </image>
+    
+    <item>
+      <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
+      <link>https://gsarti.com/publication/inseq/</link>
+      <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/inseq/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ETC-NLG: End-to-end Topic-Conditioned Natural Language Generation</title>

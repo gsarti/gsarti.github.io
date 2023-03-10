@@ -5,7 +5,7 @@
     <link>https://gsarti.com/tags/neural-machine-translation/</link>
       <atom:link href="https://gsarti.com/tags/neural-machine-translation/index.xml" rel="self" type="application/rss+xml" />
     <description>Neural Machine Translation</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Fri, 10 Mar 2023 13:00:00 +0100</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Neural Machine Translation</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Introducing Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
       <link>https://gsarti.com/talk/gronlp-rg-inseq/</link>
-      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Mar 2023 13:00:00 +0100</pubDate>
       <guid>https://gsarti.com/talk/gronlp-rg-inseq/</guid>
       <description></description>
     </item>

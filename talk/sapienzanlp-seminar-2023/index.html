@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Natural Language Processing">
+  <meta name="description" content="This talk introduces the Inseq toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution, tuned lenses and causal mediation analysis.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/authors/">
+  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/talk/sapienzanlp-seminar-2023/">
 
   
 
@@ -91,14 +91,12 @@
 
 
   
-  <link rel="alternate" href="/authors/index.xml" type="application/rss+xml" title="Gabriele Sarti">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://gsarti.com/authors/">
+  <link rel="canonical" href="https://gsarti.com/talk/sapienzanlp-seminar-2023/">
 
   
   
@@ -113,19 +111,64 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="https://gsarti.com/authors/">
-  <meta property="og:title" content="Authors | Gabriele Sarti">
-  <meta property="og:description" content="PhD in Natural Language Processing">
+  <meta property="og:url" content="https://gsarti.com/talk/sapienzanlp-seminar-2023/">
+  <meta property="og:title" content="Inseq: An Interpretability Toolkit for Sequence Generation Models | Gabriele Sarti">
+  <meta property="og:description" content="This talk introduces the Inseq toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution, tuned lenses and causal mediation analysis.">
   <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/img/avatar.jpg">
   <meta property="twitter:image" content="https://gsarti.com/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2023-04-06T15:00:00&#43;01:00">
+    
+      <meta property="article:published_time" content="2022-05-19T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2023-04-06T15:00:00&#43;01:00">
   
 
   
 
 
 
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gsarti.com/talk/sapienzanlp-seminar-2023/"
+  },
+  "name": "Inseq: An Interpretability Toolkit for Sequence Generation Models",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Sapienza University of Rome",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "",
+      "postalCode": "",
+      "addressRegion": "",
+      "addressCountry": ""
+    }
+    
+  },
+  
+  
+  "startDate": "2023-04-06T15:00:00+01:00",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "description": "This talk introduces the Inseq toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution, tuned lenses and causal mediation analysis."
+}
+</script>
 
   
 
@@ -133,10 +176,13 @@
   
 
 
+  
 
 
 
-  <title>Authors | Gabriele Sarti</title>
+
+
+  <title>Inseq: An Interpretability Toolkit for Sequence Generation Models | Gabriele Sarti</title>
 
 </head>
 
@@ -433,6 +479,88 @@
 </nav>
 
 
+  <div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Inseq: An Interpretability Toolkit for Sequence Generation Models</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/natural-language-processing/">Natural Language Processing</a>, <a href="/categories/academic/">Academic</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
   
 
 
@@ -442,55 +570,302 @@
 
 
 
-
-
-
-
   
 
-  
+
+
+
+
+
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Authors</h1>
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
 
   
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/inseq/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1kUerbFWHP2cUHEcHVIDVZ9Heo587-SoUsifs0JaCt4M/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+</div>
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  <ul>
     
+      <br>
+    
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Apr 6, 2023
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            SapienzaNLP Invited Talk
+            
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Sapienza University of Rome</div>
+          
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-9"></div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/sequence-to-sequence/">Sequence-to-sequence</a>
+  
+  <a class="badge badge-light" href="/tags/language-modeling/">Language Modeling</a>
+  
+  <a class="badge badge-light" href="/tags/feature-attribution/">Feature Attribution</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
       
-      <li><a href="https://gsarti.com/authors/leonardo-stincone/">Leonardo Stincone</a></li>
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/talk/sapienzanlp-seminar-2023/&amp;text=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
-      <li><a href="https://gsarti.com/authors/gsarti/">Gabriele Sarti</a></li>
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/talk/sapienzanlp-seminar-2023/&amp;t=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
       
-      <li><a href="https://gsarti.com/authors/giulia-venturi/">Giulia Venturi</a></li>
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models&amp;body=https://gsarti.com/talk/sapienzanlp-seminar-2023/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/talk/sapienzanlp-seminar-2023/&amp;title=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models%20https://gsarti.com/talk/sapienzanlp-seminar-2023/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/talk/sapienzanlp-seminar-2023/&amp;title=Inseq:%20An%20Interpretability%20Toolkit%20for%20Sequence%20Generation%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
   
-<nav>
-  <ul class="pagination justify-content-center">
+  
     
-    <li class="page-item"><a class="page-link" href="/authors/page/3/">&laquo;</a></li>
-    
-    
-  </ul>
-</nav>
+  
+  
 
 
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/indeep-meeting-mar23/">Advanced XAI Techniques and Inseq: An Interpretability Toolkit for Sequence Generation Models</a></li>
+      
+      <li><a href="/talk/gronlp-rg-inseq/">Introducing Inseq: An Interpretability Toolkit for Sequence Generation Models</a></li>
+      
+      <li><a href="/talk/linguistics-lunch/">Towards User-centric Interpretability of Machine Translation Models</a></li>
+      
+      <li><a href="/talk/tech-talk-translated-2022/">Towards User-centric Interpretability of NLP Models</a></li>
+      
+      <li><a href="/talk/xai4debugging21/">Empowering Human Translators via Interpretable Interactive Neural Machine Translation</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
 </div>
 
       

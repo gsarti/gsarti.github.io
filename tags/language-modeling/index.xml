@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/language-modeling/</link>
       <atom:link href="https://gsarti.com/tags/language-modeling/index.xml" rel="self" type="application/rss+xml" />
     <description>Language Modeling</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 06 Apr 2023 15:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Tue, 23 May 2023 16:00:00 +0100</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Language Modeling</title>
       <link>https://gsarti.com/tags/language-modeling/</link>
     </image>
+    
+    <item>
+      <title>Post-hoc Interpretability for Neural Language Models</title>
+      <link>https://gsarti.com/talk/ailo-xai-2023/</link>
+      <pubDate>Tue, 23 May 2023 16:00:00 +0100</pubDate>
+      <guid>https://gsarti.com/talk/ailo-xai-2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>

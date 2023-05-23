@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/feature-attribution/</link>
       <atom:link href="https://gsarti.com/tags/feature-attribution/index.xml" rel="self" type="application/rss+xml" />
     <description>Feature Attribution</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 06 Apr 2023 15:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Tue, 23 May 2023 16:00:00 +0100</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Feature Attribution</title>
       <link>https://gsarti.com/tags/feature-attribution/</link>
     </image>
+    
+    <item>
+      <title>Post-hoc Interpretability for Neural Language Models</title>
+      <link>https://gsarti.com/talk/ailo-xai-2023/</link>
+      <pubDate>Tue, 23 May 2023 16:00:00 +0100</pubDate>
+      <guid>https://gsarti.com/talk/ailo-xai-2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
@@ -25,6 +33,14 @@
       <link>https://gsarti.com/talk/indeep-meeting-mar23/</link>
       <pubDate>Thu, 23 Mar 2023 14:00:00 +0100</pubDate>
       <guid>https://gsarti.com/talk/indeep-meeting-mar23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Are Character-level Translations Worth the Wait? Comparing Character- and Subword-level Models for Machine Translation</title>
+      <link>https://gsarti.com/publication/char-mt-analysis/</link>
+      <pubDate>Tue, 28 Feb 2023 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/char-mt-analysis/</guid>
       <description></description>
     </item>
     

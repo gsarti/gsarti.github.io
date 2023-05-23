@@ -5,12 +5,20 @@
     <link>https://gsarti.com/authors/arianna-bisazza/</link>
       <atom:link href="https://gsarti.com/authors/arianna-bisazza/index.xml" rel="self" type="application/rss+xml" />
     <description>Arianna Bisazza</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Tue, 28 Feb 2023 09:47:38 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Arianna Bisazza</title>
       <link>https://gsarti.com/authors/arianna-bisazza/</link>
     </image>
+    
+    <item>
+      <title>Are Character-level Translations Worth the Wait? Comparing Character- and Subword-level Models for Machine Translation</title>
+      <link>https://gsarti.com/publication/char-mt-analysis/</link>
+      <pubDate>Tue, 28 Feb 2023 09:47:38 +0200</pubDate>
+      <guid>https://gsarti.com/publication/char-mt-analysis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>

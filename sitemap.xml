@@ -2,28 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://gsarti.com/categories/academic/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/feature-attribution/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/interpretability/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/language-modeling/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/cosmo-units-2023/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2023-06-01T14:30:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/alessio-miaschi/</loc>
+    <lastmod>2023-05-31T14:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/ailc-lcl-2023/</loc>
+    <lastmod>2023-05-31T14:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/probing-classifiers/</loc>
+    <lastmod>2023-05-31T14:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://gsarti.com/publication_types/1/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/anna-currey/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/authors/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/authors/benjamin-hsu/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/categories/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/georgiana-dinu/</loc>
@@ -39,12 +78,6 @@
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/multilingual/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/phu-mon-htut/</loc>
@@ -65,31 +98,10 @@
     <loc>https://gsarti.com/tags/style-transfer/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/authors/xing-niu/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/categories/academic/</loc>
-    <lastmod>2023-05-23T16:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/feature-attribution/</loc>
-    <lastmod>2023-05-23T16:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/interpretability/</loc>
-    <lastmod>2023-05-23T16:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/language-modeling/</loc>
-    <lastmod>2023-05-23T16:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/talk/ailo-xai-2023/</loc>
-    <lastmod>2023-05-23T16:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/talk/</loc>
-    <lastmod>2023-05-23T16:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
     <lastmod>2023-05-23T16:00:00+01:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/talk/sapienzanlp-seminar-2023/</loc>
@@ -253,9 +265,6 @@
   </url><url>
     <loc>https://gsarti.com/authors/dario-balestri/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/alessio-miaschi/</loc>
-    <lastmod>2021-06-06T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/claudia-roberta-combei/</loc>
     <lastmod>2021-06-06T09:47:38+02:00</lastmod>

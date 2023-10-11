@@ -5,12 +5,44 @@
     <link>https://gsarti.com/tags/natural-language-processing/</link>
       <atom:link href="https://gsarti.com/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
     <description>Natural Language Processing</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Sun, 02 Jul 2023 15:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 02 Nov 2023 10:30:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Natural Language Processing</title>
       <link>https://gsarti.com/tags/natural-language-processing/</link>
     </image>
+    
+    <item>
+      <title>Explaining Language Models with Inseq</title>
+      <link>https://gsarti.com/talk/indeep-masterclass-nov23/</link>
+      <pubDate>Thu, 02 Nov 2023 10:30:00 +0200</pubDate>
+      <guid>https://gsarti.com/talk/indeep-masterclass-nov23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Post-hoc Interpretability for Language Models</title>
+      <link>https://gsarti.com/talk/escience-signlp-seminar-oct23/</link>
+      <pubDate>Thu, 26 Oct 2023 13:30:00 +0200</pubDate>
+      <guid>https://gsarti.com/talk/escience-signlp-seminar-oct23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers</title>
+      <link>https://gsarti.com/publication/decoderlens/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/decoderlens/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
+      <link>https://gsarti.com/publication/pecore/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/pecore/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Post-hoc Interpretability for NLG &amp; Inseq: an Interpretability Toolkit for Sequence Generation Models</title>

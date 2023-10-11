@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Industry-oriented | Gabriele Sarti</title>
+    <link>https://gsarti.com/categories/industry-oriented/</link>
+      <atom:link href="https://gsarti.com/categories/industry-oriented/index.xml" rel="self" type="application/rss+xml" />
+    <description>Industry-oriented</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 02 Nov 2023 10:30:00 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Industry-oriented</title>
+      <link>https://gsarti.com/categories/industry-oriented/</link>
+    </image>
+    
+    <item>
+      <title>Explaining Language Models with Inseq</title>
+      <link>https://gsarti.com/talk/indeep-masterclass-nov23/</link>
+      <pubDate>Thu, 02 Nov 2023 10:30:00 +0200</pubDate>
+      <guid>https://gsarti.com/talk/indeep-masterclass-nov23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards User-centric Interpretability of NLP Models</title>
+      <link>https://gsarti.com/talk/tech-talk-translated-2022/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/talk/tech-talk-translated-2022/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

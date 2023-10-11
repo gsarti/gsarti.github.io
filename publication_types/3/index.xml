@@ -5,12 +5,28 @@
     <link>https://gsarti.com/publication_types/3/</link>
       <atom:link href="https://gsarti.com/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
     <description>3</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Tue, 28 Feb 2023 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>3</title>
       <link>https://gsarti.com/publication_types/3/</link>
     </image>
+    
+    <item>
+      <title>DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers</title>
+      <link>https://gsarti.com/publication/decoderlens/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/decoderlens/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
+      <link>https://gsarti.com/publication/pecore/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/pecore/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Are Character-level Translations Worth the Wait? Comparing Character- and Subword-level Models for Machine Translation</title>

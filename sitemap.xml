@@ -2,46 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gsarti.com/categories/academic/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <loc>https://gsarti.com/authors/arianna-bisazza/</loc>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/categories/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/indeep-masterclass-nov23/</loc>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/feature-attribution/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/grzegorz-chrupa%C5%82a/</loc>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/industry-oriented/</loc>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/interpretability/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/language-modeling/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/categories/natural-language-processing/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/talk/restcl-2023/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/talk/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/sequence-to-sequence/</loc>
-    <lastmod>2023-07-02T15:00:00+01:00</lastmod>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2023-11-02T10:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/academic/</loc>
+    <lastmod>2023-10-26T13:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/escience-signlp-seminar-oct23/</loc>
+    <lastmod>2023-10-26T13:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication_types/3/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/anna-langedijk/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/automatic-speech-recognition/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication/decoderlens/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/deep-learning/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/hosein-mohebbi/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/jaap-jumelet/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/logical-reasoning/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/machine-translation/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication_types/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/question-answering/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/willem-zuidema/</loc>
+    <lastmod>2023-10-05T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/context-usage/</loc>
+    <lastmod>2023-10-02T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/malvina-nissim/</loc>
+    <lastmod>2023-10-02T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication/pecore/</loc>
+    <lastmod>2023-10-02T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/restcl-2023/</loc>
     <lastmod>2023-07-02T15:00:00+01:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/talk/cosmo-units-2023/</loc>
@@ -65,16 +128,10 @@
     <loc>https://gsarti.com/authors/benjamin-hsu/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/authors/georgiana-dinu/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/large-language-models/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/machine-translation/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/maria-nadejde/</loc>
@@ -89,13 +146,7 @@
     <loc>https://gsarti.com/tags/prompting/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/publication_types/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/publication/ramp/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/publication/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/style-transfer/</loc>
@@ -119,16 +170,10 @@
     <loc>https://gsarti.com/tags/neural-machine-translation/</loc>
     <lastmod>2023-03-10T13:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/publication_types/3/</loc>
-    <lastmod>2023-02-28T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/authors/antonio-toral/</loc>
     <lastmod>2023-02-28T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/publication/char-mt-analysis/</loc>
-    <lastmod>2023-02-28T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/arianna-bisazza/</loc>
     <lastmod>2023-02-28T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/character-level/</loc>
@@ -150,9 +195,6 @@
     <lastmod>2023-02-27T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/ludwig-sickert/</loc>
-    <lastmod>2023-02-27T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/malvina-nissim/</loc>
     <lastmod>2023-02-27T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/natural-language-generation/</loc>

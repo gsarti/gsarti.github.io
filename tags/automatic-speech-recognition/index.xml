@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automatic Speech Recognition | Gabriele Sarti</title>
+    <link>https://gsarti.com/tags/automatic-speech-recognition/</link>
+      <atom:link href="https://gsarti.com/tags/automatic-speech-recognition/index.xml" rel="self" type="application/rss+xml" />
+    <description>Automatic Speech Recognition</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0200</lastBuildDate>
+    <image>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Automatic Speech Recognition</title>
+      <link>https://gsarti.com/tags/automatic-speech-recognition/</link>
+    </image>
+    
+    <item>
+      <title>DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers</title>
+      <link>https://gsarti.com/publication/decoderlens/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/decoderlens/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

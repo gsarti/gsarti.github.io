@@ -5,12 +5,28 @@
     <link>https://gsarti.com/authors/arianna-bisazza/</link>
       <atom:link href="https://gsarti.com/authors/arianna-bisazza/index.xml" rel="self" type="application/rss+xml" />
     <description>Arianna Bisazza</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Tue, 28 Feb 2023 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2023</copyright><lastBuildDate>Thu, 02 Nov 2023 10:30:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Arianna Bisazza</title>
       <link>https://gsarti.com/authors/arianna-bisazza/</link>
     </image>
+    
+    <item>
+      <title>Explaining Language Models with Inseq</title>
+      <link>https://gsarti.com/talk/indeep-masterclass-nov23/</link>
+      <pubDate>Thu, 02 Nov 2023 10:30:00 +0200</pubDate>
+      <guid>https://gsarti.com/talk/indeep-masterclass-nov23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
+      <link>https://gsarti.com/publication/pecore/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/pecore/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Are Character-level Translations Worth the Wait? Comparing Character- and Subword-level Models for Machine Translation</title>

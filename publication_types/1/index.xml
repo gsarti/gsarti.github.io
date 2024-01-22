@@ -5,12 +5,20 @@
     <link>https://gsarti.com/publication_types/1/</link>
       <atom:link href="https://gsarti.com/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Mon, 29 May 2023 09:47:38 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>1</title>
       <link>https://gsarti.com/publication_types/1/</link>
     </image>
+    
+    <item>
+      <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
+      <link>https://gsarti.com/publication/pecore/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/pecore/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>RAMP: Retrieval and Attribute-Marking Enhanced Prompting for Attribute-Controlled Translation</title>

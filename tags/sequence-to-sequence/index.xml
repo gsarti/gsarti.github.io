@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/sequence-to-sequence/</link>
       <atom:link href="https://gsarti.com/tags/sequence-to-sequence/index.xml" rel="self" type="application/rss+xml" />
     <description>Sequence-to-sequence</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Thu, 02 Nov 2023 10:30:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Fri, 01 Mar 2024 17:00:00 +0100</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Sequence-to-sequence</title>
       <link>https://gsarti.com/tags/sequence-to-sequence/</link>
     </image>
+    
+    <item>
+      <title>Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers</title>
+      <link>https://gsarti.com/talk/sheffield-seminar-2024/</link>
+      <pubDate>Fri, 01 Mar 2024 17:00:00 +0100</pubDate>
+      <guid>https://gsarti.com/talk/sheffield-seminar-2024/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Explaining Language Models with Inseq</title>

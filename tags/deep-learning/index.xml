@@ -63,6 +63,15 @@
     </item>
     
     <item>
+      <title>PECoRe: Plausibility Evaluation of Context Usage in Language Models</title>
+      <link>https://gsarti.com/project/pecore/</link>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://gsarti.com/project/pecore/</guid>
+      <description>&lt;p&gt;PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq interpretability library&lt;/a&gt; and can be easily used thanks to the &lt;code&gt;inseq attribute-context&lt;/code&gt; command. The framework is described in detail in the paper &lt;a href=&#34;https://openreview.net/forum?id=XTHfNGI3zT&#34;&gt;Quantifying the Plausibility of Context Reliance in Neural Machine Translation&lt;/a&gt;, published at ICLR 2024.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation</title>
       <link>https://gsarti.com/publication/it5/</link>
       <pubDate>Wed, 09 Mar 2022 01:00:00 +0200</pubDate>

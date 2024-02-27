@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution. Finally, the PECoRe framework is presented as a mean to evaluate the plausibility of context usage in language models.">
+  <meta name="description" content="An interpretability framework to detect and attribute context usage in language models&#39; generations">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/talk/escience-signlp-seminar-oct23/">
+  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/project/pecore/">
 
   
 
@@ -96,7 +96,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://gsarti.com/talk/escience-signlp-seminar-oct23/">
+  <link rel="canonical" href="https://gsarti.com/project/pecore/">
 
   
   
@@ -111,24 +111,29 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="https://gsarti.com/talk/escience-signlp-seminar-oct23/">
-  <meta property="og:title" content="Post-hoc Interpretability for Language Models | Gabriele Sarti">
-  <meta property="og:description" content="This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution. Finally, the PECoRe framework is presented as a mean to evaluate the plausibility of context usage in language models.">
-  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/img/avatar.jpg">
-  <meta property="twitter:image" content="https://gsarti.com/img/avatar.jpg"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="https://gsarti.com/project/pecore/">
+  <meta property="og:title" content="PECoRe: Plausibility Evaluation of Context Usage in Language Models | Gabriele Sarti">
+  <meta property="og:description" content="An interpretability framework to detect and attribute context usage in language models&#39; generations">
+  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/project/pecore/featured.jpg">
+  <meta property="twitter:image" content="https://gsarti.com/project/pecore/featured.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2023-10-11T00:00:00&#43;02:00">
+      <meta property="article:published_time" content="2022-12-13T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2023-10-26T13:30:00&#43;02:00">
+    <meta property="article:modified_time" content="2022-12-13T00:00:00&#43;00:00">
   
 
   
 
 
-
-  
     
+
+
+
+
+
+
+
 
 
 
@@ -136,53 +141,52 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Event",
+  "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://gsarti.com/talk/escience-signlp-seminar-oct23/"
+    "@id": "https://gsarti.com/project/pecore/"
   },
-  "name": "Post-hoc Interpretability for Language Models",
+  "headline": "PECoRe: Plausibility Evaluation of Context Usage in Language Models",
   
-  "location": {
-    "@type": "Place",
-    "name": "eScience Center, Amsterdam",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "",
-      "addressLocality": "",
-      "postalCode": "",
-      "addressRegion": "",
-      "addressCountry": ""
-    }
-    
-  },
+  "image": [
+    "https://gsarti.com/project/pecore/featured.jpg"
+  ],
   
+  "datePublished": "2022-12-13T00:00:00Z",
+  "dateModified": "2022-12-13T00:00:00Z",
   
-  "startDate": "2023-10-26T13:30:00+02:00",
-  
-  
-  "performer": {
+  "author": {
     "@type": "Person",
     "name": "Gabriele Sarti"
   },
   
-  "description": "This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution. Finally, the PECoRe framework is presented as a mean to evaluate the plausibility of context usage in language models."
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gabriele Sarti",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gsarti.com/img/icon-512.png"
+    }
+  },
+  "description": "An interpretability framework to detect and attribute context usage in language models' generations"
 }
 </script>
 
   
 
-
   
 
 
   
 
 
+  
 
 
 
-  <title>Post-hoc Interpretability for Language Models | Gabriele Sarti</title>
+
+
+  <title>PECoRe: Plausibility Evaluation of Context Usage in Language Models | Gabriele Sarti</title>
 
 </head>
 
@@ -362,7 +366,7 @@
 </nav>
 
 
-  <div class="pub">
+  <article class="article article-project">
 
   
 
@@ -377,18 +381,24 @@
 
 
 
-  
+
+
+
+
+
+
+
 
   
   
-  
+
+
 <div class="article-container pt-3">
-  <h1>Post-hoc Interpretability for Language Models</h1>
+  <h1>PECoRe: Plausibility Evaluation of Context Usage in Language Models</h1>
 
   
 
   
-    
 
 
 <div class="article-metadata">
@@ -403,12 +413,20 @@
 
 
   
-  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>, <span>Grzegorz Chrupała</span>, <span><a href="/authors/malvina-nissim/">Malvina Nissim</a></span>, <span><a href="/authors/arianna-bisazza/">Arianna Bisazza</a></span>
 
   </div>
   
   
 
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 13, 2022
+  </span>
   
 
   
@@ -423,12 +441,12 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/natural-language-processing/">Natural Language Processing</a>, <a href="/categories/academic/">Academic</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/interpretability/">Interpretability</a></span>
   
 
 </div>
 
-    
+  
 
 
 
@@ -460,122 +478,71 @@
 
 
 
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
-  Code
-</a>
 
 
 
 
-  
-  <a class="btn btn-outline-primary my-1 mr-1" href="/project/inseq/">
-    Project
-  </a>
-  
+
+
+
+
+
+
+
 
   
-  <a class="btn btn-outline-primary my-1 mr-1" href="/project/pecore/">
-    Project
-  </a>
-  
-
-
-
-
-
   
   
     
   
-<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1odm8--A5CCjof_gTiYV6WuYs6T1EXHURGCcqcpxBQq0/edit?usp=sharing" target="_blank" rel="noopener">
-  Slides
-</a>
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/gsarti/pecore" target="_blank" rel="noopener">
+    <i class="fab fa-github mr-1"></i>
+    Repository
+  </a>
 
-
-
-
-
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://huggingface.co/papers/2310.01188" target="_blank" rel="noopener">
+    <i class="fab fa-codepen mr-1"></i>
+    Hugging Face
+  </a>
 
 
 </div>
 
 
-  
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 500px; max-height: 500px;">
+  <div style="position: relative">
+    <img src="/project/pecore/featured.jpg" alt="" class="featured-image">
+    
+  </div>
 </div>
 
 
 
   <div class="article-container">
 
-    
-      <br>
-    
-
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Date</div>
-          <div class="col-12 col-md-9">
-            Oct 26, 2023
-          </div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Event</div>
-          <div class="col-12 col-md-9">
-            
-            eScience Center SIG-NLP Seminar
-            
-          </div>
-        </div> 
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    
-
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Location</div>
-          <div class="col-12 col-md-9">eScience Center, Amsterdam</div>
-          
-            
-            
-            
-            
-            
-            
-            
-            <div class="col-md-3"></div>
-            <div class="col-12 col-md-9"></div>
-          
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    
-
-    <div class="space-below"></div>
-
     <div class="article-style">
-      
+      <p>PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the <a href="https://github.com/inseq-team/inseq">Inseq interpretability library</a> and can be easily used thanks to the <code>inseq attribute-context</code> command. The framework is described in detail in the paper <a href="https://openreview.net/forum?id=XTHfNGI3zT">Quantifying the Plausibility of Context Reliance in Neural Machine Translation</a>, published at ICLR 2024.</p>
+
     </div>
 
     
@@ -590,11 +557,9 @@
   
   <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
   
-  <a class="badge badge-light" href="/tags/sequence-to-sequence/">Sequence-to-sequence</a>
+  <a class="badge badge-light" href="/tags/deep-learning/">Deep Learning</a>
   
-  <a class="badge badge-light" href="/tags/language-modeling/">Language Modeling</a>
-  
-  <a class="badge badge-light" href="/tags/feature-attribution/">Feature Attribution</a>
+  <a class="badge badge-light" href="/tags/natural-language-generation/">Natural Language Generation</a>
   
 </div>
 
@@ -611,7 +576,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/talk/escience-signlp-seminar-oct23/&amp;text=Post-hoc%20Interpretability%20for%20Language%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/project/pecore/&amp;text=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -624,7 +589,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/talk/escience-signlp-seminar-oct23/&amp;t=Post-hoc%20Interpretability%20for%20Language%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/project/pecore/&amp;t=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -637,7 +602,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Post-hoc%20Interpretability%20for%20Language%20Models&amp;body=https://gsarti.com/talk/escience-signlp-seminar-oct23/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models&amp;body=https://gsarti.com/project/pecore/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -650,7 +615,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/talk/escience-signlp-seminar-oct23/&amp;title=Post-hoc%20Interpretability%20for%20Language%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/project/pecore/&amp;title=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -663,7 +628,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Post-hoc%20Interpretability%20for%20Language%20Models%20https://gsarti.com/talk/escience-signlp-seminar-oct23/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models%20https://gsarti.com/project/pecore/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -676,7 +641,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/talk/escience-signlp-seminar-oct23/&amp;title=Post-hoc%20Interpretability%20for%20Language%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/project/pecore/&amp;title=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -738,15 +703,15 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/talk/restcl-2023/">Post-hoc Interpretability for NLG &amp; Inseq: an Interpretability Toolkit for Sequence Generation Models</a></li>
+      <li><a href="/project/inseq/">Inseq: An Interpretability Toolkit for Sequence Generation Models</a></li>
       
-      <li><a href="/talk/ailc-lcl-2023/">Explaining Neural Language Models from Internal Representations to Model Predictions</a></li>
+      <li><a href="/talk/aperitivo-bocconi/">Characterizing Linguistic Complexity in Humans and Language Models</a></li>
       
-      <li><a href="/talk/cosmo-units-2023/">Post-hoc Interpretability for Neural Language Models</a></li>
+      <li><a href="/publication/that-looks-hard/">That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</a></li>
       
-      <li><a href="/talk/ailo-xai-2023/">Post-hoc Interpretability for Neural Language Models</a></li>
+      <li><a href="/publication/etc-nlg/">ETC-NLG: End-to-end Topic-Conditioned Natural Language Generation</a></li>
       
-      <li><a href="/talk/indeep-meeting-mar23/">Advanced XAI Techniques and Inseq: An Interpretability Toolkit for Sequence Generation Models</a></li>
+      <li><a href="/publication/interpreting-nlms-for-lca/">Interpreting Neural Language Models for Linguistic Complexity Assessment</a></li>
       
     </ul>
   </div>
@@ -754,8 +719,301 @@
 
 
 
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+        <h2>Talks</h2>
+        
+          
+            
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/talk/sheffield-seminar-2024/" >Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers</a>
+    </h3>
+
+    
+    <div class="article-style">
+      This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence …
+    </div>
+    
+    <div class="stream-meta article-metadata">
+
+      <div class="article-conference">
+        
+      </div>
+      
+      <div>
+        <span>
+          Mar 1, 2024
+        </span>
+        
+        <span class="middot-divider"></span>
+        <span>Online</span>
+        
+        
+        <span class="middot-divider"></span>
+        <span>SheffieldNLP Invited Talk</span>
+        
+      </div>
+      
+
+      
+      <div>
+        
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/project/inseq/">
+    Project
+  </a>
+  
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/project/pecore/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://docs.google.com/presentation/d/1gTmQpFeonVOCSDM9uh0bQlabCvslxwdK-D32twj3lo0/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
   </div>
 </div>
+
+          
+        
+          
+            
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/talk/escience-signlp-seminar-oct23/" >Post-hoc Interpretability for Language Models</a>
+    </h3>
+
+    
+    <div class="article-style">
+      This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence …
+    </div>
+    
+    <div class="stream-meta article-metadata">
+
+      <div class="article-conference">
+        
+      </div>
+      
+      <div>
+        <span>
+          Oct 26, 2023
+        </span>
+        
+        <span class="middot-divider"></span>
+        <span>eScience Center, Amsterdam</span>
+        
+        
+        <span class="middot-divider"></span>
+        <span>eScience Center SIG-NLP Seminar</span>
+        
+      </div>
+      
+
+      
+      <div>
+        
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/project/inseq/">
+    Project
+  </a>
+  
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/project/pecore/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://docs.google.com/presentation/d/1odm8--A5CCjof_gTiYV6WuYs6T1EXHURGCcqcpxBQq0/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+          
+        
+      
+    </div>
+  </div>
+</article>
 
       
 

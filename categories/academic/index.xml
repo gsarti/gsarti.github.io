@@ -5,12 +5,20 @@
     <link>https://gsarti.com/categories/academic/</link>
       <atom:link href="https://gsarti.com/categories/academic/index.xml" rel="self" type="application/rss+xml" />
     <description>Academic</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Fri, 01 Mar 2024 17:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Fri, 26 Apr 2024 13:00:00 +0100</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Academic</title>
       <link>https://gsarti.com/categories/academic/</link>
     </image>
+    
+    <item>
+      <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
+      <link>https://gsarti.com/talk/gronlp-rg-pecore/</link>
+      <pubDate>Fri, 26 Apr 2024 13:00:00 +0100</pubDate>
+      <guid>https://gsarti.com/talk/gronlp-rg-pecore/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers</title>

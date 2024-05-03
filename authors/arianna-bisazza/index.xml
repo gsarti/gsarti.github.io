@@ -5,12 +5,20 @@
     <link>https://gsarti.com/authors/arianna-bisazza/</link>
       <atom:link href="https://gsarti.com/authors/arianna-bisazza/index.xml" rel="self" type="application/rss+xml" />
     <description>Arianna Bisazza</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Thu, 02 Nov 2023 10:30:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Wed, 01 May 2024 00:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Arianna Bisazza</title>
       <link>https://gsarti.com/authors/arianna-bisazza/</link>
     </image>
+    
+    <item>
+      <title>A Primer on the Inner Workings of Transformer-based Language Models</title>
+      <link>https://gsarti.com/publication/transformer-lm-inner-workings/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/transformer-lm-inner-workings/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Explaining Language Models with Inseq</title>
@@ -29,7 +37,7 @@
     </item>
     
     <item>
-      <title>Are Character-level Translations Worth the Wait? Comparing Character- and Subword-level Models for Machine Translation</title>
+      <title>Are Character-level Translations Worth the Wait? Comparing ByT5 and mT5 for Machine Translation</title>
       <link>https://gsarti.com/publication/char-mt-analysis/</link>
       <pubDate>Tue, 28 Feb 2023 09:47:38 +0200</pubDate>
       <guid>https://gsarti.com/publication/char-mt-analysis/</guid>

@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Natural Language Processing">
+  <meta name="description" content="This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/tags/feature-attribution/">
+  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/talk/area-pecore-2024/">
 
   
 
@@ -91,14 +91,12 @@
 
 
   
-  <link rel="alternate" href="/tags/feature-attribution/index.xml" type="application/rss+xml" title="Gabriele Sarti">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://gsarti.com/tags/feature-attribution/">
+  <link rel="canonical" href="https://gsarti.com/talk/area-pecore-2024/">
 
   
   
@@ -113,19 +111,64 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="https://gsarti.com/tags/feature-attribution/">
-  <meta property="og:title" content="Feature Attribution | Gabriele Sarti">
-  <meta property="og:description" content="PhD in Natural Language Processing">
+  <meta property="og:url" content="https://gsarti.com/talk/area-pecore-2024/">
+  <meta property="og:title" content="Quantifying the Plausibility of Context Reliance in Neural Machine Translation | Gabriele Sarti">
+  <meta property="og:description" content="This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented.">
   <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/img/avatar.jpg">
   <meta property="twitter:image" content="https://gsarti.com/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2024-05-20T09:00:00&#43;01:00">
+    
+      <meta property="article:published_time" content="2022-05-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2024-05-17T14:00:00&#43;01:00">
   
 
   
 
 
 
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gsarti.com/talk/area-pecore-2024/"
+  },
+  "name": "Quantifying the Plausibility of Context Reliance in Neural Machine Translation",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Area Science Park, Trieste, Italy",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Trieste",
+      "postalCode": "",
+      "addressRegion": "Friuli-Venezia Giulia",
+      "addressCountry": "Italy"
+    }
+    
+  },
+  
+  
+  "startDate": "2024-05-17T14:00:00+01:00",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "description": "This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented."
+}
+</script>
 
   
 
@@ -133,10 +176,13 @@
   
 
 
+  
 
 
 
-  <title>Feature Attribution | Gabriele Sarti</title>
+
+
+  <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation | Gabriele Sarti</title>
 
 </head>
 
@@ -316,6 +362,88 @@
 </nav>
 
 
+  <div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/natural-language-processing/">Natural Language Processing</a>, <a href="/categories/academic/">Academic</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
   
 
 
@@ -325,71 +453,300 @@
 
 
 
-
-
-
-
   
 
-  
+
+
+
+
+
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Feature Attribution</h1>
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/gsarti/pecore" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
 
   
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/pecore/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1ubX5TkSkUuamx5NHaoisMkoM5LY0ku7TeMkqkloXMJ4/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+</div>
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
-  <div>
-    <h2><a href="/talk/indeep-meeting-mar23/">Advanced XAI Techniques and Inseq: An Interpretability Toolkit for Sequence Generation Models</a></h2>
-    <div class="article-style">
-      
-      This talk introduces the Inseq toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution, tuned lenses and causal mediation analysis.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/char-mt-analysis/">Are Character-level Translations Worth the Wait? Comparing ByT5 and mT5 for Machine Translation</a></h2>
-    <div class="article-style">
-      
-      We analyze input contributions of char-level MT models and show how they modulate word and character-level information.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/inseq/">Inseq: An Interpretability Toolkit for Sequence Generation Models</a></h2>
-    <div class="article-style">
-      
-      We present Inseq, a Python library to democratize access to interpretability analyses of sequence generation models.
-      
-    </div>
-  </div>
-  
+    
+      <br>
+    
 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            May 17, 2024
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            Area Science Park Seminar
+            
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Area Science Park, Trieste, Italy</div>
+          
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-9">Trieste, Friuli-Venezia Giulia, Italy</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
   
-<nav>
-  <ul class="pagination justify-content-center">
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/neural-machine-translation/">Neural Machine Translation</a>
+  
+  <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/sequence-to-sequence/">Sequence-to-sequence</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-    <li class="page-item"><a class="page-link" href="/tags/feature-attribution/">&laquo;</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/talk/area-pecore-2024/&amp;text=Quantifying%20the%20Plausibility%20of%20Context%20Reliance%20in%20Neural%20Machine%20Translation" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/talk/area-pecore-2024/&amp;t=Quantifying%20the%20Plausibility%20of%20Context%20Reliance%20in%20Neural%20Machine%20Translation" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Quantifying%20the%20Plausibility%20of%20Context%20Reliance%20in%20Neural%20Machine%20Translation&amp;body=https://gsarti.com/talk/area-pecore-2024/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/talk/area-pecore-2024/&amp;title=Quantifying%20the%20Plausibility%20of%20Context%20Reliance%20in%20Neural%20Machine%20Translation" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Quantifying%20the%20Plausibility%20of%20Context%20Reliance%20in%20Neural%20Machine%20Translation%20https://gsarti.com/talk/area-pecore-2024/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/talk/area-pecore-2024/&amp;title=Quantifying%20the%20Plausibility%20of%20Context%20Reliance%20in%20Neural%20Machine%20Translation" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
-</nav>
+</div>
 
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/xai4debugging21/">Empowering Human Translators via Interpretable Interactive Neural Machine Translation</a></li>
+      
+      <li><a href="/talk/aperitivo-bocconi/">Characterizing Linguistic Complexity in Humans and Language Models</a></li>
+      
+      <li><a href="/publication/that-looks-hard/">That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</a></li>
+      
+      <li><a href="/publication/interpreting-nlms-for-lca/">Interpreting Neural Language Models for Linguistic Complexity Assessment</a></li>
+      
+      <li><a href="/publication/italian-transformers/">Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
 </div>
 
       

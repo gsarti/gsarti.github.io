@@ -5,7 +5,7 @@
     <link>https://gsarti.com/tags/pre-training/</link>
       <atom:link href="https://gsarti.com/tags/pre-training/index.xml" rel="self" type="application/rss+xml" />
     <description>Pre-training</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Wed, 09 Mar 2022 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Mon, 20 May 2024 01:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Pre-training</title>
@@ -13,9 +13,9 @@
     </image>
     
     <item>
-      <title>IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation</title>
+      <title>IT5: Text-to-text Pretraining for Italian Language Understanding and Generation</title>
       <link>https://gsarti.com/publication/it5/</link>
-      <pubDate>Wed, 09 Mar 2022 01:00:00 +0200</pubDate>
+      <pubDate>Mon, 20 May 2024 01:00:00 +0200</pubDate>
       <guid>https://gsarti.com/publication/it5/</guid>
       <description></description>
     </item>

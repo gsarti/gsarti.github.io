@@ -1,0 +1,5 @@
+PWD /Users/gsarti/Documents/projects/website-content/public/msc-thesis
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/web2c/texmf.cnf
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/gsarti/Documents/projects/website-content/public/msc-thesis/_main.tex
+OUTPUT _main.log

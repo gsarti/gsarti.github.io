@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/deep-learning/</link>
       <atom:link href="https://gsarti.com/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep Learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Mon, 20 May 2024 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Deep Learning</title>
       <link>https://gsarti.com/tags/deep-learning/</link>
     </image>
+    
+    <item>
+      <title>Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation</title>
+      <link>https://gsarti.com/publication/mirage/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/mirage/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>IT5: Text-to-text Pretraining for Italian Language Understanding and Generation</title>

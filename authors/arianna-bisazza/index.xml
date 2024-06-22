@@ -5,12 +5,20 @@
     <link>https://gsarti.com/authors/arianna-bisazza/</link>
       <atom:link href="https://gsarti.com/authors/arianna-bisazza/index.xml" rel="self" type="application/rss+xml" />
     <description>Arianna Bisazza</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Wed, 01 May 2024 00:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Arianna Bisazza</title>
       <link>https://gsarti.com/authors/arianna-bisazza/</link>
     </image>
+    
+    <item>
+      <title>Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation</title>
+      <link>https://gsarti.com/publication/mirage/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/mirage/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Primer on the Inner Workings of Transformer-based Language Models</title>

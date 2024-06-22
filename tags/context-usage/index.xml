@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/context-usage/</link>
       <atom:link href="https://gsarti.com/tags/context-usage/index.xml" rel="self" type="application/rss+xml" />
     <description>Context Usage</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Context Usage</title>
       <link>https://gsarti.com/tags/context-usage/</link>
     </image>
+    
+    <item>
+      <title>Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation</title>
+      <link>https://gsarti.com/publication/mirage/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0200</pubDate>
+      <guid>https://gsarti.com/publication/mirage/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>

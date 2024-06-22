@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="We propose DecoderLens, a method to evaluate the iterative refinement of representations in encoder-decoder Transformer models.">
+  <meta name="description" content="We propose DecoderLens, a method to interpret the iterative refinement of representations in encoder-decoder Transformer models.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://gsarti.com/publication/decoderlens/">
@@ -113,7 +113,7 @@
   <meta property="og:site_name" content="Gabriele Sarti">
   <meta property="og:url" content="https://gsarti.com/publication/decoderlens/">
   <meta property="og:title" content="DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers | Gabriele Sarti">
-  <meta property="og:description" content="We propose DecoderLens, a method to evaluate the iterative refinement of representations in encoder-decoder Transformer models.">
+  <meta property="og:description" content="We propose DecoderLens, a method to interpret the iterative refinement of representations in encoder-decoder Transformer models.">
   <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/publication/decoderlens/featured.png">
   <meta property="twitter:image" content="https://gsarti.com/publication/decoderlens/featured.png"><meta property="og:locale" content="en-us">
   
@@ -168,7 +168,7 @@
       "url": "https://gsarti.com/img/icon-512.png"
     }
   },
-  "description": "We propose DecoderLens, a method to evaluate the iterative refinement of representations in encoder-decoder Transformer models."
+  "description": "We propose DecoderLens, a method to interpret the iterative refinement of representations in encoder-decoder Transformer models."
 }
 </script>
 
@@ -516,6 +516,22 @@
   
     
   
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://aclanthology.org/2024.findings-naacl.296/" target="_blank" rel="noopener">
+    <i class="fas fa-file-alt mr-1"></i>
+    Paper
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
   <a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/abs/2310.03686" target="_blank" rel="noopener">
     <i class="fas fa-file-contract mr-1"></i>
     ArXiv
@@ -557,7 +573,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract">In recent years, many interpretability methods have been proposed to help interpret the internal states of Transformer-models, at different levels of precision and complexity. Here, to analyze encoder-decoder Transformers, we propose a simple, new method: DecoderLens. Inspired by the LogitLens (for decoder-only Transformers), this method involves allowing the decoder to cross-attend representations of intermediate encoder layers instead of using the final encoder output, as is normally done in encoder-decoder models. The method thus maps previously uninterpretable vector representations to human-interpretable sequences of words or symbols. We report results from the DecoderLens applied to models trained on question answering, logical reasoning, speech recognition and machine translation. The DecoderLens reveals several specific subtasks that are solved at low or intermediate layers, shedding new light on the information flow inside the encoder component of this important class of models.</p>
+    <p class="pub-abstract">In recent years, several interpretability methods have been proposed to interpret the inner workings of Transformer models at different levels of precision and complexity.In this work, we propose a simple but effective technique to analyze encoder-decoder Transformers. Our method, which we name DecoderLens, allows the decoder to cross-attend representations of intermediate encoder activations instead of using the default final encoder output.The method thus maps uninterpretable intermediate vector representations to human-interpretable sequences of words or symbols, shedding new light on the information flow in this popular but understudied class of models.We apply DecoderLens to question answering, logical reasoning, speech recognition and machine translation models, finding that simpler subtasks are solved with high precision by low and intermediate encoder layers.</p>
     
 
     
@@ -569,8 +585,8 @@
           <div class="col-12 col-md-9">
             
             
-            <a href="/publication/#3">
-              Preprint
+            <a href="/publication/#1">
+              Conference paper
             </a>
             
           </div>
@@ -587,7 +603,7 @@
       <div class="col-md-10">
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">Arxiv Preprint</div>
+          <div class="col-12 col-md-9">Findings of the Association for Computational Linguistics: NAACL 2024</div>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -617,7 +633,7 @@
   
   <a class="badge badge-light" href="/tags/automatic-speech-recognition/">Automatic Speech Recognition</a>
   
-  <a class="badge badge-light" href="/tags/question-answering/">Question Answering</a>
+  <a class="badge badge-light" href="/tags/factual-knowledge/">Factual Knowledge</a>
   
   <a class="badge badge-light" href="/tags/logical-reasoning/">Logical Reasoning</a>
   

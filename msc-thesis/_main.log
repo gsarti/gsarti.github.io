@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.9.21)  20 MAY 2024 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2024.3.20)  26 JUN 2024 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **/Users/gsarti/Documents/projects/website-content/public/msc-thesis/_main.tex
 (/Users/gsarti/Documents/projects/website-content/public/msc-thesis/_main.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
 
 ! LaTeX Error: File `templates/ociamthesis.cls' not found.
 
@@ -23,11 +23,11 @@ l.31 \usepackage
 
  
 Here is how much of TeX's memory you used:
- 25 strings out of 476025
- 720 string characters out of 5779036
- 1849388 words of memory out of 5000000
- 20574 multiletter control sequences out of 15000+600000
- 512287 words of font info for 32 fonts, out of 8000000 for 9000
+ 22 strings out of 474116
+ 695 string characters out of 5733619
+ 1925187 words of memory out of 5000000
+ 22481 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  19i,0n,29p,207b,17s stack positions out of 10000i,1000n,20000p,200000b,200000s
 /Users/gsarti/Documents/projects/website-content/public/msc-thesis/_main.tex:31:  ==> Fatal error occurred, no output PDF file produced!

@@ -3,48 +3,75 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gsarti.com/publication_types/3/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/arianna-bisazza/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/categories/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/daniel-scalena/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/deep-learning/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/interpretability/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/large-language-models/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/malvina-nissim/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication/dynamic-activation-composition/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/multilingual/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/prompting/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication_types/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/style-transfer/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2024-06-26T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/arianna-bisazza/</loc>
     <lastmod>2024-06-15T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/context-usage/</loc>
     <lastmod>2024-06-15T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/deep-learning/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/feature-attribution/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/interpretability/</loc>
     <lastmod>2024-06-15T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/jirui-qi/</loc>
     <lastmod>2024-06-15T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/publication/mirage/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/publication_types/</loc>
     <lastmod>2024-06-15T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/question-answering/</loc>
@@ -54,12 +81,6 @@
     <lastmod>2024-06-15T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/retrieval-augmented-generation/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/publication/</loc>
-    <lastmod>2024-06-15T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/</loc>
     <lastmod>2024-06-15T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/categories/academic/</loc>
@@ -90,12 +111,6 @@
     <lastmod>2024-05-20T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/italian/</loc>
-    <lastmod>2024-05-20T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/malvina-nissim/</loc>
-    <lastmod>2024-05-20T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/multilingual/</loc>
     <lastmod>2024-05-20T01:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/pre-training/</loc>
@@ -197,22 +212,13 @@
     <loc>https://gsarti.com/authors/georgiana-dinu/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/large-language-models/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/authors/maria-nadejde/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/phu-mon-htut/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/prompting/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/publication/ramp/</loc>
-    <lastmod>2023-05-29T09:47:38+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/style-transfer/</loc>
     <lastmod>2023-05-29T09:47:38+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/xing-niu/</loc>

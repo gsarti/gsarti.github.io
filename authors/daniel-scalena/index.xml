@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Large Language Models | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/large-language-models/</link>
-      <atom:link href="https://gsarti.com/tags/large-language-models/index.xml" rel="self" type="application/rss+xml" />
-    <description>Large Language Models</description>
+    <title>Daniel Scalena | Gabriele Sarti</title>
+    <link>https://gsarti.com/authors/daniel-scalena/</link>
+      <atom:link href="https://gsarti.com/authors/daniel-scalena/index.xml" rel="self" type="application/rss+xml" />
+    <description>Daniel Scalena</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
-      <title>Large Language Models</title>
-      <link>https://gsarti.com/tags/large-language-models/</link>
+      <title>Daniel Scalena</title>
+      <link>https://gsarti.com/authors/daniel-scalena/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>https://gsarti.com/publication/dynamic-activation-composition/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0200</pubDate>
       <guid>https://gsarti.com/publication/dynamic-activation-composition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RAMP: Retrieval and Attribute-Marking Enhanced Prompting for Attribute-Controlled Translation</title>
-      <link>https://gsarti.com/publication/ramp/</link>
-      <pubDate>Mon, 29 May 2023 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/ramp/</guid>
       <description></description>
     </item>
     

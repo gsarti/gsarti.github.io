@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Garden-path Sentences | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/garden-path-sentences/</link>
-      <atom:link href="https://gsarti.com/tags/garden-path-sentences/index.xml" rel="self" type="application/rss+xml" />
-    <description>Garden-path Sentences</description>
+    <title>Garden-Path Sentences | Gabriele Sarti</title>
+    <link>http://localhost:1313/tags/garden-path-sentences/</link>
+      <atom:link href="http://localhost:1313/tags/garden-path-sentences/index.xml" rel="self" type="application/rss+xml" />
+    <description>Garden-Path Sentences</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
-      <title>Garden-path Sentences</title>
-      <link>https://gsarti.com/tags/garden-path-sentences/</link>
+      <url>http://localhost:1313/img/avatar.jpg</url>
+      <title>Garden-Path Sentences</title>
+      <link>http://localhost:1313/tags/garden-path-sentences/</link>
     </image>
     
     <item>
       <title>Interpreting Neural Language Models for Linguistic Complexity Assessment</title>
-      <link>https://gsarti.com/publication/interpreting-nlms-for-lca/</link>
+      <link>http://localhost:1313/publication/interpreting-nlms-for-lca/</link>
       <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/interpreting-nlms-for-lca/</guid>
+      <guid>http://localhost:1313/publication/interpreting-nlms-for-lca/</guid>
       <description></description>
     </item>
     

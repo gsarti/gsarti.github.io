@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cancer Detection | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/cancer-detection/</link>
-      <atom:link href="https://gsarti.com/tags/cancer-detection/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/cancer-detection/</link>
+      <atom:link href="http://localhost:1313/tags/cancer-detection/index.xml" rel="self" type="application/rss+xml" />
     <description>Cancer Detection</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Cancer Detection</title>
-      <link>https://gsarti.com/tags/cancer-detection/</link>
+      <link>http://localhost:1313/tags/cancer-detection/</link>
     </image>
     
     <item>
       <title>Histopathologic Cancer Detection with Neural Networks</title>
-      <link>https://gsarti.com/project/cancer-detection/</link>
+      <link>http://localhost:1313/project/cancer-detection/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/cancer-detection/</guid>
+      <guid>http://localhost:1313/project/cancer-detection/</guid>
       <description>&lt;p&gt;As our final project for the course of Statistical Machine Learning held by Prof. Luca Bortolussi we explored different statistical and deep approaches to the problem of detecting tumors in histopathologic scans. We notably tried a random forest on distributional features extracted by pigment segmentation, a state-of-the-art DenseNet and a Capsule Network with Dynamic Routing.&lt;/p&gt;
 </description>
     </item>

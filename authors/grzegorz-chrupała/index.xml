@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grzegorz Chrupała | Gabriele Sarti</title>
-    <link>https://gsarti.com/authors/grzegorz-chrupa%C5%82a/</link>
-      <atom:link href="https://gsarti.com/authors/grzegorz-chrupa%C5%82a/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/authors/grzegorz-chrupa%C5%82a/</link>
+      <atom:link href="http://localhost:1313/authors/grzegorz-chrupa%C5%82a/index.xml" rel="self" type="application/rss+xml" />
     <description>Grzegorz Chrupała</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Thu, 02 Nov 2023 10:30:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Grzegorz Chrupała</title>
-      <link>https://gsarti.com/authors/grzegorz-chrupa%C5%82a/</link>
+      <link>http://localhost:1313/authors/grzegorz-chrupa%C5%82a/</link>
     </image>
     
     <item>
       <title>Explaining Language Models with Inseq</title>
-      <link>https://gsarti.com/talk/indeep-masterclass-nov23/</link>
+      <link>http://localhost:1313/talk/indeep-masterclass-nov23/</link>
       <pubDate>Thu, 02 Nov 2023 10:30:00 +0200</pubDate>
-      <guid>https://gsarti.com/talk/indeep-masterclass-nov23/</guid>
+      <guid>http://localhost:1313/talk/indeep-masterclass-nov23/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
-      <link>https://gsarti.com/publication/pecore/</link>
+      <link>http://localhost:1313/publication/pecore/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/pecore/</guid>
+      <guid>http://localhost:1313/publication/pecore/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PECoRe: Plausibility Evaluation of Context Usage in Language Models</title>
-      <link>https://gsarti.com/project/pecore/</link>
+      <link>http://localhost:1313/project/pecore/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/pecore/</guid>
+      <guid>http://localhost:1313/project/pecore/</guid>
       <description>&lt;p&gt;PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq interpretability library&lt;/a&gt; and can be easily used thanks to the &lt;code&gt;inseq attribute-context&lt;/code&gt; command. The framework is described in detail in the paper &lt;a href=&#34;https://openreview.net/forum?id=XTHfNGI3zT&#34;&gt;Quantifying the Plausibility of Context Reliance in Neural Machine Translation&lt;/a&gt;, published at ICLR 2024.&lt;/p&gt;
 </description>
     </item>

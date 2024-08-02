@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trieste Next | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/trieste-next/</link>
-      <atom:link href="https://gsarti.com/tags/trieste-next/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/trieste-next/</link>
+      <atom:link href="http://localhost:1313/tags/trieste-next/index.xml" rel="self" type="application/rss+xml" />
     <description>Trieste Next</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Trieste Next</title>
-      <link>https://gsarti.com/tags/trieste-next/</link>
+      <link>http://localhost:1313/tags/trieste-next/</link>
     </image>
     
     <item>
       <title>AItalo Svevo: Letters from an Artificial Intelligence</title>
-      <link>https://gsarti.com/project/aitalo-svevo/</link>
+      <link>http://localhost:1313/project/aitalo-svevo/</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/aitalo-svevo/</guid>
+      <guid>http://localhost:1313/project/aitalo-svevo/</guid>
       <description>&lt;p&gt;We developed an interactive experience putting together NLP and literature to raise awareness on the latest developments in language modeling and natural language generation. Participants received a printed letter written by a neural language model (GPT-2) fine-tuned on the Italian epistolary corpus of Italo Svevo, an italian writer of the 20th century. Participants could choose among several topics discussed by the author in his letters, and were also given some context on author&amp;rsquo;s life and literary production by Cristina Fenu, a digital humanist working at the &lt;a href=&#34;http://www.museosveviano.it/ar/progetto/archivio-digitale/&#34;&gt;Svevian Museum of Trieste&lt;/a&gt;. An open-source implementation will soon be available on Github.&lt;/p&gt;
 </description>
     </item>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post-editing | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/post-editing/</link>
-      <atom:link href="https://gsarti.com/tags/post-editing/index.xml" rel="self" type="application/rss+xml" />
-    <description>Post-editing</description>
+    <title>Post-Editing | Gabriele Sarti</title>
+    <link>http://localhost:1313/tags/post-editing/</link>
+      <atom:link href="http://localhost:1313/tags/post-editing/index.xml" rel="self" type="application/rss+xml" />
+    <description>Post-Editing</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
-      <title>Post-editing</title>
-      <link>https://gsarti.com/tags/post-editing/</link>
+      <url>http://localhost:1313/img/avatar.jpg</url>
+      <title>Post-Editing</title>
+      <link>http://localhost:1313/tags/post-editing/</link>
     </image>
     
     <item>
       <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>
-      <link>https://gsarti.com/publication/divemt/</link>
+      <link>http://localhost:1313/publication/divemt/</link>
       <pubDate>Tue, 24 May 2022 01:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/divemt/</guid>
+      <guid>http://localhost:1313/publication/divemt/</guid>
       <description></description>
     </item>
     

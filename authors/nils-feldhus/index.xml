@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nils Feldhus | Gabriele Sarti</title>
-    <link>http://localhost:1313/authors/nils-feldhus/</link>
-      <atom:link href="http://localhost:1313/authors/nils-feldhus/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/authors/nils-feldhus/</link>
+      <atom:link href="https://gsarti.com/authors/nils-feldhus/index.xml" rel="self" type="application/rss+xml" />
     <description>Nils Feldhus</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Mon, 27 Feb 2023 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Nils Feldhus</title>
-      <link>http://localhost:1313/authors/nils-feldhus/</link>
+      <link>https://gsarti.com/authors/nils-feldhus/</link>
     </image>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>http://localhost:1313/publication/inseq/</link>
+      <link>https://gsarti.com/publication/inseq/</link>
       <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/inseq/</guid>
+      <guid>https://gsarti.com/publication/inseq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>http://localhost:1313/project/inseq/</link>
+      <link>https://gsarti.com/project/inseq/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/inseq/</guid>
+      <guid>https://gsarti.com/project/inseq/</guid>
       <description>&lt;p&gt;Inseq is a Pytorch-based hackable toolkit to democratize the study of interpretability for sequence generation models. Inseq supports a wide set of models from the 🤗 Transformers library and an ever-growing set of feature attribution methods, leveraging in part the widely-used Captum library. For a quick introduction to common use cases, see the &lt;a href=&#34;https://inseq.readthedocs.io/examples/quickstart.html&#34;&gt;Getting started with Inseq&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;Using Inseq, feature attribution maps that can be saved, reloaded, aggregated and visualized either as HTMLs (with Jupyter notebook support) or directly in the console using rich. Besides simple attribution, Inseq also supports features like step score extraction, attribution aggregation and attributed functions customization for more advanced use cases.&lt;/p&gt;
 </description>

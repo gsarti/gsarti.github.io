@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SyntaxGym | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/syntaxgym/</link>
-      <atom:link href="https://gsarti.com/tags/syntaxgym/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/syntaxgym/</link>
+      <atom:link href="http://localhost:1313/tags/syntaxgym/index.xml" rel="self" type="application/rss+xml" />
     <description>SyntaxGym</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>SyntaxGym</title>
-      <link>https://gsarti.com/tags/syntaxgym/</link>
+      <link>http://localhost:1313/tags/syntaxgym/</link>
     </image>
     
     <item>
       <title>Interpreting Neural Language Models for Linguistic Complexity Assessment</title>
-      <link>https://gsarti.com/publication/interpreting-nlms-for-lca/</link>
+      <link>http://localhost:1313/publication/interpreting-nlms-for-lca/</link>
       <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/interpreting-nlms-for-lca/</guid>
+      <guid>http://localhost:1313/publication/interpreting-nlms-for-lca/</guid>
       <description></description>
     </item>
     

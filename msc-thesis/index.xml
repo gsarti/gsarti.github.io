@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Msc-Theses | Gabriele Sarti</title>
-    <link>https://gsarti.com/msc-thesis/</link>
-      <atom:link href="https://gsarti.com/msc-thesis/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/msc-thesis/</link>
+      <atom:link href="http://localhost:1313/msc-thesis/index.xml" rel="self" type="application/rss+xml" />
     <description>Msc-Theses</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Msc-Theses</title>
-      <link>https://gsarti.com/msc-thesis/</link>
+      <link>http://localhost:1313/msc-thesis/</link>
     </image>
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/app-co2/</link>
+      <link>http://localhost:1313/msc-thesis/app-co2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/app-co2/</guid>
+      <guid>http://localhost:1313/msc-thesis/app-co2/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -286,9 +286,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/app-et-metrics/</link>
+      <link>http://localhost:1313/msc-thesis/app-et-metrics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/app-et-metrics/</guid>
+      <guid>http://localhost:1313/msc-thesis/app-et-metrics/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -658,9 +658,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/app-et-modeling/</link>
+      <link>http://localhost:1313/msc-thesis/app-et-modeling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/app-et-modeling/</guid>
+      <guid>http://localhost:1313/msc-thesis/app-et-modeling/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -1122,9 +1122,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/app-garden-paths-et/</link>
+      <link>http://localhost:1313/msc-thesis/app-garden-paths-et/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/app-garden-paths-et/</guid>
+      <guid>http://localhost:1313/msc-thesis/app-garden-paths-et/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -1400,9 +1400,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/app-intra-sim/</link>
+      <link>http://localhost:1313/msc-thesis/app-intra-sim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/app-intra-sim/</guid>
+      <guid>http://localhost:1313/msc-thesis/app-intra-sim/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -1682,9 +1682,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/app-ling-feats/</link>
+      <link>http://localhost:1313/msc-thesis/app-ling-feats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/app-ling-feats/</guid>
+      <guid>http://localhost:1313/msc-thesis/app-ling-feats/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -2000,9 +2000,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/app-params/</link>
+      <link>http://localhost:1313/msc-thesis/app-params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/app-params/</guid>
+      <guid>http://localhost:1313/msc-thesis/app-params/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -2624,9 +2624,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/chap-ex1/</link>
+      <link>http://localhost:1313/msc-thesis/chap-ex1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/chap-ex1/</guid>
+      <guid>http://localhost:1313/msc-thesis/chap-ex1/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -4476,9 +4476,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/chap-ex2/</link>
+      <link>http://localhost:1313/msc-thesis/chap-ex2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/chap-ex2/</guid>
+      <guid>http://localhost:1313/msc-thesis/chap-ex2/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -4884,9 +4884,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/chap-ex3/</link>
+      <link>http://localhost:1313/msc-thesis/chap-ex3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/chap-ex3/</guid>
+      <guid>http://localhost:1313/msc-thesis/chap-ex3/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -5918,9 +5918,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/chap-ling-comp/</link>
+      <link>http://localhost:1313/msc-thesis/chap-ling-comp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/chap-ling-comp/</guid>
+      <guid>http://localhost:1313/msc-thesis/chap-ling-comp/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -7085,9 +7085,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/chap-models/</link>
+      <link>http://localhost:1313/msc-thesis/chap-models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/chap-models/</guid>
+      <guid>http://localhost:1313/msc-thesis/chap-models/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -7722,9 +7722,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/conclusion/</link>
+      <link>http://localhost:1313/msc-thesis/conclusion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/conclusion/</guid>
+      <guid>http://localhost:1313/msc-thesis/conclusion/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -8042,9 +8042,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/introduction/</link>
+      <link>http://localhost:1313/msc-thesis/introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/introduction/</guid>
+      <guid>http://localhost:1313/msc-thesis/introduction/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;
@@ -8338,9 +8338,9 @@ gitbook.start({
     
     <item>
       <title></title>
-      <link>https://gsarti.com/msc-thesis/references/</link>
+      <link>http://localhost:1313/msc-thesis/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/msc-thesis/references/</guid>
+      <guid>http://localhost:1313/msc-thesis/references/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
 &lt;head&gt;

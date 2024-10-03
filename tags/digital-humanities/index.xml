@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Digital Humanities | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/digital-humanities/</link>
-      <atom:link href="http://localhost:1313/tags/digital-humanities/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/digital-humanities/</link>
+      <atom:link href="https://gsarti.com/tags/digital-humanities/index.xml" rel="self" type="application/rss+xml" />
     <description>Digital Humanities</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Thu, 31 Oct 2019 12:00:41 +0100</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Digital Humanities</title>
-      <link>http://localhost:1313/tags/digital-humanities/</link>
+      <link>https://gsarti.com/tags/digital-humanities/</link>
     </image>
     
     <item>
       <title>The Literary Ordnance: When the Writer is an AI</title>
-      <link>http://localhost:1313/talk/literary-ordnance/</link>
+      <link>https://gsarti.com/talk/literary-ordnance/</link>
       <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
-      <guid>http://localhost:1313/talk/literary-ordnance/</guid>
+      <guid>https://gsarti.com/talk/literary-ordnance/</guid>
       <description></description>
     </item>
     

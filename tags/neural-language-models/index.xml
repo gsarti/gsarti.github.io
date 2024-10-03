@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Neural Language Models | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/neural-language-models/</link>
-      <atom:link href="http://localhost:1313/tags/neural-language-models/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/neural-language-models/</link>
+      <atom:link href="https://gsarti.com/tags/neural-language-models/index.xml" rel="self" type="application/rss+xml" />
     <description>Neural Language Models</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Sat, 19 Dec 2020 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Neural Language Models</title>
-      <link>http://localhost:1313/tags/neural-language-models/</link>
+      <link>https://gsarti.com/tags/neural-language-models/</link>
     </image>
     
     <item>
       <title>UmBERTo-MTSA@ AcCompl-It: Improving Complexity and Acceptability Prediction with Multi-task Learning on Self-Supervised Annotations</title>
-      <link>http://localhost:1313/publication/umberto-mtsa/</link>
+      <link>https://gsarti.com/publication/umberto-mtsa/</link>
       <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/umberto-mtsa/</guid>
+      <guid>https://gsarti.com/publication/umberto-mtsa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</title>
-      <link>http://localhost:1313/publication/italian-transformers/</link>
+      <link>https://gsarti.com/publication/italian-transformers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/italian-transformers/</guid>
+      <guid>https://gsarti.com/publication/italian-transformers/</guid>
       <description></description>
     </item>
     

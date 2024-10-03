@@ -2,34 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Felice Dell’Orletta | Gabriele Sarti</title>
-    <link>http://localhost:1313/authors/felice-dellorletta/</link>
-      <atom:link href="http://localhost:1313/authors/felice-dellorletta/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/authors/felice-dellorletta/</link>
+      <atom:link href="https://gsarti.com/authors/felice-dellorletta/index.xml" rel="self" type="application/rss+xml" />
     <description>Felice Dell’Orletta</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Felice Dell’Orletta</title>
-      <link>http://localhost:1313/authors/felice-dellorletta/</link>
+      <link>https://gsarti.com/authors/felice-dellorletta/</link>
     </image>
     
     <item>
       <title>Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</title>
-      <link>http://localhost:1313/publication/italian-transformers/</link>
+      <link>https://gsarti.com/publication/italian-transformers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/italian-transformers/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>
-></description>
-    </item>
-    
-    <item>
-      <title>The Literary Ordnance: When the Writer is an AI</title>
-      <link>http://localhost:1313/talk/literary-ordnance/</link>
-      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
-      <guid>http://localhost:1313/talk/literary-ordnance/</guid>
+      <guid>https://gsarti.com/publication/italian-transformers/</guid>
       <description></description>
     </item>
     

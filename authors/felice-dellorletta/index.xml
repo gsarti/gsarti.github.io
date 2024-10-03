@@ -22,3 +22,16 @@
     
   </channel>
 </rss>
+></description>
+    </item>
+    
+    <item>
+      <title>The Literary Ordnance: When the Writer is an AI</title>
+      <link>http://localhost:1313/talk/literary-ordnance/</link>
+      <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
+      <guid>http://localhost:1313/talk/literary-ordnance/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

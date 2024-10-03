@@ -112,7 +112,7 @@
   
   <meta property="og:site_name" content="Gabriele Sarti">
   <meta property="og:url" content="http://localhost:1313/project/pecore/">
-  <meta property="og:title" content="PECoRe: Plausibility Evaluation of Context Usage in Language Models | Gabriele Sarti">
+  <meta property="og:title" content="Attributing Context Usage in Language Models | Gabriele Sarti">
   <meta property="og:description" content="An interpretability framework to detect and attribute context usage in language models&#39; generations">
   <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="http://localhost:1313/project/pecore/featured.jpg">
   <meta property="twitter:image" content="http://localhost:1313/project/pecore/featured.jpg"><meta property="og:locale" content="en-us">
@@ -146,7 +146,7 @@
     "@type": "WebPage",
     "@id": "http://localhost:1313/project/pecore/"
   },
-  "headline": "PECoRe: Plausibility Evaluation of Context Usage in Language Models",
+  "headline": "Attributing Context Usage in Language Models",
   
   "image": [
     "http://localhost:1313/project/pecore/featured.jpg"
@@ -186,7 +186,7 @@
 
 
 
-  <title>PECoRe: Plausibility Evaluation of Context Usage in Language Models | Gabriele Sarti</title>
+  <title>Attributing Context Usage in Language Models | Gabriele Sarti</title>
 
 </head>
 
@@ -394,7 +394,7 @@
 
 
 <div class="article-container pt-3">
-  <h1>PECoRe: Plausibility Evaluation of Context Usage in Language Models</h1>
+  <h1>Attributing Context Usage in Language Models</h1>
 
   
 
@@ -413,7 +413,7 @@
 
 
   
-  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>, <span>Grzegorz Chrupała</span>, <span><a href="/authors/malvina-nissim/">Malvina Nissim</a></span>, <span><a href="/authors/arianna-bisazza/">Arianna Bisazza</a></span>
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>, <span><a href="/authors/jirui-qi/">Jirui Qi</a></span>, <span>Grzegorz Chrupała</span>, <span><a href="/authors/malvina-nissim/">Malvina Nissim</a></span>, <span>Raquel Fernández</span>, <span><a href="/authors/arianna-bisazza/">Arianna Bisazza</a></span>
 
   </div>
   
@@ -503,7 +503,23 @@
   
   <a class="btn btn-outline-primary my-1 mr-1" href="https://huggingface.co/spaces/gsarti/pecore" target="_blank" rel="noopener">
     <i class="fas fa-rocket mr-1"></i>
-    Demo
+    PECoRe Demo
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://huggingface.co/spaces/gsarti/mirage" target="_blank" rel="noopener">
+    <i class="fas fa-rocket mr-1"></i>
+    MIRAGE Demo
   </a>
 
   
@@ -519,7 +535,23 @@
   
   <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/gsarti/pecore" target="_blank" rel="noopener">
     <i class="fab fa-github mr-1"></i>
-    Repository
+    PECoRe Repository
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/Betswish/MIRAGE" target="_blank" rel="noopener">
+    <i class="fab fa-github mr-1"></i>
+    MIRAGE Repository
   </a>
 
   
@@ -551,7 +583,23 @@
   
   <a class="btn btn-outline-primary my-1 mr-1" href="https://openreview.net/forum?id=XTHfNGI3zT" target="_blank" rel="noopener">
     <i class="fas fa-file-pdf mr-1"></i>
-    Paper
+    PECoRe Paper
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/abs/2406.13663" target="_blank" rel="noopener">
+    <i class="fas fa-file-contract mr-1"></i>
+    MIRAGE Paper
   </a>
 
 
@@ -573,7 +621,7 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the <a href="https://github.com/inseq-team/inseq">Inseq interpretability library</a> and can be easily used thanks to the <code>inseq attribute-context</code> command. The framework is described in detail in the paper <a href="https://openreview.net/forum?id=XTHfNGI3zT">Quantifying the Plausibility of Context Reliance in Neural Machine Translation</a>, published at ICLR 2024.</p>
+      <p>PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the <a href="https://github.com/inseq-team/inseq">Inseq interpretability library</a> and can be easily used thanks to the <code>inseq attribute-context</code> command. The framework is described in detail in the paper <a href="/publication/pecore/">Quantifying the Plausibility of Context Reliance in Neural Machine Translation</a>, published at ICLR 2024, and its extension MIRAGE was created to support answer attribution in RAG applications <a href="/publication/mirage/">Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation</a>.</p>
 
     </div>
 
@@ -608,7 +656,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/project/pecore/&amp;text=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/project/pecore/&amp;text=Attributing%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -621,7 +669,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/project/pecore/&amp;t=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/project/pecore/&amp;t=Attributing%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -634,7 +682,7 @@
       
       
       <li>
-        <a href="mailto:?subject=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models&amp;body=http://localhost:1313/project/pecore/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Attributing%20Context%20Usage%20in%20Language%20Models&amp;body=http://localhost:1313/project/pecore/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -647,7 +695,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/project/pecore/&amp;title=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/project/pecore/&amp;title=Attributing%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -660,7 +708,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models%20http://localhost:1313/project/pecore/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Attributing%20Context%20Usage%20in%20Language%20Models%20http://localhost:1313/project/pecore/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -673,7 +721,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/project/pecore/&amp;title=PECoRe:%20Plausibility%20Evaluation%20of%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/project/pecore/&amp;title=Attributing%20Context%20Usage%20in%20Language%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -818,7 +866,7 @@
 
 
   
-  <span>Jirui Qi*</span>, <span><a href="/authors/gabriele-sarti/">Gabriele Sarti*</a></span>, <span>Raquel Fernández</span>, <span><a href="/authors/arianna-bisazza/">Arianna Bisazza</a></span>
+  <span><a href="/authors/jirui-qi/">Jirui Qi*</a></span>, <span><a href="/authors/gabriele-sarti/">Gabriele Sarti*</a></span>, <span>Raquel Fernández</span>, <span><a href="/authors/arianna-bisazza/">Arianna Bisazza</a></span>
 
       </div>
       
@@ -898,7 +946,7 @@
   
     
   
-  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://huggingface.co/spaces/gsarti/pecore" target="_blank" rel="noopener">
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://huggingface.co/spaces/gsarti/mirage" target="_blank" rel="noopener">
     <i class="fas fa-rocket mr-1"></i>
     Demo
   </a>

@@ -293,16 +293,19 @@
     <loc>http://localhost:1313/authors/oskar-van-der-wal/</loc>
     <lastmod>2023-02-27T09:47:38+02:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/project/pecore/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/project/inseq/</loc>
     <lastmod>2022-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/interpretability/</loc>
     <lastmod>2022-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/oskar-van-der-waals/</loc>
+    <loc>http://localhost:1313/authors/jirui-qi/</loc>
     <lastmod>2022-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/pecore/</loc>
+    <loc>http://localhost:1313/authors/oskar-van-der-waals/</loc>
     <lastmod>2022-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/project/</loc>

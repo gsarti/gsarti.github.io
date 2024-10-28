@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gabriele Sarti</title>
-    <link>https://gsarti.com/authors/gsarti/</link>
-      <atom:link href="https://gsarti.com/authors/gsarti/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/authors/gsarti/</link>
+      <atom:link href="http://localhost:1313/authors/gsarti/index.xml" rel="self" type="application/rss+xml" />
     <description>Gabriele Sarti</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Gabriele Sarti</title>
-      <link>https://gsarti.com/authors/gsarti/</link>
+      <link>http://localhost:1313/authors/gsarti/</link>
     </image>
     
     <item>
       <title></title>
-      <link>https://gsarti.com/authors/gsarti/</link>
+      <link>http://localhost:1313/authors/gsarti/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/authors/gsarti/</guid>
+      <guid>http://localhost:1313/authors/gsarti/</guid>
       <description>&lt;p&gt;Welcome to my website! 👋 I am a PhD student at the &lt;a href=&#34;https://www.rug.nl/research/clcg/research/cl/&#34;&gt;Computational Linguistics Group&lt;/a&gt; of the University of Groningen and member of the &lt;a href=&#34;https://projects.illc.uva.nl/indeep/&#34;&gt;InDeep consortium&lt;/a&gt;, working on user-centric interpretability for neural machine translation. I am also the main developer of the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq&lt;/a&gt; library. My supervisors are &lt;a href=&#34;http://www.cs.rug.nl/~bisazza/&#34;&gt;Arianna Bisazza&lt;/a&gt;, &lt;a href=&#34;https://malvinanissim.github.io/&#34;&gt;Malvina Nissim&lt;/a&gt; and &lt;a href=&#34;https://grzegorz.chrupala.me&#34;&gt;Grzegorz Chrupała&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Previously, I was a research intern at &lt;a href=&#34;https://www.amazon.science/research-areas/conversational-ai-natural-language-processing&#34;&gt;Amazon Translate NYC&lt;/a&gt;, a research scientist at &lt;a href=&#34;https://www.aindo.com&#34;&gt;Aindo&lt;/a&gt;, a &lt;a href=&#34;https://dssc.units.it/&#34;&gt;Data Science MSc&lt;/a&gt; student at the University of Trieste and a co-founder of the &lt;a href=&#34;https://www.ai2s.it&#34;&gt;AI Student Society&lt;/a&gt;.&lt;/p&gt;

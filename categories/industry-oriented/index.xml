@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Industry-Oriented | Gabriele Sarti</title>
-    <link>https://gsarti.com/categories/industry-oriented/</link>
-      <atom:link href="https://gsarti.com/categories/industry-oriented/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/categories/industry-oriented/</link>
+      <atom:link href="http://localhost:1313/categories/industry-oriented/index.xml" rel="self" type="application/rss+xml" />
     <description>Industry-Oriented</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Thu, 02 Nov 2023 10:30:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Industry-Oriented</title>
-      <link>https://gsarti.com/categories/industry-oriented/</link>
+      <link>http://localhost:1313/categories/industry-oriented/</link>
     </image>
     
     <item>
       <title>Explaining Language Models with Inseq</title>
-      <link>https://gsarti.com/talk/indeep-masterclass-nov23/</link>
+      <link>http://localhost:1313/talk/indeep-masterclass-nov23/</link>
       <pubDate>Thu, 02 Nov 2023 10:30:00 +0200</pubDate>
-      <guid>https://gsarti.com/talk/indeep-masterclass-nov23/</guid>
+      <guid>http://localhost:1313/talk/indeep-masterclass-nov23/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Towards User-centric Interpretability of NLP Models</title>
-      <link>https://gsarti.com/talk/tech-talk-translated-2022/</link>
+      <link>http://localhost:1313/talk/tech-talk-translated-2022/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/tech-talk-translated-2022/</guid>
+      <guid>http://localhost:1313/talk/tech-talk-translated-2022/</guid>
       <description></description>
     </item>
     

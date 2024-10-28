@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rebus | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/rebus/</link>
-      <atom:link href="https://gsarti.com/tags/rebus/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/rebus/</link>
+      <atom:link href="http://localhost:1313/tags/rebus/index.xml" rel="self" type="application/rss+xml" />
     <description>Rebus</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2024</copyright><lastBuildDate>Fri, 02 Aug 2024 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Rebus</title>
-      <link>https://gsarti.com/tags/rebus/</link>
+      <link>http://localhost:1313/tags/rebus/</link>
     </image>
     
     <item>
       <title>Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses</title>
-      <link>https://gsarti.com/publication/verbalized-rebus/</link>
+      <link>http://localhost:1313/publication/verbalized-rebus/</link>
       <pubDate>Fri, 02 Aug 2024 01:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/verbalized-rebus/</guid>
+      <guid>http://localhost:1313/publication/verbalized-rebus/</guid>
       <description></description>
     </item>
     

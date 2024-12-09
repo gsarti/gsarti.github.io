@@ -2,22 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/talk/ai2s-talk-2024/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/divulgative/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/interpretability/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/talk/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-12-09T20:00:00+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/academic/</loc>
     <lastmod>2024-12-05T15:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/evaluation/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
     <lastmod>2024-12-05T15:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/huggingface/</loc>
@@ -29,31 +50,16 @@
     <loc>http://localhost:1313/tags/large-language-models/</loc>
     <lastmod>2024-12-05T15:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/talk/verbalized-rebus-clic2024/</loc>
     <lastmod>2024-12-05T15:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/rebus/</loc>
     <lastmod>2024-12-05T15:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/talk/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-12-05T15:00:00+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/word-games/</loc>
     <lastmod>2024-12-05T15:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/feature-attribution/</loc>
-    <lastmod>2024-11-05T11:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/interpretability/</loc>
     <lastmod>2024-11-05T11:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/sapienza-data-science-phd-course-2024/</loc>
@@ -543,9 +549,6 @@
     <lastmod>2019-10-31T12:00:41+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/digital-humanities/</loc>
-    <lastmod>2019-10-31T12:00:41+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/divulgative/</loc>
     <lastmod>2019-10-31T12:00:41+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/science&#43;fiction-festival/</loc>

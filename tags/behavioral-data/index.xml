@@ -5,12 +5,20 @@
     <link>http://localhost:1313/tags/behavioral-data/</link>
       <atom:link href="http://localhost:1313/tags/behavioral-data/index.xml" rel="self" type="application/rss+xml" />
     <description>Behavioral Data</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Behavioral Data</title>
       <link>http://localhost:1313/tags/behavioral-data/</link>
     </image>
+    
+    <item>
+      <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
+      <link>http://localhost:1313/publication/qe4pe/</link>
+      <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/publication/qe4pe/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Towards User-centric Interpretability of Machine Translation Models</title>

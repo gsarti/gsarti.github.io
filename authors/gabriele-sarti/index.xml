@@ -5,12 +5,20 @@
     <link>http://localhost:1313/authors/gabriele-sarti/</link>
       <atom:link href="http://localhost:1313/authors/gabriele-sarti/index.xml" rel="self" type="application/rss+xml" />
     <description>Gabriele Sarti</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Mon, 09 Dec 2024 20:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Gabriele Sarti</title>
       <link>http://localhost:1313/authors/gabriele-sarti/</link>
     </image>
+    
+    <item>
+      <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
+      <link>http://localhost:1313/publication/qe4pe/</link>
+      <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/publication/qe4pe/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Aprire la scatola nera dei modelli del linguaggio: rischi e opportunità</title>

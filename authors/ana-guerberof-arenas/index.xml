@@ -5,12 +5,20 @@
     <link>http://localhost:1313/authors/ana-guerberof-arenas/</link>
       <atom:link href="http://localhost:1313/authors/ana-guerberof-arenas/index.xml" rel="self" type="application/rss+xml" />
     <description>Ana Guerberof Arenas</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Tue, 24 May 2022 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Ana Guerberof Arenas</title>
       <link>http://localhost:1313/authors/ana-guerberof-arenas/</link>
     </image>
+    
+    <item>
+      <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
+      <link>http://localhost:1313/publication/qe4pe/</link>
+      <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/publication/qe4pe/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>

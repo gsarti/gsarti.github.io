@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transformers | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/transformers/</link>
-      <atom:link href="http://localhost:1313/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/transformers/</link>
+      <atom:link href="https://gsarti.com/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
     <description>Transformers</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Wed, 01 May 2024 00:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Transformers</title>
-      <link>http://localhost:1313/tags/transformers/</link>
+      <link>https://gsarti.com/tags/transformers/</link>
     </image>
     
     <item>
       <title>A Primer on the Inner Workings of Transformer-based Language Models</title>
-      <link>http://localhost:1313/publication/transformer-lm-inner-workings/</link>
+      <link>https://gsarti.com/publication/transformer-lm-inner-workings/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/transformer-lm-inner-workings/</guid>
+      <guid>https://gsarti.com/publication/transformer-lm-inner-workings/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>http://localhost:1313/publication/inseq/</link>
+      <link>https://gsarti.com/publication/inseq/</link>
       <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/inseq/</guid>
+      <guid>https://gsarti.com/publication/inseq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</title>
-      <link>http://localhost:1313/publication/italian-transformers/</link>
+      <link>https://gsarti.com/publication/italian-transformers/</link>
       <pubDate>Fri, 01 Jul 2022 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/italian-transformers/</guid>
+      <guid>https://gsarti.com/publication/italian-transformers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpreting Neural Language Models for Linguistic Complexity Assessment</title>
-      <link>http://localhost:1313/publication/interpreting-nlms-for-lca/</link>
+      <link>https://gsarti.com/publication/interpreting-nlms-for-lca/</link>
       <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/interpreting-nlms-for-lca/</guid>
+      <guid>https://gsarti.com/publication/interpreting-nlms-for-lca/</guid>
       <description></description>
     </item>
     
     <item>
       <title>UmBERTo-MTSA@ AcCompl-It: Improving Complexity and Acceptability Prediction with Multi-task Learning on Self-Supervised Annotations</title>
-      <link>http://localhost:1313/publication/umberto-mtsa/</link>
+      <link>https://gsarti.com/publication/umberto-mtsa/</link>
       <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/umberto-mtsa/</guid>
+      <guid>https://gsarti.com/publication/umberto-mtsa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ETC-NLG: End-to-end Topic-Conditioned Natural Language Generation</title>
-      <link>http://localhost:1313/publication/etc-nlg/</link>
+      <link>https://gsarti.com/publication/etc-nlg/</link>
       <pubDate>Tue, 01 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/etc-nlg/</guid>
+      <guid>https://gsarti.com/publication/etc-nlg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ICLR 2020 Trends: Better &amp; Faster Transformers for Natural Language Processing</title>
-      <link>http://localhost:1313/post/iclr2020-transformers/</link>
+      <link>https://gsarti.com/post/iclr2020-transformers/</link>
       <pubDate>Sun, 03 May 2020 19:27:36 +0200</pubDate>
-      <guid>http://localhost:1313/post/iclr2020-transformers/</guid>
+      <guid>https://gsarti.com/post/iclr2020-transformers/</guid>
       <description>&lt;p&gt;&lt;em&gt;(For an overview of the Transformer, see &lt;a href=&#34;https://jalammar.github.io/illustrated-transformer/&#34;&gt;The Illustrated Transformer&lt;/a&gt; by Jay Alammar )&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The Transformer architecture was first proposed in &lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34;&gt;Attention is All you Need&lt;/a&gt; as a valid alternative to sequential language modeling approaches like &lt;a href=&#34;https://www.researchgate.net/publication/13853244_Long_Short-term_Memory&#34;&gt;LSTMs&lt;/a&gt; and has since then become ubiquitous in the field of Natural Language Processing, pushing the state-of-the-art in most downstream language-related tasks.&lt;/p&gt;
 &lt;p&gt;This year&amp;rsquo;s edition of the &lt;a href=&#34;https://iclr.cc/&#34;&gt;International Conference on Learning Representation (ICLR)&lt;/a&gt; brought a lot of promising revisions to the original Transformer and its more recent variants &lt;a href=&#34;https://www.aclweb.org/anthology/N19-1423/&#34;&gt;BERT&lt;/a&gt; and &lt;a href=&#34;https://www.aclweb.org/anthology/P19-1285/&#34;&gt;Transformer-XL&lt;/a&gt;. Proposed improvements address the well-known weaknesses of Transformers, namely:&lt;/p&gt;
@@ -77,37 +77,37 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;index&#34;&gt;Index&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#self-attention-variants&#34;&gt;Self-Attention Variants&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#self-attention-variants&#34;&gt;Self-Attention Variants&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#long-short-range-attention&#34;&gt;Long-Short Range Attention&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#tree-structured-attention-with-subtree-masking&#34;&gt;Tree-Structured Attention with Subtree Masking&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#hashed-attention&#34;&gt;Hashed Attention&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#extra-hop-attention&#34;&gt;eXtra Hop Attention&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#long-short-range-attention&#34;&gt;Long-Short Range Attention&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#tree-structured-attention-with-subtree-masking&#34;&gt;Tree-Structured Attention with Subtree Masking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#hashed-attention&#34;&gt;Hashed Attention&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#extra-hop-attention&#34;&gt;eXtra Hop Attention&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#training-objectives&#34;&gt;Training Objectives&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#training-objectives&#34;&gt;Training Objectives&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#discriminative-replacement-task&#34;&gt;Discriminative Replacement Task&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#word-and-sentence-structural-tasks&#34;&gt;Word and Sentence Structural Tasks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#type-constrained-entity-replacement&#34;&gt;Type-Constrained Entity Replacement&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#discriminative-replacement-task&#34;&gt;Discriminative Replacement Task&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#word-and-sentence-structural-tasks&#34;&gt;Word and Sentence Structural Tasks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#type-constrained-entity-replacement&#34;&gt;Type-Constrained Entity Replacement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#embeddings&#34;&gt;Embeddings&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#embeddings&#34;&gt;Embeddings&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#position-aware-complex-word-embeddings&#34;&gt;Position-Aware Complex Word Embeddings&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#hierarchical-embeddings&#34;&gt;Hierarchical Embeddings&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#factorized-embedding-parametrization&#34;&gt;Factorized Embedding Parametrization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#position-aware-complex-word-embeddings&#34;&gt;Position-Aware Complex Word Embeddings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#hierarchical-embeddings&#34;&gt;Hierarchical Embeddings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#factorized-embedding-parametrization&#34;&gt;Factorized Embedding Parametrization&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#model-architecture&#34;&gt;Model Architecture&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#model-architecture&#34;&gt;Model Architecture&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#compressive-memory&#34;&gt;Compressive Memory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#reversible-layers&#34;&gt;Reversible Layers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#cross-layer-parameter-sharing&#34;&gt;Cross-Layer Parameter Sharing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#adaptive-depth-estimation&#34;&gt;Adaptive Depth Estimation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#compressive-memory&#34;&gt;Compressive Memory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#reversible-layers&#34;&gt;Reversible Layers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#cross-layer-parameter-sharing&#34;&gt;Cross-Layer Parameter Sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#adaptive-depth-estimation&#34;&gt;Adaptive Depth Estimation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;self-attention-variants&#34;&gt;Self-Attention Variants&lt;/h1&gt;
@@ -119,24 +119,24 @@
 &lt;p&gt;This section presents some variants of the self-attention component that make it more efficient and effective in the context of language applications.&lt;/p&gt;
 &lt;h3 id=&#34;long-short-range-attention&#34;&gt;Long-Short Range Attention&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_ByeMPlHKPH.html&#34;&gt;Lite Transformer with Long-Short Range Attention&lt;/a&gt; by Wu, Liu et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/lsra.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/lsra.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Conventional self-attention is deemed as redundant since it was empirically shown to put excessive emphasis on local relations inside a sentence, which can be modeled more efficiently by a standard convolution, as shown also in &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_HJlnC1rKPB.html&#34;&gt;On the Relationship between Self-Attention and Convolutional Layers&lt;/a&gt;. While the redundancy may help model performances in some cases, it is not suitable for lighter applications.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Long-Short Range Attention (LSRA)&lt;/strong&gt; makes the computation more efficient by splitting the input into two parts along channel dimensions and feeding each to two modules: a &lt;strong&gt;global extractor&lt;/strong&gt; using standard self-attention and a &lt;strong&gt;local extractor&lt;/strong&gt; using light depth-wise convolutions. Authors report a $2\times$ reduced overall computation for the model, making it suitable for mobile settings.&lt;/p&gt;
 &lt;h3 id=&#34;tree-structured-attention-with-subtree-masking&#34;&gt;Tree-Structured Attention with Subtree Masking&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_HJxK5pEYvr.html&#34;&gt;Tree-Structured Attention with Hierarchical Accumulation&lt;/a&gt; by Nguyen et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/hierarchical_accumulation.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/hierarchical_accumulation.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;A weakness of the standard Transformer is the absence of inductive biases to account for the hierarchical structure of language. This is due in part to the difficulty in operating with tree-like structures that are usually modeled by recurrent or recursive mechanisms while maintaining the constant parallel time complexity of self-attention.&lt;/p&gt;
 &lt;p&gt;The proposed solution leverages constituency parses of input text to build a tree of hidden states, using &lt;strong&gt;hierarchical accumulation&lt;/strong&gt; to build the value of non-terminals as the aggregation of lower representations in the tree. The final output representation is built by performing a &lt;strong&gt;weighted aggregation&lt;/strong&gt; of branch-level representations.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/subtree_masking.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;An interesting addition is the use of &lt;strong&gt;subtree masking&lt;/strong&gt; to filter out superfluous noise by constraining the attention of each node query only on its subtree descendants. The cost for this inductive bias is an increased computational and memory cost, which is then mitigated using &lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#cross-layer-parameter-sharing&#34;&gt;parameter sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/subtree_masking.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;An interesting addition is the use of &lt;strong&gt;subtree masking&lt;/strong&gt; to filter out superfluous noise by constraining the attention of each node query only on its subtree descendants. The cost for this inductive bias is an increased computational and memory cost, which is then mitigated using &lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#cross-layer-parameter-sharing&#34;&gt;parameter sharing&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;hashed-attention&#34;&gt;Hashed Attention&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_rkgNKkHtvB.html&#34;&gt;Reformer: The Efficient Transformer&lt;/a&gt; by Kitaev et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/lsh.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/lsh.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the self-attention equation the factor $QK^T$ represents a bottleneck, taking $\mathcal{O}(L^2)$ for input sequences of length $L$ both in computational and memory complexity. This effectively hinders the possibility of modeling long sequences.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Reformer&lt;/strong&gt; proposes to restrict the pool of candidates attended by each query to a small set of neighbors found through &lt;strong&gt;locally-sensitive hashing&lt;/strong&gt;. Since LSH bucketing employs random projections, similar vectors may sometimes fall in different neighborhoods; an approach using multiple parallel rounds of hashing is suggested to mitigate this issue. Using LSH attention reduces the computational cost of the self-attention operation to $\mathcal{O}(L \log L)$, allowing the model to operate on longer sequences.&lt;/p&gt;
 &lt;h3 id=&#34;extra-hop-attention&#34;&gt;eXtra Hop Attention&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_r1eIiCNYwS.html&#34;&gt;Transformer-XH: Multi-Evidence Reasoning with eXtra Hop Attention&lt;/a&gt; by Zhao et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/extra_hop.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/extra_hop.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;While Transformers were optimized to operate on single sequences or pairs of sequences, they can hardly generalize to settings where evidence is scattered in multiple pieces of text, as in the challenging task of &lt;strong&gt;multi-hop question answering&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Transformer-XH&lt;/strong&gt; introduces a new variant of attention, &lt;strong&gt;eXtra Hop Attention&lt;/strong&gt;, that can be applied to a graph of text sequences connected by edges (e.g. hyperlinks). This new attention mechanism uses the special &lt;code&gt;[CLS]&lt;/code&gt; token at the beginning of each sequence as an &lt;strong&gt;attention hub&lt;/strong&gt; that attends to all other connected sequences in the graph. The resulting representation is then combined to the one obtained by standard self-attention through a linear projection. The resulting model shows significant improvements for tasks requiring reasoning over graphs, at the cost of the extra computations introduced by the new attention mechanism.&lt;/p&gt;
 &lt;h1 id=&#34;training-objectives&#34;&gt;Training Objectives&lt;/h1&gt;
@@ -148,19 +148,19 @@
 &lt;p&gt;While those tasks seem to induce meaningful token and sentence-level representation, many of the approaches covered in this section suggest better alternatives that make learning more efficient and grounded in the structure and the content of the input.&lt;/p&gt;
 &lt;h3 id=&#34;discriminative-replacement-task&#34;&gt;Discriminative Replacement Task&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_r1xMH1BtvB.html&#34;&gt;ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators&lt;/a&gt; by Clark et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/electra.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/electra.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The masking strategy used in BERT-like models is quite data inefficient, using only ~15% of the input text to complete the MLM task. However, the percentage of masked data can hardly be increased since having too many masked tokens may degrade the overall context information.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ELECTRA&lt;/strong&gt; proposes a simple yet effective approach to cope with this inefficiency. A small masked language model is trained and then used as a generator to fill the masked tokens in the input with its predictions, as in normal MLM. However, the new task for the main model will be a &lt;strong&gt;discriminative&lt;/strong&gt; one: instead of predicting masked tokens, the model has to detect which tokens have been replaced by the generator. This allows leveraging the entire input sequence for training. As mentioned by the authors, this approach consistently outperforms MLM pre-training given the same compute budget.&lt;/p&gt;
 &lt;h3 id=&#34;word-and-sentence-structural-tasks&#34;&gt;Word and Sentence Structural Tasks&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_BJgQ4lSFPH.html&#34;&gt;StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding&lt;/a&gt; by Wang et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/structural_objectives.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/structural_objectives.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;As seen previously, Transformers do not explicitly account for structures present in the input. While tree-structured attention injects a heavy hierarchical bias in the model architecture, &lt;strong&gt;StructBERT&lt;/strong&gt; adopts two lighter but effective approaches to make the resulting representations more aware of the underlying sequentiality of language.&lt;/p&gt;
 &lt;p&gt;The first is a &lt;strong&gt;word structural objective&lt;/strong&gt; where trigrams inside the inputs are randomly shuffled, and their original position must be reconstructed. This is done in parallel with normal MLM. The &lt;strong&gt;sentence structural objective&lt;/strong&gt; is a lighter variant of the sentence reordering introduced in &lt;a href=&#34;https://arxiv.org/abs/1907.12412&#34;&gt;ERNIE 2.0&lt;/a&gt; and equal to the &lt;strong&gt;sentence ordering prediction&lt;/strong&gt; introduced in &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_H1eA7AEtvS.html&#34;&gt;ALBERT&lt;/a&gt;: given a pair of sentences $(S_1, S_2)$ as input, we ask the model to discriminate whether $S_2$ precedes, follows or is unrelated to $S_1$. This new task extends the standard NSP, which was deemed as too easy for learning meaningful sentence relations. These additions result in significant improvements over standard benchmarks for natural language understanding.&lt;/p&gt;
 &lt;h3 id=&#34;type-constrained-entity-replacement&#34;&gt;Type-Constrained Entity Replacement&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_BJlzm64tDH.html&#34;&gt;Pretrained Encyclopedia: Weakly Supervised Knowledge-Pretrained Language Model&lt;/a&gt; by Xiong et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/entity_replacement.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/entity_replacement.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;While it was shown that pre-trained Transformer models implicitly capture real-world knowledge, their standard training objectives do not explicitly take into account the entity-centric information needed for robust reasoning over real-world settings.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Type-constrained entity replacement&lt;/strong&gt; is a weakly supervised approach where random entities in the text are replaced with other entities taken from Wikidata that have the same entity type. The model then uses a discriminative objective similar to the one of &lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#discriminative-replacement-task&#34;&gt;ELECTRA&lt;/a&gt; to determine which entities were replaced. This is done along with MLM in a multi-task setup, and authors report significant improvements in settings requiring a deeper entity understanding, such as &lt;strong&gt;open-domain QA&lt;/strong&gt; and &lt;strong&gt;entity typing&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Type-constrained entity replacement&lt;/strong&gt; is a weakly supervised approach where random entities in the text are replaced with other entities taken from Wikidata that have the same entity type. The model then uses a discriminative objective similar to the one of &lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#discriminative-replacement-task&#34;&gt;ELECTRA&lt;/a&gt; to determine which entities were replaced. This is done along with MLM in a multi-task setup, and authors report significant improvements in settings requiring a deeper entity understanding, such as &lt;strong&gt;open-domain QA&lt;/strong&gt; and &lt;strong&gt;entity typing&lt;/strong&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;embeddings&#34;&gt;Embeddings&lt;/h1&gt;
 &lt;p&gt;The original Transformer relies on two sets of embeddings to represent the input sequence:&lt;/p&gt;
 &lt;ul&gt;
@@ -177,17 +177,17 @@
 &lt;p&gt;All those embeddings have the same dimensions and get summed together to obtain an input representation. Approaches introduced in this section aim to inject more structure in the embeddings, or to optimize their dimension for better efficiency.&lt;/p&gt;
 &lt;h3 id=&#34;position-aware-complex-word-embeddings&#34;&gt;Position-Aware Complex Word Embeddings&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_Hke-WTVtwr.html&#34;&gt;Encoding word order in complex embeddings&lt;/a&gt; by Wang et al.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Complex Word Embeddings&#34; src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/complex_embeddings.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Complex Word Embeddings&#34; src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/complex_embeddings.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;While PE capture different positions in the input, they do not explicitly take into account the relation between those positions, i.e. ordered relationships such as adjacency or precedence. This problem was already addressed in &lt;a href=&#34;https://www.aclweb.org/anthology/P19-1285/&#34;&gt;Transformer-XL&lt;/a&gt; by leveraging relative distances between words instead of raw position indices.&lt;/p&gt;
 &lt;p&gt;A proposed improvement is to generalize word embeddings to continuous functions defined over positions, extending the solutions to the complex-valued domain to benefit from richer representations. The resulting &lt;strong&gt;complex-valued embeddings&lt;/strong&gt; introduce new parameters for amplitudes, frequencies and initial phases that determine various properties of the embedding such as position sensitivity. Empirical results show that the complex embeddings with parameter-sharing schemas outperform previous embedding approaches without a significant increase in the number of trainable parameters.&lt;/p&gt;
 &lt;h3 id=&#34;hierarchical-embeddings&#34;&gt;Hierarchical Embeddings&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_HJxK5pEYvr.html&#34;&gt;Tree-Structured Attention with Hierarchical Accumulation&lt;/a&gt; by Nguyen et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/hierarchical_embeddings.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;In the overview of &lt;a href=&#34;http://localhost:1313/post/iclr2020-transformers/#tree-structured-attention-with-subtree-masking&#34;&gt;tree-structured attention&lt;/a&gt;, we saw how hierarchical accumulation is used to form a representation based on descendants for nonterminal nodes. This procedure, however, has the disadvantage of not taking into account the hierarchical structure of descendants.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/hierarchical_embeddings.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the overview of &lt;a href=&#34;https://gsarti.com/post/iclr2020-transformers/#tree-structured-attention-with-subtree-masking&#34;&gt;tree-structured attention&lt;/a&gt;, we saw how hierarchical accumulation is used to form a representation based on descendants for nonterminal nodes. This procedure, however, has the disadvantage of not taking into account the hierarchical structure of descendants.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Hierarchical embeddings&lt;/strong&gt; are used to inject this structural bias by concatenating &lt;strong&gt;vertical&lt;/strong&gt; and &lt;strong&gt;horizontal embeddings matrices&lt;/strong&gt; representing respectively hierarchical ordering inside branches and relationships between siblings nodes in a subtree. Those embeddings are shared across attention heads, thus accounting only for 0.1% of the total parameters.&lt;/p&gt;
 &lt;h3 id=&#34;factorized-embedding-parametrization&#34;&gt;Factorized Embedding Parametrization&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_H1eA7AEtvS.html&#34;&gt;ALBERT: A Lite BERT for Self-supervised Learning of Language Representations&lt;/a&gt; by Lan et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/factorized_embeddings.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/factorized_embeddings.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In recent models based on BERT and Transformer-XL the input embeddings size $E$ is tied with the hidden layer size $H$, i.e. $E \equiv H$. This is very impractical since, to augment the expressivity of hidden representations used to learn &lt;em&gt;context-dependent representation&lt;/em&gt;, one should also increase the size of the embedding matrix $\textbf{M} = V \times E$, where $V$ is the vocabulary size. Even for relatively small hidden layer dimensions, this results in billions of parameters that are rarely updated during training.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ALBERT&lt;/strong&gt; authors propose to insert a projection between $E$ and $V$ to make both dimensions independent, an approach that is especially efficient to reduce the parameter count when $H \gg E$. As a result, an ALBERT base with $E = 128$ and $H = 768$ obtains performances comparable with a BERT base with the same configuration on many downstream tasks, using 21M fewer parameters (89M in Table 3 vs 110M for BERT).&lt;/p&gt;
 &lt;h1 id=&#34;model-architecture&#34;&gt;Model Architecture&lt;/h1&gt;
@@ -198,22 +198,22 @@
 &lt;p&gt;The following approaches try to build on top of current structures to improve long-range modeling, reduce the parameter count, or optimize the computation performed by the model.&lt;/p&gt;
 &lt;h3 id=&#34;compressive-memory&#34;&gt;Compressive Memory&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_SylKikSYDH.html&#34;&gt;Compressive Transformers for Long-Range Sequence Modelling&lt;/a&gt; by Rae et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/compressive_memory.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/compressive_memory.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In Transformer-XL&amp;rsquo;s recurrent memory approach, old memories are discarded to enable the storing of new ones in a first-in-first-out fashion. This method accounts only for recency, not taking into account the relevance of information that might get discarded.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Compressive Transformers&lt;/strong&gt; builds upon the memory notion by adding a new &lt;strong&gt;compressed memory&lt;/strong&gt; that stores coarse representations of older memories instead of discarding them. Authors try multiple alternatives for the compression function, finally selecting an &lt;strong&gt;attention-reconstruction loss&lt;/strong&gt; that discards information that is not attended by the network. The use of compressive memory shows large improvements over the modeling of infrequent words, with empirical evidence of the network learning to preserve salient information through the compression mechanism.&lt;/p&gt;
 &lt;h3 id=&#34;reversible-layers&#34;&gt;Reversible Layers&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_rkgNKkHtvB.html&#34;&gt;Reformer: The Efficient Transformer&lt;/a&gt; by Kitaev et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/reversible.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/reversible.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The main idea behind &lt;strong&gt;reversibility&lt;/strong&gt; is to enable the recovering of activations in any layer of the network by using only activations of the following layer and model parameters. This feature is especially interesting when applied to Transformer models since they are usually composed of a large pile of stacked layers and their memory complexity grows linearly with the layer count.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Reformer&lt;/strong&gt; introduces reversibility in the Transformer architecture by combining attention and feed-forward sublayers into a single reversible layer. This allows to store activations only for the topmost layer and recover all the other ones by reversing layers during back-propagation, making the model depth irrelevant memory-wise. Further improvements in memory complexity are achieved by &lt;strong&gt;chunking&lt;/strong&gt; independent computations in feed-forward and reversible layers.&lt;/p&gt;
 &lt;h3 id=&#34;cross-layer-parameter-sharing&#34;&gt;Cross-Layer Parameter Sharing&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_H1eA7AEtvS.html&#34;&gt;ALBERT: A Lite BERT for Self-supervised Learning of Language Representations&lt;/a&gt; by Lan et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/albert_distances.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/albert_distances.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;A simple yet very effective approach to greatly reduce the parameter count inside deep Transformer models is to share parameters across multiple layers, as it was shown in the &lt;a href=&#34;https://arxiv.org/abs/1807.03819&#34;&gt;Universal Transformer&lt;/a&gt; paper at ICLR 2019.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ALBERT&lt;/strong&gt; authors experiment cross-layer parameter sharing for both self-attention and feed-forward sublayers, finding that sharing both weight matrices contributes to bringing down the total parameter count of the model by a factor of $7\times$ (for embedding size $E = 128$) while only slightly affecting final performances. The use of parameter sharing leads to smoother transition across layers and effectively stabilizes network parameters.&lt;/p&gt;
 &lt;h3 id=&#34;adaptive-depth-estimation&#34;&gt;Adaptive Depth Estimation&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Introduced in&lt;/em&gt;: &lt;a href=&#34;https://iclr.cc/virtual_2020/poster_SJg7KhVKPH.html&#34;&gt;Depth-Adaptive Transformer&lt;/a&gt; by Elbayad et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/iclr2020-transformers/assets/depth_adaptive.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gsarti.com/post/iclr2020-transformers/assets/depth_adaptive.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Current models perform a fixed number of computations for each input, regardless of the underlying complexity specific to each sequence. This problem was already highlighted in the &lt;a href=&#34;https://arxiv.org/abs/1807.03819&#34;&gt;Universal Transformer&lt;/a&gt;, which proposes a repeated application of the same layer with &lt;strong&gt;adaptive computation time (ACT)&lt;/strong&gt;, but the resulting increase in per-layer weights considerably reduce the overall network speed.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Depth-adaptive Transformer&lt;/strong&gt; solves this issue by encoding a sequence with a standard Transformer encoder and decoding it with a variable number of steps. To do so, a classifier is attached to each repeated layer of the decoder and the whole set is then trained with &lt;strong&gt;aligned&lt;/strong&gt; and &lt;strong&gt;mixed training&lt;/strong&gt; (see image) using the &lt;strong&gt;anytime prediction&lt;/strong&gt; approach first introduced in the field of computer vision. Authors explore different mechanisms to adaptively control the amount of computation both on sequence level and on a per-token basis and conclude that an adaptive reduction of more than 75% of decoder layers can be applied without any loss in accuracy on machine translation tasks.&lt;/p&gt;
 &lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;

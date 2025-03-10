@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/talk/aniti-2025/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/talk/aniti-2025/">
 
   
 
@@ -96,7 +96,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://gsarti.com/talk/aniti-2025/">
+  <link rel="canonical" href="http://localhost:1313/talk/aniti-2025/">
 
   
   
@@ -111,14 +111,16 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="https://gsarti.com/talk/aniti-2025/">
-  <meta property="og:title" content=" | Gabriele Sarti">
-  <meta property="og:description" content="">
-  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/img/avatar.jpg">
-  <meta property="twitter:image" content="https://gsarti.com/img/avatar.jpg"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="http://localhost:1313/talk/aniti-2025/">
+  <meta property="og:title" content="Interpreting Context Usage in Generative Language Models | Gabriele Sarti">
+  <meta property="og:description" content="This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.">
+  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="http://localhost:1313/img/avatar.jpg">
+  <meta property="twitter:image" content="http://localhost:1313/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2024-07-15T00:00:00&#43;00:00">
     
+    <meta property="article:modified_time" content="2025-03-11T14:00:00&#43;01:00">
   
 
   
@@ -137,12 +139,26 @@
   "@type": "Event",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://gsarti.com/talk/aniti-2025/"
+    "@id": "http://localhost:1313/talk/aniti-2025/"
   },
-  "name": "",
+  "name": "Interpreting Context Usage in Generative Language Models",
+  
+  "location": {
+    "@type": "Place",
+    "name": "IRT Saint Exupéry, Toulouse, France",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Tolouse",
+      "postalCode": "",
+      "addressRegion": "Occitanie",
+      "addressCountry": "France"
+    }
+    
+  },
   
   
-  "startDate": "0001-01-01T00:00:00Z",
+  "startDate": "2025-03-11T14:00:00+01:00",
   
   
   "performer": {
@@ -150,7 +166,7 @@
     "name": "Gabriele Sarti"
   },
   
-  "description": ""
+  "description": "This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation."
 }
 </script>
 
@@ -166,7 +182,7 @@
 
 
 
-  <title> | Gabriele Sarti</title>
+  <title>Interpreting Context Usage in Generative Language Models | Gabriele Sarti</title>
 
 </head>
 
@@ -367,7 +383,7 @@
   
   
 <div class="article-container pt-3">
-  <h1></h1>
+  <h1>Interpreting Context Usage in Generative Language Models</h1>
 
   
 
@@ -379,6 +395,19 @@
 
   
   
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
 
   
 
@@ -391,6 +420,10 @@
   
 
   
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/natural-language-processing/">Natural Language Processing</a>, <a href="/categories/academic/">Academic</a></span>
   
 
 </div>
@@ -408,6 +441,67 @@
 
 
 
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/inseq/">
+    Project
+  </a>
+  
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/pecore/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1wgD3q19ECrqt8j59Mn4h4fpdti_YeJMFolzt84ewFwk/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+</div>
 
 
   
@@ -427,7 +521,7 @@
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Date</div>
           <div class="col-12 col-md-9">
-            Jan 1, 0001 00:00
+            Mar 11, 2025
           </div>
         </div>
       </div>
@@ -436,7 +530,46 @@
     <div class="d-md-none space-below"></div>
 
     
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            ANITI Seminar
+            
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
 
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">IRT Saint Exupéry, Toulouse, France</div>
+          
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-9">Tolouse, Occitanie, France</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
     
 
     <div class="space-below"></div>
@@ -451,6 +584,22 @@
 
 
 
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/sequence-to-sequence/">Sequence-to-sequence</a>
+  
+  <a class="badge badge-light" href="/tags/language-modeling/">Language Modeling</a>
+  
+  <a class="badge badge-light" href="/tags/feature-attribution/">Feature Attribution</a>
+  
+  <a class="badge badge-light" href="/tags/retrieval-augmented-generation/">Retrieval-augmented Generation</a>
+  
+</div>
+
 
 
 <div class="share-box" aria-hidden="true">
@@ -464,7 +613,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://gsarti.com/talk/aniti-2025/&amp;text=" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/talk/aniti-2025/&amp;text=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -477,7 +626,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://gsarti.com/talk/aniti-2025/&amp;t=" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/talk/aniti-2025/&amp;t=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -490,7 +639,7 @@
       
       
       <li>
-        <a href="mailto:?subject=&amp;body=https://gsarti.com/talk/aniti-2025/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models&amp;body=http://localhost:1313/talk/aniti-2025/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -503,7 +652,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://gsarti.com/talk/aniti-2025/&amp;title=" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/talk/aniti-2025/&amp;title=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -516,7 +665,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=%20https://gsarti.com/talk/aniti-2025/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models%20http://localhost:1313/talk/aniti-2025/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -529,7 +678,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://gsarti.com/talk/aniti-2025/&amp;title=" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/talk/aniti-2025/&amp;title=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -549,11 +698,33 @@
 
 
   
+  
+    
+  
+  
 
 
 
 
 
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
 
 
 
@@ -564,6 +735,23 @@
 
 
   
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/cis-lmu-inseq-pecore-2024/">Interpreting Context Usage in Generative Language Models with Inseq, PECoRe and MIRAGE</a></li>
+      
+      <li><a href="/talk/sapienza-data-science-phd-course-2024/">Interpretability for Language Models: Current Trends and Applications</a></li>
+      
+      <li><a href="/talk/polito-inseq-pecore-2024/">Interpreting Context Usage in Generative Language Models with Inseq and PECoRe</a></li>
+      
+      <li><a href="/talk/sheffield-seminar-2024/">Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers</a></li>
+      
+      <li><a href="/talk/escience-signlp-seminar-oct23/">Post-hoc Interpretability for Language Models</a></li>
+      
+    </ul>
+  </div>
   
 
 

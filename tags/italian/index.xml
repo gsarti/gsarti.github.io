@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Italian | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/italian/</link>
-      <atom:link href="https://gsarti.com/tags/italian/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/italian/</link>
+      <atom:link href="http://localhost:1313/tags/italian/index.xml" rel="self" type="application/rss+xml" />
     <description>Italian</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 05 Dec 2024 15:00:00 +0100</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Italian</title>
-      <link>https://gsarti.com/tags/italian/</link>
+      <link>http://localhost:1313/tags/italian/</link>
     </image>
     
     <item>
       <title>Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses</title>
-      <link>https://gsarti.com/talk/verbalized-rebus-clic2024/</link>
+      <link>http://localhost:1313/talk/verbalized-rebus-clic2024/</link>
       <pubDate>Thu, 05 Dec 2024 15:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/verbalized-rebus-clic2024/</guid>
+      <guid>http://localhost:1313/talk/verbalized-rebus-clic2024/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses</title>
-      <link>https://gsarti.com/publication/verbalized-rebus/</link>
+      <link>http://localhost:1313/publication/verbalized-rebus/</link>
       <pubDate>Fri, 02 Aug 2024 01:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/verbalized-rebus/</guid>
+      <guid>http://localhost:1313/publication/verbalized-rebus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IT5: Text-to-text Pretraining for Italian Language Understanding and Generation</title>
-      <link>https://gsarti.com/publication/it5/</link>
+      <link>http://localhost:1313/publication/it5/</link>
       <pubDate>Mon, 20 May 2024 01:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/it5/</guid>
+      <guid>http://localhost:1313/publication/it5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contrastive Language-Image Pre-training for the Italian Language</title>
-      <link>https://gsarti.com/publication/clip-italian/</link>
+      <link>http://localhost:1313/publication/clip-italian/</link>
       <pubDate>Thu, 19 Aug 2021 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/clip-italian/</guid>
+      <guid>http://localhost:1313/publication/clip-italian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contrastive Image-Text Pretraining for Italian</title>
-      <link>https://gsarti.com/project/clip-italian/</link>
+      <link>http://localhost:1313/project/clip-italian/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/clip-italian/</guid>
+      <guid>http://localhost:1313/project/clip-italian/</guid>
       <description>&lt;p&gt;CLIP is a multimodel model that can learn to represent images and text jointly in the same space. In this project, we aim to propose the first CLIP model trained on Italian data, that in this context can be considered a low resource language. Using a few techniques, we have been able to fine-tune a SOTA Italian CLIP model with only 1.4 million training samples.&lt;/p&gt;
 &lt;p&gt;For more information, refer to our &lt;a href=&#34;https://huggingface.co/spaces/clip-italian/clip-italian-demo&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -56,9 +56,9 @@
     
     <item>
       <title>Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students</title>
-      <link>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</link>
+      <link>http://localhost:1313/publication/teaching-nlp-bracelets-menus/</link>
       <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</guid>
+      <guid>http://localhost:1313/publication/teaching-nlp-bracelets-menus/</guid>
       <description></description>
     </item>
     

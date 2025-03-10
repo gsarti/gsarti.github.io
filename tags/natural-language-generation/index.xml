@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Natural Language Generation | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/natural-language-generation/</link>
-      <atom:link href="https://gsarti.com/tags/natural-language-generation/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/natural-language-generation/</link>
+      <atom:link href="http://localhost:1313/tags/natural-language-generation/index.xml" rel="self" type="application/rss+xml" />
     <description>Natural Language Generation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Mon, 27 Feb 2023 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Natural Language Generation</title>
-      <link>https://gsarti.com/tags/natural-language-generation/</link>
+      <link>http://localhost:1313/tags/natural-language-generation/</link>
     </image>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>https://gsarti.com/publication/inseq/</link>
+      <link>http://localhost:1313/publication/inseq/</link>
       <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/inseq/</guid>
+      <guid>http://localhost:1313/publication/inseq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Attributing Context Usage in Language Models</title>
-      <link>https://gsarti.com/project/pecore/</link>
+      <link>http://localhost:1313/project/pecore/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/pecore/</guid>
-      <description>&lt;p&gt;PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq interpretability library&lt;/a&gt; and can be easily used thanks to the &lt;code&gt;inseq attribute-context&lt;/code&gt; command. The framework is described in detail in the paper &lt;a href=&#34;https://gsarti.com/publication/pecore/&#34;&gt;Quantifying the Plausibility of Context Reliance in Neural Machine Translation&lt;/a&gt;, published at ICLR 2024, and its extension MIRAGE was created to support answer attribution in RAG applications &lt;a href=&#34;https://gsarti.com/publication/mirage/&#34;&gt;Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation&lt;/a&gt;.&lt;/p&gt;
+      <guid>http://localhost:1313/project/pecore/</guid>
+      <description>&lt;p&gt;PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq interpretability library&lt;/a&gt; and can be easily used thanks to the &lt;code&gt;inseq attribute-context&lt;/code&gt; command. The framework is described in detail in the paper &lt;a href=&#34;http://localhost:1313/publication/pecore/&#34;&gt;Quantifying the Plausibility of Context Reliance in Neural Machine Translation&lt;/a&gt;, published at ICLR 2024, and its extension MIRAGE was created to support answer attribution in RAG applications &lt;a href=&#34;http://localhost:1313/publication/mirage/&#34;&gt;Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>https://gsarti.com/project/inseq/</link>
+      <link>http://localhost:1313/project/inseq/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/inseq/</guid>
+      <guid>http://localhost:1313/project/inseq/</guid>
       <description>&lt;p&gt;Inseq is a Pytorch-based hackable toolkit to democratize the study of interpretability for sequence generation models. Inseq supports a wide set of models from the 🤗 Transformers library and an ever-growing set of feature attribution methods, leveraging in part the widely-used Captum library. For a quick introduction to common use cases, see the &lt;a href=&#34;https://inseq.readthedocs.io/examples/quickstart.html&#34;&gt;Getting started with Inseq&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;Using Inseq, feature attribution maps that can be saved, reloaded, aggregated and visualized either as HTMLs (with Jupyter notebook support) or directly in the console using rich. Besides simple attribution, Inseq also supports features like step score extraction, attribution aggregation and attributed functions customization for more advanced use cases.&lt;/p&gt;
 </description>
@@ -41,25 +41,25 @@
     
     <item>
       <title>ETC-NLG: End-to-end Topic-Conditioned Natural Language Generation</title>
-      <link>https://gsarti.com/publication/etc-nlg/</link>
+      <link>http://localhost:1313/publication/etc-nlg/</link>
       <pubDate>Tue, 01 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/etc-nlg/</guid>
+      <guid>http://localhost:1313/publication/etc-nlg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Literary Ordnance: When the Writer is an AI</title>
-      <link>https://gsarti.com/talk/literary-ordnance/</link>
+      <link>http://localhost:1313/talk/literary-ordnance/</link>
       <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
-      <guid>https://gsarti.com/talk/literary-ordnance/</guid>
+      <guid>http://localhost:1313/talk/literary-ordnance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AItalo Svevo: Letters from an Artificial Intelligence</title>
-      <link>https://gsarti.com/project/aitalo-svevo/</link>
+      <link>http://localhost:1313/project/aitalo-svevo/</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/aitalo-svevo/</guid>
+      <guid>http://localhost:1313/project/aitalo-svevo/</guid>
       <description>&lt;p&gt;We developed an interactive experience putting together NLP and literature to raise awareness on the latest developments in language modeling and natural language generation. Participants received a printed letter written by a neural language model (GPT-2) fine-tuned on the Italian epistolary corpus of Italo Svevo, an italian writer of the 20th century. Participants could choose among several topics discussed by the author in his letters, and were also given some context on author&amp;rsquo;s life and literary production by Cristina Fenu, a digital humanist working at the &lt;a href=&#34;http://www.museosveviano.it/ar/progetto/archivio-digitale/&#34;&gt;Svevian Museum of Trieste&lt;/a&gt;. An open-source implementation will soon be available on Github.&lt;/p&gt;
 </description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Daniel Scalena | Gabriele Sarti</title>
-    <link>https://gsarti.com/authors/daniel-scalena/</link>
-      <atom:link href="https://gsarti.com/authors/daniel-scalena/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/authors/daniel-scalena/</link>
+      <atom:link href="http://localhost:1313/authors/daniel-scalena/index.xml" rel="self" type="application/rss+xml" />
     <description>Daniel Scalena</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Daniel Scalena</title>
-      <link>https://gsarti.com/authors/daniel-scalena/</link>
+      <link>http://localhost:1313/authors/daniel-scalena/</link>
     </image>
     
     <item>
       <title>Multi-property Steering of Large Language Models with Dynamic Activation Composition</title>
-      <link>https://gsarti.com/publication/dynamic-activation-composition/</link>
+      <link>http://localhost:1313/publication/dynamic-activation-composition/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/dynamic-activation-composition/</guid>
+      <guid>http://localhost:1313/publication/dynamic-activation-composition/</guid>
       <description></description>
     </item>
     

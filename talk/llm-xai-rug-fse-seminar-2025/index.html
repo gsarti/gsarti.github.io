@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Natural Language Processing">
+  <meta name="description" content="In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will focus specifically on post-hoc attribution technique and their usage to identify relevant input and model components, showcasing their usage with our Inseq open-source toolkit. A practical application of attribution techniques will be presented with the PECoRe data-driven framework for context usage attribution and its adaptation to produce internals-based citations for model answers in retrieval-augmented generation settings (MIRAGE).">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/tags/natural-language-processing/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/">
 
   
 
@@ -91,14 +91,12 @@
 
 
   
-  <link rel="alternate" href="/tags/natural-language-processing/index.xml" type="application/rss+xml" title="Gabriele Sarti">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://localhost:1313/tags/natural-language-processing/">
+  <link rel="canonical" href="http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/">
 
   
   
@@ -113,19 +111,64 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="http://localhost:1313/tags/natural-language-processing/">
-  <meta property="og:title" content="Natural Language Processing | Gabriele Sarti">
-  <meta property="og:description" content="PhD in Natural Language Processing">
+  <meta property="og:url" content="http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/">
+  <meta property="og:title" content="Interpretability for Language Models: Current Trends and Applications | Gabriele Sarti">
+  <meta property="og:description" content="In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will focus specifically on post-hoc attribution technique and their usage to identify relevant input and model components, showcasing their usage with our Inseq open-source toolkit. A practical application of attribution techniques will be presented with the PECoRe data-driven framework for context usage attribution and its adaptation to produce internals-based citations for model answers in retrieval-augmented generation settings (MIRAGE).">
   <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="http://localhost:1313/img/avatar.jpg">
   <meta property="twitter:image" content="http://localhost:1313/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2025-03-24T14:00:00&#43;01:00">
+    
+      <meta property="article:published_time" content="2024-07-15T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2025-03-24T14:00:00&#43;01:00">
   
 
   
 
 
 
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/"
+  },
+  "name": "Interpretability for Language Models: Current Trends and Applications",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Bernoulli Institute, Faculty of Science and Engineering, University of Groningen",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Groningen",
+      "postalCode": "",
+      "addressRegion": "",
+      "addressCountry": "Netherlands"
+    }
+    
+  },
+  
+  
+  "startDate": "2025-03-24T14:00:00+01:00",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "description": "In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will focus specifically on post-hoc attribution technique and their usage to identify relevant input and model components, showcasing their usage with our Inseq open-source toolkit. A practical application of attribution techniques will be presented with the PECoRe data-driven framework for context usage attribution and its adaptation to produce internals-based citations for model answers in retrieval-augmented generation settings (MIRAGE)."
+}
+</script>
 
   
 
@@ -133,10 +176,13 @@
   
 
 
+  
 
 
 
-  <title>Natural Language Processing | Gabriele Sarti</title>
+
+
+  <title>Interpretability for Language Models: Current Trends and Applications | Gabriele Sarti</title>
 
 </head>
 
@@ -316,6 +362,88 @@
 </nav>
 
 
+  <div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Interpretability for Language Models: Current Trends and Applications</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/natural-language-processing/">Natural Language Processing</a>, <a href="/categories/academic/">Academic</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
   
 
 
@@ -325,136 +453,310 @@
 
 
 
-
-
-
-
   
 
-  
+
+
+
+
+
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Natural Language Processing</h1>
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
 
   
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/inseq/">
+    Project
+  </a>
+  
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/pecore/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1uid4lkMgk2qgnkbHByM6ZoAhg4M9kdIigHAjruvaxgE/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+</div>
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
-  <div>
-    <h2><a href="/talk/polito-inseq-pecore-2024/">Interpreting Context Usage in Generative Language Models with Inseq and PECoRe</a></h2>
-    <div class="article-style">
-      
-      This talk discusses the challenges and opportunities in conducting interpretability analyses of generative language models. We begin by presenting Inseq, an open-source toolkit for advanced feature attribution analyses of language models. The usage of Inseq is illustrated through examples of state-of-the-art approaches contrastive attribution, input dependence and locating factual knowledge in intermediate model representations. Then, we introduce Plausibility Evaluation of Context Reliance (PECoRe), an end-to-end interpretability framework using model internals  to detect context-dependent spans in model generations and trace their prediction back to salient tokens in the available context. The usage of PECoRe is showcased on various generative tasks, including machine translation, story generation and retrieval-augmented question answering.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/it5/">IT5: Text-to-text Pretraining for Italian Language Understanding and Generation</a></h2>
-    <div class="article-style">
-      
-      IT5s are the first encoder-decoder transformers pretrained on more than 40 billion Italian words.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/area-pecore-2024/">Quantifying the Plausibility of Context Reliance in Neural Machine Translation</a></h2>
-    <div class="article-style">
-      
-      This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/transformer-lm-inner-workings/">A Primer on the Inner Workings of Transformer-based Language Models</a></h2>
-    <div class="article-style">
-      
-      This primer provides a concise technical introduction to the current techniques used to interpret the inner workings of Transformer-based language models, focusing on the generative decoder-only architecture.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/gronlp-rg-pecore/">Quantifying the Plausibility of Context Reliance in Neural Machine Translation</a></h2>
-    <div class="article-style">
-      
-      This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/sheffield-seminar-2024/">Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers</a></h2>
-    <div class="article-style">
-      
-      This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution. Finally, the PECoRe framework is presented as a mean to evaluate the plausibility of context usage in language models.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/indeep-masterclass-nov23/">Explaining Language Models with Inseq</a></h2>
-    <div class="article-style">
-      
-      In recent years, Transformer-based language models have achieved remarkable progress in most language generation and understanding tasks. However, the internal computations of these models are hardly interpretable due to their highly nonlinear structure, hindering their usage for mission-critical applications requiring trustworthiness and transparency guarantees. This presentation will introduce interpretability methods used for tracing the predictions of language models back to their inputs and discuss how these can be used to gain insights into model biases and behaviors. Several concrete examples of language model attributions will be presented throughout the presentation using the Inseq interpretability library.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/escience-signlp-seminar-oct23/">Post-hoc Interpretability for Language Models</a></h2>
-    <div class="article-style">
-      
-      This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution. Finally, the PECoRe framework is presented as a mean to evaluate the plausibility of context usage in language models.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/decoderlens/">DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers</a></h2>
-    <div class="article-style">
-      
-      We propose DecoderLens, a method to interpret the iterative refinement of representations in encoder-decoder Transformer models.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/pecore/">Quantifying the Plausibility of Context Reliance in Neural Machine Translation</a></h2>
-    <div class="article-style">
-      
-      We introduce PECoRe, an interpretability framework for identifying context dependence in language model generations.
-      
-    </div>
-  </div>
-  
+    
+      <br>
+    
 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Mar 24, 2025
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            Seminar, MSc Course on Trustworthy and Explainable AI, University of Groningen
+            
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Bernoulli Institute, Faculty of Science and Engineering, University of Groningen</div>
+          
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-9">Groningen, Netherlands</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
   
-<nav>
-  <ul class="pagination justify-content-center">
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/sequence-to-sequence/">Sequence-to-sequence</a>
+  
+  <a class="badge badge-light" href="/tags/language-modeling/">Language Modeling</a>
+  
+  <a class="badge badge-light" href="/tags/feature-attribution/">Feature Attribution</a>
+  
+  <a class="badge badge-light" href="/tags/retrieval-augmented-generation/">Retrieval-augmented Generation</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-    <li class="page-item"><a class="page-link" href="/tags/natural-language-processing/">&laquo;</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/&amp;text=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/&amp;t=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
-    <li class="page-item"><a class="page-link" href="/tags/natural-language-processing/page/3/">&raquo;</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications&amp;body=http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/&amp;title=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications%20http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/&amp;title=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
-</nav>
+</div>
 
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/aniti-2025/">Interpreting Context Usage in Generative Language Models</a></li>
+      
+      <li><a href="/talk/cis-lmu-inseq-pecore-2024/">Interpreting Context Usage in Generative Language Models with Inseq, PECoRe and MIRAGE</a></li>
+      
+      <li><a href="/talk/sapienza-data-science-phd-course-2024/">Interpretability for Language Models: Current Trends and Applications</a></li>
+      
+      <li><a href="/talk/polito-inseq-pecore-2024/">Interpreting Context Usage in Generative Language Models with Inseq and PECoRe</a></li>
+      
+      <li><a href="/talk/sheffield-seminar-2024/">Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
 </div>
 
       

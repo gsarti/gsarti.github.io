@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning | Gabriele Sarti</title>
-    <link>http://localhost:1313/categories/deep-learning/</link>
-      <atom:link href="http://localhost:1313/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/categories/deep-learning/</link>
+      <atom:link href="https://gsarti.com/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep Learning</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 18 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Deep Learning</title>
-      <link>http://localhost:1313/categories/deep-learning/</link>
+      <link>https://gsarti.com/categories/deep-learning/</link>
     </image>
     
     <item>
       <title>Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</title>
-      <link>http://localhost:1313/talk/lth/</link>
+      <link>https://gsarti.com/talk/lth/</link>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talk/lth/</guid>
+      <guid>https://gsarti.com/talk/lth/</guid>
       <description></description>
     </item>
     

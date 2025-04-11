@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CLIP | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/clip/</link>
-      <atom:link href="http://localhost:1313/tags/clip/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/clip/</link>
+      <atom:link href="https://gsarti.com/tags/clip/index.xml" rel="self" type="application/rss+xml" />
     <description>CLIP</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 19 Aug 2021 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>CLIP</title>
-      <link>http://localhost:1313/tags/clip/</link>
+      <link>https://gsarti.com/tags/clip/</link>
     </image>
     
     <item>
       <title>Contrastive Language-Image Pre-training for the Italian Language</title>
-      <link>http://localhost:1313/publication/clip-italian/</link>
+      <link>https://gsarti.com/publication/clip-italian/</link>
       <pubDate>Thu, 19 Aug 2021 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/clip-italian/</guid>
+      <guid>https://gsarti.com/publication/clip-italian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contrastive Image-Text Pretraining for Italian</title>
-      <link>http://localhost:1313/project/clip-italian/</link>
+      <link>https://gsarti.com/project/clip-italian/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/clip-italian/</guid>
+      <guid>https://gsarti.com/project/clip-italian/</guid>
       <description>&lt;p&gt;CLIP is a multimodel model that can learn to represent images and text jointly in the same space. In this project, we aim to propose the first CLIP model trained on Italian data, that in this context can be considered a low resource language. Using a few techniques, we have been able to fine-tune a SOTA Italian CLIP model with only 1.4 million training samples.&lt;/p&gt;
 &lt;p&gt;For more information, refer to our &lt;a href=&#34;https://huggingface.co/spaces/clip-italian/clip-italian-demo&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
 </description>

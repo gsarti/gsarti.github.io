@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Translation | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/machine-translation/</link>
-      <atom:link href="http://localhost:1313/tags/machine-translation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/machine-translation/</link>
+      <atom:link href="https://gsarti.com/tags/machine-translation/index.xml" rel="self" type="application/rss+xml" />
     <description>Machine Translation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Machine Translation</title>
-      <link>http://localhost:1313/tags/machine-translation/</link>
+      <link>https://gsarti.com/tags/machine-translation/</link>
     </image>
     
     <item>
       <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
-      <link>http://localhost:1313/publication/qe4pe/</link>
+      <link>https://gsarti.com/publication/qe4pe/</link>
       <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/qe4pe/</guid>
+      <guid>https://gsarti.com/publication/qe4pe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers</title>
-      <link>http://localhost:1313/publication/decoderlens/</link>
+      <link>https://gsarti.com/publication/decoderlens/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/decoderlens/</guid>
+      <guid>https://gsarti.com/publication/decoderlens/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
-      <link>http://localhost:1313/publication/pecore/</link>
+      <link>https://gsarti.com/publication/pecore/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/pecore/</guid>
+      <guid>https://gsarti.com/publication/pecore/</guid>
       <description></description>
     </item>
     
     <item>
       <title>RAMP: Retrieval and Attribute-Marking Enhanced Prompting for Attribute-Controlled Translation</title>
-      <link>http://localhost:1313/publication/ramp/</link>
+      <link>https://gsarti.com/publication/ramp/</link>
       <pubDate>Mon, 29 May 2023 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/ramp/</guid>
+      <guid>https://gsarti.com/publication/ramp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Are Character-level Translations Worth the Wait? Comparing ByT5 and mT5 for Machine Translation</title>
-      <link>http://localhost:1313/publication/char-mt-analysis/</link>
+      <link>https://gsarti.com/publication/char-mt-analysis/</link>
       <pubDate>Tue, 28 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/char-mt-analysis/</guid>
+      <guid>https://gsarti.com/publication/char-mt-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>http://localhost:1313/publication/inseq/</link>
+      <link>https://gsarti.com/publication/inseq/</link>
       <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/inseq/</guid>
+      <guid>https://gsarti.com/publication/inseq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>
-      <link>http://localhost:1313/publication/divemt/</link>
+      <link>https://gsarti.com/publication/divemt/</link>
       <pubDate>Tue, 24 May 2022 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/divemt/</guid>
+      <guid>https://gsarti.com/publication/divemt/</guid>
       <description></description>
     </item>
     

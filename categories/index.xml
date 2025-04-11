@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Gabriele Sarti</title>
-    <link>http://localhost:1313/categories/</link>
-      <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/categories/</link>
+      <atom:link href="https://gsarti.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Mon, 24 Mar 2025 14:00:00 +0100</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Categories</title>
-      <link>http://localhost:1313/categories/</link>
+      <link>https://gsarti.com/categories/</link>
     </image>
     
   </channel>

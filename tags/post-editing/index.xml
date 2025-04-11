@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post-Editing | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/post-editing/</link>
-      <atom:link href="http://localhost:1313/tags/post-editing/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/post-editing/</link>
+      <atom:link href="https://gsarti.com/tags/post-editing/index.xml" rel="self" type="application/rss+xml" />
     <description>Post-Editing</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Post-Editing</title>
-      <link>http://localhost:1313/tags/post-editing/</link>
+      <link>https://gsarti.com/tags/post-editing/</link>
     </image>
     
     <item>
       <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
-      <link>http://localhost:1313/publication/qe4pe/</link>
+      <link>https://gsarti.com/publication/qe4pe/</link>
       <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/qe4pe/</guid>
+      <guid>https://gsarti.com/publication/qe4pe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages</title>
-      <link>http://localhost:1313/publication/divemt/</link>
+      <link>https://gsarti.com/publication/divemt/</link>
       <pubDate>Tue, 24 May 2022 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/divemt/</guid>
+      <guid>https://gsarti.com/publication/divemt/</guid>
       <description></description>
     </item>
     

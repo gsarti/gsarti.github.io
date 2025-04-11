@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tommaso Caselli | Gabriele Sarti</title>
-    <link>http://localhost:1313/authors/tommaso-caselli/</link>
-      <atom:link href="http://localhost:1313/authors/tommaso-caselli/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/authors/tommaso-caselli/</link>
+      <atom:link href="https://gsarti.com/authors/tommaso-caselli/index.xml" rel="self" type="application/rss+xml" />
     <description>Tommaso Caselli</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 02 Aug 2024 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Tommaso Caselli</title>
-      <link>http://localhost:1313/authors/tommaso-caselli/</link>
+      <link>https://gsarti.com/authors/tommaso-caselli/</link>
     </image>
     
     <item>
       <title>Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses</title>
-      <link>http://localhost:1313/publication/verbalized-rebus/</link>
+      <link>https://gsarti.com/publication/verbalized-rebus/</link>
       <pubDate>Fri, 02 Aug 2024 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/verbalized-rebus/</guid>
+      <guid>https://gsarti.com/publication/verbalized-rebus/</guid>
       <description></description>
     </item>
     

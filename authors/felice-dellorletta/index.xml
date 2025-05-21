@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Felice Dell&#39;Orletta | Gabriele Sarti</title>
-    <link>https://gsarti.com/authors/felice-dellorletta/</link>
-      <atom:link href="https://gsarti.com/authors/felice-dellorletta/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/authors/felice-dellorletta/</link>
+      <atom:link href="http://localhost:1313/authors/felice-dellorletta/index.xml" rel="self" type="application/rss+xml" />
     <description>Felice Dell&#39;Orletta</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Sun, 06 Jun 2021 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Felice Dell&#39;Orletta</title>
-      <link>https://gsarti.com/authors/felice-dellorletta/</link>
+      <link>http://localhost:1313/authors/felice-dellorletta/</link>
     </image>
     
     <item>
       <title>That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</title>
-      <link>https://gsarti.com/publication/that-looks-hard/</link>
+      <link>http://localhost:1313/publication/that-looks-hard/</link>
       <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/that-looks-hard/</guid>
+      <guid>http://localhost:1313/publication/that-looks-hard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Literary Ordnance: When the Writer is an AI</title>
-      <link>https://gsarti.com/talk/literary-ordnance/</link>
+      <link>http://localhost:1313/talk/literary-ordnance/</link>
       <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
-      <guid>https://gsarti.com/talk/literary-ordnance/</guid>
+      <guid>http://localhost:1313/talk/literary-ordnance/</guid>
       <description></description>
     </item>
     

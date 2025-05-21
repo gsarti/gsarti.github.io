@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
   <meta name="description" content="PhD in Natural Language Processing">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://gsarti.com/tags/interpretability/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/tags/interpretability/">
 
   
 
@@ -98,7 +98,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://gsarti.com/tags/interpretability/">
+  <link rel="canonical" href="http://localhost:1313/tags/interpretability/">
 
   
   
@@ -113,13 +113,13 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="https://gsarti.com/tags/interpretability/">
+  <meta property="og:url" content="http://localhost:1313/tags/interpretability/">
   <meta property="og:title" content="Interpretability | Gabriele Sarti">
   <meta property="og:description" content="PhD in Natural Language Processing">
-  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="https://gsarti.com/img/avatar.jpg">
-  <meta property="twitter:image" content="https://gsarti.com/img/avatar.jpg"><meta property="og:locale" content="en-us">
+  <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="http://localhost:1313/img/avatar.jpg">
+  <meta property="twitter:image" content="http://localhost:1313/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2025-03-24T14:00:00&#43;01:00">
+    <meta property="og:updated_time" content="2025-05-22T10:30:00&#43;02:00">
   
 
   
@@ -352,6 +352,24 @@
   
   
   <div>
+    <h2><a href="/talk/circuits-inclow-2025/">Interpreting Latent Features in Large Language Models</a></h2>
+    <div class="article-style">
+      
+      The presentation discusses interpreting latent features in large language models (LLMs). After an introduction on mechanistic interpretability fundamentals, including feature superposition and sparse autoencoders, I discuss recent work by the Anthropic interpretability team (Ameisen et al. 2025, Lindsey et al. 2025) for extracting circuits of interpretable features from trained LLMs. Real-world investigations of Claude mechanisms, such as multi-step reasoning and multilinguality, are also analyzed.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/talk/dfki-saarland-qe4pe-2025/">QE4PE: Word-level Quality Estimation for Human Post-Editing</a></h2>
+    <div class="article-style">
+      
+      Word-level quality estimation (QE) detects erroneous spans in machine translations, which can direct and facilitate human post-editing. While the accuracy of word-level QE systems has been assessed extensively, their usability and downstream influence on the speed, quality and editing choices of human post-editing remain understudied. Our QE4PE study investigates the impact of word-level QE on machine translation (MT) post-editing in a realistic setting involving 42 professional post-editors across two translation directions. We compare four error-span highlight modalities, including supervised and uncertainty-based word-level QE methods, for identifying potential errors in the outputs of a state-of-the-art neural MT model. Post-editing effort and productivity are estimated by behavioral logs, while quality improvements are assessed by word- and segment-level human annotation. We find that domain, language and editors' speed are critical factors in determining highlights' effectiveness, with modest differences between human-made and automated QE highlights underlining a gap between accuracy and usability in professional workflows.
+      
+    </div>
+  </div>
+  
+  <div>
     <h2><a href="/talk/llm-xai-rug-fse-seminar-2025/">Interpretability for Language Models: Current Trends and Applications</a></h2>
     <div class="article-style">
       
@@ -419,24 +437,6 @@
     <div class="article-style">
       
       This talk discusses the challenges and opportunities in conducting interpretability analyses of generative language models. We begin by presenting Inseq, an open-source toolkit for advanced feature attribution analyses of language models. The usage of Inseq is illustrated through examples of state-of-the-art approaches contrastive attribution, input dependence and locating factual knowledge in intermediate model representations. Then, we introduce Plausibility Evaluation of Context Reliance (PECoRe), an end-to-end interpretability framework using model internals  to detect context-dependent spans in model generations and trace their prediction back to salient tokens in the available context. The usage of PECoRe is showcased on various generative tasks, including machine translation, story generation and retrieval-augmented question answering.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/area-pecore-2024/">Quantifying the Plausibility of Context Reliance in Neural Machine Translation</a></h2>
-    <div class="article-style">
-      
-      This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/publication/transformer-lm-inner-workings/">A Primer on the Inner Workings of Transformer-based Language Models</a></h2>
-    <div class="article-style">
-      
-      This primer provides a concise technical introduction to the current techniques used to interpret the inner workings of Transformer-based language models, focusing on the generative decoder-only architecture.
       
     </div>
   </div>

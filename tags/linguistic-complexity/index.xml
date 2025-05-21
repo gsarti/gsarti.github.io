@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linguistic Complexity | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/linguistic-complexity/</link>
-      <atom:link href="https://gsarti.com/tags/linguistic-complexity/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/linguistic-complexity/</link>
+      <atom:link href="http://localhost:1313/tags/linguistic-complexity/index.xml" rel="self" type="application/rss+xml" />
     <description>Linguistic Complexity</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Linguistic Complexity</title>
-      <link>https://gsarti.com/tags/linguistic-complexity/</link>
+      <link>http://localhost:1313/tags/linguistic-complexity/</link>
     </image>
     
     <item>
       <title>Towards User-centric Interpretability of Machine Translation Models</title>
-      <link>https://gsarti.com/talk/linguistics-lunch/</link>
+      <link>http://localhost:1313/talk/linguistics-lunch/</link>
       <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/linguistics-lunch/</guid>
+      <guid>http://localhost:1313/talk/linguistics-lunch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Towards User-centric Interpretability of NLP Models</title>
-      <link>https://gsarti.com/talk/tech-talk-translated-2022/</link>
+      <link>http://localhost:1313/talk/tech-talk-translated-2022/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/tech-talk-translated-2022/</guid>
+      <guid>http://localhost:1313/talk/tech-talk-translated-2022/</guid>
       <description></description>
     </item>
     

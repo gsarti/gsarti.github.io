@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Benjamin Hsu | Gabriele Sarti</title>
-    <link>https://gsarti.com/authors/benjamin-hsu/</link>
-      <atom:link href="https://gsarti.com/authors/benjamin-hsu/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/authors/benjamin-hsu/</link>
+      <atom:link href="http://localhost:1313/authors/benjamin-hsu/index.xml" rel="self" type="application/rss+xml" />
     <description>Benjamin Hsu</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Mon, 29 May 2023 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Benjamin Hsu</title>
-      <link>https://gsarti.com/authors/benjamin-hsu/</link>
+      <link>http://localhost:1313/authors/benjamin-hsu/</link>
     </image>
     
     <item>
       <title>RAMP: Retrieval and Attribute-Marking Enhanced Prompting for Attribute-Controlled Translation</title>
-      <link>https://gsarti.com/publication/ramp/</link>
+      <link>http://localhost:1313/publication/ramp/</link>
       <pubDate>Mon, 29 May 2023 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/ramp/</guid>
+      <guid>http://localhost:1313/publication/ramp/</guid>
       <description></description>
     </item>
     

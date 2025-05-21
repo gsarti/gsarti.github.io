@@ -2,157 +2,173 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Feature Attribution | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/feature-attribution/</link>
-      <atom:link href="https://gsarti.com/tags/feature-attribution/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/feature-attribution/</link>
+      <atom:link href="http://localhost:1313/tags/feature-attribution/index.xml" rel="self" type="application/rss+xml" />
     <description>Feature Attribution</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Mon, 24 Mar 2025 14:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 22 May 2025 10:30:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Feature Attribution</title>
-      <link>https://gsarti.com/tags/feature-attribution/</link>
+      <link>http://localhost:1313/tags/feature-attribution/</link>
     </image>
     
     <item>
+      <title>Interpreting Latent Features in Large Language Models</title>
+      <link>http://localhost:1313/talk/circuits-inclow-2025/</link>
+      <pubDate>Thu, 22 May 2025 10:30:00 +0200</pubDate>
+      <guid>http://localhost:1313/talk/circuits-inclow-2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
+      <link>http://localhost:1313/talk/dfki-saarland-qe4pe-2025/</link>
+      <pubDate>Tue, 15 Apr 2025 10:15:00 +0100</pubDate>
+      <guid>http://localhost:1313/talk/dfki-saarland-qe4pe-2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Interpretability for Language Models: Current Trends and Applications</title>
-      <link>https://gsarti.com/talk/llm-xai-rug-fse-seminar-2025/</link>
+      <link>http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/</link>
       <pubDate>Mon, 24 Mar 2025 14:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/llm-xai-rug-fse-seminar-2025/</guid>
+      <guid>http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpreting Context Usage in Generative Language Models</title>
-      <link>https://gsarti.com/talk/aniti-2025/</link>
+      <link>http://localhost:1313/talk/aniti-2025/</link>
       <pubDate>Tue, 11 Mar 2025 14:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/aniti-2025/</guid>
+      <guid>http://localhost:1313/talk/aniti-2025/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpretability for Language Models: Current Trends and Applications</title>
-      <link>https://gsarti.com/talk/sapienza-data-science-phd-course-2024/</link>
+      <link>http://localhost:1313/talk/sapienza-data-science-phd-course-2024/</link>
       <pubDate>Tue, 05 Nov 2024 11:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/sapienza-data-science-phd-course-2024/</guid>
+      <guid>http://localhost:1313/talk/sapienza-data-science-phd-course-2024/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpreting Context Usage in Generative Language Models with Inseq, PECoRe and MIRAGE</title>
-      <link>https://gsarti.com/talk/cis-lmu-inseq-pecore-2024/</link>
+      <link>http://localhost:1313/talk/cis-lmu-inseq-pecore-2024/</link>
       <pubDate>Tue, 16 Jul 2024 09:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/cis-lmu-inseq-pecore-2024/</guid>
+      <guid>http://localhost:1313/talk/cis-lmu-inseq-pecore-2024/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation</title>
-      <link>https://gsarti.com/publication/mirage/</link>
+      <link>http://localhost:1313/publication/mirage/</link>
       <pubDate>Sat, 15 Jun 2024 00:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/mirage/</guid>
+      <guid>http://localhost:1313/publication/mirage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpreting Context Usage in Generative Language Models with Inseq and PECoRe</title>
-      <link>https://gsarti.com/talk/polito-inseq-pecore-2024/</link>
+      <link>http://localhost:1313/talk/polito-inseq-pecore-2024/</link>
       <pubDate>Mon, 20 May 2024 09:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/polito-inseq-pecore-2024/</guid>
+      <guid>http://localhost:1313/talk/polito-inseq-pecore-2024/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers</title>
-      <link>https://gsarti.com/talk/sheffield-seminar-2024/</link>
+      <link>http://localhost:1313/talk/sheffield-seminar-2024/</link>
       <pubDate>Fri, 01 Mar 2024 17:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/sheffield-seminar-2024/</guid>
+      <guid>http://localhost:1313/talk/sheffield-seminar-2024/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Explaining Language Models with Inseq</title>
-      <link>https://gsarti.com/talk/indeep-masterclass-nov23/</link>
+      <link>http://localhost:1313/talk/indeep-masterclass-nov23/</link>
       <pubDate>Thu, 02 Nov 2023 10:30:00 +0200</pubDate>
-      <guid>https://gsarti.com/talk/indeep-masterclass-nov23/</guid>
+      <guid>http://localhost:1313/talk/indeep-masterclass-nov23/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post-hoc Interpretability for Language Models</title>
-      <link>https://gsarti.com/talk/escience-signlp-seminar-oct23/</link>
+      <link>http://localhost:1313/talk/escience-signlp-seminar-oct23/</link>
       <pubDate>Thu, 26 Oct 2023 13:30:00 +0200</pubDate>
-      <guid>https://gsarti.com/talk/escience-signlp-seminar-oct23/</guid>
+      <guid>http://localhost:1313/talk/escience-signlp-seminar-oct23/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
-      <link>https://gsarti.com/publication/pecore/</link>
+      <link>http://localhost:1313/publication/pecore/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/pecore/</guid>
+      <guid>http://localhost:1313/publication/pecore/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post-hoc Interpretability for NLG &amp; Inseq: an Interpretability Toolkit for Sequence Generation Models</title>
-      <link>https://gsarti.com/talk/restcl-2023/</link>
+      <link>http://localhost:1313/talk/restcl-2023/</link>
       <pubDate>Sun, 02 Jul 2023 15:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/restcl-2023/</guid>
+      <guid>http://localhost:1313/talk/restcl-2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post-hoc Interpretability for Neural Language Models</title>
-      <link>https://gsarti.com/talk/cosmo-units-2023/</link>
+      <link>http://localhost:1313/talk/cosmo-units-2023/</link>
       <pubDate>Thu, 01 Jun 2023 14:30:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/cosmo-units-2023/</guid>
+      <guid>http://localhost:1313/talk/cosmo-units-2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Explaining Neural Language Models from Internal Representations to Model Predictions</title>
-      <link>https://gsarti.com/talk/ailc-lcl-2023/</link>
+      <link>http://localhost:1313/talk/ailc-lcl-2023/</link>
       <pubDate>Wed, 31 May 2023 14:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/ailc-lcl-2023/</guid>
+      <guid>http://localhost:1313/talk/ailc-lcl-2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post-hoc Interpretability for Neural Language Models</title>
-      <link>https://gsarti.com/talk/ailo-xai-2023/</link>
+      <link>http://localhost:1313/talk/ailo-xai-2023/</link>
       <pubDate>Tue, 23 May 2023 16:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/ailo-xai-2023/</guid>
+      <guid>http://localhost:1313/talk/ailo-xai-2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>https://gsarti.com/talk/sapienzanlp-seminar-2023/</link>
+      <link>http://localhost:1313/talk/sapienzanlp-seminar-2023/</link>
       <pubDate>Thu, 06 Apr 2023 15:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/sapienzanlp-seminar-2023/</guid>
+      <guid>http://localhost:1313/talk/sapienzanlp-seminar-2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Advanced XAI Techniques and Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>https://gsarti.com/talk/indeep-meeting-mar23/</link>
+      <link>http://localhost:1313/talk/indeep-meeting-mar23/</link>
       <pubDate>Thu, 23 Mar 2023 14:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/indeep-meeting-mar23/</guid>
+      <guid>http://localhost:1313/talk/indeep-meeting-mar23/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Are Character-level Translations Worth the Wait? Comparing ByT5 and mT5 for Machine Translation</title>
-      <link>https://gsarti.com/publication/char-mt-analysis/</link>
+      <link>http://localhost:1313/publication/char-mt-analysis/</link>
       <pubDate>Tue, 28 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/char-mt-analysis/</guid>
+      <guid>http://localhost:1313/publication/char-mt-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>https://gsarti.com/publication/inseq/</link>
+      <link>http://localhost:1313/publication/inseq/</link>
       <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>https://gsarti.com/publication/inseq/</guid>
+      <guid>http://localhost:1313/publication/inseq/</guid>
       <description></description>
     </item>
     

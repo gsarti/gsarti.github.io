@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vilém Zouhar | Gabriele Sarti</title>
-    <link>https://gsarti.com/authors/vilem-zouhar/</link>
-      <atom:link href="https://gsarti.com/authors/vilem-zouhar/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/authors/vilem-zouhar/</link>
+      <atom:link href="http://localhost:1313/authors/vilem-zouhar/index.xml" rel="self" type="application/rss+xml" />
     <description>Vilém Zouhar</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Vilém Zouhar</title>
-      <link>https://gsarti.com/authors/vilem-zouhar/</link>
+      <link>http://localhost:1313/authors/vilem-zouhar/</link>
     </image>
     
     <item>
       <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
-      <link>https://gsarti.com/publication/qe4pe/</link>
+      <link>http://localhost:1313/publication/qe4pe/</link>
       <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/publication/qe4pe/</guid>
+      <guid>http://localhost:1313/publication/qe4pe/</guid>
       <description></description>
     </item>
     

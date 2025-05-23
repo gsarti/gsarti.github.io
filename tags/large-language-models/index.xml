@@ -5,12 +5,20 @@
     <link>http://localhost:1313/tags/large-language-models/</link>
       <atom:link href="http://localhost:1313/tags/large-language-models/index.xml" rel="self" type="application/rss+xml" />
     <description>Large Language Models</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 05 Dec 2024 15:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 23 May 2025 00:00:00 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Large Language Models</title>
       <link>http://localhost:1313/tags/large-language-models/</link>
     </image>
+    
+    <item>
+      <title>Steering Large Language Models for Machine Translation Personalization</title>
+      <link>http://localhost:1313/publication/steering-litmt/</link>
+      <pubDate>Fri, 23 May 2025 00:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/publication/steering-litmt/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses</title>

@@ -5,12 +5,20 @@
     <link>http://localhost:1313/tags/multilingual/</link>
       <atom:link href="http://localhost:1313/tags/multilingual/index.xml" rel="self" type="application/rss+xml" />
     <description>Multilingual</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 23 May 2025 00:00:00 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Multilingual</title>
       <link>http://localhost:1313/tags/multilingual/</link>
     </image>
+    
+    <item>
+      <title>Steering Large Language Models for Machine Translation Personalization</title>
+      <link>http://localhost:1313/publication/steering-litmt/</link>
+      <pubDate>Fri, 23 May 2025 00:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/publication/steering-litmt/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Multi-property Steering of Large Language Models with Dynamic Activation Composition</title>

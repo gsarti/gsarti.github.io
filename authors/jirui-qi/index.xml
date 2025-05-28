@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jirui Qi* | Gabriele Sarti</title>
+    <title>Jirui Qi | Gabriele Sarti</title>
     <link>http://localhost:1313/authors/jirui-qi/</link>
       <atom:link href="http://localhost:1313/authors/jirui-qi/index.xml" rel="self" type="application/rss+xml" />
-    <description>Jirui Qi*</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0200</lastBuildDate>
+    <description>Jirui Qi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Tue, 13 Dec 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
-      <title>Jirui Qi*</title>
+      <title>Jirui Qi</title>
       <link>http://localhost:1313/authors/jirui-qi/</link>
     </image>
     
     <item>
-      <title>Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation</title>
-      <link>http://localhost:1313/publication/mirage/</link>
-      <pubDate>Sat, 15 Jun 2024 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/mirage/</guid>
-      <description></description>
+      <title>Attributing Context Usage in Language Models</title>
+      <link>http://localhost:1313/project/pecore/</link>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/pecore/</guid>
+      <description>&lt;p&gt;PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq interpretability library&lt;/a&gt; and can be easily used thanks to the &lt;code&gt;inseq attribute-context&lt;/code&gt; command. The framework is described in detail in the paper &lt;a href=&#34;http://localhost:1313/publication/pecore/&#34;&gt;Quantifying the Plausibility of Context Reliance in Neural Machine Translation&lt;/a&gt;, published at ICLR 2024, and its extension MIRAGE was created to support answer attribution in RAG applications &lt;a href=&#34;http://localhost:1313/publication/mirage/&#34;&gt;Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

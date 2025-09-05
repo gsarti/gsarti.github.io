@@ -3,16 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/publication_types/3/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/arianna-bisazza/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/human-label-variation/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/interpretability/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/machine-translation/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/malvina-nissim/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication_types/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/quality-estimation/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/uncertainty-quantification/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/unsup-wqe/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/vilem-zouhar/</loc>
+    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/daniel-scalena/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
@@ -23,40 +68,16 @@
     <loc>http://localhost:1313/authors/elisabetta-fersini/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/interpretability/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/large-language-models/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/machine-translation/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/malvina-nissim/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/multilingual/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/prompting/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/steering/</loc>
@@ -68,9 +89,6 @@
     <loc>http://localhost:1313/tags/style-transfer/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/academic/</loc>
     <lastmod>2025-05-22T10:30:00+02:00</lastmod>
   </url><url>
@@ -78,9 +96,6 @@
     <lastmod>2025-05-22T10:30:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/feature-attribution/</loc>
-    <lastmod>2025-05-22T10:30:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
     <lastmod>2025-05-22T10:30:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/circuits-inclow-2025/</loc>
@@ -122,25 +137,10 @@
     <loc>http://localhost:1313/tags/human-evaluation/</loc>
     <lastmod>2025-03-06T01:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/human-label-variation/</loc>
-    <lastmod>2025-03-06T01:00:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/post-editing/</loc>
     <lastmod>2025-03-06T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/qe4pe/</loc>
-    <lastmod>2025-03-06T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/quality-estimation/</loc>
-    <lastmod>2025-03-06T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/uncertainty-quantification/</loc>
-    <lastmod>2025-03-06T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication/unsup-wqe/</loc>
-    <lastmod>2025-03-06T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/vilem-zouhar/</loc>
     <lastmod>2025-03-06T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/ai2s-talk-2024/</loc>
@@ -645,37 +645,5 @@
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/gsarti/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/app-co2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/app-et-metrics/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/app-et-modeling/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/app-garden-paths-et/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/app-intra-sim/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/app-ling-feats/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/app-params/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/chap-ex1/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/chap-ex2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/chap-ex3/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/chap-ling-comp/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/chap-models/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/conclusion/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/introduction/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/references/</loc>
-  </url><url>
-    <loc>http://localhost:1313/msc-thesis/</loc>
   </url>
 </urlset>

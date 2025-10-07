@@ -5,12 +5,20 @@
     <link>http://localhost:1313/authors/gabriele-sarti/</link>
       <atom:link href="http://localhost:1313/authors/gabriele-sarti/index.xml" rel="self" type="application/rss+xml" />
     <description>Gabriele Sarti</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 30 May 2025 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Tue, 07 Oct 2025 15:30:00 +0100</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Gabriele Sarti</title>
       <link>http://localhost:1313/authors/gabriele-sarti/</link>
     </image>
+    
+    <item>
+      <title>Interpreting Context Usage in Generative Language Models</title>
+      <link>http://localhost:1313/talk/fbk-land-2025/</link>
+      <pubDate>Tue, 07 Oct 2025 15:30:00 +0100</pubDate>
+      <guid>http://localhost:1313/talk/fbk-land-2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Unsupervised Word-level Quality Estimation for Machine Translation Through the Lens of Annotators (Dis)agreement</title>

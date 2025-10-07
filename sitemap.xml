@@ -2,40 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/categories/academic/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/feature-attribution/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/interpretability/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/talk/fbk-land-2025/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/language-modeling/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/talk/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/retrieval-augmented-generation/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sequence-to-sequence/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/publication_types/3/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/arianna-bisazza/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/human-label-variation/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/interpretability/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/machine-translation/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/malvina-nissim/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication_types/</loc>
@@ -45,9 +69,6 @@
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/</loc>
-    <lastmod>2025-05-30T01:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/uncertainty-quantification/</loc>
@@ -89,31 +110,13 @@
     <loc>http://localhost:1313/tags/style-transfer/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/academic/</loc>
-    <lastmod>2025-05-22T10:30:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/concept-based-interpretability/</loc>
-    <lastmod>2025-05-22T10:30:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/feature-attribution/</loc>
     <lastmod>2025-05-22T10:30:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/circuits-inclow-2025/</loc>
     <lastmod>2025-05-22T10:30:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/language-modeling/</loc>
-    <lastmod>2025-05-22T10:30:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/talk/</loc>
-    <lastmod>2025-05-22T10:30:00+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/talk/dfki-saarland-qe4pe-2025/</loc>
-    <lastmod>2025-04-15T10:15:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/retrieval-augmented-generation/</loc>
-    <lastmod>2025-04-15T10:15:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/sequence-to-sequence/</loc>
     <lastmod>2025-04-15T10:15:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/llm-xai-rug-fse-seminar-2025/</loc>

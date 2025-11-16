@@ -47,7 +47,7 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-07T15:30:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/publication_types/3/</loc>
+    <loc>http://localhost:1313/publication_types/1/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/arianna-bisazza/</loc>
@@ -79,6 +79,9 @@
   </url><url>
     <loc>http://localhost:1313/authors/vilem-zouhar/</loc>
     <lastmod>2025-05-30T01:00:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication_types/3/</loc>
+    <lastmod>2025-05-23T00:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/daniel-scalena/</loc>
     <lastmod>2025-05-23T00:00:00+02:00</lastmod>
@@ -124,6 +127,9 @@
   </url><url>
     <loc>http://localhost:1313/talk/aniti-2025/</loc>
     <lastmod>2025-03-11T14:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication_types/2/</loc>
+    <lastmod>2025-03-06T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/ana-guerberof-arenas/</loc>
     <lastmod>2025-03-06T01:00:00+02:00</lastmod>
@@ -172,9 +178,6 @@
   </url><url>
     <loc>http://localhost:1313/talk/sapienza-data-science-phd-course-2024/</loc>
     <lastmod>2024-11-05T11:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/1/</loc>
-    <lastmod>2024-08-02T01:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/verbalized-rebus/</loc>
     <lastmod>2024-08-02T01:00:00+02:00</lastmod>
@@ -331,9 +334,6 @@
   </url><url>
     <loc>http://localhost:1313/talk/gronlp-rg-inseq/</loc>
     <lastmod>2023-03-10T13:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/2/</loc>
-    <lastmod>2023-02-28T09:47:38+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/antonio-toral/</loc>
     <lastmod>2023-02-28T09:47:38+02:00</lastmod>

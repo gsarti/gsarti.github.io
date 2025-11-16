@@ -5,12 +5,20 @@
     <link>http://localhost:1313/publication_types/1/</link>
       <atom:link href="http://localhost:1313/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 02 Aug 2024 01:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 30 May 2025 01:00:00 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>1</title>
       <link>http://localhost:1313/publication_types/1/</link>
     </image>
+    
+    <item>
+      <title>Unsupervised Word-level Quality Estimation for Machine Translation Through the Lens of Annotators (Dis)agreement</title>
+      <link>http://localhost:1313/publication/unsup-wqe/</link>
+      <pubDate>Fri, 30 May 2025 01:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/publication/unsup-wqe/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses</title>

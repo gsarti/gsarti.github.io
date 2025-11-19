@@ -3,48 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/academic/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/feature-attribution/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/gabriele-sarti/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/interpretability/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/talk/xai-units-seminar-2025/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/language-modeling/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mechanistic-interpretability/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/talk/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/retrieval-augmented-generation/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/fbk-land-2025/</loc>
     <lastmod>2025-10-07T15:30:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/language-modeling/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/natural-language-processing/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/natural-language-processing/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/talk/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/retrieval-augmented-generation/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/sequence-to-sequence/</loc>
-    <lastmod>2025-10-07T15:30:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-07T15:30:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication_types/1/</loc>
@@ -237,9 +243,6 @@
     <lastmod>2024-05-01T00:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/marta-costa-jussa/</loc>
-    <lastmod>2024-05-01T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/mechanistic-interpretability/</loc>
     <lastmod>2024-05-01T00:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/transformers/</loc>

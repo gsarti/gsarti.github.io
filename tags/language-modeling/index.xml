@@ -5,12 +5,20 @@
     <link>http://localhost:1313/tags/language-modeling/</link>
       <atom:link href="http://localhost:1313/tags/language-modeling/index.xml" rel="self" type="application/rss+xml" />
     <description>Language Modeling</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Tue, 07 Oct 2025 15:30:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Wed, 19 Nov 2025 10:00:00 +0100</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Language Modeling</title>
       <link>http://localhost:1313/tags/language-modeling/</link>
     </image>
+    
+    <item>
+      <title>Interpretability for Language Models: Current Trends and Applications</title>
+      <link>http://localhost:1313/talk/xai-units-seminar-2025/</link>
+      <pubDate>Wed, 19 Nov 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/talk/xai-units-seminar-2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Interpreting Context Usage in Generative Language Models</title>

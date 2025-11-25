@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eye-Tracking | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/eye-tracking/</link>
-      <atom:link href="http://localhost:1313/tags/eye-tracking/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/eye-tracking/</link>
+      <atom:link href="https://gsarti.com/tags/eye-tracking/index.xml" rel="self" type="application/rss+xml" />
     <description>Eye-Tracking</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 05 Nov 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Eye-Tracking</title>
-      <link>http://localhost:1313/tags/eye-tracking/</link>
+      <link>https://gsarti.com/tags/eye-tracking/</link>
     </image>
     
     <item>
       <title>Characterizing Linguistic Complexity in Humans and Language Models</title>
-      <link>http://localhost:1313/talk/aperitivo-bocconi/</link>
+      <link>https://gsarti.com/talk/aperitivo-bocconi/</link>
       <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talk/aperitivo-bocconi/</guid>
+      <guid>https://gsarti.com/talk/aperitivo-bocconi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</title>
-      <link>http://localhost:1313/publication/that-looks-hard/</link>
+      <link>https://gsarti.com/publication/that-looks-hard/</link>
       <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/that-looks-hard/</guid>
+      <guid>https://gsarti.com/publication/that-looks-hard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpreting Neural Language Models for Linguistic Complexity Assessment</title>
-      <link>http://localhost:1313/publication/interpreting-nlms-for-lca/</link>
+      <link>https://gsarti.com/publication/interpreting-nlms-for-lca/</link>
       <pubDate>Sat, 19 Dec 2020 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/interpreting-nlms-for-lca/</guid>
+      <guid>https://gsarti.com/publication/interpreting-nlms-for-lca/</guid>
       <description></description>
     </item>
     

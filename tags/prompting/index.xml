@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Prompting | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/prompting/</link>
-      <atom:link href="http://localhost:1313/tags/prompting/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/prompting/</link>
+      <atom:link href="https://gsarti.com/tags/prompting/index.xml" rel="self" type="application/rss+xml" />
     <description>Prompting</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 23 May 2025 00:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Prompting</title>
-      <link>http://localhost:1313/tags/prompting/</link>
+      <link>https://gsarti.com/tags/prompting/</link>
     </image>
     
     <item>
       <title>Steering Large Language Models for Machine Translation Personalization</title>
-      <link>http://localhost:1313/publication/steering-litmt/</link>
+      <link>https://gsarti.com/publication/steering-litmt/</link>
       <pubDate>Fri, 23 May 2025 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/steering-litmt/</guid>
+      <guid>https://gsarti.com/publication/steering-litmt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multi-property Steering of Large Language Models with Dynamic Activation Composition</title>
-      <link>http://localhost:1313/publication/dynamic-activation-composition/</link>
+      <link>https://gsarti.com/publication/dynamic-activation-composition/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/dynamic-activation-composition/</guid>
+      <guid>https://gsarti.com/publication/dynamic-activation-composition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>RAMP: Retrieval and Attribute-Marking Enhanced Prompting for Attribute-Controlled Translation</title>
-      <link>http://localhost:1313/publication/ramp/</link>
+      <link>https://gsarti.com/publication/ramp/</link>
       <pubDate>Mon, 29 May 2023 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/ramp/</guid>
+      <guid>https://gsarti.com/publication/ramp/</guid>
       <description></description>
     </item>
     

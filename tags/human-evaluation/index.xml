@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Human Evaluation | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/human-evaluation/</link>
-      <atom:link href="http://localhost:1313/tags/human-evaluation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/human-evaluation/</link>
+      <atom:link href="https://gsarti.com/tags/human-evaluation/index.xml" rel="self" type="application/rss+xml" />
     <description>Human Evaluation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Human Evaluation</title>
-      <link>http://localhost:1313/tags/human-evaluation/</link>
+      <link>https://gsarti.com/tags/human-evaluation/</link>
     </image>
     
     <item>
       <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
-      <link>http://localhost:1313/publication/qe4pe/</link>
+      <link>https://gsarti.com/publication/qe4pe/</link>
       <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/qe4pe/</guid>
+      <guid>https://gsarti.com/publication/qe4pe/</guid>
       <description></description>
     </item>
     

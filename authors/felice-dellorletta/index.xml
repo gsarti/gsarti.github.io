@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Felice Dell’Orletta | Gabriele Sarti</title>
+    <title>Felice Dell&#39;Orletta | Gabriele Sarti</title>
     <link>http://localhost:1313/authors/felice-dellorletta/</link>
       <atom:link href="http://localhost:1313/authors/felice-dellorletta/index.xml" rel="self" type="application/rss+xml" />
-    <description>Felice Dell’Orletta</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 01 Jul 2022 01:00:00 +0200</lastBuildDate>
+    <description>Felice Dell&#39;Orletta</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Sun, 06 Jun 2021 09:47:38 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
-      <title>Felice Dell’Orletta</title>
+      <title>Felice Dell&#39;Orletta</title>
       <link>http://localhost:1313/authors/felice-dellorletta/</link>
     </image>
     
     <item>
-      <title>Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties</title>
-      <link>http://localhost:1313/publication/italian-transformers/</link>
-      <pubDate>Fri, 01 Jul 2022 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/italian-transformers/</guid>
+      <title>That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models</title>
+      <link>http://localhost:1313/publication/that-looks-hard/</link>
+      <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
+      <guid>http://localhost:1313/publication/that-looks-hard/</guid>
       <description></description>
     </item>
     
-  </channel>
-</rss>
-iterary Ordnance: When the Writer is an AI</title>
+    <item>
+      <title>The Literary Ordnance: When the Writer is an AI</title>
       <link>http://localhost:1313/talk/literary-ordnance/</link>
       <pubDate>Thu, 31 Oct 2019 12:00:41 +0100</pubDate>
       <guid>http://localhost:1313/talk/literary-ordnance/</guid>

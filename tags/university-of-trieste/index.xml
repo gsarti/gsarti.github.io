@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>University of Trieste | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/university-of-trieste/</link>
-      <atom:link href="https://gsarti.com/tags/university-of-trieste/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/university-of-trieste/</link>
+      <atom:link href="http://localhost:1313/tags/university-of-trieste/index.xml" rel="self" type="application/rss+xml" />
     <description>University of Trieste</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>University of Trieste</title>
-      <link>https://gsarti.com/tags/university-of-trieste/</link>
+      <link>http://localhost:1313/tags/university-of-trieste/</link>
     </image>
     
     <item>
       <title>Neural Language Models: the New Frontier of Natural Language Understanding</title>
-      <link>https://gsarti.com/talk/neural-lm/</link>
+      <link>http://localhost:1313/talk/neural-lm/</link>
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/neural-lm/</guid>
+      <guid>http://localhost:1313/talk/neural-lm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</title>
-      <link>https://gsarti.com/talk/lth/</link>
+      <link>http://localhost:1313/talk/lth/</link>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/lth/</guid>
+      <guid>http://localhost:1313/talk/lth/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Histopathologic Cancer Detection with Neural Networks</title>
-      <link>https://gsarti.com/project/cancer-detection/</link>
+      <link>http://localhost:1313/project/cancer-detection/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/project/cancer-detection/</guid>
+      <guid>http://localhost:1313/project/cancer-detection/</guid>
       <description>&lt;p&gt;As our final project for the course of Statistical Machine Learning held by Prof. Luca Bortolussi we explored different statistical and deep approaches to the problem of detecting tumors in histopathologic scans. We notably tried a random forest on distributional features extracted by pigment segmentation, a state-of-the-art DenseNet and a Capsule Network with Dynamic Routing.&lt;/p&gt;
 </description>
     </item>

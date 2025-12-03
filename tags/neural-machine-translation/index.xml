@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Neural Machine Translation | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/neural-machine-translation/</link>
-      <atom:link href="https://gsarti.com/tags/neural-machine-translation/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/neural-machine-translation/</link>
+      <atom:link href="http://localhost:1313/tags/neural-machine-translation/index.xml" rel="self" type="application/rss+xml" />
     <description>Neural Machine Translation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 17 May 2024 14:00:00 +0100</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Neural Machine Translation</title>
-      <link>https://gsarti.com/tags/neural-machine-translation/</link>
+      <link>http://localhost:1313/tags/neural-machine-translation/</link>
     </image>
     
     <item>
       <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
-      <link>https://gsarti.com/talk/area-pecore-2024/</link>
+      <link>http://localhost:1313/talk/area-pecore-2024/</link>
       <pubDate>Fri, 17 May 2024 14:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/area-pecore-2024/</guid>
+      <guid>http://localhost:1313/talk/area-pecore-2024/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
-      <link>https://gsarti.com/talk/gronlp-rg-pecore/</link>
+      <link>http://localhost:1313/talk/gronlp-rg-pecore/</link>
       <pubDate>Fri, 26 Apr 2024 13:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/gronlp-rg-pecore/</guid>
+      <guid>http://localhost:1313/talk/gronlp-rg-pecore/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Introducing Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>https://gsarti.com/talk/gronlp-rg-inseq/</link>
+      <link>http://localhost:1313/talk/gronlp-rg-inseq/</link>
       <pubDate>Fri, 10 Mar 2023 13:00:00 +0100</pubDate>
-      <guid>https://gsarti.com/talk/gronlp-rg-inseq/</guid>
+      <guid>http://localhost:1313/talk/gronlp-rg-inseq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Towards User-centric Interpretability of Machine Translation Models</title>
-      <link>https://gsarti.com/talk/linguistics-lunch/</link>
+      <link>http://localhost:1313/talk/linguistics-lunch/</link>
       <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/linguistics-lunch/</guid>
+      <guid>http://localhost:1313/talk/linguistics-lunch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Towards User-centric Interpretability of NLP Models</title>
-      <link>https://gsarti.com/talk/tech-talk-translated-2022/</link>
+      <link>http://localhost:1313/talk/tech-talk-translated-2022/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/tech-talk-translated-2022/</guid>
+      <guid>http://localhost:1313/talk/tech-talk-translated-2022/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Empowering Human Translators via Interpretable Interactive Neural Machine Translation</title>
-      <link>https://gsarti.com/talk/xai4debugging21/</link>
+      <link>http://localhost:1313/talk/xai4debugging21/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://gsarti.com/talk/xai4debugging21/</guid>
+      <guid>http://localhost:1313/talk/xai4debugging21/</guid>
       <description></description>
     </item>
     

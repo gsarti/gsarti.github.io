@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grzegorz Chrupała | Gabriele Sarti</title>
-    <link>http://localhost:1313/authors/grzegorz-chrupa%C5%82a/</link>
-      <atom:link href="http://localhost:1313/authors/grzegorz-chrupa%C5%82a/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/authors/grzegorz-chrupa%C5%82a/</link>
+      <atom:link href="https://gsarti.com/authors/grzegorz-chrupa%C5%82a/index.xml" rel="self" type="application/rss+xml" />
     <description>Grzegorz Chrupała</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 06 Mar 2025 01:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Grzegorz Chrupała</title>
-      <link>http://localhost:1313/authors/grzegorz-chrupa%C5%82a/</link>
+      <link>https://gsarti.com/authors/grzegorz-chrupa%C5%82a/</link>
     </image>
     
     <item>
       <title>QE4PE: Word-level Quality Estimation for Human Post-Editing</title>
-      <link>http://localhost:1313/publication/qe4pe/</link>
+      <link>https://gsarti.com/publication/qe4pe/</link>
       <pubDate>Thu, 06 Mar 2025 01:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/qe4pe/</guid>
+      <guid>https://gsarti.com/publication/qe4pe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Explaining Language Models with Inseq</title>
-      <link>http://localhost:1313/talk/indeep-masterclass-nov23/</link>
+      <link>https://gsarti.com/talk/indeep-masterclass-nov23/</link>
       <pubDate>Thu, 02 Nov 2023 10:30:00 +0200</pubDate>
-      <guid>http://localhost:1313/talk/indeep-masterclass-nov23/</guid>
+      <guid>https://gsarti.com/talk/indeep-masterclass-nov23/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantifying the Plausibility of Context Reliance in Neural Machine Translation</title>
-      <link>http://localhost:1313/publication/pecore/</link>
+      <link>https://gsarti.com/publication/pecore/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/pecore/</guid>
+      <guid>https://gsarti.com/publication/pecore/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Attributing Context Usage in Language Models</title>
-      <link>http://localhost:1313/project/pecore/</link>
+      <link>https://gsarti.com/project/pecore/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/pecore/</guid>
-      <description>&lt;p&gt;PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq interpretability library&lt;/a&gt; and can be easily used thanks to the &lt;code&gt;inseq attribute-context&lt;/code&gt; command. The framework is described in detail in the paper &lt;a href=&#34;http://localhost:1313/publication/pecore/&#34;&gt;Quantifying the Plausibility of Context Reliance in Neural Machine Translation&lt;/a&gt;, published at ICLR 2024, and its extension MIRAGE was created to support answer attribution in RAG applications &lt;a href=&#34;http://localhost:1313/publication/mirage/&#34;&gt;Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation&lt;/a&gt;.&lt;/p&gt;
+      <guid>https://gsarti.com/project/pecore/</guid>
+      <description>&lt;p&gt;PECoRe is a framework using the internal properties of generative language models to identify and attribute context usage in their generations. In particular, the framework is composed by two steps: Context-sensitive Token Identification (CTI), where generated tokens are classified as context-sensitive by contrastively comparing their probabilities with and without context, and Contextual Cues Imputation (CCI), where the dependence of token selected in the CTI step is highlighted by using contrastive attribution. The framework is integrated in the &lt;a href=&#34;https://github.com/inseq-team/inseq&#34;&gt;Inseq interpretability library&lt;/a&gt; and can be easily used thanks to the &lt;code&gt;inseq attribute-context&lt;/code&gt; command. The framework is described in detail in the paper &lt;a href=&#34;https://gsarti.com/publication/pecore/&#34;&gt;Quantifying the Plausibility of Context Reliance in Neural Machine Translation&lt;/a&gt;, published at ICLR 2024, and its extension MIRAGE was created to support answer attribution in RAG applications &lt;a href=&#34;https://gsarti.com/publication/mirage/&#34;&gt;Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elisabetta Fersini | Gabriele Sarti</title>
-    <link>http://localhost:1313/authors/elisabetta-fersini/</link>
-      <atom:link href="http://localhost:1313/authors/elisabetta-fersini/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/authors/elisabetta-fersini/</link>
+      <atom:link href="https://gsarti.com/authors/elisabetta-fersini/index.xml" rel="self" type="application/rss+xml" />
     <description>Elisabetta Fersini</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Fri, 23 May 2025 00:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Elisabetta Fersini</title>
-      <link>http://localhost:1313/authors/elisabetta-fersini/</link>
+      <link>https://gsarti.com/authors/elisabetta-fersini/</link>
     </image>
     
     <item>
       <title>Steering Large Language Models for Machine Translation Personalization</title>
-      <link>http://localhost:1313/publication/steering-litmt/</link>
+      <link>https://gsarti.com/publication/steering-litmt/</link>
       <pubDate>Fri, 23 May 2025 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/steering-litmt/</guid>
+      <guid>https://gsarti.com/publication/steering-litmt/</guid>
       <description></description>
     </item>
     

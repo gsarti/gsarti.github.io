@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Marta Costa-Jussà | Gabriele Sarti</title>
-    <link>http://localhost:1313/authors/marta-costa-jussa/</link>
-      <atom:link href="http://localhost:1313/authors/marta-costa-jussa/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/authors/marta-costa-jussa/</link>
+      <atom:link href="https://gsarti.com/authors/marta-costa-jussa/index.xml" rel="self" type="application/rss+xml" />
     <description>Marta Costa-Jussà</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Wed, 01 May 2024 00:00:00 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Marta Costa-Jussà</title>
-      <link>http://localhost:1313/authors/marta-costa-jussa/</link>
+      <link>https://gsarti.com/authors/marta-costa-jussa/</link>
     </image>
     
     <item>
       <title>A Primer on the Inner Workings of Transformer-based Language Models</title>
-      <link>http://localhost:1313/publication/transformer-lm-inner-workings/</link>
+      <link>https://gsarti.com/publication/transformer-lm-inner-workings/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/transformer-lm-inner-workings/</guid>
+      <guid>https://gsarti.com/publication/transformer-lm-inner-workings/</guid>
       <description></description>
     </item>
     

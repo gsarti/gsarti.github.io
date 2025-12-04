@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computational Linguistics | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/computational-linguistics/</link>
-      <atom:link href="http://localhost:1313/tags/computational-linguistics/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/computational-linguistics/</link>
+      <atom:link href="https://gsarti.com/tags/computational-linguistics/index.xml" rel="self" type="application/rss+xml" />
     <description>Computational Linguistics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Sun, 06 Jun 2021 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Computational Linguistics</title>
-      <link>http://localhost:1313/tags/computational-linguistics/</link>
+      <link>https://gsarti.com/tags/computational-linguistics/</link>
     </image>
     
     <item>
       <title>Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students</title>
-      <link>http://localhost:1313/publication/teaching-nlp-bracelets-menus/</link>
+      <link>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</link>
       <pubDate>Sun, 06 Jun 2021 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/teaching-nlp-bracelets-menus/</guid>
+      <guid>https://gsarti.com/publication/teaching-nlp-bracelets-menus/</guid>
       <description></description>
     </item>
     

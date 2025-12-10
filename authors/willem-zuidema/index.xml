@@ -5,12 +5,20 @@
     <link>https://gsarti.com/authors/willem-zuidema/</link>
       <atom:link href="https://gsarti.com/authors/willem-zuidema/index.xml" rel="self" type="application/rss+xml" />
     <description>Willem Zuidema</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 04 Dec 2025 09:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 11 Dec 2025 11:05:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Willem Zuidema</title>
       <link>https://gsarti.com/authors/willem-zuidema/</link>
     </image>
+    
+    <item>
+      <title>From Insights to Impact: Actionable Interpretability for Neural Machine Translation</title>
+      <link>https://gsarti.com/talk/phd-graduation-workshop-dec25/</link>
+      <pubDate>Thu, 11 Dec 2025 11:05:00 +0200</pubDate>
+      <guid>https://gsarti.com/talk/phd-graduation-workshop-dec25/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Interpreting and Understanding LLMs and Other Deep Learning Models</title>

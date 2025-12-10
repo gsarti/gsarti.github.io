@@ -2,43 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gsarti.com/publication_types/7/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
+    <loc>https://gsarti.com/categories/academic/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/authors/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/barbara-plank/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/eva-vanmassenhove/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/feature-attribution/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/phd-graduation-workshop-dec25/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/interpretability/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/ivan-titov/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/language-modeling/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/machine-translation/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/post-editing/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/talk/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/sparse-autoencoders/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/steering/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/tags/user-study/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/authors/willem-zuidema/</loc>
+    <lastmod>2025-12-11T11:05:00+02:00</lastmod>
+  </url><url>
+    <loc>https://gsarti.com/publication_types/7/</loc>
     <lastmod>2025-12-11T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/deep-learning/</loc>
     <lastmod>2025-12-11T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/feature-attribution/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/publication/from-insight-to-impact/</loc>
     <lastmod>2025-12-11T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/gabriele-sarti/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/human-computer-interaction/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/interpretability/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/language-modeling/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/machine-translation/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/natural-language-processing/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/post-editing/</loc>
     <lastmod>2025-12-11T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/publication_types/</loc>
@@ -50,22 +89,10 @@
     <loc>https://gsarti.com/publication/</loc>
     <lastmod>2025-12-11T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/steering/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/tags/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/tags/transformers/</loc>
     <lastmod>2025-12-11T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://gsarti.com/tags/user-study/</loc>
-    <lastmod>2025-12-11T00:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://gsarti.com/authors/antske-fokkens/</loc>
-    <lastmod>2025-12-04T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/</loc>
     <lastmod>2025-12-04T09:00:00+02:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/tags/feature-circuits/</loc>
@@ -79,18 +106,6 @@
   </url><url>
     <loc>https://gsarti.com/tags/logit-lens/</loc>
     <lastmod>2025-12-04T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/natural-language-processing/</loc>
-    <lastmod>2025-12-04T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/talk/</loc>
-    <lastmod>2025-12-04T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/authors/willem-zuidema/</loc>
-    <lastmod>2025-12-04T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://gsarti.com/categories/academic/</loc>
-    <lastmod>2025-11-19T10:00:00+01:00</lastmod>
   </url><url>
     <loc>https://gsarti.com/talk/xai-units-seminar-2025/</loc>
     <lastmod>2025-11-19T10:00:00+01:00</lastmod>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Feature Circuits | Gabriele Sarti</title>
-    <link>https://gsarti.com/tags/feature-circuits/</link>
-      <atom:link href="https://gsarti.com/tags/feature-circuits/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/feature-circuits/</link>
+      <atom:link href="http://localhost:1313/tags/feature-circuits/index.xml" rel="self" type="application/rss+xml" />
     <description>Feature Circuits</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2025</copyright><lastBuildDate>Thu, 04 Dec 2025 09:00:00 +0200</lastBuildDate>
     <image>
-      <url>https://gsarti.com/img/avatar.jpg</url>
+      <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Feature Circuits</title>
-      <link>https://gsarti.com/tags/feature-circuits/</link>
+      <link>http://localhost:1313/tags/feature-circuits/</link>
     </image>
     
     <item>
       <title>Interpreting and Understanding LLMs and Other Deep Learning Models</title>
-      <link>https://gsarti.com/talk/indeep-deloitte-masterclass-dec25/</link>
+      <link>http://localhost:1313/talk/indeep-deloitte-masterclass-dec25/</link>
       <pubDate>Thu, 04 Dec 2025 09:00:00 +0200</pubDate>
-      <guid>https://gsarti.com/talk/indeep-deloitte-masterclass-dec25/</guid>
+      <guid>http://localhost:1313/talk/indeep-deloitte-masterclass-dec25/</guid>
       <description></description>
     </item>
     

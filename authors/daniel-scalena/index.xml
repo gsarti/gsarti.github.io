@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Daniel Scalena* | Gabriele Sarti</title>
+    <title>Daniel Scalena | Gabriele Sarti</title>
     <link>http://localhost:1313/authors/daniel-scalena/</link>
       <atom:link href="http://localhost:1313/authors/daniel-scalena/index.xml" rel="self" type="application/rss+xml" />
-    <description>Daniel Scalena*</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Fri, 23 May 2025 00:00:00 +0200</lastBuildDate>
+    <description>Daniel Scalena</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0200</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
-      <title>Daniel Scalena*</title>
+      <title>Daniel Scalena</title>
       <link>http://localhost:1313/authors/daniel-scalena/</link>
     </image>
     
     <item>
-      <title>Steering Large Language Models for Machine Translation Personalization</title>
-      <link>http://localhost:1313/publication/steering-litmt/</link>
-      <pubDate>Fri, 23 May 2025 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/steering-litmt/</guid>
+      <title>Multi-property Steering of Large Language Models with Dynamic Activation Composition</title>
+      <link>http://localhost:1313/publication/dynamic-activation-composition/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/publication/dynamic-activation-composition/</guid>
       <description></description>
     </item>
     

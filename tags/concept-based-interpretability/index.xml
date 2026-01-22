@@ -5,12 +5,20 @@
     <link>http://localhost:1313/tags/concept-based-interpretability/</link>
       <atom:link href="http://localhost:1313/tags/concept-based-interpretability/index.xml" rel="self" type="application/rss+xml" />
     <description>Concept-Based Interpretability</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Thu, 18 Dec 2025 10:45:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Thu, 22 Jan 2026 07:15:00 -0500</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
       <title>Concept-Based Interpretability</title>
       <link>http://localhost:1313/tags/concept-based-interpretability/</link>
     </image>
+    
+    <item>
+      <title>Interpreting Context Usage in Generative Language Models</title>
+      <link>http://localhost:1313/talk/uni-helsinki-attribution-2026/</link>
+      <pubDate>Thu, 22 Jan 2026 07:15:00 -0500</pubDate>
+      <guid>http://localhost:1313/talk/uni-helsinki-attribution-2026/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Interpretability for Language Models: Trends and Applications</title>

@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Postdoc in NLP Interpretability">
+  <meta name="description" content="This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/authors/jirui-qi/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/talk/uni-helsinki-attribution-2026/">
 
   
 
@@ -91,14 +91,12 @@
 
 
   
-  <link rel="alternate" href="/authors/jirui-qi/index.xml" type="application/rss+xml" title="Gabriele Sarti">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://localhost:1313/authors/jirui-qi/">
+  <link rel="canonical" href="http://localhost:1313/talk/uni-helsinki-attribution-2026/">
 
   
   
@@ -113,19 +111,64 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="http://localhost:1313/authors/jirui-qi/">
-  <meta property="og:title" content="Jirui Qi | Gabriele Sarti">
-  <meta property="og:description" content="Postdoc in NLP Interpretability">
+  <meta property="og:url" content="http://localhost:1313/talk/uni-helsinki-attribution-2026/">
+  <meta property="og:title" content="Interpreting Context Usage in Generative Language Models | Gabriele Sarti">
+  <meta property="og:description" content="This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.">
   <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="http://localhost:1313/img/avatar.jpg">
   <meta property="twitter:image" content="http://localhost:1313/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2022-12-13T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2024-07-15T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2026-01-22T07:15:00-05:00">
   
 
   
 
 
 
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/talk/uni-helsinki-attribution-2026/"
+  },
+  "name": "Interpreting Context Usage in Generative Language Models",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Online",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Helsinki",
+      "postalCode": "",
+      "addressRegion": "",
+      "addressCountry": "Finland"
+    }
+    
+  },
+  
+  
+  "startDate": "2026-01-22T07:15:00-05:00",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "description": "This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation."
+}
+</script>
 
   
 
@@ -133,10 +176,13 @@
   
 
 
+  
 
 
 
-  <title>Jirui Qi | Gabriele Sarti</title>
+
+
+  <title>Interpreting Context Usage in Generative Language Models | Gabriele Sarti</title>
 
 </head>
 
@@ -314,34 +360,406 @@
 </nav>
 
 
+  <div class="pub">
+
   
 
-<div class="universal-wrapper pt-3">
-  <h1>Jirui Qi</h1>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Interpreting Context Usage in Generative Language Models</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/natural-language-processing/">Natural Language Processing</a>, <a href="/categories/academic/">Academic</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/inseq-team/inseq" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/inseq/">
+    Project
+  </a>
+  
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/pecore/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1g3XH3TYZ6jAFJvDMtNrEuxJsW79smIcs-1V5IzkghI8/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
 </div>
 
 
-<section id="profile-page" class="pt-5">
-  <div class="container">
+  
+</div>
+
+
+
+  <div class="article-container">
+
     
+      <br>
+    
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Jan 22, 2026
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            Seminar at University of Helsinki
+            
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
     
 
     
-    
-    
-    <div class="article-widget content-widget-hr">
-      <h3>Latest</h3>
-      <ul>
-        
-        <li>
-          <a href="/project/pecore/">Attributing Context Usage in Language Models</a>
-        </li>
-        
-      </ul>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Online</div>
+          
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-9">Helsinki, Finland</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
+    <div class="d-md-none space-below"></div>
     
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/sequence-to-sequence/">Sequence-to-sequence</a>
+  
+  <a class="badge badge-light" href="/tags/language-modeling/">Language Modeling</a>
+  
+  <a class="badge badge-light" href="/tags/feature-attribution/">Feature Attribution</a>
+  
+  <a class="badge badge-light" href="/tags/retrieval-augmented-generation/">Retrieval-augmented Generation</a>
+  
+  <a class="badge badge-light" href="/tags/concept-based-interpretability/">Concept-based Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/sparse-autoencoders/">Sparse Autoencoders</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/talk/uni-helsinki-attribution-2026/&amp;text=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/talk/uni-helsinki-attribution-2026/&amp;t=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models&amp;body=http://localhost:1313/talk/uni-helsinki-attribution-2026/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/talk/uni-helsinki-attribution-2026/&amp;title=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models%20http://localhost:1313/talk/uni-helsinki-attribution-2026/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/talk/uni-helsinki-attribution-2026/&amp;title=Interpreting%20Context%20Usage%20in%20Generative%20Language%20Models" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
   </div>
-</section>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/dei-padua-interpretability-2025/">Interpretability for Language Models: Trends and Applications</a></li>
+      
+      <li><a href="/talk/llm-xai-rug-fse-seminar-2025/">Interpretability for Language Models: Current Trends and Applications</a></li>
+      
+      <li><a href="/talk/fbk-land-2025/">Interpreting Context Usage in Generative Language Models</a></li>
+      
+      <li><a href="/talk/aniti-2025/">Interpreting Context Usage in Generative Language Models</a></li>
+      
+      <li><a href="/talk/cis-lmu-inseq-pecore-2024/">Interpreting Context Usage in Generative Language Models with Inseq, PECoRe and MIRAGE</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</div>
 
       
 

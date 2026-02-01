@@ -693,5 +693,11 @@
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/gsarti/</loc>
+  </url><url>
+    <loc>http://localhost:1313/langlearn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/langlearn/read-help/</loc>
+  </url><url>
+    <loc>http://localhost:1313/langlearn/trans-check/</loc>
   </url>
 </urlset>

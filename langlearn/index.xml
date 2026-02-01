@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Language Learning Tools | Gabriele Sarti</title>
+    <link>http://localhost:1313/langlearn/</link>
+      <atom:link href="http://localhost:1313/langlearn/index.xml" rel="self" type="application/rss+xml" />
+    <description>Language Learning Tools</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright>
+    <image>
+      <url>http://localhost:1313/img/avatar.jpg</url>
+      <title>Language Learning Tools</title>
+      <link>http://localhost:1313/langlearn/</link>
+    </image>
+    
+    <item>
+      <title>Reading Helper</title>
+      <link>http://localhost:1313/langlearn/read-help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/langlearn/read-help/</guid>
+      <description>&lt;p&gt;An interactive tool to assist with reading comprehension in foreign languages, with built-in flashcard support.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Reading Helper Demo&#34; src=&#34;http://localhost:1313/img/read-help-demo.png&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Translation validator</title>
+      <link>http://localhost:1313/langlearn/trans-check/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/langlearn/trans-check/</guid>
+      <description>&lt;p&gt;A tool to validate and correct your translations with explanations for mistakes.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Translation Validator Demo&#34; src=&#34;http://localhost:1313/img/trans-check-demo.png&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

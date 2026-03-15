@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Postdoc in NLP Interpretability">
+  <meta name="description" content="In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will start discussing post-hoc attribution technique and their usage to identify prediction-relevant inputs, showcasing their usage within our PECoRe framework for context usage attribution, and its adaptation to produce internals-based citations in retrieval-augmented generation settings (MIRAGE). The final part will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/categories/academic/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/talk/ucl-llm-interp-2026/">
 
   
 
@@ -91,14 +91,12 @@
 
 
   
-  <link rel="alternate" href="/categories/academic/index.xml" type="application/rss+xml" title="Gabriele Sarti">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://localhost:1313/categories/academic/">
+  <link rel="canonical" href="http://localhost:1313/talk/ucl-llm-interp-2026/">
 
   
   
@@ -113,19 +111,64 @@
   <meta property="twitter:creator" content="@gsarti_">
   
   <meta property="og:site_name" content="Gabriele Sarti">
-  <meta property="og:url" content="http://localhost:1313/categories/academic/">
-  <meta property="og:title" content="Academic | Gabriele Sarti">
-  <meta property="og:description" content="Postdoc in NLP Interpretability">
+  <meta property="og:url" content="http://localhost:1313/talk/ucl-llm-interp-2026/">
+  <meta property="og:title" content="Interpretability for Language Models: Current Trends and Applications | Gabriele Sarti">
+  <meta property="og:description" content="In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will start discussing post-hoc attribution technique and their usage to identify prediction-relevant inputs, showcasing their usage within our PECoRe framework for context usage attribution, and its adaptation to produce internals-based citations in retrieval-augmented generation settings (MIRAGE). The final part will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors.">
   <a rel="me" href="https://sigmoid.social/@gsarti"></a><meta property="og:image" content="http://localhost:1313/img/avatar.jpg">
   <meta property="twitter:image" content="http://localhost:1313/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2026-03-17T14:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2024-07-15T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2026-03-17T14:00:00&#43;00:00">
   
 
   
 
 
 
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/talk/ucl-llm-interp-2026/"
+  },
+  "name": "Interpretability for Language Models: Current Trends and Applications",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Online",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "London",
+      "postalCode": "",
+      "addressRegion": "",
+      "addressCountry": "United Kingdom"
+    }
+    
+  },
+  
+  
+  "startDate": "2026-03-17T14:00:00Z",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Gabriele Sarti"
+  },
+  
+  "description": "In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will start discussing post-hoc attribution technique and their usage to identify prediction-relevant inputs, showcasing their usage within our PECoRe framework for context usage attribution, and its adaptation to produce internals-based citations in retrieval-augmented generation settings (MIRAGE). The final part will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors."
+}
+</script>
 
   
 
@@ -133,10 +176,13 @@
   
 
 
+  
 
 
 
-  <title>Academic | Gabriele Sarti</title>
+
+
+  <title>Interpretability for Language Models: Current Trends and Applications | Gabriele Sarti</title>
 
 </head>
 
@@ -334,6 +380,97 @@
 </nav>
 
 
+  <div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Interpretability for Language Models: Current Trends and Applications</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/gabriele-sarti/">Gabriele Sarti</a></span>
+
+  </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/natural-language-processing/">Natural Language Processing</a>, <a href="/categories/academic/">Academic</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
   
 
 
@@ -344,133 +481,292 @@
 
 
 
-
-
-
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/inseq/">
+    Project
+  </a>
   
 
   
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/pecore/">
+    Project
+  </a>
+  
+
+
+
+
+
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Academic</h1>
+<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1KTV22f30jCdaRaLPARFF19yfBM4qknsHdK6Ndt_NkgU/edit?usp=sharing" target="_blank" rel="noopener">
+  Slides
+</a>
 
-  
+
+
+
+
+
+
+</div>
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
-  <div>
-    <h2><a href="/talk/ucl-llm-interp-2026/">Interpretability for Language Models: Current Trends and Applications</a></h2>
-    <div class="article-style">
-      
-      In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will start discussing post-hoc attribution technique and their usage to identify prediction-relevant inputs, showcasing their usage within our PECoRe framework for context usage attribution, and its adaptation to produce internals-based citations in retrieval-augmented generation settings (MIRAGE). The final part will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/fbk-mt-2026/">Interpreting Context Usage in Generative Language Models</a></h2>
-    <div class="article-style">
-      
-      This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/neural-mechanics-cs7180-attribution-2026/">Attribution: Tracing Influence to Inputs and Model Components</a></h2>
-    <div class="article-style">
-      
-      Attribution methods are a family of techniques for tracing the influence of inputs and model components on a model's predictions. In this lecture, I will provide an overview of attribution methods, focusing in particular on shortcomings and practical applications of input attribution techniques, and their usage to analyze context usage in language models.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/bu-context-usage-2026/">Interpreting Context Usage in Generative Language Models</a></h2>
-    <div class="article-style">
-      
-      This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/uni-helsinki-attribution-2026/">Interpreting Context Usage in Generative Language Models</a></h2>
-    <div class="article-style">
-      
-      This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/dei-padua-interpretability-2025/">Interpretability for Language Models: Trends and Applications</a></h2>
-    <div class="article-style">
-      
-      This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/phd-graduation-workshop-dec25/">From Insights to Impact: Actionable Interpretability for Neural Machine Translation</a></h2>
-    <div class="article-style">
-      
-      This presentation summarizes the main contributions of my PhD thesis, advocating for a user-centric perspective on interpretability research, aiming to translate theoretical advances in model understanding in practical benefits in trustworthiness and transparency for end users of these systems.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/xai-units-seminar-2025/">Interpretability for Language Models: Current Trends and Applications</a></h2>
-    <div class="article-style">
-      
-      In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will start discussing post-hoc attribution technique and their usage to identify prediction-relevant inputs, showcasing their usage within our PECoRe framework for context usage attribution, and its adaptation to produce internals-based citations in retrieval-augmented generation settings (MIRAGE). The final part will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/fbk-land-2025/">Interpreting Context Usage in Generative Language Models</a></h2>
-    <div class="article-style">
-      
-      This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/talk/circuits-inclow-2025/">Interpreting Latent Features in Large Language Models</a></h2>
-    <div class="article-style">
-      
-      The presentation discusses interpreting latent features in large language models (LLMs). After an introduction on mechanistic interpretability fundamentals, including feature superposition and sparse autoencoders, I discuss recent work by the Anthropic interpretability team (Ameisen et al. 2025, Lindsey et al. 2025) for extracting circuits of interpretable features from trained LLMs. Real-world investigations of Claude mechanisms, such as multi-step reasoning and multilinguality, are also analyzed.
-      
-    </div>
-  </div>
-  
+    
+      <br>
+    
 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Mar 17, 2026
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            Invited Lecture, MSc Advanced Computational Linguistics, University College London
+            
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Online</div>
+          
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-9">London, United Kingdom</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
   
-<nav>
-  <ul class="pagination justify-content-center">
+  <a class="badge badge-light" href="/tags/natural-language-processing/">Natural Language Processing</a>
+  
+  <a class="badge badge-light" href="/tags/interpretability/">Interpretability</a>
+  
+  <a class="badge badge-light" href="/tags/language-modeling/">Language Modeling</a>
+  
+  <a class="badge badge-light" href="/tags/feature-attribution/">Feature Attribution</a>
+  
+  <a class="badge badge-light" href="/tags/retrieval-augmented-generation/">Retrieval-augmented Generation</a>
+  
+  <a class="badge badge-light" href="/tags/mechanistic-interpretability/">Mechanistic Interpretability</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/talk/ucl-llm-interp-2026/&amp;text=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-    <li class="page-item"><a class="page-link" href="/categories/academic/page/2/">&raquo;</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/talk/ucl-llm-interp-2026/&amp;t=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications&amp;body=http://localhost:1313/talk/ucl-llm-interp-2026/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/talk/ucl-llm-interp-2026/&amp;title=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications%20http://localhost:1313/talk/ucl-llm-interp-2026/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/talk/ucl-llm-interp-2026/&amp;title=Interpretability%20for%20Language%20Models:%20Current%20Trends%20and%20Applications" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
-</nav>
+</div>
 
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/gabriele-sarti/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/neural-mechanics-cs7180-attribution-2026/">Attribution: Tracing Influence to Inputs and Model Components</a></li>
+      
+      <li><a href="/talk/xai-units-seminar-2025/">Interpretability for Language Models: Current Trends and Applications</a></li>
+      
+      <li><a href="/talk/fbk-mt-2026/">Interpreting Context Usage in Generative Language Models</a></li>
+      
+      <li><a href="/talk/uni-helsinki-attribution-2026/">Interpreting Context Usage in Generative Language Models</a></li>
+      
+      <li><a href="/talk/bu-context-usage-2026/">Interpreting Context Usage in Generative Language Models</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
 </div>
 
       

@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gabriele Sarti* | Gabriele Sarti</title>
+    <title>Gabriele Sarti</title>
     <link>http://localhost:1313/authors/gabriele-sarti/</link>
       <atom:link href="http://localhost:1313/authors/gabriele-sarti/index.xml" rel="self" type="application/rss+xml" />
-    <description>Gabriele Sarti*</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Fri, 23 May 2025 00:00:00 +0200</lastBuildDate>
+    <description>Gabriele Sarti</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Fri, 27 Mar 2026 12:00:00 -0500</lastBuildDate>
     <image>
       <url>http://localhost:1313/img/avatar.jpg</url>
-      <title>Gabriele Sarti*</title>
+      <title>Gabriele Sarti</title>
       <link>http://localhost:1313/authors/gabriele-sarti/</link>
     </image>
     
     <item>
-      <title>Steering Large Language Models for Machine Translation Personalization</title>
-      <link>http://localhost:1313/publication/steering-litmt/</link>
-      <pubDate>Fri, 23 May 2025 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/steering-litmt/</guid>
+      <title>Scaling Interpretability for LLM Agents</title>
+      <link>http://localhost:1313/talk/baulab-scaling-interp-2026/</link>
+      <pubDate>Fri, 27 Mar 2026 12:00:00 -0500</pubDate>
+      <guid>http://localhost:1313/talk/baulab-scaling-interp-2026/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation</title>
-      <link>http://localhost:1313/publication/mirage/</link>
-      <pubDate>Sat, 15 Jun 2024 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/mirage/</guid>
+      <title>Interpretability for Language Models: Current Trends and Applications</title>
+      <link>http://localhost:1313/talk/ucl-llm-interp-2026/</link>
+      <pubDate>Tue, 17 Mar 2026 14:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/talk/ucl-llm-interp-2026/</guid>
       <description></description>
     </item>
     
-  </channel>
-</rss>
-nguage Models</title>
+    <item>
+      <title>Interpreting Context Usage in Generative Language Models</title>
       <link>http://localhost:1313/talk/fbk-mt-2026/</link>
       <pubDate>Thu, 12 Mar 2026 17:00:00 +0100</pubDate>
       <guid>http://localhost:1313/talk/fbk-mt-2026/</guid>

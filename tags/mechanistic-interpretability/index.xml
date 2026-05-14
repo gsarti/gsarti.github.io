@@ -2,61 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mechanistic Interpretability | Gabriele Sarti</title>
-    <link>http://localhost:1313/tags/mechanistic-interpretability/</link>
-      <atom:link href="http://localhost:1313/tags/mechanistic-interpretability/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://gsarti.com/tags/mechanistic-interpretability/</link>
+      <atom:link href="https://gsarti.com/tags/mechanistic-interpretability/index.xml" rel="self" type="application/rss+xml" />
     <description>Mechanistic Interpretability</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Tue, 12 May 2026 14:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Thu, 14 May 2026 10:00:00 -0500</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
+      <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Mechanistic Interpretability</title>
-      <link>http://localhost:1313/tags/mechanistic-interpretability/</link>
+      <link>https://gsarti.com/tags/mechanistic-interpretability/</link>
     </image>
     
     <item>
+      <title>Scaling Interpretability for LLM Agents</title>
+      <link>https://gsarti.com/talk/mit-scaling-interp-2026-copy/</link>
+      <pubDate>Thu, 14 May 2026 10:00:00 -0500</pubDate>
+      <guid>https://gsarti.com/talk/mit-scaling-interp-2026-copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Interpretability for Language Models: Current Trends and Applications</title>
-      <link>http://localhost:1313/talk/dnai-llm-interp-2026/</link>
+      <link>https://gsarti.com/talk/dnai-llm-interp-2026/</link>
       <pubDate>Tue, 12 May 2026 14:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/talk/dnai-llm-interp-2026/</guid>
+      <guid>https://gsarti.com/talk/dnai-llm-interp-2026/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scaling Interpretability for LLM Agents</title>
-      <link>http://localhost:1313/talk/baulab-scaling-interp-2026/</link>
+      <link>https://gsarti.com/talk/baulab-scaling-interp-2026/</link>
       <pubDate>Fri, 27 Mar 2026 12:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/talk/baulab-scaling-interp-2026/</guid>
+      <guid>https://gsarti.com/talk/baulab-scaling-interp-2026/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpretability for Language Models: Current Trends and Applications</title>
-      <link>http://localhost:1313/talk/ucl-llm-interp-2026/</link>
+      <link>https://gsarti.com/talk/ucl-llm-interp-2026/</link>
       <pubDate>Tue, 17 Mar 2026 14:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talk/ucl-llm-interp-2026/</guid>
+      <guid>https://gsarti.com/talk/ucl-llm-interp-2026/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Attribution: Tracing Influence to Inputs and Model Components</title>
-      <link>http://localhost:1313/talk/neural-mechanics-cs7180-attribution-2026/</link>
+      <link>https://gsarti.com/talk/neural-mechanics-cs7180-attribution-2026/</link>
       <pubDate>Tue, 24 Feb 2026 13:45:00 -0500</pubDate>
-      <guid>http://localhost:1313/talk/neural-mechanics-cs7180-attribution-2026/</guid>
+      <guid>https://gsarti.com/talk/neural-mechanics-cs7180-attribution-2026/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interpretability for Language Models: Current Trends and Applications</title>
-      <link>http://localhost:1313/talk/xai-units-seminar-2025/</link>
+      <link>https://gsarti.com/talk/xai-units-seminar-2025/</link>
       <pubDate>Wed, 19 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/talk/xai-units-seminar-2025/</guid>
+      <guid>https://gsarti.com/talk/xai-units-seminar-2025/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Primer on the Inner Workings of Transformer-based Language Models</title>
-      <link>http://localhost:1313/publication/transformer-lm-inner-workings/</link>
+      <link>https://gsarti.com/publication/transformer-lm-inner-workings/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/publication/transformer-lm-inner-workings/</guid>
+      <guid>https://gsarti.com/publication/transformer-lm-inner-workings/</guid>
       <description></description>
     </item>
     

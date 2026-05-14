@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oskar Van Der Wal | Gabriele Sarti</title>
-    <link>http://localhost:1313/authors/oskar-van-der-wal/</link>
-      <atom:link href="http://localhost:1313/authors/oskar-van-der-wal/index.xml" rel="self" type="application/rss+xml" />
-    <description>Oskar Van Der Wal</description>
+    <title>Oskar van der Wal | Gabriele Sarti</title>
+    <link>https://gsarti.com/authors/oskar-van-der-wal/</link>
+      <atom:link href="https://gsarti.com/authors/oskar-van-der-wal/index.xml" rel="self" type="application/rss+xml" />
+    <description>Oskar van der Wal</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Mon, 27 Feb 2023 09:47:38 +0200</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/avatar.jpg</url>
-      <title>Oskar Van Der Wal</title>
-      <link>http://localhost:1313/authors/oskar-van-der-wal/</link>
+      <url>https://gsarti.com/img/avatar.jpg</url>
+      <title>Oskar van der Wal</title>
+      <link>https://gsarti.com/authors/oskar-van-der-wal/</link>
     </image>
     
     <item>
       <title>Inseq: An Interpretability Toolkit for Sequence Generation Models</title>
-      <link>http://localhost:1313/publication/inseq/</link>
+      <link>https://gsarti.com/publication/inseq/</link>
       <pubDate>Mon, 27 Feb 2023 09:47:38 +0200</pubDate>
-      <guid>http://localhost:1313/publication/inseq/</guid>
+      <guid>https://gsarti.com/publication/inseq/</guid>
       <description></description>
     </item>
     

@@ -5,12 +5,20 @@
     <link>https://gsarti.com/tags/interpretability/</link>
       <atom:link href="https://gsarti.com/tags/interpretability/index.xml" rel="self" type="application/rss+xml" />
     <description>Interpretability</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Thu, 14 May 2026 10:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Gabriele Sarti 2026</copyright><lastBuildDate>Thu, 18 Jun 2026 13:45:00 +0200</lastBuildDate>
     <image>
       <url>https://gsarti.com/img/avatar.jpg</url>
       <title>Interpretability</title>
       <link>https://gsarti.com/tags/interpretability/</link>
     </image>
+    
+    <item>
+      <title>From Insights to Impact: Actionable Interpretability for Neural Machine Translation</title>
+      <link>https://gsarti.com/talk/eamt-best-thesis-2026/</link>
+      <pubDate>Thu, 18 Jun 2026 13:45:00 +0200</pubDate>
+      <guid>https://gsarti.com/talk/eamt-best-thesis-2026/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Scaling Interpretability for LLM Agents</title>

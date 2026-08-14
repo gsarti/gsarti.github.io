@@ -1,0 +1,18 @@
+---
+interface Props {
+  date: Date;
+  /** 'long' → "12 June 2026", 'month' → "June 2026" */
+  format?: 'long' | 'month';
+}
+
+const { date, format = 'long' } = Astro.props;
+
+const opts: Intl.DateTimeFormatOptions =
+  format === 'month'
+    ? { month: 'long', year: 'numeric' }
+    : { day: 'numeric', month: 'long', year: 'numeric' };
+
+const formatted = date.toLocaleDateString('en-GB', opts);
+---
+
+<time datetime={date.toISOString().slice(0, 10)}>{formatted}</time>

@@ -1,0 +1,138 @@
+---
+/** Homepage section wrapper with an optional title and "see all" link. */
+import Icon from './Icon.astro';
+
+interface Props {
+  id?: string;
+  eyebrow: string;
+  title?: string;
+  moreHref?: string;
+  moreLabel?: string;
+  layout?: 'split' | 'stacked';
+  hideHeading?: boolean;
+}
+
+const {
+  id,
+  eyebrow,
+  title,
+  moreHref,
+  moreLabel = 'See all',
+  layout = 'split',
+  hideHeading = false,
+} = Astro.props;
+const heading = title ?? eyebrow;
+const moreIsExternal = moreHref?.startsWith('http') ?? false;
+---
+
+<section
+  {id}
+  aria-label={hideHeading ? heading : undefined}
+  class:list={['section', { stacked: layout === 'stacked', headingless: hideHeading }]}
+>
+  {
+    !hideHeading && (
+      <header class="section-head">
+        <h2>{heading}</h2>
+        {moreHref && (
+          <a
+            class="more"
+            href={moreHref}
+            target={moreIsExternal ? '_blank' : undefined}
+            rel={moreIsExternal ? 'noopener' : undefined}
+          >
+            {moreLabel}
+            <span class="more-icon" aria-hidden="true">
+              {moreIsExternal ? <Icon name="external" size={13} /> : '→'}
+            </span>
+          </a>
+        )}
+      </header>
+    )
+  }
+  <div class="section-body">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .section {
+    display: grid;
+    grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 2.2fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    padding-block: clamp(1.5rem, 3.5vw, 3rem);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-head {
+    align-self: start;
+  }
+
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 1.65rem + 1.4vw, 3.2rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.3rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid currentColor;
+    font-size: 0.85rem;
+    font-weight: 520;
+    white-space: nowrap;
+  }
+
+  .more:hover {
+    text-decoration: none;
+  }
+
+  .more-icon {
+    display: inline-flex;
+  }
+
+  .section-body {
+    min-width: 0;
+  }
+
+  .section.stacked {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .section.headingless {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .stacked .section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .stacked .more {
+    margin-top: 0;
+  }
+
+  @media (max-width: 760px) {
+    .section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-head {
+      max-width: 25rem;
+    }
+
+    .stacked .section-head {
+      max-width: none;
+    }
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import Icon from './Icon.astro';
+import { getEntry } from 'astro:content';
+
+interface Props {
+  size?: number;
+}
+
+const { size = 18 } = Astro.props;
+const profile = await getEntry('profile', 'main');
+if (!profile) throw new Error('profile.yaml missing');
+---
+
+<ul class="social">
+  {
+    profile.data.socials.map((s) => (
+      <li>
+        <a href={s.url} aria-label={s.label} title={s.label} rel="me noopener">
+          <Icon name={s.icon} size={size} />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    display: inline-flex;
+    padding: 0.42rem;
+    color: var(--text-muted);
+    transition: color 120ms ease;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>

@@ -1,0 +1,56 @@
+- id: rug-iknlp25
+  course: Advanced Topics in Natural Language Processing
+  dateStart: 2025-02-07
+  dateEnd: 2025-04-11
+  role: Co-instructor
+  coInstructors:
+    - Arianna Bisazza
+    - Jirui Qi
+    - Leonidas Zotos
+  degree: MSc Information Science
+  university: University of Groningen
+  website: https://sites.google.com/rug.nl/ik-nlp-2025
+  repository: https://github.com/gsarti/ik-nlp-tutorials
+- id: rug-somwind0724
+  course: "Fundamentals of Machine Learning"
+  dateStart: 2024-09-10
+  dateEnd: 2024-10-24
+  role: Instructor
+  degree: "Data Wise: Data Science in Society Minor"
+  university: University of Groningen
+  website: https://www.rug.nl/gmw/bachelors/minor/minor-datawise?lang=en
+- id: rug-iknlp24
+  course: Natural Language Processing
+  dateStart: 2024-02-07
+  dateEnd: 2024-04-11
+  role: Co-instructor
+  coInstructors:
+    - Arianna Bisazza
+    - Jirui Qi
+    - Leonidas Zotos
+  degree: MSc Information Science
+  university: University of Groningen
+  website: https://sites.google.com/rug.nl/ik-nlp-2024
+  repository: https://github.com/gsarti/ik-nlp-tutorials
+- id: rug-iknlp23
+  course: Natural Language Processing
+  dateStart: 2023-02-07
+  dateEnd: 2023-04-12
+  role: Co-instructor
+  coInstructors:
+    - Arianna Bisazza
+  degree: MSc Information Science
+  university: University of Groningen
+  website: https://sites.google.com/rug.nl/ik-nlp-2023
+  repository: https://github.com/gsarti/ik-nlp-tutorials
+- id: rug-iknlp22
+  course: Natural Language Processing
+  dateStart: 2022-02-07
+  dateEnd: 2022-04-12
+  role: Co-instructor
+  coInstructors:
+    - Arianna Bisazza
+  degree: MSc Information Science
+  university: University of Groningen
+  website: https://sites.google.com/rug.nl/ik-nlp-2022
+  repository: https://github.com/gsarti/ik-nlp-tutorials

@@ -1,0 +1,657 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import LinkChips from './LinkChips.astro';
+import { marked } from 'marked';
+import { contributionMarker, displayedAuthors } from '../lib/publications';
+import { highlightAuthor } from '../lib/utils';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  relatedPublications?: CollectionEntry<'publications'>[];
+  relatedTools?: CollectionEntry<'tools'>[];
+  relatedModels?: CollectionEntry<'models'>[];
+  relatedDatasets?: CollectionEntry<'datasets'>[];
+  grants?: CollectionEntry<'grants'>[];
+  headingLevel?: 'h2' | 'h3';
+}
+
+const {
+  project,
+  relatedPublications = [],
+  relatedTools = [],
+  relatedModels = [],
+  relatedDatasets = [],
+  grants = [],
+  headingLevel = 'h3',
+} = Astro.props;
+const { data } = project;
+const Heading = headingLevel;
+const status =
+  data.category === 'current'
+    ? { label: 'Ongoing', className: 'ongoing' }
+    : { label: 'Past', className: 'past' };
+const projectPublications = relatedPublications.flatMap((publication) => {
+  const paper =
+    publication.data.links.find((link) => link.label.toLowerCase() === 'paper') ??
+    publication.data.links.find((link) => link.label.toLowerCase().includes('arxiv'));
+  if (!paper) return [];
+
+  const authorsHtml = displayedAuthors(publication)
+    .map((author, index) => {
+      const isEtAl = typeof author !== 'string';
+      const separator = index === 0 ? '' : isEtAl ? ' ' : ', ';
+      if (isEtAl) {
+        const includeSelf = author.includeSelf ? ' (incl. <strong>Gabriele Sarti</strong>)' : '';
+        return `${separator}<span class="et-al">et al.</span>${includeSelf}`;
+      }
+      const marker = contributionMarker(publication, author);
+      return (
+        separator +
+        highlightAuthor(author) +
+        (marker ? `<span class="author-contribution-marker">${marker}</span>` : '')
+      );
+    })
+    .join('');
+
+  return [{ publication, paper, authorsHtml }];
+});
+
+const grantsById = new Map(grants.map((grant) => [grant.id, grant]));
+const fundingItems = data.funding.flatMap((entry) => {
+  if (typeof entry === 'string') {
+    const grant = grantsById.get(entry);
+    return grant ? [{ kind: 'grant' as const, grant }] : [];
+  }
+  return [{ kind: 'text' as const, title: entry.title, source: entry.source }];
+});
+const relatedResourceSections = [
+  { key: 'tools', label: 'Tools', singular: 'tool', entries: relatedTools },
+  { key: 'models', label: 'Models', singular: 'model', entries: relatedModels },
+  { key: 'datasets', label: 'Datasets', singular: 'dataset', entries: relatedDatasets },
+] as const;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/projects/*.{png,jpg,jpeg,webp}',
+  { eager: true }
+);
+const cover = data.image ? images[`../assets/projects/${data.image}`]?.default : undefined;
+---
+
+<article class:list={['project', { 'has-visual': Boolean(cover) }]} id={project.id}>
+  <header class="project-head">
+    <div>
+      <Heading class="title">{data.title}</Heading>
+      {data.summary && <p class="summary">{data.summary}</p>}
+    </div>
+    <span class:list={['status', status.className]}>{status.label}</span>
+  </header>
+
+  <div class:list={['project-overview', { 'without-visual': !cover }]}>
+    {
+      cover && (
+        <div class="visual-column">
+          <div
+            class="visual"
+            style={`--cover-max-width: ${Math.round((450 * cover.width) / cover.height)}px`}
+          >
+            <Image
+              class="cover"
+              src={cover}
+              alt={`${data.title} project visual`}
+              width={900}
+              loading="lazy"
+            />
+          </div>
+
+          {data.links.length > 0 && (
+            <div class="visual-details">
+              <h5>Explore</h5>
+              <LinkChips links={data.links} variant="buttons" />
+            </div>
+          )}
+        </div>
+      )
+    }
+
+    <aside class="project-details" aria-label={`${data.title} details`}>
+      <h4>Project details</h4>
+      {
+        fundingItems.length > 0 && (
+          <div class="detail-group funding-group">
+            <h5>Funding</h5>
+            <ul class="funding-list">
+              {fundingItems.map((item) =>
+                item.kind === 'grant' ? (
+                  <li>
+                    <span>{item.grant.data.title}</span>
+                    <small>{item.grant.data.organizationShort ?? item.grant.data.organization}, {item.grant.data.year}</small>
+                  </li>
+                ) : (
+                  <li>
+                    <span>{item.title}</span>
+                    {item.source && <small>{item.source}</small>}
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        )
+      }
+      {
+        data.period && (
+          <div class="detail-group period-group">
+            <h5>Period</h5>
+            <p>{data.period}</p>
+          </div>
+        )
+      }
+      {
+        data.collaborators.length > 0 && (
+          <div class="detail-group collaborators-group">
+            <h5>Collaborators</h5>
+            <p>{data.collaborators.join(', ')}</p>
+          </div>
+        )
+      }
+      {
+        !cover && data.links.length > 0 && (
+          <div class="detail-group explore-group">
+            <h5>Explore</h5>
+            <LinkChips links={data.links} variant="buttons" />
+          </div>
+        )
+      }
+      {
+        data.tags.length > 0 && (
+          <div class="detail-group focus-group">
+            <h5>Topics</h5>
+            <p>{data.tags.join(' · ')}</p>
+          </div>
+        )
+      }
+    </aside>
+  </div>
+
+  {data.description && <div class="description" set:html={marked.parse(data.description)} />}
+
+  {(projectPublications.length > 0 || relatedResourceSections.some(({ entries }) => entries.length > 0)) && (
+    <div class="related-sections">
+      {projectPublications.length > 0 && (
+        <details class="related-section" open>
+          <summary>
+            <span>Publications</span>
+            <span
+              class="related-count"
+              aria-label={`${projectPublications.length} ${projectPublications.length === 1 ? 'publication' : 'publications'}`}
+            >
+              {projectPublications.length}
+            </span>
+          </summary>
+          <ul class="related-list">
+            {projectPublications.map(({ publication, paper, authorsHtml }) => (
+              <li>
+                <p class="publication-line">
+                  <a href={paper.url} target="_blank" rel="noopener">{publication.data.title}</a>
+                  <span aria-hidden="true"> · </span>
+                  <span>{publication.data.venueShort ?? publication.data.date.getFullYear()}</span>
+                </p>
+                <p class="publication-authors" set:html={authorsHtml} />
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+
+      {relatedResourceSections.map(({ key, label, singular, entries }) =>
+        entries.length > 0 && (
+          <details class="related-section" data-resource-section={key}>
+            <summary>
+              <span>{label}</span>
+              <span
+                class="related-count"
+                aria-label={`${entries.length} ${entries.length === 1 ? singular : label.toLowerCase()}`}
+              >
+                {entries.length}
+              </span>
+            </summary>
+            <ul class="related-list resource-list">
+              {entries.map((entry) => (
+                <li>
+                  <p class="resource-title">{entry.data.title}</p>
+                  {entry.data.summary && <p class="resource-summary">{entry.data.summary}</p>}
+                  {entry.data.links.length > 0 && (
+                    <ul class="resource-links" aria-label={`${entry.data.title} links`}>
+                      {entry.data.links.map((link) => (
+                        <li>
+                          <a
+                            href={link.url}
+                            target={link.url.startsWith('/') ? undefined : '_blank'}
+                            rel={link.url.startsWith('/') ? undefined : 'noopener'}
+                          >
+                            {link.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </details>
+        )
+      )}
+    </div>
+  )}
+</article>
+
+<style>
+  .project {
+    padding: clamp(1.25rem, 2.7vw, 2.25rem);
+    border: 1px solid var(--border);
+    border-radius: clamp(1rem, 1.5vw, 1.35rem);
+    background: color-mix(in srgb, var(--bg-solid) 68%, var(--bg));
+    scroll-margin-top: 5rem;
+    transition: border-color 180ms ease, transform 180ms ease;
+  }
+
+  .project:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+
+  .project-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: clamp(1.25rem, 2.3vw, 1.8rem);
+  }
+
+  .project:target {
+    animation: flash 1.8s ease 1;
+  }
+
+  @keyframes flash {
+    0%,
+    60% {
+      background: var(--accent-subtle);
+      box-shadow: 0 0 0 8px var(--accent-subtle);
+    }
+    100% {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 1.25rem + 0.8vw, 2.15rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  .summary {
+    max-width: 50rem;
+    margin-top: 0.45rem;
+    color: var(--text-muted);
+    font-size: var(--font-size-copy);
+    line-height: 1.5;
+  }
+
+  .status {
+    flex: 0 0 auto;
+    padding: 0.34rem 0.7rem;
+    border-radius: 99px;
+    font: 600 0.72rem/1 var(--font-sans);
+  }
+
+  .status.ongoing {
+    color: var(--accent-hover);
+    background: var(--accent-subtle);
+  }
+
+  .status.past {
+    color: var(--text-muted);
+    background: var(--bg-raised);
+  }
+
+  .project-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(15rem, 0.8fr);
+    align-items: start;
+    gap: clamp(1rem, 2.5vw, 1.8rem);
+  }
+
+  .project-overview.without-visual {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .visual-column {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .visual {
+    width: min(100%, var(--cover-max-width));
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 0.85rem;
+    background: transparent;
+    line-height: 0;
+  }
+
+  .cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: inherit;
+    filter: saturate(0.86) contrast(0.97);
+    transition: filter 180ms ease, transform 280ms ease;
+  }
+
+  .project:hover .cover {
+    filter: saturate(1) contrast(1);
+    transform: scale(1.012);
+  }
+
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    padding: clamp(1rem, 2vw, 1.35rem);
+    border-radius: 0.85rem;
+    background: var(--bg-raised);
+  }
+
+  .visual-details {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.85rem;
+    background: var(--bg-raised);
+  }
+
+  .visual-details h5 {
+    flex: 0 0 auto;
+    color: var(--text);
+    font: 700 0.96rem/1.25 var(--font-sans);
+  }
+
+  .project-details h4 {
+    font-family: var(--font-sans);
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .detail-group {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .detail-group h5 {
+    color: var(--text);
+    font: 700 0.96rem/1.25 var(--font-sans);
+  }
+
+  .detail-group p {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .funding-list {
+    display: grid;
+    gap: 0.45rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .funding-list li {
+    display: grid;
+    gap: 0.08rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .funding-list small {
+    color: var(--text-faint);
+    font-size: 0.76rem;
+  }
+
+  .description {
+    max-width: 54rem;
+    margin-top: clamp(1.25rem, 2.2vw, 1.75rem);
+    color: var(--text-muted);
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .description :global(p + p) {
+    margin-top: 0.85em;
+  }
+
+  .related-sections {
+    max-width: 54rem;
+    margin-top: clamp(1.15rem, 2vw, 1.6rem);
+    border-top: 1px solid var(--border);
+  }
+
+  .related-section {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .related-section summary {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding-block: 0.85rem;
+    color: var(--text);
+    font: 700 0.96rem/1.25 var(--font-sans);
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .related-section summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .related-section summary::after {
+    content: '+';
+    margin-left: auto;
+    color: var(--text-faint);
+    font: 500 1.05rem/1 var(--font-sans);
+  }
+
+  .related-section[open] > summary::after {
+    content: '−';
+  }
+
+  .related-section summary:hover::after {
+    color: var(--accent);
+  }
+
+  .related-section summary:focus-visible {
+    border-radius: 0.25rem;
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .related-count {
+    display: inline-flex;
+    min-width: 1.45rem;
+    height: 1.45rem;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 0.32rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font: 600 0.7rem/1 var(--font-sans);
+  }
+
+  .related-list {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0 0 1rem;
+    list-style: none;
+  }
+
+  .publication-line {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .publication-line a {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .publication-authors {
+    margin-top: 0.15rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .publication-authors :global(strong) {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .publication-authors :global(.author-contribution-marker) {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .resource-title {
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.4;
+  }
+
+  .resource-summary {
+    margin-top: 0.15rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 0.3rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .resource-links li {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .resource-links li:not(:last-child)::after {
+    content: '/';
+    margin-inline: 0.42rem;
+    color: var(--text-faint);
+  }
+
+  .resource-links a {
+    color: var(--accent);
+    font: 500 0.84rem/1.45 var(--font-sans);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project,
+    .cover {
+      transition: none;
+    }
+
+    .project:hover,
+    .project:hover .cover {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 880px) {
+    .project-overview {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        'heading heading'
+        'funding period'
+        'collaborators collaborators'
+        'focus focus';
+      align-items: start;
+    }
+
+    .project-details h4 {
+      grid-area: heading;
+      grid-column: 1 / -1;
+    }
+
+    .funding-group {
+      grid-area: funding;
+    }
+
+    .period-group {
+      grid-area: period;
+    }
+
+    .collaborators-group {
+      grid-area: collaborators;
+    }
+
+    .focus-group {
+      grid-area: focus;
+    }
+
+  }
+
+  @media (max-width: 580px) {
+    .project {
+      padding: 1rem;
+    }
+
+    .project-head {
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+
+    .title {
+      font-size: 1.45rem;
+    }
+
+    .status {
+      margin-top: 0.1rem;
+    }
+
+    .project-details {
+      display: flex;
+    }
+
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+</style>

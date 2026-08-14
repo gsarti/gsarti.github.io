@@ -1,0 +1,61 @@
+- id: northeastern-postdoc
+  organization: Northeastern University
+  organizationUrl: https://www.northeastern.edu/
+  cvOrganization: Bau Lab, Northeastern University
+  cvOrganizationUrl: https://baulab.info/
+  location: Boston, MA, USA
+  mapPlace: boston
+  title: Postdoctoral Researcher
+  homepagePresentation:
+    role: Postdoc in LLM Interpretability
+    lab: Bau Lab
+    labUrl: https://baulab.info/
+    department: Khoury College of Computer Sciences
+  dateStart: 2026-01-01
+  dateEnd: 2026-12-31
+  ongoing: true
+  expectedEnd: true
+  homepage: true
+  logos:
+    - northeastern.png
+    - ndif.png
+  description: "Advisor: David Bau. R&D for the NSF National Deep Inference Fabric (NDIF) project."
+  descriptionLinks:
+    - label: National Deep Inference Fabric (NDIF)
+      url: https://ndif.us/
+- id: aws-applied-scientist-intern
+  organization: Amazon Web Services AI Lab
+  organizationUrl: https://aws.amazon.com/translate/
+  location: New York, NY, USA
+  mapPlace: new-york
+  title: Applied Scientist Intern, Amazon Translate
+  dateStart: 2022-06-01
+  dateEnd: 2022-09-30
+  homepage: true
+  logos:
+    - aws.png
+  description: RAG-augmented LLM prompting for attribute-controlled translation.
+  hosts:
+    - Georgiana Dinu
+    - Maria Nadejde
+- id: aindo-research-scientist
+  organization: Aindo
+  organizationUrl: https://www.aindo.com/
+  location: Trieste, Italy
+  mapPlace: trieste
+  title: Research Scientist, Generative AI Systems
+  dateStart: 2020-11-01
+  dateEnd: 2021-08-31
+  homepage: true
+  logos:
+    - aindo.png
+  description: Structured clinical QA, recommender systems and sketch-to-image generation.
+- id: skytech-ml-engineer-intern
+  organization: Skytech Communications
+  location: Montréal, QC, Canada
+  mapPlace: montreal
+  title: Machine Learning Engineer Intern
+  dateStart: 2018-02-01
+  dateEnd: 2018-06-30
+  homepage: false
+  description: Handwritten OCR detection and sentiment analysis for educational applications.

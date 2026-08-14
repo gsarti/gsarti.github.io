@@ -1,0 +1,116 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import EventRow from './activities/EventRow.astro';
+
+type AttendedEventEntry = CollectionEntry<'events'>;
+
+interface EventItem {
+  event: AttendedEventEntry;
+  papers: {
+    href: string;
+    title: string;
+  }[];
+}
+
+interface Props {
+  items: EventItem[];
+}
+
+const { items } = Astro.props;
+const sorted = [...items].sort((a, b) => b.event.data.date.getTime() - a.event.data.date.getTime());
+const recentEvents = sorted.slice(0, 6);
+const previousEvents = sorted.slice(6);
+const splitColumns = <T,>(entries: T[]) => {
+  const midpoint = Math.ceil(entries.length / 2);
+  return entries.length > midpoint ? [entries.slice(0, midpoint), entries.slice(midpoint)] : [entries];
+};
+const recentColumns = splitColumns(recentEvents);
+const previousColumns = splitColumns(previousEvents);
+---
+
+<div class:list={['event-columns', { 'is-single': recentColumns.length === 1 }]}>
+  {recentColumns.map((column) => (
+    <ul class="rows">
+      {column.map(({ event, papers }) => <EventRow {event} {papers} />)}
+    </ul>
+  ))}
+</div>
+
+{
+  previousEvents.length > 0 && (
+    <details class="event-more">
+      <summary>See previous events ({previousEvents.length})</summary>
+      <div class:list={['event-columns', { 'is-single': previousColumns.length === 1 }]}>
+        {previousColumns.map((column) => (
+          <ul class="rows">
+            {column.map(({ event, papers }) => <EventRow {event} {papers} />)}
+          </ul>
+        ))}
+      </div>
+    </details>
+  )
+}
+
+<style>
+  .event-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .event-columns.is-single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rows {
+    overflow: visible;
+    margin: 0;
+    list-style: none;
+    padding: 0 0 0 2.15rem;
+  }
+
+  .event-more {
+    margin-top: 1.35rem;
+  }
+
+  .event-more summary {
+    width: fit-content;
+    margin-left: 2.15rem;
+    padding: 0.25rem 0;
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 530;
+    cursor: pointer;
+  }
+
+  .event-more summary:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .event-more[open] > summary {
+    margin-bottom: 1.35rem;
+  }
+
+  @media (max-width: 760px) {
+    .event-columns {
+      grid-template-columns: minmax(0, 1fr);
+      column-gap: 0;
+    }
+
+    .event-columns > .rows:first-child:not(:last-child) > :global(.row:last-child)::after {
+      display: block;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .rows {
+      padding-left: 1.8rem;
+    }
+
+    .event-more summary {
+      margin-left: 1.8rem;
+    }
+  }
+</style>

@@ -1,0 +1,1407 @@
+---
+import { geoNaturalEarth1, geoPath } from 'd3-geo';
+import { feature } from 'topojson-client';
+import world from 'world-atlas/countries-110m.json';
+import Icon from './Icon.astro';
+
+type MapPointKind = 'talk' | 'event' | 'position';
+type MapPointVariant = MapPointKind | 'talk-event' | 'talk-position' | 'event-position' | 'all';
+
+interface MapPoint {
+  id: string;
+  title: string;
+  kind: MapPointKind;
+  location: string;
+  mapLocation: string;
+  detail: string;
+  titleUrl?: string;
+  papers: {
+    href: string;
+    title: string;
+  }[];
+  date: string;
+  dateStartValue: number;
+  dateEndValue: number;
+  coordinates?: readonly [number, number];
+}
+
+interface Props {
+  points: MapPoint[];
+}
+
+const { points } = Astro.props;
+const width = 1000;
+const height = 480;
+const toMonthIndex = (dateValue: number) => {
+  const date = new Date(dateValue);
+  return date.getFullYear() * 12 + date.getMonth();
+};
+const pointMonthIndexes = points.flatMap((point) => [
+  toMonthIndex(point.dateStartValue),
+  toMonthIndex(point.dateEndValue),
+]);
+const currentMonthIndex = toMonthIndex(Date.now());
+const timelineStartIndex = pointMonthIndexes.length > 0 ? Math.min(...pointMonthIndexes) : currentMonthIndex;
+const timelineEndIndex = pointMonthIndexes.length > 0 ? Math.max(...pointMonthIndexes) : currentMonthIndex;
+const timelineDate = (monthIndex: number) => new Date(Math.floor(monthIndex / 12), monthIndex % 12, 1);
+const timelineDateFormatter = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' });
+const timelineStartLabel = timelineDateFormatter.format(timelineDate(timelineStartIndex));
+const timelineEndLabel = timelineDateFormatter.format(timelineDate(timelineEndIndex));
+const timelineSpan = Math.max(1, timelineEndIndex - timelineStartIndex);
+const timelineStartYear = Math.floor(timelineStartIndex / 12);
+const timelineEndYear = Math.floor(timelineEndIndex / 12);
+const timelineFirstTickYear = timelineStartIndex % 12 === 0 ? timelineStartYear : timelineStartYear + 1;
+const timelineYearTicks = Array.from(
+  { length: Math.max(0, timelineEndYear - timelineFirstTickYear + 1) },
+  (_, index) => {
+    const year = timelineFirstTickYear + index;
+    const monthIndex = year * 12;
+    return {
+      year,
+      position: ((monthIndex - timelineStartIndex) / timelineSpan) * 100,
+    };
+  }
+);
+
+const countries = feature(
+  world as any,
+  (world as any).objects.countries
+) as unknown as GeoJSON.FeatureCollection;
+const projection = geoNaturalEarth1().fitExtent(
+  [[18, 18], [width - 18, height - 18]],
+  { type: 'Sphere' }
+);
+const path = geoPath(projection);
+const spherePath = path({ type: 'Sphere' }) ?? '';
+const countryPaths = countries.features.map((country) => path(country)).filter(Boolean);
+const isOnlineLocation = (location: string) => location.trim().toLowerCase() === 'online';
+const newestFirst = (a: MapPoint, b: MapPoint) =>
+  b.dateStartValue - a.dateStartValue ||
+  b.dateEndValue - a.dateEndValue ||
+  a.title.localeCompare(b.title);
+type GeographicPoint = MapPoint & { coordinates: readonly [number, number] };
+const geographicPoints = points.filter(
+  (point): point is GeographicPoint => Boolean(point.coordinates) && !isOnlineLocation(point.location)
+);
+const onlineItems = points
+  .filter((point) => isOnlineLocation(point.location))
+  .sort(newestFirst);
+
+const pointVariant = (talkCount: number, eventCount: number, positionCount: number): MapPointVariant => {
+  if (talkCount > 0 && eventCount > 0 && positionCount > 0) return 'all';
+  if (talkCount > 0 && eventCount > 0) return 'talk-event';
+  if (talkCount > 0 && positionCount > 0) return 'talk-position';
+  if (eventCount > 0 && positionCount > 0) return 'event-position';
+  if (talkCount > 0) return 'talk';
+  if (eventCount > 0) return 'event';
+  return 'position';
+};
+const countSummary = (
+  talkCount: number,
+  eventCount: number,
+  positionCount: number,
+  titleCase = false
+) => [
+  talkCount > 0 ? `${talkCount} ${talkCount === 1 ? (titleCase ? 'Talk' : 'talk') : (titleCase ? 'Talks' : 'talks')}` : '',
+  eventCount > 0 ? `${eventCount} ${eventCount === 1 ? (titleCase ? 'Event' : 'event') : (titleCase ? 'Events' : 'events')}` : '',
+  positionCount > 0 ? `${positionCount} ${positionCount === 1 ? (titleCase ? 'Position' : 'position') : (titleCase ? 'Positions' : 'positions')}` : '',
+].filter(Boolean).join(titleCase ? ' · ' : ', ');
+
+const locationGroups = new Map<string, {
+  location: string;
+  coordinates: readonly [number, number];
+  items: MapPoint[];
+}>();
+
+geographicPoints.forEach((point) => {
+  const key = point.coordinates.join(',');
+  const group = locationGroups.get(key);
+  if (group) {
+    group.items.push(point);
+  } else {
+    locationGroups.set(key, {
+      location: point.mapLocation,
+      coordinates: point.coordinates,
+      items: [point],
+    });
+  }
+});
+
+const plottedGroups = Array.from(locationGroups.values()).flatMap((group) => {
+  const projected = projection(group.coordinates);
+  if (!projected) return [];
+
+  const [x, y] = projected;
+
+  const items = [...group.items].sort(newestFirst);
+  const talkCount = items.filter((item) => item.kind === 'talk').length;
+  const eventCount = items.filter((item) => item.kind === 'event').length;
+  const positionCount = items.filter((item) => item.kind === 'position').length;
+  const kind = pointVariant(talkCount, eventCount, positionCount);
+
+  return [{ ...group, items, talkCount, eventCount, positionCount, kind, x, y }];
+});
+const onlineTalkCount = onlineItems.filter((item) => item.kind === 'talk').length;
+const onlineEventCount = onlineItems.filter((item) => item.kind === 'event').length;
+const onlinePositionCount = onlineItems.filter((item) => item.kind === 'position').length;
+const onlineKind = pointVariant(onlineTalkCount, onlineEventCount, onlinePositionCount);
+const onlineGroup = onlineItems.length > 0
+  ? {
+      location: 'Online',
+      items: onlineItems,
+      talkCount: onlineTalkCount,
+      eventCount: onlineEventCount,
+      positionCount: onlinePositionCount,
+      kind: onlineKind,
+    }
+  : null;
+const tooltipGroups = [
+  ...plottedGroups,
+  ...(onlineGroup ? [onlineGroup] : []),
+];
+const onlineTemplateIndex = plottedGroups.length;
+---
+
+<section class="event-map" data-event-map aria-labelledby="event-map-title">
+  <h2 id="event-map-title" class="sr-only">Map of talks, events and positions</h2>
+  <div class="map-toolbar">
+    <div class="map-zoom-controls" role="group" aria-label="Map zoom controls">
+      <button type="button" data-map-zoom-out aria-label="Zoom out" disabled>
+        <Icon name="zoom-out" size={15} />
+      </button>
+      <button type="button" data-map-reset aria-label="Reset map view" disabled>
+        <Icon name="maximize" size={14} />
+      </button>
+      <button type="button" data-map-zoom-in aria-label="Zoom in">
+        <Icon name="zoom-in" size={15} />
+      </button>
+    </div>
+    <div class="map-legend" role="group" aria-label="Filter map entries">
+      <button class="map-filter" type="button" data-map-filter="talk" aria-pressed="true">
+        <i class="legend-dot legend-dot--talk" aria-hidden="true"></i>
+        Talks
+      </button>
+      <button class="map-filter" type="button" data-map-filter="event" aria-pressed="true">
+        <i class="legend-dot legend-dot--event" aria-hidden="true"></i>
+        Events
+      </button>
+      <button class="map-filter" type="button" data-map-filter="position" aria-pressed="true">
+        <i class="legend-dot legend-dot--position" aria-hidden="true"></i>
+        Positions
+      </button>
+    </div>
+  </div>
+
+  <div class="map-canvas">
+    <div class="map-viewport" data-map-viewport data-map-width={width} data-map-height={height}>
+      <div class="map-stage" data-map-stage>
+        <svg
+          class="world-map"
+          viewBox={`0 0 ${width} ${height}`}
+          role="img"
+          aria-labelledby="map-svg-title map-svg-description"
+        >
+          <title id="map-svg-title">Map of talks, events and positions</title>
+          <desc id="map-svg-description">
+            Indigo dots mark talks, orange dots mark events, and gold dots mark positions, academic
+            visits and education. Multicolor dots mark locations with more than one category. A
+            globe icon groups online entries. Each location is shown once. Use the map controls to
+            zoom and drag while zoomed.
+          </desc>
+          <path class="sphere" d={spherePath} />
+          <g class="countries" aria-hidden="true">
+            {countryPaths.map((countryPath) => <path d={countryPath} />)}
+          </g>
+        </svg>
+
+        {
+          plottedGroups.map((group, index) => (
+            <button
+              class:list={['map-point', `map-point--${group.kind}`]}
+              type="button"
+              style={`--map-x: ${(group.x / width) * 100}%; --map-y: ${(group.y / height) * 100}%;`}
+              data-map-x={group.x}
+              data-map-y={group.y}
+              data-map-template={`map-location-${index}`}
+              data-map-location={group.location}
+              data-map-talk-count={group.talkCount}
+              data-map-event-count={group.eventCount}
+              data-map-position-count={group.positionCount}
+              aria-controls="event-map-tooltip"
+              aria-expanded="false"
+              aria-label={`${group.location}: ${group.items.length} ${group.items.length === 1 ? 'entry' : 'entries'} (${countSummary(group.talkCount, group.eventCount, group.positionCount)})`}
+            >
+              <span class="map-point-dot" aria-hidden="true"></span>
+            </button>
+          ))
+        }
+        {
+          onlineGroup && (
+            <button
+              class:list={['map-point', 'map-online-point', `map-point--${onlineGroup.kind}`]}
+              type="button"
+              data-map-fixed="true"
+              data-map-template={`map-location-${onlineTemplateIndex}`}
+              data-map-location="Online"
+              data-map-talk-count={onlineGroup.talkCount}
+              data-map-event-count={onlineGroup.eventCount}
+              data-map-position-count={onlineGroup.positionCount}
+              aria-controls="event-map-tooltip"
+              aria-expanded="false"
+              aria-label={`Online: ${onlineGroup.items.length} ${onlineGroup.items.length === 1 ? 'entry' : 'entries'} (${countSummary(onlineGroup.talkCount, onlineGroup.eventCount, onlineGroup.positionCount)})`}
+            >
+              <svg class="map-online-globe" viewBox="0 0 48 48" aria-hidden="true">
+                <circle class="globe-sphere" cx="24" cy="24" r="18" />
+                <path d="M6 24h36" />
+                <path d="M24 6c5.8 5 9 11.3 9 18s-3.2 13-9 18" />
+                <path d="M24 6c-5.8 5-9 11.3-9 18s3.2 13 9 18" />
+                <path d="M9.5 15.5c4.2 2.1 9.1 3.2 14.5 3.2s10.3-1.1 14.5-3.2" />
+                <path d="M9.5 32.5c4.2-2.1 9.1-3.2 14.5-3.2s10.3 1.1 14.5 3.2" />
+              </svg>
+              <span class="map-point-dot map-online-dot" aria-hidden="true"></span>
+            </button>
+          )
+        }
+      </div>
+    </div>
+
+    {
+      tooltipGroups.map((group, index) => (
+        <template id={`map-location-${index}`}>
+          <div class="map-tooltip-head">
+            <strong>{group.location}</strong>
+            <span data-map-tooltip-summary>
+              {countSummary(group.talkCount, group.eventCount, group.positionCount, true)}
+            </span>
+          </div>
+          <ul class="map-tooltip-list">
+            {group.items.map((item) => (
+              <li
+                data-map-kind={item.kind}
+                data-map-date-start-index={toMonthIndex(item.dateStartValue)}
+                data-map-date-end-index={toMonthIndex(item.dateEndValue)}
+              >
+                <i class:list={['tooltip-dot', `tooltip-dot--${item.kind}`]} aria-hidden="true"></i>
+                <span class="map-tooltip-item">
+                  <span class="map-tooltip-title-row">
+                    {
+                      item.titleUrl ? (
+                        <a
+                          class="map-tooltip-title-link"
+                          href={item.titleUrl}
+                          target={item.titleUrl.startsWith('/') ? undefined : '_blank'}
+                          rel={item.titleUrl.startsWith('/') ? undefined : 'noopener'}
+                        >
+                          <b>{item.title}</b>
+                        </a>
+                      ) : (
+                        <b>{item.title}</b>
+                      )
+                    }
+                    {
+                      item.kind === 'event' && item.papers.length > 0 && (
+                        <span class="map-tooltip-papers">
+                          {item.papers.map((paper) => (
+                            <a
+                              class="map-tooltip-paper"
+                              href={paper.href}
+                              target={paper.href.startsWith('/') ? undefined : '_blank'}
+                              rel={paper.href.startsWith('/') ? undefined : 'noopener'}
+                              title={paper.title}
+                              aria-label={`Open ${paper.title}`}
+                            >
+                              <Icon name="pdf" size={11} />
+                            </a>
+                          ))}
+                        </span>
+                      )
+                    }
+                  </span>
+                  <small>{item.date} · {item.detail}</small>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </template>
+      ))
+    }
+
+    <div id="event-map-tooltip" class="map-tooltip" role="tooltip" aria-live="polite" hidden></div>
+    <span class="sr-only" data-map-zoom-status aria-live="polite">Map zoom 1×</span>
+  </div>
+
+  <div
+    class="map-timeline"
+    data-map-timeline
+    data-map-timeline-min={timelineStartIndex}
+    data-map-timeline-max={timelineEndIndex}
+    style="--timeline-start: 0%; --timeline-end: 100%;"
+  >
+    <div class="map-timeline-head">
+      <span>Timeline</span>
+      <output data-map-timeline-output aria-live="polite">
+        {timelineStartLabel} – {timelineEndLabel}
+      </output>
+    </div>
+    <div class="map-range">
+      <div class="map-range-track" aria-hidden="true">
+        <span class="map-range-selection"></span>
+      </div>
+      <div class="map-range-ticks" aria-hidden="true">
+        {
+          timelineYearTicks.map((tick) => (
+            <span
+              class="map-year-tick"
+              style={`--tick-position: ${tick.position}%;`}
+            >
+              <i></i>
+              <b>{tick.year}</b>
+            </span>
+          ))
+        }
+      </div>
+      <input
+        class="map-range-input map-range-input--start"
+        type="range"
+        min={timelineStartIndex}
+        max={timelineEndIndex}
+        value={timelineStartIndex}
+        step="1"
+        data-map-range-start
+        aria-label="Timeline start date"
+      />
+      <input
+        class="map-range-input map-range-input--end"
+        type="range"
+        min={timelineStartIndex}
+        max={timelineEndIndex}
+        value={timelineEndIndex}
+        step="1"
+        data-map-range-end
+        aria-label="Timeline end date"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .event-map {
+    --map-land: color-mix(in srgb, var(--text) 8%, var(--bg));
+    --map-country-border: color-mix(in srgb, var(--text) 20%, var(--bg));
+    --map-handle: color-mix(in srgb, var(--text) 55%, var(--bg));
+    --position: #ad7d0b;
+    margin-block: 0.5rem 3.25rem;
+  }
+
+  :global(:root[data-theme='dark']) .event-map {
+    --map-handle: var(--bg-raised);
+    --position: #e1b64a;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .map-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .map-zoom-controls {
+    display: inline-flex;
+    flex: none;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-solid);
+  }
+
+  .map-zoom-controls button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.85rem;
+    height: 1.75rem;
+    padding: 0;
+    border: 0;
+    border-left: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  .map-zoom-controls button:first-child {
+    border-left: 0;
+  }
+
+  .map-zoom-controls button:hover:not(:disabled),
+  .map-zoom-controls button:focus-visible {
+    background: var(--bg-raised);
+    color: var(--accent);
+  }
+
+  .map-zoom-controls button:focus-visible {
+    position: relative;
+    z-index: 1;
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+
+  .map-zoom-controls button:disabled {
+    color: var(--text-faint);
+    cursor: default;
+    opacity: 0.55;
+  }
+
+  .map-legend {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.1rem;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+
+  .map-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38rem;
+    padding: 0.12rem 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .map-filter:hover,
+  .map-filter:focus-visible {
+    color: var(--text);
+  }
+
+  .map-filter:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 0.22rem;
+  }
+
+  .map-filter[aria-pressed='false'] {
+    color: var(--text-faint);
+  }
+
+  .map-filter[aria-pressed='false'] .legend-dot {
+    border-color: currentColor;
+    background: transparent;
+  }
+
+  .legend-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  .legend-dot--talk {
+    background: var(--accent);
+  }
+
+  .legend-dot--event {
+    background: var(--signal);
+  }
+
+  .legend-dot--position {
+    background: var(--position);
+  }
+
+  .map-canvas {
+    position: relative;
+    width: 100%;
+  }
+
+  .map-viewport {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1000 / 480;
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+
+  .map-viewport.is-zoomed {
+    cursor: grab;
+    touch-action: none;
+  }
+
+  .map-viewport.is-dragging {
+    cursor: grabbing;
+    user-select: none;
+  }
+
+  .map-stage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .world-map {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    shape-rendering: geometricPrecision;
+  }
+
+  .sphere {
+    fill: transparent;
+    stroke: var(--border-strong);
+    stroke-width: 0.8;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .countries path {
+    fill: var(--map-land);
+    stroke: var(--map-country-border);
+    stroke-width: 0.6;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .map-point {
+    --point-fill: var(--accent);
+    --point-ring: var(--accent);
+    position: absolute;
+    left: var(--map-x);
+    top: var(--map-y);
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  }
+
+  .map-point-dot {
+    width: 0.58rem;
+    height: 0.58rem;
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--point-ring);
+    background: var(--point-fill);
+    transition: transform 140ms ease;
+  }
+
+  .map-point--talk {
+    --point-fill: var(--accent);
+    --point-ring: var(--accent);
+    z-index: 2;
+  }
+
+  .map-point--event {
+    --point-fill: var(--signal);
+    --point-ring: var(--signal);
+    z-index: 3;
+  }
+
+  .map-point--position {
+    --point-fill: var(--position);
+    --point-ring: var(--position);
+    z-index: 4;
+  }
+
+  .map-point--talk-event {
+    --point-fill: linear-gradient(90deg, var(--signal) 0 50%, var(--accent) 50% 100%);
+    --point-ring: var(--signal);
+    z-index: 3;
+  }
+
+  .map-point--talk-position {
+    --point-fill: linear-gradient(90deg, var(--position) 0 50%, var(--accent) 50% 100%);
+    --point-ring: var(--position);
+    z-index: 4;
+  }
+
+  .map-point--event-position {
+    --point-fill: linear-gradient(90deg, var(--position) 0 50%, var(--signal) 50% 100%);
+    --point-ring: var(--position);
+    z-index: 4;
+  }
+
+  .map-point--all {
+    --point-fill: conic-gradient(
+      var(--position) 0 33.333%,
+      var(--signal) 33.333% 66.666%,
+      var(--accent) 66.666% 100%
+    );
+    --point-ring: var(--position);
+    z-index: 4;
+  }
+
+  .map-online-point {
+    top: 5%;
+    right: auto;
+    bottom: auto;
+    left: 2.5%;
+    width: 3.25rem;
+    height: 3.25rem;
+    transform: none;
+  }
+
+  .map-online-globe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    fill: none;
+    stroke: var(--map-country-border);
+    stroke-width: 0.8;
+    shape-rendering: geometricPrecision;
+    pointer-events: none;
+  }
+
+  .map-online-globe :global(*) {
+    vector-effect: non-scaling-stroke;
+  }
+
+  .map-online-globe .globe-sphere {
+    fill: var(--map-land);
+    stroke: var(--border-strong);
+    stroke-width: 0.8;
+  }
+
+  .map-online-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .map-point:hover,
+  .map-point:focus-visible,
+  .map-point.is-pinned {
+    z-index: 6;
+    outline: none;
+  }
+
+  .map-point:hover .map-point-dot,
+  .map-point:focus-visible .map-point-dot,
+  .map-point.is-pinned .map-point-dot {
+    transform: scale(1.45);
+  }
+
+  .map-point:focus-visible .map-point-dot {
+    box-shadow: 0 0 0 1px var(--point-ring), 0 0 0 4px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+
+  .map-online-point:hover .map-online-dot,
+  .map-online-point:focus-visible .map-online-dot,
+  .map-online-point.is-pinned .map-online-dot {
+    transform: translate(-50%, -50%) scale(1.45);
+  }
+
+  .map-timeline {
+    padding-inline: clamp(0.25rem, 1.8vw, 1.25rem);
+  }
+
+  .map-timeline-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .map-timeline-head {
+    margin-bottom: 0.3rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+  }
+
+  .map-timeline-head > span {
+    font-weight: 570;
+    letter-spacing: 0.02em;
+  }
+
+  .map-timeline-head output {
+    color: var(--text);
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .map-range {
+    position: relative;
+    height: 2.15rem;
+  }
+
+  .map-range-track {
+    position: absolute;
+    top: 0.625rem;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: color-mix(in srgb, var(--map-country-border) 45%, transparent);
+    transform: translateY(-50%);
+  }
+
+  .map-range-selection {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: var(--timeline-start);
+    right: calc(100% - var(--timeline-end));
+    background: var(--map-country-border);
+  }
+
+  .map-range-ticks {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1.25rem;
+    pointer-events: none;
+  }
+
+  .map-year-tick {
+    position: absolute;
+    top: 0.625rem;
+    left: var(--tick-position);
+    color: var(--text-faint);
+  }
+
+  .map-year-tick i {
+    display: block;
+    width: 1px;
+    height: 0.4rem;
+    background: var(--map-country-border);
+    transform: translate(-50%, -50%);
+  }
+
+  .map-year-tick b {
+    position: absolute;
+    top: 0.48rem;
+    left: 0;
+    font-family: var(--font-display);
+    font-size: 0.66rem;
+    font-weight: 500;
+    transform: translateX(-50%);
+  }
+
+  .map-range-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.25rem;
+    margin: 0;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    pointer-events: none;
+  }
+
+  .map-range-input--start {
+    z-index: 2;
+  }
+
+  .map-range-input--end {
+    z-index: 3;
+  }
+
+  .map-range-input--start:focus {
+    z-index: 4;
+  }
+
+  .map-range-input:focus-visible {
+    outline: none;
+  }
+
+  .map-range-input::-webkit-slider-runnable-track {
+    height: 1px;
+    background: transparent;
+  }
+
+  .map-range-input::-webkit-slider-thumb {
+    width: 0.42rem;
+    height: 1.05rem;
+    margin-top: calc((1px - 1.05rem) / 2);
+    appearance: none;
+    border: 1px solid var(--map-country-border);
+    border-radius: 0;
+    background: var(--map-handle);
+    box-shadow: 0 0 0 1px var(--bg);
+    cursor: ew-resize;
+    pointer-events: auto;
+  }
+
+  .map-range-input::-moz-range-track {
+    height: 1px;
+    background: transparent;
+  }
+
+  .map-range-input::-moz-range-thumb {
+    width: 0.42rem;
+    height: 1.05rem;
+    border: 1px solid var(--map-country-border);
+    border-radius: 0;
+    background: var(--map-handle);
+    box-shadow: 0 0 0 1px var(--bg);
+    cursor: ew-resize;
+    pointer-events: auto;
+  }
+
+  .map-range-input:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px var(--map-country-border), 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+
+  .map-range-input:focus-visible::-moz-range-thumb {
+    box-shadow: 0 0 0 1px var(--map-country-border), 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+
+  .map-tooltip {
+    position: absolute;
+    z-index: 5;
+    width: max-content;
+    max-width: min(27rem, calc(100% - 1.5rem));
+    max-height: min(30rem, 65vh);
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-solid);
+    color: var(--text);
+    box-shadow: 4px 4px 0 color-mix(in srgb, var(--text) 12%, transparent);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    pointer-events: auto;
+    transform: translate(-50%, calc(-100% - 0.55rem));
+  }
+
+  .map-tooltip-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .map-tooltip-head strong {
+    font-size: 0.88rem;
+    font-weight: 620;
+    line-height: 1.35;
+  }
+
+  .map-tooltip-head span {
+    flex: none;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .map-tooltip-list {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0.6rem 0 0;
+    padding: 0.6rem 0 0;
+    border-top: 1px solid var(--border);
+    list-style: none;
+  }
+
+  .map-tooltip-list li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.5rem;
+  }
+
+  .tooltip-dot {
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-top: 0.27rem;
+    border-radius: 50%;
+  }
+
+  .tooltip-dot--talk {
+    background: var(--accent);
+  }
+
+  .tooltip-dot--event {
+    background: var(--signal);
+  }
+
+  .tooltip-dot--position {
+    background: var(--position);
+  }
+
+  .map-tooltip-item,
+  .map-tooltip-item b,
+  .map-tooltip-item small {
+    display: block;
+  }
+
+  .map-tooltip-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .map-tooltip-title-link {
+    min-width: 0;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .map-tooltip-title-link:hover,
+  .map-tooltip-title-link:focus-visible {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+  }
+
+  .map-tooltip-papers {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: 0.12rem;
+    padding-top: 0.02rem;
+  }
+
+  .map-tooltip-paper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-faint);
+    text-decoration: none;
+  }
+
+  .map-tooltip-paper:hover,
+  .map-tooltip-paper:focus-visible {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .map-tooltip-item b {
+    font-size: 0.79rem;
+    font-weight: 590;
+    line-height: 1.35;
+  }
+
+  .map-tooltip-item small {
+    margin-top: 0.08rem;
+    color: var(--text-muted);
+    font-size: 0.69rem;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 560px) {
+    .event-map {
+      margin-bottom: 2.5rem;
+    }
+
+    .map-toolbar {
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.45rem 1rem;
+    }
+
+    .map-legend {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 0.45rem 1rem;
+    }
+
+    .map-point {
+      width: 1.35rem;
+      height: 1.35rem;
+    }
+
+    .map-point-dot {
+      width: 0.52rem;
+      height: 0.52rem;
+    }
+
+    .map-online-point {
+      width: 2.65rem;
+      height: 2.65rem;
+    }
+  }
+</style>
+
+<script>
+  const initializeEventMaps = () => {
+    document.querySelectorAll<HTMLElement>('[data-event-map]:not([data-map-ready])').forEach((map) => {
+      map.dataset.mapReady = 'true';
+      const canvas = map.querySelector<HTMLElement>('.map-canvas');
+      const viewport = map.querySelector<HTMLElement>('[data-map-viewport]');
+      const stage = map.querySelector<HTMLElement>('[data-map-stage]');
+      const worldMap = map.querySelector<SVGSVGElement>('.world-map');
+      const tooltip = map.querySelector<HTMLElement>('.map-tooltip');
+      const zoomIn = map.querySelector<HTMLButtonElement>('[data-map-zoom-in]');
+      const zoomOut = map.querySelector<HTMLButtonElement>('[data-map-zoom-out]');
+      const reset = map.querySelector<HTMLButtonElement>('[data-map-reset]');
+      const zoomStatus = map.querySelector<HTMLElement>('[data-map-zoom-status]');
+      const filterButtons = Array.from(map.querySelectorAll<HTMLButtonElement>('[data-map-filter]'));
+      const timeline = map.querySelector<HTMLElement>('[data-map-timeline]');
+      const rangeStart = map.querySelector<HTMLInputElement>('[data-map-range-start]');
+      const rangeEnd = map.querySelector<HTMLInputElement>('[data-map-range-end]');
+      const timelineOutput = map.querySelector<HTMLOutputElement>('[data-map-timeline-output]');
+      const points = Array.from(map.querySelectorAll<HTMLButtonElement>('.map-point'));
+      if (!canvas || !viewport || !stage || !worldMap || !tooltip || !zoomIn || !zoomOut || !reset || !timeline || !rangeStart || !rangeEnd || !timelineOutput) return;
+
+      type MapKind = 'talk' | 'event' | 'position';
+      const isMapKind = (kind: string | undefined): kind is MapKind =>
+        kind === 'talk' || kind === 'event' || kind === 'position';
+      const pointClass = (talkCount: number, eventCount: number, positionCount: number) => {
+        if (talkCount > 0 && eventCount > 0 && positionCount > 0) return 'map-point--all';
+        if (talkCount > 0 && eventCount > 0) return 'map-point--talk-event';
+        if (talkCount > 0 && positionCount > 0) return 'map-point--talk-position';
+        if (eventCount > 0 && positionCount > 0) return 'map-point--event-position';
+        if (talkCount > 0) return 'map-point--talk';
+        if (eventCount > 0) return 'map-point--event';
+        return 'map-point--position';
+      };
+      const visibleSummary = (talkCount: number, eventCount: number, positionCount: number, titleCase = false) => [
+        talkCount > 0 ? `${talkCount} ${talkCount === 1 ? (titleCase ? 'Talk' : 'talk') : (titleCase ? 'Talks' : 'talks')}` : '',
+        eventCount > 0 ? `${eventCount} ${eventCount === 1 ? (titleCase ? 'Event' : 'event') : (titleCase ? 'Events' : 'events')}` : '',
+        positionCount > 0 ? `${positionCount} ${positionCount === 1 ? (titleCase ? 'Position' : 'position') : (titleCase ? 'Positions' : 'positions')}` : '',
+      ].filter(Boolean).join(titleCase ? ' · ' : ', ');
+      let pinnedPoint: HTMLButtonElement | null = null;
+      const activeKinds: Record<MapKind, boolean> = { talk: true, event: true, position: true };
+      const timelineMin = Number(timeline.dataset.mapTimelineMin);
+      const timelineMax = Number(timeline.dataset.mapTimelineMax);
+      let selectedStart = timelineMin;
+      let selectedEnd = timelineMax;
+      const timelineFormatter = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' });
+      const mapWidth = Number(viewport.dataset.mapWidth);
+      const mapHeight = Number(viewport.dataset.mapHeight);
+      const zoomLevels = [1, 1.5, 2, 3, 4, 6, 8, 10, 12];
+      let zoomIndex = 0;
+      let scale = zoomLevels[zoomIndex];
+      let viewX = 0;
+      let viewY = 0;
+      let dragPointer: number | null = null;
+      let dragX = 0;
+      let dragY = 0;
+      let dragViewX = 0;
+      let dragViewY = 0;
+
+      const formatTimelineDate = (monthIndex: number) => timelineFormatter.format(
+        new Date(Math.floor(monthIndex / 12), monthIndex % 12, 1)
+      );
+
+      const getPointTemplate = (point: HTMLButtonElement) => {
+        const templateId = point.dataset.mapTemplate;
+        return templateId ? map.querySelector<HTMLTemplateElement>(`#${templateId}`) : null;
+      };
+
+      const getVisibleCounts = (point: HTMLButtonElement) => {
+        const counts = { talk: 0, event: 0, position: 0 };
+        const template = getPointTemplate(point);
+        if (!template) return counts;
+
+        template.content.querySelectorAll<HTMLElement>('[data-map-kind]').forEach((item) => {
+          const kind = item.dataset.mapKind;
+          const dateStartIndex = Number(item.dataset.mapDateStartIndex);
+          const dateEndIndex = Number(item.dataset.mapDateEndIndex);
+          if (
+            isMapKind(kind) &&
+            activeKinds[kind] &&
+            dateEndIndex >= selectedStart &&
+            dateStartIndex <= selectedEnd
+          ) {
+            counts[kind] += 1;
+          }
+        });
+        return counts;
+      };
+
+      const positionTooltip = (point: HTMLButtonElement) => {
+        const canvasRect = canvas.getBoundingClientRect();
+        const pointRect = point.getBoundingClientRect();
+        const rawX = pointRect.left - canvasRect.left + pointRect.width / 2;
+        const rawY = pointRect.top - canvasRect.top + pointRect.height / 2;
+        tooltip.style.left = `${rawX}px`;
+        tooltip.style.top = `${rawY}px`;
+
+        requestAnimationFrame(() => {
+          const tooltipRect = tooltip.getBoundingClientRect();
+          const halfWidth = tooltipRect.width / 2;
+          const clampedX = Math.max(
+            halfWidth + 8,
+            Math.min(canvas.clientWidth - halfWidth - 8, rawX)
+          );
+          tooltip.style.left = `${clampedX}px`;
+          tooltip.style.transform =
+            rawY - tooltipRect.height - 12 < 0
+              ? 'translate(-50%, 0.65rem)'
+              : 'translate(-50%, calc(-100% - 0.55rem))';
+        });
+      };
+
+      const showTooltip = (point: HTMLButtonElement) => {
+        const template = getPointTemplate(point);
+        if (!template) return;
+
+        tooltip.replaceChildren(template.content.cloneNode(true));
+        tooltip.querySelectorAll<HTMLElement>('[data-map-kind]').forEach((item) => {
+          const kind = item.dataset.mapKind;
+          const dateStartIndex = Number(item.dataset.mapDateStartIndex);
+          const dateEndIndex = Number(item.dataset.mapDateEndIndex);
+          if (
+            isMapKind(kind) &&
+            (!activeKinds[kind] || dateEndIndex < selectedStart || dateStartIndex > selectedEnd)
+          ) {
+            item.remove();
+          }
+        });
+
+        const { talk: talkCount, event: eventCount, position: positionCount } = getVisibleCounts(point);
+        if (talkCount + eventCount + positionCount === 0) {
+          hideTooltip();
+          return;
+        }
+        const summary = visibleSummary(talkCount, eventCount, positionCount, true);
+        const summaryElement = tooltip.querySelector<HTMLElement>('[data-map-tooltip-summary]');
+        if (summaryElement) summaryElement.textContent = summary;
+
+        tooltip.hidden = false;
+        positionTooltip(point);
+      };
+
+      const hideTooltip = () => {
+        tooltip.hidden = true;
+      };
+
+      const unpinPoint = () => {
+        if (!pinnedPoint) return;
+        pinnedPoint.classList.remove('is-pinned');
+        pinnedPoint.setAttribute('aria-expanded', 'false');
+        pinnedPoint = null;
+      };
+
+      const clampView = () => {
+        const viewWidth = mapWidth / scale;
+        const viewHeight = mapHeight / scale;
+        viewX = Math.min(mapWidth - viewWidth, Math.max(0, viewX));
+        viewY = Math.min(mapHeight - viewHeight, Math.max(0, viewY));
+      };
+
+      const renderTimeline = () => {
+        const timelineSpan = Math.max(1, timelineMax - timelineMin);
+        const startPercent = ((selectedStart - timelineMin) / timelineSpan) * 100;
+        const endPercent = ((selectedEnd - timelineMin) / timelineSpan) * 100;
+        timeline.style.setProperty('--timeline-start', `${startPercent}%`);
+        timeline.style.setProperty('--timeline-end', `${endPercent}%`);
+        const startLabel = formatTimelineDate(selectedStart);
+        const endLabel = formatTimelineDate(selectedEnd);
+        timelineOutput.textContent = `${startLabel} – ${endLabel}`;
+        rangeStart.setAttribute('aria-valuetext', startLabel);
+        rangeEnd.setAttribute('aria-valuetext', endLabel);
+      };
+
+      const renderMapView = () => {
+        clampView();
+        const viewWidth = mapWidth / scale;
+        const viewHeight = mapHeight / scale;
+        worldMap.setAttribute('viewBox', `${viewX} ${viewY} ${viewWidth} ${viewHeight}`);
+        stage.dataset.mapScale = String(scale);
+        stage.dataset.mapViewBox = `${viewX},${viewY},${viewWidth},${viewHeight}`;
+        points.forEach((point) => {
+          const { talk: talkCount, event: eventCount, position: positionCount } = getVisibleCounts(point);
+          const visibleCount = talkCount + eventCount + positionCount;
+          if (point.dataset.mapFixed === 'true') {
+            point.hidden = visibleCount === 0;
+          } else {
+            const pointX = Number(point.dataset.mapX);
+            const pointY = Number(point.dataset.mapY);
+            const relativeX = (pointX - viewX) / viewWidth;
+            const relativeY = (pointY - viewY) / viewHeight;
+            point.style.left = `${relativeX * 100}%`;
+            point.style.top = `${relativeY * 100}%`;
+            point.hidden = visibleCount === 0 || relativeX < -0.02 || relativeX > 1.02 || relativeY < -0.04 || relativeY > 1.04;
+          }
+          point.classList.remove(
+            'map-point--talk',
+            'map-point--event',
+            'map-point--position',
+            'map-point--talk-event',
+            'map-point--talk-position',
+            'map-point--event-position',
+            'map-point--all'
+          );
+          point.classList.add(pointClass(talkCount, eventCount, positionCount));
+          const summary = visibleSummary(talkCount, eventCount, positionCount);
+          point.setAttribute(
+            'aria-label',
+            `${point.dataset.mapLocation}: ${visibleCount} ${visibleCount === 1 ? 'entry' : 'entries'} (${summary})`
+          );
+        });
+        viewport.classList.toggle('is-zoomed', scale > 1);
+        zoomOut.disabled = zoomIndex === 0;
+        reset.disabled = zoomIndex === 0;
+        zoomIn.disabled = zoomIndex === zoomLevels.length - 1;
+        if (zoomStatus) zoomStatus.textContent = `Map zoom ${scale}×`;
+        if (pinnedPoint?.hidden) {
+          unpinPoint();
+          hideTooltip();
+        }
+        const pointToReposition = pinnedPoint;
+        if (pointToReposition) {
+          requestAnimationFrame(() => {
+            if (pointToReposition.isConnected) positionTooltip(pointToReposition);
+          });
+        }
+      };
+
+      const setZoomIndex = (nextIndex: number, focusX = viewport.clientWidth / 2, focusY = viewport.clientHeight / 2) => {
+        const boundedIndex = Math.max(0, Math.min(zoomLevels.length - 1, nextIndex));
+        if (boundedIndex === zoomIndex) return;
+        const focusRatioX = viewport.clientWidth > 0 ? focusX / viewport.clientWidth : 0.5;
+        const focusRatioY = viewport.clientHeight > 0 ? focusY / viewport.clientHeight : 0.5;
+        const focusMapX = viewX + focusRatioX * (mapWidth / scale);
+        const focusMapY = viewY + focusRatioY * (mapHeight / scale);
+        const nextScale = zoomLevels[boundedIndex];
+        zoomIndex = boundedIndex;
+        scale = nextScale;
+        viewX = focusMapX - focusRatioX * (mapWidth / scale);
+        viewY = focusMapY - focusRatioY * (mapHeight / scale);
+        renderMapView();
+      };
+
+      zoomIn.addEventListener('click', () => setZoomIndex(zoomIndex + 1));
+      zoomOut.addEventListener('click', () => setZoomIndex(zoomIndex - 1));
+      reset.addEventListener('click', () => {
+        zoomIndex = 0;
+        scale = zoomLevels[0];
+        viewX = 0;
+        viewY = 0;
+        renderMapView();
+      });
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const kind = button.dataset.mapFilter;
+          if (!isMapKind(kind)) return;
+          activeKinds[kind] = !activeKinds[kind];
+          button.setAttribute('aria-pressed', String(activeKinds[kind]));
+          renderMapView();
+          if (pinnedPoint && !pinnedPoint.hidden) showTooltip(pinnedPoint);
+        });
+      });
+
+      const updateTimeline = (changedRange: 'start' | 'end') => {
+        const nextStart = Number(rangeStart.value);
+        const nextEnd = Number(rangeEnd.value);
+        if (changedRange === 'start') {
+          selectedStart = Math.min(nextStart, selectedEnd);
+          rangeStart.value = String(selectedStart);
+        } else {
+          selectedEnd = Math.max(nextEnd, selectedStart);
+          rangeEnd.value = String(selectedEnd);
+        }
+        renderTimeline();
+        renderMapView();
+        if (pinnedPoint && !pinnedPoint.hidden) showTooltip(pinnedPoint);
+      };
+
+      rangeStart.addEventListener('input', () => updateTimeline('start'));
+      rangeEnd.addEventListener('input', () => updateTimeline('end'));
+
+      viewport.addEventListener('wheel', (event) => {
+        if (!event.ctrlKey && !event.metaKey) return;
+        event.preventDefault();
+        const rect = viewport.getBoundingClientRect();
+        setZoomIndex(
+          zoomIndex + (event.deltaY < 0 ? 1 : -1),
+          event.clientX - rect.left,
+          event.clientY - rect.top
+        );
+      }, { passive: false });
+
+      viewport.addEventListener('pointerdown', (event) => {
+        const target = event.target;
+        if (scale === 1 || !(target instanceof Element) || target.closest('.map-point')) return;
+        dragPointer = event.pointerId;
+        dragX = event.clientX;
+        dragY = event.clientY;
+        dragViewX = viewX;
+        dragViewY = viewY;
+        viewport.classList.add('is-dragging');
+        viewport.setPointerCapture(event.pointerId);
+      });
+
+      viewport.addEventListener('pointermove', (event) => {
+        if (dragPointer !== event.pointerId) return;
+        viewX = dragViewX - ((event.clientX - dragX) / viewport.clientWidth) * (mapWidth / scale);
+        viewY = dragViewY - ((event.clientY - dragY) / viewport.clientHeight) * (mapHeight / scale);
+        renderMapView();
+      });
+
+      const finishDragging = (event: PointerEvent) => {
+        if (dragPointer !== event.pointerId) return;
+        dragPointer = null;
+        viewport.classList.remove('is-dragging');
+        if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+      };
+
+      viewport.addEventListener('pointerup', finishDragging);
+      viewport.addEventListener('pointercancel', finishDragging);
+
+      new ResizeObserver(renderMapView).observe(viewport);
+      renderTimeline();
+      renderMapView();
+
+      points.forEach((point) => {
+        point.addEventListener('mouseenter', () => {
+          if (!pinnedPoint || pinnedPoint === point) showTooltip(point);
+        });
+        point.addEventListener('focus', () => {
+          if (!pinnedPoint || pinnedPoint === point) showTooltip(point);
+        });
+        point.addEventListener('mouseleave', () => {
+          if (!pinnedPoint) hideTooltip();
+        });
+        point.addEventListener('blur', () => {
+          if (!pinnedPoint) hideTooltip();
+        });
+        point.addEventListener('click', () => {
+          if (pinnedPoint === point) {
+            unpinPoint();
+            hideTooltip();
+            return;
+          }
+
+          unpinPoint();
+          pinnedPoint = point;
+          point.classList.add('is-pinned');
+          point.setAttribute('aria-expanded', 'true');
+          showTooltip(point);
+        });
+        point.addEventListener('keydown', (event) => {
+          if (event.key !== 'Escape' || !pinnedPoint) return;
+          unpinPoint();
+          hideTooltip();
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!pinnedPoint) return;
+        const target = event.target;
+        if (!(target instanceof Node)) return;
+        if (pinnedPoint.contains(target) || tooltip.contains(target)) return;
+        unpinPoint();
+        hideTooltip();
+      });
+    });
+  };
+
+  initializeEventMaps();
+  document.addEventListener('astro:page-load', initializeEventMaps);
+</script>

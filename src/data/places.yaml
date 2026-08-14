@@ -1,0 +1,140 @@
+# Canonical map locations shared by talks, events, positions, visits and education.
+# Coordinates are [longitude, latitude].
+- id: online
+  label: Online
+
+- id: tilburg
+  label: Tilburg, Netherlands
+  coordinates: [5.0913, 51.5555]
+
+- id: boston
+  label: Boston, MA, USA
+  coordinates: [-71.0589, 42.3601]
+
+- id: padua
+  label: Padua, Italy
+  coordinates: [11.8768, 45.4064]
+
+- id: groningen
+  label: Groningen, Netherlands
+  coordinates: [6.5665, 53.2194]
+
+- id: amsterdam
+  label: Amsterdam, Netherlands
+  coordinates: [4.9041, 52.3676]
+
+- id: toulouse
+  label: Toulouse, France
+  coordinates: [1.4442, 43.6047]
+
+- id: trieste
+  label: Trieste, Italy
+  coordinates: [13.7768, 45.6495]
+
+- id: pisa
+  label: Pisa, Italy
+  coordinates: [10.4017, 43.7228]
+
+- id: munich
+  label: Munich, Germany
+  coordinates: [11.582, 48.1351]
+
+- id: turin
+  label: Turin, Italy
+  coordinates: [7.6869, 45.0703]
+
+- id: arboc
+  label: L'Arboç, Spain
+  coordinates: [1.603, 41.2666]
+
+- id: rome
+  label: Rome, Italy
+  coordinates: [12.4964, 41.9028]
+
+- id: nijmegen
+  label: Nijmegen, Netherlands
+  coordinates: [5.8372, 51.8126]
+
+- id: cambridge-uk
+  label: Cambridge, UK
+  coordinates: [0.1218, 52.2053]
+
+- id: suzhou
+  label: Suzhou, China
+  coordinates: [120.5853, 31.2989]
+
+- id: miami
+  label: Miami, FL, USA
+  coordinates: [-80.1918, 25.7617]
+
+- id: valletta
+  label: Valletta, Malta
+  coordinates: [14.5146, 35.8989]
+
+- id: vienna
+  label: Vienna, Austria
+  coordinates: [16.3738, 48.2082]
+
+- id: singapore
+  label: Singapore
+  coordinates: [103.8198, 1.3521]
+
+- id: toronto
+  label: Toronto, Canada
+  coordinates: [-79.3832, 43.6532]
+
+- id: abu-dhabi
+  label: Abu Dhabi, UAE
+  coordinates: [54.3773, 24.4539]
+
+- id: ghent
+  label: Ghent, Belgium
+  coordinates: [3.7174, 51.0543]
+
+- id: bari
+  label: Bari, Italy
+  coordinates: [16.8719, 41.1171]
+
+- id: pavia
+  label: Pavia, Italy
+  coordinates: [9.1582, 45.1847]
+
+- id: florence
+  label: Florence, Italy
+  coordinates: [11.2558, 43.7696]
+
+- id: saint-hyacinthe
+  label: Saint-Hyacinthe, QC, Canada
+  coordinates: [-72.94646, 45.6259]
+
+- id: london
+  label: London, UK
+  coordinates: [-0.1276, 51.5072]
+
+- id: trento
+  label: Trento, Italy
+  coordinates: [11.1217, 46.0748]
+
+- id: helsinki
+  label: Helsinki, Finland
+  coordinates: [24.9384, 60.1699]
+
+- id: saarbrucken
+  label: Saarbrücken, Germany
+  coordinates: [6.9969, 49.2402]
+
+- id: sheffield
+  label: Sheffield, UK
+  coordinates: [-1.4701, 53.3811]
+
+- id: milan
+  label: Milan, Italy
+  coordinates: [9.19, 45.4642]
+
+- id: new-york
+  label: New York, NY, USA
+  coordinates: [-74.006, 40.7128]
+
+- id: montreal
+  label: Montréal, QC, Canada
+  coordinates: [-73.5673, 45.5017]

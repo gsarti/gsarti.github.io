@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Content: validate YAML",
+      "type": "npm",
+      "script": "validate",
+      "problemMatcher": []
+    },
+    {
+      "label": "CV: build PDF",
+      "type": "npm",
+      "script": "cv:build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CV: watch",
+      "type": "npm",
+      "script": "cv:watch",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

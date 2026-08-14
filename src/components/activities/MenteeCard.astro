@@ -1,0 +1,141 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import Icon from '../Icon.astro';
+
+type Mentee = CollectionEntry<'advising'>['data'];
+
+interface Props {
+  mentee: Mentee;
+}
+
+const { mentee: s } = Astro.props;
+
+const avatars = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/activities/*.{png,jpg,jpeg,webp,avif}',
+  { eager: true }
+);
+const avatar = s.image ? avatars[`../../assets/activities/${s.image}`]?.default : undefined;
+
+const fmtMonth = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' });
+const range = (start: Date, end?: Date) =>
+  end ? `${fmtMonth.format(start)} – ${fmtMonth.format(end)}` : `${fmtMonth.format(start)} – present`;
+---
+
+<article class="mentee">
+  <header class="mentee-head">
+    {
+      avatar ? (
+        <Image class="avatar" src={avatar} alt="" width={112} height={112} loading="lazy" />
+      ) : (
+        <span class="avatar avatar--placeholder">
+          <Icon name="users" size={20} />
+        </span>
+      )
+    }
+    <div>
+      <h3>{s.website ? <a href={s.website} target="_blank" rel="noopener">{s.name}</a> : s.name}</h3>
+      <p class="program">
+        {s.programUrl ? <a href={s.programUrl} target="_blank" rel="noopener">{s.description}</a> : s.description}
+      </p>
+      <p class="dates">{range(s.dateStart, s.dateEnd)}</p>
+    </div>
+  </header>
+  {
+    s.projectName && (
+      <ul class="mentee-projects">
+        <li>
+          <span class="type">{s.level.toUpperCase()}</span>
+          <span class="proj-title">{s.projectName}</span>
+        </li>
+      </ul>
+    )
+  }
+</article>
+
+<style>
+  .mentee {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+  }
+
+  .mentee-head {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .avatar--placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-faint);
+    background: var(--bg-raised);
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .program {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .dates {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .mentee-projects {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .mentee-projects li {
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+    font-size: 0.88rem;
+  }
+
+  .type {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    border-radius: 5px;
+    padding: 0.1rem 0.4rem;
+    white-space: nowrap;
+  }
+
+  .proj-title {
+    color: var(--text-muted);
+  }
+
+  .paper {
+    margin-left: 0.35rem;
+    color: var(--text-faint);
+  }
+
+  .paper:hover {
+    color: var(--accent);
+  }
+</style>

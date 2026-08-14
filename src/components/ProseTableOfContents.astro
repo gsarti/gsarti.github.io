@@ -1,0 +1,420 @@
+---
+import Icon from './Icon.astro';
+---
+
+<nav id="prose-toc-panel" class="prose-toc" aria-label="Table of contents" data-prose-toc hidden>
+  <ol data-prose-toc-list></ol>
+</nav>
+
+<button
+  class="prose-toc-toggle"
+  type="button"
+  aria-label="Open table of contents"
+  aria-controls="prose-toc-panel"
+  aria-expanded="false"
+  title="Table of contents"
+  data-prose-toc-toggle
+  hidden
+>
+  <span class="prose-toc-toggle__open"><Icon name="toc" size={18} /></span>
+  <span class="prose-toc-toggle__close"><Icon name="close" size={18} /></span>
+</button>
+
+<style is:global>
+  .prose-toc,
+  .prose-toc-toggle {
+    display: none;
+  }
+
+  .prose-toc ol {
+    --toc-indent: 0.85rem;
+
+    position: relative;
+    margin: 0;
+    padding: 0.15rem 0 0.15rem var(--toc-indent);
+    border-left: 1px solid var(--border-strong);
+    list-style: none;
+  }
+
+  .prose-toc > ol {
+    padding-bottom: 0;
+  }
+
+  .prose-toc > ol::before {
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    left: -1px;
+    height: 0.7rem;
+    border-left: 1px solid var(--border-strong);
+  }
+
+  .prose-toc li {
+    position: relative;
+  }
+
+  .prose-toc li + li {
+    margin-top: 0.38rem;
+  }
+
+  .prose-toc li[data-depth='1'] + li {
+    margin-top: 0.65rem;
+  }
+
+  .prose-toc li > ol {
+    --toc-connector-length: 0.85rem;
+
+    margin-top: 0.4rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .prose-toc li > ol:has(> li:last-child > ol:not(.prose-toc__branch--merges)) {
+    padding-bottom: 0;
+  }
+
+  .prose-toc li > ol::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--toc-connector-length) - 1px);
+    width: calc(var(--toc-connector-length) + 1px);
+    border-top: 1px solid var(--border-strong);
+  }
+
+  .prose-toc ol::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -0.5px;
+    z-index: 1;
+    width: 6px;
+    height: 6px;
+    background:
+      linear-gradient(45deg, transparent 44%, var(--signal) 44% 56%, transparent 56%),
+      linear-gradient(-45deg, transparent 44%, var(--signal) 44% 56%, transparent 56%);
+    transform: translate(-50%, 50%);
+  }
+
+  .prose-toc ol.prose-toc__branch--merges::after {
+    left: calc(-1 * var(--toc-connector-length) - 1px);
+    width: calc(var(--toc-connector-length) + 1px);
+    height: 1px;
+    background: var(--border-strong);
+    transform: none;
+  }
+
+  .prose-toc a {
+    position: relative;
+    display: block;
+    color: var(--text-muted);
+    font: 500 0.76rem/1.35 var(--font-sans);
+    text-wrap: pretty;
+    transition: color 140ms ease;
+  }
+
+  .prose-toc li[data-depth='1'] a {
+    color: var(--text);
+    font-size: 0.82rem;
+    font-weight: 650;
+  }
+
+  .prose-toc li[data-depth='2'] a {
+    font-size: 0.75rem;
+    font-weight: 540;
+  }
+
+  .prose-toc li[data-depth='3'] a {
+    color: var(--text-faint);
+    font-size: 0.69rem;
+    font-weight: 500;
+  }
+
+  .prose-toc a::before {
+    content: '';
+    position: absolute;
+    top: 0.675em;
+    left: calc(-1 * var(--toc-indent) - 0.5px);
+    z-index: 1;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--border-strong);
+    border-radius: 50%;
+    background: var(--bg);
+    transform: translate(-50%, -50%);
+    transition: border-color 140ms ease, background 140ms ease;
+  }
+
+  .prose-toc ol:not(.prose-toc__branch--merges)
+    > li:last-child:not(:has(> ol))
+    > a::before {
+    top: auto;
+    bottom: 0.675em;
+    transform: translate(-50%, 50%);
+  }
+
+  .prose-toc li[data-depth='1'] > a::before {
+    border-color: var(--text-muted);
+    background: var(--text-muted);
+  }
+
+  .prose-toc a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .prose-toc a:hover::before,
+  .prose-toc a[aria-current='location']::before {
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+
+  .prose-toc a[aria-current='location'] {
+    color: var(--accent);
+    font-weight: 650;
+  }
+
+  @media (max-width: calc(80rem - 0.02px)) {
+    .prose-toc.is-open:not([hidden]) {
+      position: fixed;
+      right: 1.15rem;
+      bottom: 4.05rem;
+      z-index: 58;
+      display: block;
+      width: min(22rem, calc(100vw - 2.3rem));
+      max-height: min(70dvh, 36rem);
+      padding: 1rem 1.15rem 1.1rem;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      color: var(--text-muted);
+      border: 1px solid var(--border-strong);
+      background: color-mix(in srgb, var(--bg-solid) 94%, transparent);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      scrollbar-width: thin;
+    }
+
+    body:has(.back-to-top.is-visible) .prose-toc.is-open:not([hidden]) {
+      bottom: 6.95rem;
+    }
+
+    .prose-toc-toggle:not([hidden]) {
+      position: fixed;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      z-index: 59;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.35rem;
+      height: 2.35rem;
+      padding: 0;
+      border: 1px solid var(--border-strong);
+      color: var(--text-muted);
+      background: color-mix(in srgb, var(--bg-solid) 92%, transparent);
+      box-shadow: 0 0.35rem 1rem color-mix(in srgb, var(--text) 12%, transparent);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+    }
+
+    .prose-toc-toggle:hover,
+    .prose-toc-toggle[aria-expanded='true'] {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--accent-subtle);
+    }
+
+    .prose-toc-toggle__open,
+    .prose-toc-toggle__close {
+      display: inline-flex;
+    }
+
+    .prose-toc-toggle__close,
+    .prose-toc-toggle[aria-expanded='true'] .prose-toc-toggle__open {
+      display: none;
+    }
+
+    .prose-toc-toggle[aria-expanded='true'] .prose-toc-toggle__close {
+      display: inline-flex;
+    }
+  }
+
+  @media (min-width: 1081px) and (max-width: calc(80rem - 0.02px)) {
+    .prose-toc.is-open:not([hidden]) {
+      bottom: 6.95rem;
+    }
+
+    body:has(.back-to-top.is-visible) .prose-toc.is-open:not([hidden]) {
+      bottom: 9.85rem;
+    }
+
+    .prose-toc-toggle:not([hidden]) {
+      bottom: 4.05rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .prose-toc:not([hidden]) {
+      /* Match CircuitRails' MIN_X / PATH_WIDTH clearance: 7 / 56. */
+      --toc-body-gap: calc((100vw - var(--content-width)) / 16);
+      --toc-inner-gap: 24px;
+
+      position: fixed;
+      top: 4.65rem;
+      left: 0;
+      z-index: 25;
+      display: block;
+      width: max(0px, calc((100vw - var(--content-width)) / 2));
+      max-height: calc(100dvh - 4.65rem);
+      padding: 0.7rem calc(var(--toc-body-gap) + var(--toc-inner-gap)) 0.7rem 2rem;
+      overflow-y: auto;
+      color: var(--text-muted);
+      background: var(--bg);
+      background-image:
+        linear-gradient(var(--border), var(--border)),
+        linear-gradient(var(--border), var(--border));
+      background-position:
+        calc(100% - var(--toc-body-gap)) 0,
+        0 100%;
+      background-repeat: no-repeat;
+      background-size:
+        1px 100%,
+        calc(100% - var(--toc-body-gap)) 1px;
+      scrollbar-width: thin;
+    }
+  }
+</style>
+
+<script>
+  const toc = document.querySelector<HTMLElement>('[data-prose-toc]');
+  const tocList = toc?.querySelector<HTMLOListElement>('[data-prose-toc-list]');
+  const tocToggle = document.querySelector<HTMLButtonElement>('[data-prose-toc-toggle]');
+  const prose = document.querySelector<HTMLElement>('article.prose');
+
+  const setMobileTocOpen = (open: boolean) => {
+    if (!toc || !tocToggle) return;
+    toc.classList.toggle('is-open', open);
+    tocToggle.setAttribute('aria-expanded', String(open));
+    tocToggle.setAttribute('aria-label', open ? 'Close table of contents' : 'Open table of contents');
+  };
+
+  if (toc && tocList && prose) {
+    const headings = Array.from(
+      prose.querySelectorAll<HTMLElement>('h1, h2, h3')
+    ).filter((heading) => !heading.closest('section[data-footnotes]') && heading.textContent?.trim());
+
+    const usedIds = new Set(
+      Array.from(document.querySelectorAll<HTMLElement>('[id]'))
+        .map((element) => element.id)
+        .filter(Boolean)
+    );
+
+    const makeHeadingId = (heading: HTMLElement) => {
+      if (heading.id) return heading.id;
+
+      const base = heading.textContent
+        ?.trim()
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+      let id = base;
+      let suffix = 2;
+      while (usedIds.has(id)) id = `${base}-${suffix++}`;
+      heading.id = id;
+      usedIds.add(id);
+      return id;
+    };
+
+    if (headings.length > 1) {
+      const links: HTMLAnchorElement[] = [];
+      const firstDepth = Number(headings[0].tagName.slice(1));
+      const listStack: Array<{ depth: number; list: HTMLOListElement }> = [
+        { depth: firstDepth, list: tocList },
+      ];
+      let previousDepth = firstDepth;
+      let previousItem: HTMLLIElement | null = null;
+
+      headings.forEach((heading) => {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        const id = makeHeadingId(heading);
+        const depth = Number(heading.tagName.slice(1));
+
+        if (previousItem && depth > previousDepth) {
+          const nestedList = document.createElement('ol');
+          previousItem.append(nestedList);
+          listStack.push({ depth, list: nestedList });
+        } else if (depth < previousDepth) {
+          while (listStack.length > 1 && listStack.at(-1)!.depth > depth) {
+            listStack.pop();
+          }
+        }
+
+        item.dataset.depth = String(depth);
+        link.href = `#${id}`;
+        link.textContent = heading.textContent?.trim() || id;
+        item.append(link);
+        listStack.at(-1)!.list.append(item);
+        links.push(link);
+        previousDepth = depth;
+        previousItem = item;
+      });
+
+      tocList.querySelectorAll<HTMLOListElement>('ol').forEach((list) => {
+        const owner = list.parentElement;
+        if (owner?.nextElementSibling) list.classList.add('prose-toc__branch--merges');
+      });
+
+      let scrollFrame = 0;
+      const updateCurrentSection = () => {
+        const headerOffset = 96;
+        const current = [...headings]
+          .reverse()
+          .find((heading) => heading.getBoundingClientRect().top <= headerOffset) ?? headings[0];
+
+        links.forEach((link, index) => {
+          if (headings[index] === current) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      };
+
+      const scheduleCurrentSection = () => {
+        cancelAnimationFrame(scrollFrame);
+        scrollFrame = requestAnimationFrame(updateCurrentSection);
+      };
+
+      toc.hidden = false;
+      if (tocToggle) tocToggle.hidden = false;
+      updateCurrentSection();
+      window.addEventListener('scroll', scheduleCurrentSection, { passive: true });
+      window.addEventListener('resize', scheduleCurrentSection, { passive: true });
+      window.addEventListener('load', scheduleCurrentSection, { once: true });
+      window.addEventListener('pageshow', scheduleCurrentSection);
+      document.fonts?.ready.then(scheduleCurrentSection);
+
+      tocToggle?.addEventListener('click', () => {
+        setMobileTocOpen(tocToggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      toc.addEventListener('click', (event) => {
+        if (event.target instanceof Element && event.target.closest('a')) setMobileTocOpen(false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (tocToggle?.getAttribute('aria-expanded') !== 'true' || !(event.target instanceof Node)) return;
+        if (!toc.contains(event.target) && !tocToggle.contains(event.target)) setMobileTocOpen(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape' || tocToggle?.getAttribute('aria-expanded') !== 'true') return;
+        setMobileTocOpen(false);
+        tocToggle.focus();
+      });
+
+      window.matchMedia('(min-width: 80rem)').addEventListener('change', () => setMobileTocOpen(false));
+    }
+  }
+</script>

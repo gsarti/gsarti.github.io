@@ -1,0 +1,56 @@
+---
+import SocialLinks from './SocialLinks.astro';
+import { getEntry } from 'astro:content';
+
+const year = new Date().getFullYear();
+const profile = await getEntry('profile', 'main');
+if (!profile) throw new Error('profile.yaml missing');
+---
+
+<footer class="site-footer">
+  <div class="container container--wide inner">
+    <p class="colophon">© {year} {profile.data.name}</p>
+    <div class="links">
+      <SocialLinks size={16} />
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: auto;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 5.5rem;
+  }
+
+  .colophon {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media (max-width: 820px) {
+    .inner {
+      padding-block: 1.5rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .inner {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+</style>

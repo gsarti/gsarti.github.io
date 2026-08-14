@@ -1,0 +1,28 @@
+- id: eamt-best-thesis
+  title: Best PhD Thesis Award
+  organization: European Association for Machine Translation (EAMT)
+  publicationLabel: EAMT Best Thesis Award
+  year: 2026
+  url: https://eamt.org/2026/04/14/2025-anthony-c-clarke-award-for-the-eamt-best-thesis-awardee-announcement/
+- id: clicit-2025-best-paper
+  title: Best Paper
+  organization: Italian Conference on Computational Linguistics (CLiC-it 2025)
+  publicationLabel: Best paper award
+  year: 2025
+  url: https://clic2025.unica.it/wp-content/uploads/2025/09/25_main_long.pdf
+- id: clicit-2023-best-paper
+  title: Best Paper
+  organization: Italian Conference on Computational Linguistics (CLiC-it 2023)
+  publicationLabel: Best paper award
+  year: 2023
+  url: https://arxiv.org/abs/2108.08688v1
+- id: ailc-best-msc-thesis
+  title: Best Master's Thesis Award
+  organization: Italian Association for Computational Linguistics (AILC)
+  publicationLabel: AILC Best Master's Thesis Award
+  year: 2022
+  url: https://gsarti.com/msc-thesis/introduction.html
+- id: emnlp-2024-reviewer
+  title: Outstanding Reviewer
+  organization: EMNLP 2024
+  year: 2024

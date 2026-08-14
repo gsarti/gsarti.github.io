@@ -1,0 +1,297 @@
+---
+/**
+ * Interactive 3D book showcase for the PhD thesis. The 3D CSS is ported
+ * from the old site's assets/scss/custom.scss; cover and spine textures
+ * live in public/files/ so the thesis PDF links keep working unchanged.
+ */
+import CiteDialog from './CiteDialog.astro';
+import Icon from './Icon.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { publicationToCitationFormats } from '../lib/publications';
+
+const thesis = await getEntry('publications', 'phd-thesis');
+if (!thesis) throw new Error('phd-thesis missing from publications.yaml');
+const awards = await getCollection('awards');
+const webBook = thesis.data.links.find((link) => link.label === 'Paper');
+const thesisCitationFormats = publicationToCitationFormats(thesis);
+const thesisAward = [
+  thesis.data.distinction,
+  ...thesis.data.awardIds.map((id) => {
+    const award = awards.find((candidate) => candidate.id === id);
+    return award?.data.publicationLabel ?? award?.data.title;
+  }),
+]
+  .filter((label): label is string => Boolean(label))
+  .join(', ');
+---
+
+<div class="phd-book-section">
+  <div class="phd-book-container">
+    <a href={webBook?.url} class="phd-book-link" aria-label="Read the PhD thesis web book">
+      <div class="phd-book">
+        <div class="phd-front">
+          <div class="phd-cover"></div>
+        </div>
+        <div class="phd-left-side"></div>
+      </div>
+    </a>
+    <span class="phd-cast-shadow" aria-hidden="true"></span>
+  </div>
+  <div class="phd-book-description">
+    <h3>{thesis.data.title}</h3>
+    <p class="subtitle">
+      {thesis.data.venue} · <Icon name="award" size={13} /> {thesisAward}
+    </p>
+    <p class="blurb">{thesis.data.abstract}</p>
+    <div class="actions">
+      {
+        thesis.data.links.map((link, index) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener"
+            class:list={['btn', { 'btn--primary': index === 0 }]}
+          >
+            {link.label === 'Paper' ? 'Web Book' : link.label}
+          </a>
+        ))
+      }
+      <CiteDialog id="phd-thesis" formats={thesisCitationFormats} variant="button" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .phd-book-section {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1.35fr);
+    gap: clamp(3rem, 8vw, 7rem);
+    align-items: center;
+    width: min(100%, 68rem);
+    margin-inline: auto;
+  }
+
+  .phd-book-container {
+    --book-height: clamp(23rem, 30vw, 26.5rem);
+    position: relative;
+    z-index: 1;
+    justify-self: center;
+  }
+
+  .phd-book-link {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding-right: clamp(2.5rem, 4vw, 3.5rem);
+    perspective: 1800px;
+    transform-style: preserve-3d;
+    transition: 0.9s;
+    text-decoration: none;
+  }
+
+  .phd-book {
+    position: relative;
+    display: block;
+    width: calc(var(--book-height) * 0.6974);
+    height: var(--book-height);
+    margin: 0 auto;
+    border-radius: 2px 4px 4px 2px;
+    box-shadow: 0 42px 70px rgba(0, 0, 0, 0.15);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transform: translateZ(0) rotateY(20deg) rotateX(2deg) translateX(4%);
+    transition: 0.6s;
+    cursor: pointer;
+    will-change: transform;
+  }
+
+  :global(:root[data-theme='dark']) .phd-book {
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.2);
+  }
+
+  .phd-book-link:hover .phd-book,
+  .phd-book-link:focus-visible .phd-book {
+    transform: translateZ(100px) rotateY(40deg) translateX(10%);
+    transition: 0.5s;
+  }
+
+  .phd-cast-shadow {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: calc(var(--book-height) * 0.6974);
+    height: var(--book-height);
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.34);
+    filter: blur(26px);
+    opacity: 0.62;
+    transform-origin: center center;
+    transform: translate3d(10%, 8%, -20px) rotateY(20deg) rotateX(2deg) scale(0.96);
+    transition: transform 0.5s, opacity 0.5s, filter 0.5s;
+    pointer-events: none;
+  }
+
+  :global(:root[data-theme='dark']) .phd-cast-shadow {
+    background: rgba(0, 0, 0, 0.78);
+    box-shadow: 0 0 34px rgba(72, 80, 72, 0.26);
+    opacity: 0.88;
+  }
+
+  .phd-book-link:hover + .phd-cast-shadow,
+  .phd-book-link:focus-visible + .phd-cast-shadow {
+    filter: blur(32px);
+    opacity: 0.48;
+    transform: translate3d(18%, 10%, -20px) rotateY(40deg) scale(1.02);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .phd-book,
+    .phd-book-link:hover .phd-book,
+    .phd-book-link:focus-visible .phd-book {
+      transform: translateZ(0) rotateY(20deg) rotateX(2deg) translateX(4%);
+      transition: none;
+    }
+
+    .phd-cast-shadow,
+    .phd-book-link:hover + .phd-cast-shadow,
+    .phd-book-link:focus-visible + .phd-cast-shadow {
+      filter: blur(26px);
+      opacity: 0.62;
+      transform: translate3d(10%, 8%, -20px) rotateY(20deg) rotateX(2deg) scale(0.96);
+      transition: none;
+    }
+  }
+
+  .phd-book > div {
+    display: block;
+    position: absolute;
+  }
+
+  .phd-front {
+    inset: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    outline: 0.1px solid transparent;
+    z-index: 10;
+  }
+
+  .phd-front > div {
+    width: 100%;
+    height: 100%;
+  }
+
+  .phd-cover {
+    background-image: url('/files/phd_thesis_cover.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 3px 3px 0;
+    box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .phd-left-side {
+    top: 0;
+    left: 0;
+    width: 12%;
+    height: var(--book-height);
+    background-image: url('/files/phd_thesis_spine.png');
+    background-size: cover;
+    background-position: center;
+    transform-origin: left center;
+    transform: rotateY(-90deg) translateX(-100%);
+    backface-visibility: hidden;
+    outline: 0.1px solid transparent;
+  }
+
+  .phd-book-description {
+    min-width: 0;
+    max-width: 46rem;
+  }
+
+  .phd-book-description h3 {
+    margin-bottom: 0.4rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1.3rem + 0.55vw, 1.85rem);
+    font-weight: 600;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    color: var(--text-faint);
+    font-size: var(--font-size-copy);
+    line-height: 1.45;
+    margin-bottom: 0.85rem;
+  }
+
+  .blurb {
+    font-size: var(--font-size-copy);
+    color: var(--text-muted);
+    line-height: var(--leading-copy);
+    margin-bottom: 1.1rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.32rem 0.8rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 0;
+    font-size: 0.84rem;
+    font-weight: 540;
+    color: var(--text);
+    transition: all 120ms ease;
+  }
+
+  .btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-subtle);
+    text-decoration: none;
+  }
+
+  .btn--primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  .btn--primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--accent-ink);
+  }
+
+  @media (max-width: 768px) {
+    .phd-book-section {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+      padding-top: 1rem;
+    }
+
+    .phd-book-container {
+      --book-height: clamp(18.5rem, 74vw, 21rem);
+      padding-bottom: 1rem;
+    }
+
+    .phd-book-link {
+      padding-right: 0;
+    }
+
+    .phd-book-description {
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+  }
+</style>

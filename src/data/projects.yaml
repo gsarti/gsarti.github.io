@@ -1,0 +1,222 @@
+- id: aletheias-quest
+  title: "Aletheia's Quest: An AI Lie Detection Challenge"
+  category: current
+  summary: A competition to build general-purpose lie detectors for LLMs
+  date: 2026-07
+  period: "2026"
+  funding:
+    - title: "Deception Detection Grant"
+      source: "Schmidt Sciences, 2026"
+  collaborators:
+    - Emma Bortz
+    - Jaden Fiotto-Kaufman
+    - Walter Laurito
+    - Kieron Kretschmar
+    - Peter Hase
+    - David Bau
+    - Samuel Marks
+    - D. Sculley
+    - Chris Cundy
+  tags:
+    - Deception Detection
+    - Model Organisms
+    - Black-box Monitoring
+    - White-box Auditing
+    - Interpretability
+    - Hackathons and Competitions
+  links:
+    - label: Datasets and Model Organisms
+      url: https://huggingface.co/aletheias-quest
+      kind: other
+    - label: Leaderboard (Validation Set)
+      url: https://huggingface.co/spaces/NDIF/aletheias-leaderboard
+      kind: other
+    - label: Website
+      url: https://aletheias-quest.github.io/
+      kind: other
+    - label: Code
+      url: https://github.com/ndif-team/Aletheias-Quest-Competition
+      kind: code
+  image: aletheias-quest.png
+  description: |-
+    I collaborated in the organization of [Aletheia's Quest](https://aletheias-quest.github.io/), a competition designed to move AI lie detection beyond methods tailored to a single model or behavior. In the first phase, pre-selected red teams produced diverse deception datasets and trained model organisms to lie in specific undisclosed scenarios. During the main competition, blue teams developed unified detectors for deception detection with either black-box access or privileged white-box access to weights and activations through [NNsight and NDIF](https://ndif.us/). Reproducible baselines and a public [validation leaderboard](https://huggingface.co/spaces/NDIF/aletheias-leaderboard) allowed participants to obtain live feedback for their submissions. At the end of the competition, final methods were evaluated on held-out red teams datasets using OOD AUROC as the main success metric. The competition adopted explicit safeguards against organism-specific shortcuts and additional recognition for scientific novelty and computational scalability.
+- id: ndif-ecosystem
+  title: "The NDIF Ecosystem: Open-source Tools and Infrastructure for Interpretability Research"
+  category: current
+  summary: A suite of tools for supporting interpretability research on deep neural networks
+  date: 2026-01
+  period: "2026 - Current"
+  funding:
+    - title: "NSF Award #2408455"
+      source: "US National Science Foundation, 2024"
+  collaborators:
+    - David Bau (PI)
+    - Jaden Fiotto-Kaufman
+    - Emma Bortz
+    - Zikai Wang
+    - Adam Belfki
+    - Michael Ripa
+    - Clément Dumas
+    - Gwen Lincroft
+    - Jonathan Bell
+  tags:
+    - Interpretability
+    - Tools and Interfaces
+  links:
+    - label: National Deep Inference Fabric (NDIF)
+      url: https://ndif.us
+      kind: website
+    - label: NNsight
+      url: https://nnsight.net
+      kind: website
+    - label: NNterp
+      url: https://ndif-team.github.io/nnterp/
+      kind: website
+    - label: NDIF Workbench
+      url: https://workbench.ndif.us
+      kind: website
+  image: ndif-ecosystem.png
+  description: |-
+    As a member of the [National Deep Inference Fabric (NDIF)](https://ndif.us) team, I collaborated to the development of a suite of open-source tools and infrastructure to support large-scale interpretability research on LLMs. The NDIF ecosystem is based on [NNsight](https://nnsight.net), a library built on PyTorch to simplify internal inspection and interventions on deep learning models, with first-class support for LLMs and remote execution capabilities on the NDIF server. [NNterp](https://ndif-team.github.io/nnterp/) extends NNsight with standardized naming and efficient implementations of common methods in interpretability research, and the [NDIF Workbench](https://workbench.ndif.us) is a web-based interface for prototyping and exploration, supporting interpretability educators. I personally contributed to the initial version of [NDIF Skills](https://github.com/ndif-team/skills) to facilitate AI-assisted interpretability research, and to the development of the [Interpretability Interchange Format (INIF)](https://github.com/ndif-team/inif) to enhance the reproducibility and portability of interpretability artifacts.
+  toolIds:
+    - ndif-skills
+    - inif
+
+- id: context-attribution
+  title: Attributing Context Usage in Language Models
+  category: past
+  summary: Tools and methods for scalable input attribution in language models
+  date: 2022-12
+  funding:
+    - nwo-indeep
+    - escience-fellowship
+  period: 2023 – 2024
+  collaborators:
+    - Arianna Bisazza
+    - Malvina Nissim
+    - Grzegorz Chrupała
+    - Jirui Qi
+    - Nils Feldhus
+    - Ludwig Sickert
+    - Oskar van der Wal
+    - Raquel Fernández
+  tags:
+    - Natural Language Generation
+    - Interpretability
+    - Input Attribution
+    - Tools and Interfaces
+  publicationIds:
+    - inseq
+    - inseq-xai
+    - pecore
+    - mirage
+  toolIds:
+    - inseq
+  links:
+    - label: MIRAGE Demo
+      url: https://huggingface.co/spaces/gsarti/mirage
+      kind: demo
+    - label: Inseq Repository
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Inseq Documentation
+      url: https://inseq.readthedocs.io/en/latest/
+      kind: other
+  image: context-attribution.png
+  description: |-
+    This project was the first and most consistent part of my PhD thesis. The main deliverables were [PECoRe](https://proceedings.iclr.cc/paper_files/paper/2024/hash/6d3040941a2d57ead4043556a70dd728-Abstract-Conference.html), a scalable framework to identify and attribute context usage in LLM generations through a combination of information-theoretic measures and contrastive gradient attribution, and the [Inseq](https://github.com/inseq-team/inseq) library to democratize access to attribution methods for generative language models. While originally tested on neural machine translation models, we validated the PECoRe framework's effectiveness on LLMs for question answering with retrieval-augmented generation ([MIRAGE](https://aclanthology.org/2024.emnlp-main.347/)), showing it can outperform self-citation approaches and lead to improved faithfulness to actual context usage. The framework is integrated in Inseq, supporting execution on all Hugging Face-compatible LLMs (`inseq attribute-context`).
+- id: unsupervised-qe
+  title: Unsupervised Machine Translation Quality Estimation
+  category: past
+  summary: Estimating translation quality from the internal confidence of translation models
+  date: 2024-07
+  funding:
+  - nwo-indeep
+  - imminent-language-technology
+  period: "2025"
+  collaborators:
+    - Arianna Bisazza
+    - Malvina Nissim
+    - Grzegorz Chrupała
+    - Vilém Zouhar
+    - Ana Guerberof-Arenas
+  tags:
+    - Machine Translation
+    - Quality Estimation
+    - Uncertainty Estimation
+    - Tools and Interfaces
+  publicationIds:
+    - qe4pe
+    - qe-disagreement
+  toolIds:
+    - grote
+    - labl
+  datasetIds:
+    - qe4pe
+  image: unsupervised-qe.png
+  description: |-
+    This project, marking the end of my PhD journey, investigated whether word-level translation errors can be identified directly from a model's uncertainty and internal signals. The [QE4PE](https://doi.org/10.1162/TACL.a.46) study analyzed translations by 42 professional translators across two language directions, releasing their behavioral logs and fine-grained error annotations collected with our custom [GroTE](https://github.com/gsarti/grote) post-editing interface. The results showed that domain, language and individual baselines were more predictive of post-editing speed than differences between human-made and automatic error span highlights. We benchmarked 14 supervised and unsupervised metrics across 12 translation directions and multiple annotators, finding substantial potential in efficient uncertainty- and interpretability-based methods while showing that supervised systems and single-annotator evaluations can be brittle under label disagreement ([EMNLP 2025](https://aclanthology.org/2025.emnlp-main.924/)).
+- id: italian-language-games
+  title: "Culturally-grounded Reasoning for Italian Language Games"
+  category: past
+  summary: Language games as a testbed bridging logical reasoning and cultural understanding in LLMs
+  date: 2024-06
+  period: 2024 - 2026
+  funding:
+    - google-cloud-credits-2026
+  collaborators:
+    - Malvina Nissim
+    - Felice Dell'Orletta
+    - Cristiano Ciaccio
+    - Alessio Miaschi
+    - Asya Zanollo
+    - Arianna Bisazza
+  tags:
+    - Italian NLP
+    - Language Games
+    - Sequential Reasoning
+    - Cultural Understanding
+    - Crossword Puzzles
+    - Rebus Puzzles
+  image: language-games-it.png
+  description: |-
+    This project used Italian rebuses and crosswords as culturally-grounded benchmark requiring sequential reasoning and sociolinguistic knowledge to evaluate LLM abilities in Italian. We introduced [EurekaRebus](https://aclanthology.org/2024.clicit-1.96/), a large collection of verbalized Italian rebuses, and showed that state-of-the-art LLMs struggle to solve them. The dataset later became part of the Italian [CALAMITA challenge](https://aclanthology.org/2024.clicit-1.132/). The project later expanded to crosswords: [Crossword Space](https://aclanthology.org/2025.clicit-1.26/) introduced dual encoders that learn a shared latent space between clues and answers, winning the CLiC-it 2025 Best Paper Award, while [Cruciverb-IT](https://apa.dipsco.unitn.it/evalita2026/62.pdf) was the first shared task on Italian crossword solving, releasing a large dataset of clue-answer pairs and generated grids for evaluating answer generation and end-to-end solving.
+  publicationIds:
+    - non-verbis
+    - eureka-rebus-challenge
+    - crossword-space
+    - cruciverb-it
+  datasetIds:
+    - eureka-rebus
+    - cruciverb-it
+  modelIds:
+    - verbis-solvers
+    - crossword-space
+- id: italian-nlp
+  title: "Foundation Models for Italian NLP"
+  category: past
+  summary: Developing and evaluating Italian foundation models for text and vision
+  date: 2021-08
+  period: "2021-2022"
+  funding:
+    - title: "TPU Credits for JAX launch party"
+      source: "Hugging Face and Google Cloud, 2021"
+  collaborators:
+    - Malvina Nissim
+    - Giuseppe Attanasio
+    - Silvia Terragni
+    - Federico Bianchi
+  tags:
+    - Italian NLP
+    - Foundation Models
+  image: italian-nlp.png
+  description: |-
+    This project addressed the shortage of open foundation models and evaluation resources designed specifically for Italian across both text and vision. The main text deliverable was [IT5](https://aclanthology.org/2024.lrec-main.823/), the first family of Italian encoder-decoder Transformers: we cleaned a 41-billion-word Italian split of mC4, pretrained four model sizes, and introduced the ItaGen benchmark for Italian understanding and generation. IT5 achieved a stronger scale-to-performance ratio than multilingual alternatives and set a new state of the art for Italian language generation. In parallel, [CLIP-Italian](https://aclanthology.org/2023.clicit-1.11/) was trained on more than 1.4 million Italian image-text pairs and outperformed multilingual CLIP on image retrieval and zero-shot classification. We released the [IT5](https://huggingface.co/collections/gsarti/it5-lrec-coling-2024) and [CLIP-Italian](https://huggingface.co/gsarti/clip-italian) models alongside their training code, datasets and interactive demos.
+  publicationIds:
+    - it5
+    - clip-italian
+  datasetIds:
+    - mc4-it
+  modelIds:
+    - it5
+    - clip-italian

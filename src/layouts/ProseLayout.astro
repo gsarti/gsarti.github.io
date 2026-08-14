@@ -1,0 +1,39 @@
+---
+/**
+ * Layout for text-heavy MDX pages (blog posts, langlearn, ...).
+ * Frontmatter arrives via Astro.props.frontmatter when used as MDX `layout`.
+ */
+import BaseLayout from './BaseLayout.astro';
+import ProseTableOfContents from '../components/ProseTableOfContents.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  frontmatter?: { title?: string; description?: string; summary?: string };
+}
+
+const fm = Astro.props.frontmatter ?? {};
+const title = Astro.props.title ?? fm.title;
+const description = Astro.props.description ?? fm.description ?? fm.summary;
+---
+
+<BaseLayout {title} {description} prose>
+  <ProseTableOfContents />
+  <article class="prose">
+    {title && <h1>{title}</h1>}
+    <slot />
+  </article>
+</BaseLayout>
+
+<style>
+  .prose {
+    /* Keep long-form text at a readable measure inside the wide column. */
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding-block: 2.75rem 4rem;
+  }
+
+  .prose h1 {
+    margin-bottom: 0.5em;
+  }
+</style>

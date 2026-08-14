@@ -1,0 +1,253 @@
+- id: nemi26
+  name: NEMI 2026
+  date: 2026-08-14
+  url: https://nemiconf.github.io/summer26/
+  location: Boston, MA, USA
+  mapPlace: boston
+  description: Poster presentation
+  papers:
+    - publicationId: commitment-boundary
+- id: eamt2026
+  name: EAMT 2026
+  date: 2026-06-15
+  url: https://eamt2026.org/
+  location: Tilburg, The Netherlands
+  mapPlace: tilburg
+  description: Best thesis award presentation
+  papers:
+    - publicationId: phd-thesis
+- id: raw2026
+  name: Meridian RAW 2026
+  date: 2026-05-12
+  url: https://www.meridiancambridge.org/
+  location: Cambridge, UK
+  mapPlace: cambridge-uk
+  description: Research acceleration week
+- id: emnlp25
+  name: EMNLP 2025
+  date: 2025-11-04
+  url: https://2025.emnlp.org
+  location: Suzhou, China
+  mapPlace: suzhou
+  description: 2 Oral presentations, co-organized BlackboxNLP workshop
+  papers:
+    - publicationId: qe4pe
+    - publicationId: qe-disagreement
+- id: nemi25
+  name: NEMI 2025
+  date: 2025-08-22
+  url: https://nemiconf.github.io/summer25/
+  location: Boston, MA, USA
+  mapPlace: boston
+  description: Poster combining our 2 QE papers
+  papers:
+    - publicationId: qe4pe
+    - publicationId: steering-litmt
+- id: clic24
+  name: CLiC-it 2024
+  date: 2024-12-04
+  url: https://clic2024.ilc.cnr.it/
+  location: Pisa, Italy
+  mapPlace: pisa
+  description: Poster + 2 Research Communications + CALAMITA Task
+  papers:
+    - publicationId: non-verbis
+- id: emnlp24
+  name: EMNLP 2024
+  date: 2024-11-11
+  url: https://2024.emnlp.org/
+  location: Miami, FL, USA
+  mapPlace: miami
+  description: Main + BlackboxNLP WS
+  papers:
+    - publicationId: mirage
+    - publicationId: activation-composition
+- id: xai24
+  name: XAI 2024
+  date: 2024-07-16
+  url: https://xaiworldconference.com/2024/
+  location: Valletta, Malta
+  mapPlace: valletta
+  papers:
+    - publicationId: inseq-xai
+- id: coling24
+  name: LREC-COLING 2024
+  date: 2024-05-20
+  url: https://lrec-coling-2024.org/
+  location: Turin, Italy
+  mapPlace: turin
+  description: Main conference short paper
+  papers:
+    - publicationId: it5
+- id: iclr24
+  name: ICLR 2024
+  date: 2024-05-06
+  url: https://iclr.cc/
+  location: Vienna, Austria
+  mapPlace: vienna
+  description: Main conference paper
+  papers:
+    - publicationId: pecore
+- id: emnlp23
+  name: EMNLP 2023
+  date: 2023-12-05
+  url: https://2023.emnlp.org/
+  location: Singapore
+  mapPlace: singapore
+  description: Two long abstracts at the BlackboxNLP workshop
+  papers:
+    - publicationId: pecore
+    - url: https://arxiv.org/abs/2309.00751
+      label: "Let the Models Respond: Interpreting Language Model Detoxification Through the Lens of Prompt Dependence"
+- id: acl23
+  name: ACL 2023
+  date: 2023-07-09
+  url: https://2023.aclweb.org/
+  location: Toronto, ON, Canada
+  mapPlace: toronto
+  papers:
+    - publicationId: ramp
+    - publicationId: inseq
+- id: restcl23
+  name: REST-CL 2023
+  date: 2023-06-30
+  url: https://sites.google.com/view/rest-cl-2023/home?authuser=0
+  location: L'Arboç, Spain
+  mapPlace: arboc
+  description: Hosted a tutorial on interpretability for generative language models
+  papers:
+    - url: /events#restcl-2023
+      label: REST-CL interpretability tutorial
+- id: lcl23
+  name: Lectures on Computational Linguistics 2023
+  date: 2023-05-29
+  url: https://www.ai-lc.it/en/lectures-2/lectures-2023/
+  location: Pisa, Italy
+  mapPlace: pisa
+  description: Hosted a lab session on interpretability for neural language models
+  papers:
+    - url: https://github.com/gsarti/lcl23-xnlm-lab
+      label: LCL 2023 lab materials
+- id: emnlp22
+  name: EMNLP 2022
+  date: 2022-12-06
+  url: https://2022.emnlp.org/
+  location: Abu Dhabi, UAE
+  mapPlace: abu-dhabi
+  papers:
+    - publicationId: divemt
+- id: eamt22
+  name: EAMT 2022
+  date: 2022-06-01
+  url: https://eamt2022.com/
+  location: Ghent, Belgium
+  mapPlace: ghent
+  papers:
+    - publicationId: byt5-mt
+- id: indeeplaunch22
+  name: InDeep Launch Event
+  date: 2022-05-20
+  url: https://interpretingdl.github.io/
+  location: Amsterdam, Netherlands
+  mapPlace: amsterdam
+- id: nits22
+  name: NITS 2022
+  date: 2022-05-13
+  url: https://nits2022.github.io/
+  location: Groningen, Netherlands
+  mapPlace: groningen
+  description: Presented my PhD project poster
+- id: xai4debugging21-attended
+  name: XAI4Debugging WS @ NeurIPS 2021
+  date: 2022-01-17
+  url: https://xai4debugging.github.io/
+  location: Online
+  mapPlace: online
+  papers:
+    - url: /events#xai4debugging21
+      label: XAI4Debugging presentation
+- id: alps22
+  name: ALPS Winter School 2022
+  date: 2022-01-17
+  url: http://lig-alps.imag.fr/
+  location: Online
+  mapPlace: online
+- id: emnlp21
+  name: EMNLP 2021
+  date: 2021-11-08
+  url: https://2021.emnlp.org/
+  location: Online
+  mapPlace: online
+- id: naacl21
+  name: NAACL 2021
+  date: 2021-06-06
+  url: https://2021.naacl.org
+  location: Online
+  mapPlace: online
+  papers:
+    - publicationId: that-looks-hard
+    - publicationId: teaching-nlp
+- id: clic20
+  name: CLiC-it 2020
+  date: 2021-03-01
+  url: http://clic2020.ilc.cnr.it/it/home/
+  location: Online
+  mapPlace: online
+  papers:
+    - publicationId: italian-lm-probing
+- id: evalita20
+  name: EVALITA 2020
+  date: 2020-12-18
+  url: http://www.evalita.it/2020
+  location: Online
+  mapPlace: online
+  description: Special student paper mention for UmBERTo-MTSA
+  papers:
+    - publicationId: acceptability-multitask
+- id: nlxai20
+  name: NL4AI WS @ AIxIA 2020
+  date: 2020-12-01
+  url: http://sag.art.uniroma2.it/NL4AI/
+  location: Online
+  mapPlace: online
+  papers:
+    - publicationId: etc-nlg
+- id: emnlp20
+  name: EMNLP & CoNLL 2020
+  date: 2020-11-16
+  url: https://2020.emnlp.org/
+  location: Online
+  mapPlace: online
+- id: acl20
+  name: ACL 2020
+  date: 2020-07-05
+  url: https://acl2020.org/
+  location: Online
+  mapPlace: online
+- id: iclr20
+  name: ICLR 2020
+  date: 2020-04-26
+  url: https://iclr.cc/Conferences/2020
+  location: Online
+  mapPlace: online
+- id: clic19
+  name: CLiC-it 2019
+  date: 2019-11-12
+  url: http://clic2019.di.uniba.it/index_en.html
+  location: Bari, Italy
+  mapPlace: bari
+- id: lcl19
+  name: Lectures on Computational Linguistics 2019
+  date: 2019-05-08
+  url: https://www.ai-lc.it/en/lectures-2019/
+  location: Pavia, Italy
+  mapPlace: pavia
+  papers:
+    - url: https://github.com/gsarti/svevo-letters-analysis
+      label: AI–Italo Svevo analysis
+- id: acl19
+  name: ACL 2019
+  date: 2019-07-28
+  url: https://acl2019.org/EN/index.xhtml.html
+  location: Florence, Italy
+  mapPlace: florence

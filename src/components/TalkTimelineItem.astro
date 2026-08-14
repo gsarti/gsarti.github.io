@@ -1,0 +1,167 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import LinkChips from './LinkChips.astro';
+import Icon from './Icon.astro';
+
+type TalkEntry = CollectionEntry<'talks'>;
+
+interface Props {
+  talk: TalkEntry;
+}
+
+const { talk } = Astro.props;
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+---
+
+<li class="talk" id={talk.id}>
+  <time class="date" datetime={talk.data.date.toISOString()}>{fmt.format(talk.data.date)}</time>
+  <div class="talk-body">
+    <h3 class="title">{talk.data.title}</h3>
+    <p class:list={['event', { 'has-location': Boolean(talk.data.location) }]}>
+      {talk.data.eventUrl ? (
+        <a href={talk.data.eventUrl} target="_blank" rel="noopener">
+          {talk.data.event}
+        </a>
+      ) : (
+        talk.data.event
+      )}
+    </p>
+    {talk.data.location && (
+      <p class="location">
+        <Icon name="location" size={12} /> {talk.data.location}
+      </p>
+    )}
+    {talk.data.summary && (
+      <details class="summary">
+        <summary>Details</summary>
+        <p>{talk.data.summary}</p>
+      </details>
+    )}
+    <LinkChips links={talk.data.links} />
+  </div>
+</li>
+
+<style>
+  .talk {
+    position: relative;
+    padding-block: 0 1.65rem;
+    scroll-margin-top: 5rem;
+  }
+
+  .talk::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0.3rem;
+    left: -2.03rem;
+    width: 0.72rem;
+    height: 0.72rem;
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .talk::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0.86rem;
+    bottom: -0.3rem;
+    left: -1.71rem;
+    width: 1px;
+    background: var(--border-strong);
+  }
+
+  .talk:last-child {
+    padding-bottom: 0;
+  }
+
+  .talk:last-child::after {
+    display: none;
+  }
+
+  .talk:target {
+    animation: flash 1.8s ease 1;
+  }
+
+  @keyframes flash {
+    0%,
+    60% {
+      background: var(--accent-subtle);
+      box-shadow: 0 0 0 8px var(--accent-subtle);
+    }
+    100% {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .date {
+    color: var(--text);
+    font: 600 var(--font-size-copy)/1.25 var(--font-display);
+    font-variant-numeric: normal;
+    letter-spacing: -0.015em;
+  }
+
+  .title {
+    margin-top: 0.38rem;
+    font-size: var(--font-size-copy);
+    line-height: 1.45;
+  }
+
+  .event {
+    margin-block: 0.2rem 0.55rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .event.has-location {
+    margin-bottom: 0;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    width: fit-content;
+    margin-block: 0.28rem 0.55rem;
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .summary {
+    margin-bottom: 0.55rem;
+    font-size: 0.88rem;
+  }
+
+  .summary summary {
+    width: fit-content;
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    font-weight: 520;
+    cursor: pointer;
+  }
+
+  .summary summary:hover {
+    color: var(--accent);
+  }
+
+  .summary p {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 560px) {
+    .talk::before {
+      left: -1.68rem;
+    }
+
+    .talk::after {
+      left: -1.36rem;
+    }
+  }
+</style>

@@ -1,0 +1,194 @@
+---
+layout: ../layouts/ProseLayout.astro
+title: Even more about me
+description: A longer personal history of Gabriele Sarti's education, research, interests, and projects.
+---
+
+import PhotoGrid from '../components/PhotoGrid.astro';
+import goodOldDays from '../assets/about/good-old-days-2013.png';
+import monochromeGroup from '../assets/about/monochrome-2017.png';
+import monochromeLive from '../assets/about/monochrome-live-2017.png';
+import gabrieleSinger from '../assets/about/jeff-buckleys-halleluja-2013.png';
+import triesteSunny from '../assets/about/trieste-sunny.png';
+import barcolana  from '../assets/about/barcolana.png'
+import reecsh from '../assets/about/reecsh-general-assembly.png'
+import dssc from '../assets/about/dssc.png'
+import gfh from '../assets/about/graduating-from-home.png'
+import monotiles from '../assets/about/monotiles.png'
+import thesis from '../assets/about/thesis-closeup.png'
+
+*For a short overview, see [More about me](/about). Last update: August 2026.*
+
+I am from Trieste, a seaside city at the northeastern edge of Italy. Built on the slopes between the Adriatic and the Karst Plateau, it was once the Habsburg Empire’s main port before becoming part of Italy after World War I. I may be biased, but it really is a sight to behold.
+
+<PhotoGrid
+  label="Sights of Trieste"
+  photos={[
+    {
+      src: triesteSunny,
+      alt: 'View of Trieste on a sunny summer day',
+      caption: 'A sunny summer day in Trieste',
+    },
+    {
+      src: barcolana,
+      alt: 'View from the Faro della Vittoria during the Barcolana regatta',
+      caption: "The [Barcolana](https://en.wikipedia.org/wiki/Barcolana) regatta is an international sailing competition and Trieste's most famous event.",
+    },
+  ]}
+/>
+
+## The early years
+
+I spent my first 16 years in Trieste and might have become one of those people who never leave their hometown had it not been for [AFS Intercultura](https://www.intercultura.it/). At 16, I received a full scholarship to spend a year in Québec, where I quickly had to become fluent in French and adept at dressing for the cold.[^quebec-weather] By the end of the year, I had fallen in love with Québec and its culture; returning to Italy was an even bigger shock than leaving for Canada had been. After graduating from high school the following year, I was dead set on moving back to the True North (strong and free) to continue my studies there.[^translation-path]
+
+[^quebec-weather]: Saint-Hyacinthe is close to Montréal, so its weather is similarly frigid. In winter, as locals say, ["il fait frette en esti"](https://www.youtube.com/watch?v=9f2xntMrW9A).
+
+[^translation-path]: Had I stayed in Trieste, I would have probably studied translation at [SSLMIT](https://portale.units.it/en/events/sslmit-70-years-service-multilingualism). Somehow, I still ended up working on translation many years later.
+
+I ended up attending the [Cégep of Saint-Hyacinthe](https://www.cegepsth.qc.ca/) for a three-year program in management informatics. Looking back, attending Cégep was a somewhat random choice — I simply did not know any better at the time. My two main interests were understanding how computers worked and exploring game theory.[^game-theory] The program was highly practical and taught me a great deal about software engineering, although I had to take mathematics electives to avoid falling behind on that front. During my time at Cégep, I got my first work experience at the college technology transfer center, [played some music](#music), and got involved in the local student union, first as event coordinator and then as president.[^student-union]
+
+[^game-theory]: I was nerd-sniped by Poundstone's [Prisoner's Dilemma](https://www.goodreads.com/book/show/1685756), and ended up writing my high school thesis about the Minimax theorem and Nash equilibria.
+
+[^student-union]: I was mind-blown by Québécois student unions led by ~teenagers and entrusted with annual budgets in the low six figures to fund student services, events, legal fees, and employee salaries.
+
+<PhotoGrid
+  label="RÉÉCSH"
+  photos={[
+    {
+      src: reecsh,
+      alt: 'The executive of the Cégep student union at the yearly general assembly.',
+      caption: 'My first general assembly at RÉÉCSH, our Cégep student union.',
+    },
+  ]}
+/>
+
+## There and back (in Europe) again
+
+My final internship, a brief stint at [Skytech Communications](https://www.skytech.com/en/) in Montréal, sparked my interest in AI and its applications. I then wrapped up my time overseas and returned to Trieste. My return coincided with the University of Trieste launching a new MSc program in data science[^data-science-program] in collaboration with institutions like [SISSA](https://www.sissa.it/) and [ICTP](https://www.ictp.it/), so I had a plan. Despite struggling at times with gaps in my math and statistics training, it was great to be back home in Trieste, and I thoroughly enjoyed both my courses and the time spent with my classmates.
+
+[^data-science-program]: The program, then called Data Science and Scientific Computing (DSSC), is now known as [Data Science and Artificial Intelligence (DSAI)](https://degree.units.it/en/0320107313600001).
+
+<PhotoGrid
+  label="DSSC"
+  photos={[
+    {
+      src: dssc,
+      alt: 'Gabriele and his data science classmates helping Luca Bortolussi promote the course.',
+      caption: 'The data science gang helping Prof. [Luca Bortolussi](https://scholar.google.com/citations?user=p5ynADcAAAAJ&hl=it) (squatting in the middle) promote the program.',
+    },
+  ]}
+/>
+
+During the first year, I did a topic modeling project[^svevo-topic-modeling] on the epistolary corpus of [Italo Svevo](https://en.wikipedia.org/wiki/Italo_Svevo), a popular author from Trieste. I instantly fell in love with all things NLP from that point on and spent the summer of 2019 avidly reading about Transformers and learning all about the new "huge" models Google and OpenAI had just released, [BERT](https://aclanthology.org/N19-1423/) and [GPT-2](https://openai.com/index/better-language-models/).[^svevo-gpt2] Conveniently, the first-ever ACL conference in Italy was happening that year, so I could just hop on a train to Florence and enjoy my first-ever conference, at a time when 3,000 participants was an [unprecedented record](https://www.ai-lc.it/en/acl-2019-2/) and we could still have proper dinners with tenors, ice cream, and fireworks.
+
+[^svevo-topic-modeling]: At the time topic modeling was mostly done using [Latent Dirichlet Allocation (LDA)](https://dl.acm.org/doi/10.5555/944919.944937), by the machine learning rockstar Michael I. Jordan. Funnily enough, Michael happens to be [quite fond of Trieste](https://www.youtube.com/watch?v=3lXphIYfoBM), too.
+
+[^svevo-gpt2]: That summer, I ended up fine-tuning GPT-2 117M on the Svevo epistolary. With the help of [Eric Medvet](https://medvet.inginf.units.it/) and [Cristina Fenu](https://bibliotecacivicahortis.academia.edu/CristinaFenu), we set up a workshop titled [AI-Italo Svevo: Letters from an AI](https://www.openstarts.units.it/entities/publication/782b0ce9-850f-4207-b0de-dc82869df63d/details), printing GPT-generated Svevo letters for more than 3,000 people over three intense days of work at [Trieste Next](https://www.triestenext.it/).
+
+I spent the last few months of 2019 in Pisa, working as a research assistant at the [ItaliaNLP lab](http://www.italianlp.it/) of the [CNR-ILC](https://www.ilc.cnr.it/en/) on using eye-tracking data to study linguistic complexity in language models. This work later became [my first paper](https://aclanthology.org/2021.cmcl-1.5/) (already using probes!) and an important part of my master's thesis, ["Interpreting Neural Language Models for Linguistic Complexity Assessment"](/msc-thesis/introduction.html).
+
+We entered a national lockdown in March, cutting me off from most social contact just in time for the final push on my thesis. At that point, I knew that I wanted to pursue a PhD, but I had already collected a few rejections[^phd-rejections] and was still looking for a position that felt like the right fit.[^emergent-comm] COVID ultimately changed those plans, since I did not want to move countries and begin a PhD while curfews, social distancing, and mandatory remote work were still in place. I instead joined [Aindo](https://www.aindo.com/), Trieste’s first serious deep learning startup, shortly after my graduation. I was employee #2.
+
+<PhotoGrid
+  label="MSc Graduation from Home"
+  photos={[
+    {
+      src: gfh,
+      alt: 'Gabriele with a laurel crown after his graduation from home during COVID social distancing.',
+      caption: 'Celebrating my MSc graduation from home due to COVID social distancing measures on December 11th, 2020.',
+    },
+  ]}
+  singleWidth={50}
+/>
+
+[^phd-rejections]: Notably, the ELLIS PhD inaugural cohort, Edinburgh's [CDT in NLP](https://informatics.ed.ac.uk/ukri-cdt-in-natural-language-processing) and Amsterdam's [ILLC](https://www.illc.uva.nl/).
+
+[^emergent-comm]: My proposals at the time were centered around studying emergent communication between language agents, inspired by [some](https://arxiv.org/abs/2006.02419) [cool](https://aclanthology.org/D19-3010/) [works](https://aclanthology.org/2020.acl-main.407/) from Marco Baroni's group.
+
+## The PhD journey
+
+2021 went by quickly while I was working on very diverse projects related to generative models, from medical information extraction with T5 encoder-decoders to sketch-to-image generation with StyleGANs. That summer, I accepted a PhD offer to work on interpretability for machine translation with [Arianna Bisazza](https://www.cs.rug.nl/~bisazza/) and [Malvina Nissim](https://malvinanissim.github.io/) at the University of Groningen. The position was affiliated with [InDeep](https://projects.illc.uva.nl/indeep/) — a new Dutch consortium for research on deep learning interpretability — and Malvina assured me Groningen was the Dutch equivalent of Pisa,[^groningen-pisa] so I was sold.
+
+[^groningen-pisa]: As in, a small, walkable city with more students than residents.
+
+I will not go through the four years I spent in Groningen in much detail here. Suffice it to say that, in retrospect, I am glad I picked Groningen over more prestigious alternatives in bigger cities for this phase of my life: the [GroNLP](https://www.rug.nl/research/clcg/research/cl/) macro-group was always extremely friendly and supportive, and the laid-back Groningen lifestyle gave me the peace of mind I needed to focus on my research. At the same time, the density of talented and ambitious researchers in the [InCLoW](https://inclow-lm.github.io/) micro-group set up by Arianna kept me engaged and motivated throughout my PhD.
+
+Of course, the biggest perk of a PhD, aside from having time to really think through hard problems, is traveling to NLP and AI conferences. Between 2021 and 2025, I had lots of fun and many productive discussions in places like [Abu Dhabi](https://2022.emnlp.org/), [Singapore](https://2023.emnlp.org/), [Miami](https://2024.emnlp.org/), and [Suzhou](https://2025.emnlp.org/).[^events-map] One of these discussions was with [David Bau](https://baulab.info/), whom I met at EMNLP 2023 in Singapore to discuss the state of the interpretability tooling ecosystem. Our chat eventually converged on how academic incentives discourage the development of robust research tools that can be adopted by the whole academic community, a fact I experienced first-hand when building my [Inseq](https://github.com/inseq-team/inseq) attribution library.[^ndif-fan] Before we parted ways, David handed me a box of 3D-printed [aperiodic monotiles](https://arxiv.org/abs/2303.10798) discovered earlier that year, which reminded me of my grandpa's passion for [symmetries in art and science](https://www.carocci.it/prodotto/simmetrie-nellarte-e-nella-scienza). I ended up using them for the printed cover of my dissertation a year later.
+
+[^events-map]: The [Events](/events) page has an interactive map with a timeline of events I attended. And yes, EMNLP was our go-to yearly top conference.
+
+[^ndif-fan]: [NNsight](https://nnsight.net) was barely out at the time, and I was already a fan of how David's [NDIF project](https://ndif.us/) was trying to change the status quo in this regard.
+
+<PhotoGrid
+  label="Monotiles and Symmetries"
+  photos={[
+    {
+      src: monotiles,
+      alt: 'A box with 3D-printed aperiodic monotiles',
+      caption: 'The 3D-printed aperiodic monotiles signed "Courtesy of [nnsight.net](https://nnsight.net)"',
+    },
+    {
+      src: thesis,
+      alt: 'Close-up of the thesis cover, tessellated with aperiodic monotiles',
+      caption: 'The cover of my [PhD thesis](/phd-thesis), with a tiling of aperiodic monotiles in the beautiful colors of the [Berber flag](https://en.wikipedia.org/wiki/Berber_flag).'
+    }
+  ]}
+/>
+
+I met David again at EMNLP 2024 in Miami, when he suggested I could come do my postdoc in his lab in Boston and contribute to making their (already great) open-source interpretability tools the standard in the community. Once again, the stars aligned to make a great opportunity come together, so I accepted the offer with pleasure and joined the [Bau Lab](https://baulab.info/) at Northeastern in January 2026.
+
+## The rise of AI agents and Parallax
+
+I will remember 2026 as The Year AI Agents Became Useful, the year I stopped coding in the traditional sense, and the year I changed my mind about a great many things.[^opus-takeoff] Working in AI in early 2026 felt like standing at the epicenter of a new era of work — one in which raw skills mattered less and [wanting became an art](https://davidbau.com/archives/2026/01/17/the_art_of_wanting.html) to cultivate even more carefully. The onslaught of mindless AI slop made me acutely aware of the limitations of our current academic model and shared scientific commons. At the same time, renewed progress in AI made me question how I could put my knowledge and abilities to work and help steer the coming revolution in a positive direction.
+
+That question eventually led my friend and colleague [Mario Giulianelli](https://glnmario.github.io/) and me to refocus our efforts on building [Parallax](https://parallx.ai), a London-based non-profit research organisation aiming to make white-box auditing of AI agents’ internal beliefs, goals and plans a standard component of frontier AI evaluations. Parallax feels like a natural convergence of the ideas that have shaped my work so far, bringing open infrastructure and scalable interpretability methods to practical use for de-risking deployments of increasingly capable and [dangerous](https://www.youtube.com/watch?v=87DyyMV0kCY) AI systems. I am especially excited about growing Parallax as an independent European center of expertise around these themes, to ensure our society is not caught unprepared by the disruptive changes ahead of us. If this resonates with you, I am [happy to chat](mailto:gsarti@parallx.ai)!
+
+[^opus-takeoff]: I started using Claude Code in May 2025 and remained bearish on further progress until [Claude Opus 4.5](https://www.anthropic.com/news/claude-opus-4-5) single-handedly brought my manual coding needs to a minimum.
+
+## Random fun facts about me
+
+No "About me" page would be complete without a curated collection of random fun facts. Here we go:
+
+- I have been learning Russian since Fall 2024. Nearly uninterrupted weekly lessons have taken me from A0 to a respectable B1,[^cefr] largely thanks to the commitment and passion of my friend and teacher [Sergei](https://www.linkedin.com/in/smmkolesnikov/). Given my background in Romance languages, I found the learning curve quite steep, but it's very rewarding when the pieces — especially case endings and verbal aspect — begin to click.
+
+[^cefr]: For non-European friends, this is [CEFR](https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions) slang for "totally ignorant to somewhat proficient".
+
+- During the early months of lockdown in Spring 2020 I built a little demo for a [Covid Browser](https://github.com/gsarti/covid-papers-browser), one of the first examples of semantic retrieval of papers using [bio-tuned BERT models](https://huggingface.co/gsarti/biobert-nli). The tool garnered [a](https://www.ai-lc.it/en/covid-19-2/) [lot](https://x.com/gsarti_/status/1274277529013104640?s=20) [of](https://x.com/gsarti_/status/1245451569765576705?s=20) [attention](https://x.com/gsarti_/status/1250358078769377280?s=20) on Twitter, culminating in a surreal interview with NYT's [Cade Metz](https://www.nytimes.com/by/cade-metz) — including a mid-lockdown semi-legal photoshoot — for an article on "Italy, the first victim of Covid, strikes back with technology". Sadly, that was never published, so you have to take my word for it.[^covid-browser]
+
+[^covid-browser]: I often wondered if this was the result of me spending a non-zero amount of time trying to convince Cade that a [Transformer](https://arxiv.org/abs/1706.03762) and a [Universal Transformer](https://arxiv.org/abs/1807.03819) are not the same thing.
+
+- I used to be very much into [Magic: The Gathering](https://en.wikipedia.org/wiki/Magic:_The_Gathering) back in the day.[^mtg-history] I had a penchant for all flavors of combo (a real [Johnny](https://magic.wizards.com/en/news/making-magic/timmy-johnny-and-spike), in MTG jargon), but also enjoyed tempo and control decks. My favorite format is probably Commander.[^commander] MTG can be an expensive hobby, but it almost single-handedly taught me English and sharpened my logical thinking from a very early age — highly recommended to all parents!
+
+[^mtg-history]: For fellow MTG nerds: I started playing with friends with Darksteel and played T2 and some Extended/Modern regularly until the Innistrad block. My favorite combos were [Eggs](https://www.coolstuffinc.com/a/carlosgutierrez-082912-eggs-101), Thopter Sieve, Ad Nauseam and Living Death.
+
+[^commander]: At the time, we still called it EDH! I played a bunch of different commanders on [Cockatrice](https://cockatrice.github.io/), but my only IRL deck was an Animar Pod combo.
+
+<span id="music"></span>
+- As a teenager, I was the lead singer in a rock band named **Good Old Days** in Trieste 🇮🇹, where we played mostly classic rock covers around local pubs and events (Led Zeppelin, Rolling Stones, Jimi Hendrix, Deep Purple, Chuck Berry) and then **Monochrome** in Saint-Hyacinthe 🇨🇦, where we also played more modern stuff (Arctic Monkeys, Rage against the Machine) and Québécois classics (mainly [Les Colocs](https://www.youtube.com/watch?v=38arYF35tbQ)). We also had original singles in both bands, but no recordings have survived to my knowledge.
+
+<PhotoGrid
+  label="Good Old Days and Monochrome performances"
+  photos={[
+    {
+      src: gabrieleSinger,
+      alt: 'Gabriele Sarti singing under a spotlight in a dark room',
+      caption: "Performing [Jeff Buckley's 'Hallelujah'](https://www.youtube.com/watch?v=y8AWFf7EAc4&list=RDy8AWFf7EAc4&start_radio=1) at the first Good Old Days concert in Trieste (2013)",
+    },
+    {
+      src: goodOldDays,
+      alt: 'Good Old Days performing live in Trieste',
+      caption: "Good Old Days performing [The Rolling Stones' 'Satisfaction'](https://www.youtube.com/watch?v=nrIPxlFzDi0) live in Trieste (2013)",
+    },
+    {
+      src: monochromeGroup,
+      alt: 'The members of Monochrome together after Cégep en Spectacle',
+      caption: 'Monochrome at Cégep en Spectacle at Cégep de Saint-Hyacinthe (2017)',
+      objectPosition: 'center 38%',
+    },
+    {
+      src: monochromeLive,
+      alt: 'Monochrome performing live at Cégep en Spectacle',
+      caption: "Monochrome performing [AC/DC's 'Highway to Hell'](https://www.youtube.com/watch?v=l482T0yNkeo) live at Cégep en Spectacle (2017)",
+    }
+  ]}
+/>

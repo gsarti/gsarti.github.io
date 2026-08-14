@@ -1,0 +1,79 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import ProseTableOfContents from '../../components/ProseTableOfContents.astro';
+import 'katex/dist/katex.min.css';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\/index$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.summary} prose>
+  <ProseTableOfContents />
+  <article class="post prose">
+    <header class="post-head">
+      <p class="date">
+        <FormattedDate date={post.data.date} />
+      </p>
+      <h1>{post.data.title}</h1>
+      {post.data.summary && <p class="summary">{post.data.summary}</p>}
+      {post.data.cover && <Image class="cover" src={post.data.cover} alt="" width={880} loading="eager" />}
+    </header>
+    <Content />
+  </article>
+</BaseLayout>
+
+<style>
+  .post {
+    /* Keep long-form text at a readable measure inside the wide column. */
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding-block: 2.75rem 4rem;
+  }
+
+  .post-head {
+    margin-bottom: 2rem;
+  }
+
+  .date {
+    font-size: 0.85rem;
+    color: var(--text-faint);
+    margin-bottom: 0.4rem;
+  }
+
+  .post-head h1 {
+    margin-bottom: 0.6rem;
+  }
+
+  .summary {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .cover {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    width: 100%;
+    height: auto;
+  }
+
+  .prose {
+    font-size: 1rem;
+  }
+
+  .prose :global(.katex-display) {
+    overflow-x: auto;
+    padding-block: 0.25rem;
+  }
+</style>

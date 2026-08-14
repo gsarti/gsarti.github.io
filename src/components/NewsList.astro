@@ -1,0 +1,140 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { marked } from 'marked';
+
+interface Props {
+  items: CollectionEntry<'news'>[];
+  limit?: number;
+  variant?: 'rows' | 'timeline';
+}
+
+const { items, limit, variant = 'rows' } = Astro.props;
+const sorted = [...items].sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const shown = limit ? sorted.slice(0, limit) : sorted;
+---
+
+<ul class:list={['news', { timeline: variant === 'timeline' }]}>
+  {
+    shown.map((item) => (
+      <li>
+        <p class="when">{item.data.label}</p>
+        <p class="what" set:html={marked.parseInline(item.data.text)} />
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .news {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border-strong);
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 8.75rem 1fr;
+    gap: 1.5rem;
+    padding-block: 1.1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .when {
+    font: 0.7rem/1.3 var(--font-mono);
+    color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+  }
+
+  .what {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .what :global(a) {
+    font-weight: 520;
+  }
+
+  .news.timeline {
+    overflow: visible;
+    border-top: 0;
+    padding-left: 2.15rem;
+  }
+
+  .timeline li {
+    position: relative;
+    display: block;
+    padding-block: 0 1.65rem;
+    border-bottom: 0;
+  }
+
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0.3rem;
+    left: -2.03rem;
+    width: 0.72rem;
+    height: 0.72rem;
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .timeline li::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0.86rem;
+    bottom: -0.3rem;
+    left: -1.71rem;
+    width: 1px;
+    background: var(--border-strong);
+  }
+
+  .timeline li:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline li:last-child::after {
+    display: none;
+  }
+
+  .timeline .when {
+    color: var(--text);
+    font: 600 var(--font-size-copy)/1.25 var(--font-display);
+    font-variant-numeric: normal;
+    letter-spacing: -0.015em;
+    text-transform: none;
+  }
+
+  .timeline .what {
+    margin-top: 0.38rem;
+    font-size: var(--font-size-copy);
+    line-height: var(--leading-copy);
+  }
+
+  @media (max-width: 560px) {
+    .news:not(.timeline) li {
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+    }
+
+    .news.timeline {
+      padding-left: 1.8rem;
+    }
+
+    .timeline li::before {
+      left: -1.68rem;
+    }
+
+    .timeline li::after {
+      left: -1.36rem;
+    }
+  }
+</style>

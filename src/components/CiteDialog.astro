@@ -1,0 +1,491 @@
+---
+import Icon from './Icon.astro';
+import type { PublicationCitationFormats } from '../lib/publications';
+
+interface Props {
+  id: string;
+  formats: PublicationCitationFormats | PublicationCitationFormats[];
+  label?: string;
+  icon?: string;
+  /** 'chip' matches publication pills; 'inline' matches research links; 'button' matches .btn rows. */
+  variant?: 'chip' | 'inline' | 'button';
+}
+
+const { id, formats, label = 'Cite', icon = 'cite', variant = 'chip' } = Astro.props;
+const citationEntries = Array.isArray(formats) ? formats : [formats];
+const combinedFormats = {
+  full: citationEntries.map((entry) => entry.full.value).join('\n\n'),
+  informal: citationEntries.map((entry) => entry.informal.value).join('\n\n'),
+  markdown: citationEntries.map((entry) => entry.markdown).join('\n\n'),
+  bibtex: citationEntries.map((entry) => entry.bibtex).join('\n\n'),
+};
+const dialogId = `cite-${id}`;
+const tabId = (format: string) => `${dialogId}-tab-${format}`;
+const panelId = (format: string) => `${dialogId}-panel-${format}`;
+
+const escapeHtml = (value: string) =>
+  value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+
+const highlightBibtex = (bibtex: string) =>
+  bibtex
+    .split('\n')
+    .map((line) => {
+      const entry = line.match(/^@([A-Za-z]+)\{([^,]+),$/);
+      if (entry) {
+        return `<span class="syntax-entry">@${entry[1]}</span><span class="syntax-punctuation">{</span><span class="syntax-key">${escapeHtml(entry[2])}</span><span class="syntax-punctuation">,</span>`;
+      }
+      const field = line.match(/^(\s*)([A-Za-z]+)(\s*=\s*)(.*?)(,?)$/);
+      if (field) {
+        return `${field[1]}<span class="syntax-field">${field[2]}</span><span class="syntax-punctuation">${escapeHtml(field[3])}</span><span class="syntax-value">${escapeHtml(field[4])}</span><span class="syntax-punctuation">${field[5]}</span>`;
+      }
+      return escapeHtml(line);
+    })
+    .join('\n');
+---
+
+{variant === 'inline' && <span class="cite-separator" aria-hidden="true">/</span>}
+<button class:list={['cite-trigger', `cite-trigger--${variant}`]} type="button" data-cite-open={dialogId}>
+  {(variant === 'chip' || variant === 'button') && <Icon name={icon} size={14} />}
+  {label}
+</button>
+
+<dialog id={dialogId} class="cite-dialog">
+  <div class="cite-head">
+    <p class="eyebrow">Citation</p>
+    <form method="dialog">
+      <button class="icon-btn" aria-label="Close"><Icon name="close" size={16} /></button>
+    </form>
+  </div>
+
+  <div class="citation-tabs" role="tablist" aria-label="Citation format">
+    {
+      ['full', 'informal', 'markdown', 'bibtex'].map((format, index) => (
+        <button
+          id={tabId(format)}
+          class="citation-tab"
+          type="button"
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+          aria-controls={panelId(format)}
+          tabindex={index === 0 ? 0 : -1}
+          data-citation-tab={format}
+        >
+          {format === 'bibtex' ? 'BibTeX' : format[0].toUpperCase() + format.slice(1)}
+        </button>
+      ))
+    }
+  </div>
+
+  <section
+    id={panelId('full')}
+    class="citation-panel citation-preview"
+    role="tabpanel"
+    aria-labelledby={tabId('full')}
+    data-citation-panel="full"
+  >
+    {
+      citationEntries.map((entry) => (
+        <p>
+          {entry.full.authors}. {entry.full.year}.{' '}
+          {
+            entry.full.url ? (
+              <a href={entry.full.url} target="_blank" rel="noopener">{entry.full.title}</a>
+            ) : (
+              entry.full.title
+            )
+          }.{' '}
+          {
+            entry.full.containerTitle && (
+              <>
+                {entry.full.containerPrefix}<em>{entry.full.containerTitle}</em>.{' '}
+              </>
+            )
+          }
+          {entry.full.publisher && <>{entry.full.publisher}.</>}
+        </p>
+      ))
+    }
+    <textarea class="copy-source" tabindex="-1" aria-hidden="true" readonly data-copy-source>
+      {combinedFormats.full}
+    </textarea>
+  </section>
+
+  <section
+    id={panelId('informal')}
+    class="citation-panel citation-preview"
+    role="tabpanel"
+    aria-labelledby={tabId('informal')}
+    data-citation-panel="informal"
+    hidden
+  >
+    {
+      citationEntries.map((entry) => (
+        <p>
+          {
+            entry.informal.url ? (
+              <a href={entry.informal.url} target="_blank" rel="noopener">{entry.informal.title}</a>
+            ) : (
+              entry.informal.title
+            )
+          } ({entry.informal.parenthetical})
+        </p>
+      ))
+    }
+    <textarea class="copy-source" tabindex="-1" aria-hidden="true" readonly data-copy-source>
+      {combinedFormats.informal}
+    </textarea>
+  </section>
+
+  <section
+    id={panelId('markdown')}
+    class="citation-panel"
+    role="tabpanel"
+    aria-labelledby={tabId('markdown')}
+    data-citation-panel="markdown"
+    hidden
+  >
+    <pre tabindex="0"><code>{combinedFormats.markdown}</code></pre>
+    <textarea class="copy-source" tabindex="-1" aria-hidden="true" readonly data-copy-source>
+      {combinedFormats.markdown}
+    </textarea>
+  </section>
+
+  <section
+    id={panelId('bibtex')}
+    class="citation-panel"
+    role="tabpanel"
+    aria-labelledby={tabId('bibtex')}
+    data-citation-panel="bibtex"
+    hidden
+  >
+    <pre tabindex="0"><code class="language-bibtex" set:html={highlightBibtex(combinedFormats.bibtex)} /></pre>
+    <textarea class="copy-source" tabindex="-1" aria-hidden="true" readonly data-copy-source>
+      {combinedFormats.bibtex}
+    </textarea>
+  </section>
+
+  <button class="copy-btn" type="button" data-copy-citation>
+    <span class="copy-idle"><Icon name="copy" size={14} /> Copy to clipboard</span>
+    <span class="copy-done"><Icon name="check" size={14} /> Copied!</span>
+  </button>
+</dialog>
+
+<style>
+  .cite-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+  }
+
+  .cite-trigger--chip {
+    padding: 0.15rem 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .cite-trigger--button {
+    min-height: 2rem;
+    padding: 0.34rem 0.66rem;
+    border: 0;
+    border-radius: 6px;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    font: 600 0.82rem/1.25 var(--font-sans);
+  }
+
+  .cite-trigger--inline {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    color: var(--accent);
+    font: 500 0.84rem/1.5 var(--font-mono);
+  }
+
+  .cite-separator {
+    display: inline-flex;
+    align-items: center;
+    margin-inline: 0.45rem;
+    color: var(--text-faint);
+    font: 400 1rem/1 var(--font-sans);
+  }
+
+  .cite-trigger--inline:hover,
+  .cite-trigger--inline:focus-visible {
+    color: var(--accent-hover);
+    background: transparent;
+    text-decoration: underline;
+  }
+
+  .cite-trigger:not(.cite-trigger--inline):hover {
+    color: var(--accent-hover);
+    border-color: transparent;
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  .cite-dialog {
+    width: min(48rem, calc(100vw - 2rem));
+    max-width: none;
+    max-height: min(42rem, calc(100vh - 2rem));
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    padding: 1rem 1.25rem 1.25rem;
+    box-shadow: var(--shadow);
+    overflow: auto;
+  }
+
+  .cite-dialog::backdrop {
+    background: rgba(10, 12, 16, 0.45);
+    backdrop-filter: blur(2px);
+  }
+
+  .cite-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.55rem;
+  }
+
+  .icon-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 6px;
+  }
+
+  .icon-btn:hover {
+    color: var(--text);
+    background: var(--bg-raised);
+  }
+
+  .citation-tabs {
+    display: flex;
+    gap: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+  }
+
+  .citation-tab {
+    position: relative;
+    flex: 0 0 auto;
+    border: 0;
+    background: transparent;
+    color: var(--text-muted);
+    padding: 0.45rem 0 0.55rem;
+    font: 560 0.82rem/1 var(--font-sans);
+    cursor: pointer;
+  }
+
+  .citation-tab::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 140ms ease;
+  }
+
+  .citation-tab:hover,
+  .citation-tab[aria-selected='true'] {
+    color: var(--accent);
+  }
+
+  .citation-tab[aria-selected='true']::after {
+    transform: scaleX(1);
+  }
+
+  .citation-panel {
+    margin-bottom: 0.9rem;
+  }
+
+  .citation-panel[hidden] {
+    display: none;
+  }
+
+  .citation-preview {
+    min-height: 7.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+  }
+
+  .citation-preview p {
+    width: 100%;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .citation-preview em {
+    color: var(--text);
+  }
+
+  pre {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    overflow-x: auto;
+    max-height: 24rem;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .language-bibtex :global(.syntax-entry),
+  .language-bibtex :global(.syntax-field) {
+    color: var(--accent);
+    font-weight: 650;
+  }
+
+  .language-bibtex :global(.syntax-key) {
+    color: var(--signal);
+  }
+
+  .language-bibtex :global(.syntax-value) {
+    color: var(--text);
+  }
+
+  .language-bibtex :global(.syntax-punctuation) {
+    color: var(--text-faint);
+  }
+
+  .copy-source {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border-strong);
+    border-radius: 7px;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 520;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+  }
+
+  .copy-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-subtle);
+  }
+
+  .copy-btn .copy-done,
+  .copy-btn.copied .copy-idle {
+    display: none;
+  }
+
+  .copy-btn.copied .copy-done {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .copy-btn .copy-idle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  @media (max-width: 520px) {
+    .cite-dialog {
+      padding: 0.85rem 1rem 1rem;
+    }
+
+    .citation-tabs {
+      gap: 0.85rem;
+    }
+
+    .citation-preview {
+      min-height: 0;
+      padding: 0.85rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('click', async (e) => {
+    const target = e.target instanceof Element ? e.target : null;
+    if (!target) return;
+
+    const opener = target.closest('[data-cite-open]');
+    if (opener instanceof HTMLElement) {
+      const dialog = document.getElementById(opener.dataset.citeOpen!);
+      if (dialog instanceof HTMLDialogElement) dialog.showModal();
+      return;
+    }
+
+    const tab = target.closest('[data-citation-tab]');
+    if (tab instanceof HTMLButtonElement) {
+      const dialog = tab.closest('dialog');
+      const format = tab.dataset.citationTab;
+      if (!dialog || !format) return;
+      dialog.querySelectorAll<HTMLButtonElement>('[data-citation-tab]').forEach((button) => {
+        const selected = button === tab;
+        button.setAttribute('aria-selected', String(selected));
+        button.tabIndex = selected ? 0 : -1;
+      });
+      dialog.querySelectorAll<HTMLElement>('[data-citation-panel]').forEach((panel) => {
+        panel.hidden = panel.dataset.citationPanel !== format;
+      });
+      return;
+    }
+
+    const copyBtn = target.closest('[data-copy-citation]');
+    if (copyBtn instanceof HTMLElement) {
+      const source = copyBtn
+        .closest('dialog')
+        ?.querySelector<HTMLTextAreaElement>('[data-citation-panel]:not([hidden]) [data-copy-source]');
+      if (source?.value) {
+        await navigator.clipboard.writeText(source.value.trim());
+        copyBtn.classList.add('copied');
+        setTimeout(() => copyBtn.classList.remove('copied'), 1600);
+      }
+      return;
+    }
+
+    // Click on the backdrop closes the dialog.
+    if (target instanceof HTMLDialogElement && target.open) {
+      const rect = target.getBoundingClientRect();
+      const ev = e as MouseEvent;
+      const inside =
+        ev.clientX >= rect.left && ev.clientX <= rect.right && ev.clientY >= rect.top && ev.clientY <= rect.bottom;
+      if (!inside) target.close();
+    }
+  });
+</script>

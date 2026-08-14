@@ -1,0 +1,138 @@
+- id: sara-candussio-phd
+  name: Sara Candussio
+  level: phd
+  description: ADSAI Ph.D. at University of Trieste
+  dateStart: 2024-11-01
+  dateEnd: 2027-10-31
+  ongoing: true
+  projectName:
+  coSupervisors:
+    - Luca Bortolussi
+  website: https://www.linkedin.com/in/sara-candussio-830772283/
+  programUrl: https://adsai.units.it/
+- id: timothy-obiso-cbai
+  name: Timothy Obiso
+  level: phd
+  description: CBAI '26 Summer Fellow
+  dateStart: 2026-06-01
+  dateEnd: 2026-09-01
+  ongoing: true
+  projectName:
+  coSupervisors:
+    - Logan Riggs
+  website: https://www.linkedin.com/in/timothy-obiso
+  programUrl: https://www.cbai.ai/ais-research-fellowship
+- id: jacopo-zacchigna-spar
+  name: Jacopo Zacchigna
+  level: msc
+  description: SPAR Spring '26 Fellow
+  dateStart: 2026-02-15
+  dateEnd: 2026-07-01
+  projectName: Monitoring and Attributing Implicit Personalization in Conversational Agents
+  website: https://www.linkedin.com/in/jacopo-zacchigna/
+  programUrl: https://sparai.org/
+- id: hengxu-li-spar
+  name: Hengxu Li
+  level: msc
+  description: SPAR Spring '26 Fellow
+  dateStart: 2026-02-15
+  dateEnd: 2026-07-01
+  projectName: Monitoring and Attributing Implicit Personalization in Conversational Agents
+  website: https://www.linkedin.com/in/hli24/
+  programUrl: https://sparai.org/
+- id: khondoker-islam
+  name: Khondoker I. Islam
+  level: msc
+  description: NLD Project, University of Groningen
+  dateStart: 2024-11-01
+  dateEnd: 2025-05-01
+  projectName: "Reveal-Bangla: A Dataset for Cross-Lingual Multi-Step Reasoning Evaluation"
+  publicationIds:
+    - reveal-bangla
+  website: https://khondokerislam.github.io/
+- id: samuele-davenia
+  name: Samuele D'Avenia
+  level: msc
+  description: Thesis in Data Science, University of Trieste
+  dateStart: 2024-04-20
+  dateEnd: 2024-10-21
+  projectName: "Interpretability in VLMs: Extending the PECoRe Framework to Image Context"
+  website: https://www.linkedin.com/in/samuele-d-avenia-537a2b229
+- id: sara-candussio-msc
+  name: Sara Candussio
+  level: msc
+  description: Thesis in Data Science, University of Trieste
+  dateStart: 2024-04-01
+  dateEnd: 2024-09-20
+  projectName: A Dialectic Pipeline for Improving LLM Robustness
+  website: https://www.linkedin.com/in/sara-candussio-830772283/
+- id: konstantin-chernyshev
+  name: Konstantin Chernyshev
+  level: msc
+  description: Thesis in NLP, University of Saarland & University of Groningen
+  dateStart: 2023-04-17
+  dateEnd: 2024-11-01
+  projectName: Fast and Efficient Structured Pruning of LLMs with Gradient-Based Meta-Mask
+  website: https://www.linkedin.com/in/kdchernyshev
+- id: daniel-scalena
+  name: Daniel Scalena
+  level: msc
+  description: Project in Computer Science, University of Milano-Bicocca
+  dateStart: 2023-04-01
+  dateEnd: 2023-10-01
+  projectName: Interpreting the Detoxification Process of Language Models
+  website: https://www.danielsc4.it/
+- id: ludwig-sickert
+  name: Ludwig Sickert
+  level: msc
+  description: Thesis in Artificial Intelligence, University of Groningen
+  dateStart: 2022-04-11
+  dateEnd: 2023-07-01
+  projectName: Assessing Formality in Machine Translation through Interpretability Methods
+  website: https://www.linkedin.com/in/lsickert
+- id: qiankun-zheng
+  name: Qiankun Zheng
+  level: msc
+  description: NLP Project, University of Groningen
+  dateStart: 2022-10-30
+  dateEnd: 2023-04-30
+  projectName: Cross-lingual Analysis of Neural Machine Translation Post-Edits
+- id: rohan-kathuria-cbai
+  name: Rohan Kathuria
+  level: bsc
+  description: CBAI '26 Summer Fellow
+  dateStart: 2026-06-01
+  dateEnd: 2026-09-01
+  ongoing: true
+  projectName:
+  coSupervisors:
+    - Logan Riggs
+  website: https://rkathuria.com/
+  programUrl: https://www.cbai.ai/ais-research-fellowship
+- id: afitab-iyigun-spar
+  name: Afitab Iyigun
+  level: bsc
+  description: SPAR Spring '26 Research Project
+  dateStart: 2026-02-15
+  dateEnd: 2026-06-01
+  projectName: Monitoring and Attributing Implicit Personalization in Conversational Agents
+  website: https://www.linkedin.com/in/afitab-iyigun/
+  programUrl: https://sparai.org/
+- id: mika-okamoto-spar
+  name: Mika Okamoto
+  level: bsc
+  description: SPAR Spring '26 Research Project
+  dateStart: 2026-02-15
+  dateEnd: 2026-06-01
+  projectName: Monitoring and Attributing Implicit Personalization in Conversational Agents
+  website: https://www.linkedin.com/in/mika-okamoto/
+  programUrl: https://sparai.org/
+- id: vinit-patel-spar
+  name: Vinit Patel
+  level: bsc
+  description: SPAR Spring '26 Research Project
+  dateStart: 2026-02-15
+  dateEnd: 2026-06-01
+  projectName: Monitoring and Attributing Implicit Personalization in Conversational Agents
+  website: https://www.linkedin.com/in/vinit-patel/
+  programUrl: https://sparai.org/

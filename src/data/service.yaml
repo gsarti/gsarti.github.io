@@ -1,0 +1,90 @@
+- role: Organizing Committee
+  venue: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
+  dateStart: 2025
+  dateEnd: 2026
+- role: Organizing Committee
+  venue: EVALITA Shared Task on Automatic Italian Crossword Solving (Cruciverb-IT)
+  dateStart: 2026
+  dateEnd: 2026
+- role: Area Chair
+  venue: ICML/NeurIPS Workshop on Mechanistic Interpretability
+  dateStart: 2026
+  ongoing: true
+- role: Area Chair
+  venue: Conference on Language Modeling (COLM)
+  dateStart: 2026
+  dateEnd: 2026
+- role: Area Chair
+  venue: Annual Meeting of the Association for Computational Linguistics (ACL, via ARR)
+  dateStart: 2025
+  dateEnd: 2026
+- role: Area Chair
+  venue: Empirical Methods for Natural Language Processing (EMNLP, via ARR)
+  dateStart: 2025
+  dateEnd: 2025
+- role: Area Chair
+  venue: Italian Conference on Computational Linguistics (CLiC-it)
+  dateStart: 2025
+  dateEnd: 2025
+- role: Academic Paper Reviewer
+  venue: COLM Actionable Interpretability Workshop (AIW)
+  dateStart: 2026
+  dateEnd: 2026
+- role: Academic Paper Reviewer
+  venue: Neural Information Processing Systems (NeurIPS)
+  dateStart: 2026
+  ongoing: true
+- role: Academic Paper Reviewer
+  venue: Transactions on Machine Learning Research (TMLR)
+  dateStart: 2025
+  ongoing: true
+- role: Academic Paper Reviewer
+  venue: International Conference on Learning Representations (ICLR)
+  dateStart: 2025
+  dateEnd: 2026
+- role: Academic Paper Reviewer
+  venue: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
+  dateStart: 2023
+  dateEnd: 2025
+- role: Academic Paper Reviewer
+  venue: Annual Conference of the European Chapter of ACL (EACL, via ARR)
+  dateStart: 2025
+  dateEnd: 2025
+- role: Academic Paper Reviewer
+  venue: Annual Conference of the Asia-Pacific Chapter of ACL (AACL, via ARR)
+  dateStart: 2025
+  dateEnd: 2025
+- role: Academic Paper Reviewer
+  venue: ICML/NeurIPS Workshop on Mechanistic Interpretability
+  dateStart: 2024
+  dateEnd: 2024
+- role: Academic Paper Reviewer
+  venue: Conference on Language Modeling (COLM)
+  dateStart: 2024
+  dateEnd: 2024
+- role: Academic Paper Reviewer
+  venue: Annual Conference of the Nations of the Americas Chapter of ACL (NAACL, via ARR)
+  dateStart: 2024
+  dateEnd: 2024
+- role: Academic Paper Reviewer
+  venue: Empirical Methods for Natural Language Processing (EMNLP, via ARR)
+  dateStart: 2022
+  dateEnd: 2024
+- role: Academic Paper Reviewer
+  venue: Italian Conference on Computational Linguistics (CLiC-it)
+  years:
+    - 2021
+    - 2024
+    - 2025
+- role: Academic Paper Reviewer
+  venue: Annual Meeting of the Association for Computational Linguistics (ACL, via ARR)
+  dateStart: 2023
+  dateEnd: 2023
+- role: Academic Paper Reviewer
+  venue: International Conference on Language Resources and Evaluation (LREC)
+  dateStart: 2022
+  dateEnd: 2022
+- role: Grant Reviewer
+  venue: Schmidt Sciences, Interpretability RFP (Stage 1)
+  dateStart: 2026
+  dateEnd: 2026

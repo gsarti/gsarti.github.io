@@ -1,0 +1,71 @@
+- id: divemt
+  title: DivEMT
+  date: 2022-12
+  summary: Machine translation post-editing with behavioral logs across six typologically diverse target languages.
+  image: divemt.png
+  padImage: false
+  links:
+    - label: Dataset
+      url: https://huggingface.co/datasets/GroNLP/divemt
+    - label: Code
+      url: https://github.com/gsarti/divemt
+
+- id: qe4pe
+  title: QE4PE
+  date: 2025-03
+  summary: Professional MT post-editing with word-level error spans, to study word-level quality estimation.
+  image: qe4pe.png
+  padImage: false
+  links:
+    - label: Dataset
+      url: https://huggingface.co/datasets/gsarti/qe4pe
+    - label: Code
+      url: https://github.com/gsarti/qe4pe
+  publicationIds:
+    - qe4pe
+
+- id: eureka-rebus
+  title: EurekaRebus
+  date: 2024-06
+  summary: A collection of more than 200k verbalized rebus puzzles in Italian for research on reasoning in language games.
+  image: eureka-rebus.png
+  padImage: false
+  links:
+    - label: Dataset
+      url: https://huggingface.co/datasets/gsarti/eureka-rebus
+    - label: Code
+      url: https://github.com/gsarti/verbalized-rebus
+    - label: Demo
+      url: https://huggingface.co/spaces/gsarti/verbalized-rebus-solver
+  publicationIds:
+    - non-verbis
+
+- id: cruciverb-it
+  title: Cruciverb-IT
+  date: 2026-01
+  summary: A dataset of Italian crossword clues and answers for research on reasoning in language games.
+  image: cruciverbit.png
+  padImage: false
+  links:
+    - label: EVALITA '26 Dataset
+      url: https://huggingface.co/datasets/cruciverb-it/evalita2026
+    - label: Augmented Dataset
+      url: https://huggingface.co/datasets/gsarti/cruciverbit_augmented
+    - label: Code
+      url: https://github.com/snizio/Crossword-Space
+  publicationIds:
+    - cruciverb-it
+
+- id: mc4-it
+  title: mC4 IT
+  date: 2021-07
+  summary: A cleaned Italian split of mC4 containing ~41 billion words, used to pretrain the IT5 model suite.
+  image: mc4-it.png
+  padImage: false
+  links:
+    - label: Dataset
+      url: https://huggingface.co/datasets/gsarti/clean_mc4_it
+    - label: Code
+      url: https://github.com/gsarti/it5
+  publicationIds:
+    - it5

@@ -1,0 +1,17 @@
+- id: interpreto-irt
+  organization: IRT Saint-Exupéry
+  organizationUrl: https://www.irt-saintexupery.com/
+  location: Toulouse, France
+  mapPlace: toulouse
+  dateStart: 2025-02-01
+  dateEnd: 2025-03-31
+  host: Fanny Jourdan
+  description: Collaboration on an open-source toolkit for concept-based interpretability of LLMs.
+- id: ilc-cnr
+  organization: Institute of Computational Linguistics (ILC-CNR)
+  location: Pisa, Italy
+  mapPlace: pisa
+  dateStart: 2019-09-01
+  dateEnd: 2019-12-31
+  host: Felice Dell'Orletta
+  description: Training NLP models for eye-tracking metrics prediction.

@@ -1,0 +1,111 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TalkTimelineItem from './TalkTimelineItem.astro';
+
+type TalkEntry = CollectionEntry<'talks'>;
+
+interface Props {
+  talks: TalkEntry[];
+}
+
+const { talks } = Astro.props;
+const recentTalks = talks.slice(0, 6);
+const previousTalks = talks.slice(6);
+const splitColumns = <T,>(items: T[]) => {
+  const midpoint = Math.ceil(items.length / 2);
+  return items.length > midpoint ? [items.slice(0, midpoint), items.slice(midpoint)] : [items];
+};
+const recentColumns = splitColumns(recentTalks);
+const previousColumns = splitColumns(previousTalks);
+---
+
+<div class:list={['talk-columns', { 'is-single': recentColumns.length === 1 }]}>
+  {recentColumns.map((column) => (
+    <ol class="talk-timeline">
+      {column.map((talk) => <TalkTimelineItem {talk} />)}
+    </ol>
+  ))}
+</div>
+
+{
+  previousTalks.length > 0 && (
+    <details class="talk-more">
+      <summary>See previous talks ({previousTalks.length})</summary>
+      <div class:list={['talk-columns', { 'is-single': previousColumns.length === 1 }]}>
+        {previousColumns.map((column) => (
+          <ol class="talk-timeline">
+            {column.map((talk) => <TalkTimelineItem {talk} />)}
+          </ol>
+        ))}
+      </div>
+    </details>
+  )
+}
+
+<style>
+  .talk-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .talk-columns.is-single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .talk-timeline {
+    overflow: visible;
+    margin: 0;
+    padding: 0 0 0 2.15rem;
+    list-style: none;
+  }
+
+  .talk-more {
+    margin-top: 1.35rem;
+  }
+
+  .talk-more summary {
+    width: fit-content;
+    margin-left: 2.15rem;
+    padding: 0.25rem 0;
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 530;
+    cursor: pointer;
+  }
+
+  .talk-more summary:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .talk-more[open] > summary {
+    margin-bottom: 1.35rem;
+  }
+
+  @media (max-width: 760px) {
+    .talk-columns {
+      grid-template-columns: minmax(0, 1fr);
+      column-gap: 0;
+    }
+
+    .talk-columns > .talk-timeline:first-child:not(:last-child) > :global(.talk:last-child)::after {
+      display: block;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .talk-timeline {
+      padding-left: 1.8rem;
+    }
+
+    .talk-more {
+      margin-left: 0;
+    }
+
+    .talk-more summary {
+      margin-left: 1.8rem;
+    }
+  }
+</style>

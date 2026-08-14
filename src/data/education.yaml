@@ -1,0 +1,47 @@
+- id: rug-phd
+  institution: University of Groningen
+  institutionUrl: https://www.rug.nl/research/clcg/?lang=en
+  location: Groningen, Netherlands
+  mapPlace: groningen
+  country: NL
+  degree: Ph.D. in Natural Language Processing, Cum Laude
+  homepageDegree: PhD in NLP Interpretability
+  dateStart: 2021-09-01
+  dateEnd: 2025-12-31
+  homepage: true
+  logos:
+    - rug.png
+  advisors:
+    - Arianna Bisazza
+    - Malvina Nissim
+    - Grzegorz Chrupała
+  thesisPublicationId: phd-thesis
+- id: units-sissa-msc
+  institution: University of Trieste & SISSA
+  institutionUrl: https://degree.units.it/en/0320107313600001
+  location: Trieste, Italy
+  mapPlace: trieste
+  country: IT
+  degree: M.Sc. in Data Science and Scientific Computing, 110 Cum Laude
+  homepageDegree: MSc. in Data Science
+  dateStart: 2018-10-01
+  dateEnd: 2020-12-31
+  homepage: true
+  logos:
+    - units.png
+    - sissa.png
+  advisors:
+    - Felice Dell'Orletta
+    - Davide Crepaldi
+  thesisPublicationId: msc-thesis
+- id: cegep-dec
+  institution: Cégep de Saint-Hyacinthe
+  location: Saint-Hyacinthe, QC, Canada
+  mapPlace: saint-hyacinthe
+  country: CA
+  degree: Collegial Studies Degree (DEC) in Management Informatics
+  dateStart: 2015-08-01
+  dateEnd: 2018-05-31
+  homepage: false
+  logos: []
+  description: Valedictorian of the 2018 informatics cohort. Program taught in French.

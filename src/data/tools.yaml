@@ -1,0 +1,80 @@
+- id: ndif-skills
+  title: NDIF Skills
+  date: 2026-01
+  status: WIP
+  summary: NDIF Skills for Claude Code and Codex, supporting AI-assisted interpretability research.
+  image: ndif.png
+  whiteBackground: true
+  links:
+    - label: Code
+      url: https://github.com/ndif-team/skills
+
+- id: inif
+  title: Interpretability Interchange Format (INIF)
+  date: 2026-02
+  status: WIP
+  summary: INIF is a standardized format for the representation of interpretability artifacts.
+  image: inif.png
+  whiteBackground: true
+  links:
+    - label: Code
+      url: https://github.com/ndif-team/inif
+    - label: Documentation
+      url: https://ndif-team.github.io/inif
+
+- id: inseq
+  title: Inseq
+  date: 2023-02
+  status: Active
+  summary: Inseq is a Python library for democratizing access to attributional analyses of generative language models, supporting a wide range of attribution methods and model architectures.
+  image: inseq.png
+  whiteBackground: true
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+    - label: Documentation
+      url: https://inseq.org
+  publicationIds:
+    - inseq
+    - inseq-xai
+
+- id: grote
+  title: GroTE
+  date: 2022-08
+  status: Archived
+  summary: The Groningen Translation Environment (GroTE) is a Gradio post-editing interface supporting the editing of translations with highlighted spans for the study of word-level quality estimation.
+  image: grote.png
+  whiteBackground: true
+  links:
+    - label: Code
+      url: https://github.com/gsarti/grote
+    - label: Demo
+      url: https://huggingface.co/spaces/gsarti/grote
+  publicationIds:
+    - qe4pe
+
+- id: labl
+  title: labl
+  date: 2024-09-25
+  status: Archived
+  summary: labl is a minimal Python library for human-friendly span labeling and edit evaluation.
+  image: labl.png
+  whiteBackground: true
+  links:
+    - label: Code
+      url: https://github.com/gsarti/labl
+  publicationIds:
+    - qe-disagreement
+
+- id: scholar-monitor
+  title: Scholar Monitor
+  date: 2026-04-23
+  status: Active
+  summary: A customizable Google Scholar personal monitor to improve citation tracking and impact analysis.
+  image: scholar-monitor.png
+  whiteBackground: true
+  links:
+    - label: Website
+      url: https://gsarti.com/scholar_monitor/
+    - label: Code
+      url: https://github.com/gsarti/scholar_monitor

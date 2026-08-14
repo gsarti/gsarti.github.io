@@ -1,0 +1,219 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { publicationToCitationFormats } from '../lib/publications';
+import CiteDialog from './CiteDialog.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  resource:
+    | CollectionEntry<'tools'>
+    | CollectionEntry<'models'>
+    | CollectionEntry<'datasets'>;
+  relatedPublications?: CollectionEntry<'publications'>[];
+}
+
+const { resource, relatedPublications = [] } = Astro.props;
+const { data } = resource;
+const status = resource.collection === 'tools' ? resource.data.status : undefined;
+const citationFormats = relatedPublications.map(publicationToCitationFormats);
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/{tools,models,datasets}/*.{png,jpg,jpeg,webp,gif}',
+  { eager: true }
+);
+const cover = data.image
+  ? images[`../assets/${resource.collection}/${data.image}`]?.default
+  : undefined;
+---
+
+<article class:list={['tool', { 'has-image': Boolean(cover) }]} id={resource.id}>
+  {
+    cover && (
+      <div
+        class:list={[
+          'tool-visual',
+          { 'is-unpadded': !data.padImage, 'has-white-background': data.whiteBackground },
+        ]}
+      >
+        <Image src={cover} alt={`${data.title} preview`} width={900} loading="lazy" />
+      </div>
+    )
+  }
+  <div class="tool-body">
+    <div class="tool-heading">
+      <h2>{data.title}</h2>
+      {status && <span class:list={['status', `status--${status.toLowerCase()}`]}>{status}</span>}
+    </div>
+    {data.summary && <p>{data.summary}</p>}
+    <div class="tool-links" aria-label={`${data.title} links`}>
+      {data.links.map((link) => {
+        const external = !link.url.startsWith('/');
+        return (
+          <a
+            class="tool-link"
+            href={link.url}
+            target={external ? '_blank' : undefined}
+            rel={external ? 'noopener' : undefined}
+          >
+            {link.label}
+            <Icon name="external" size={14} />
+          </a>
+        );
+      })}
+      {
+        citationFormats.length > 0 && (
+          <CiteDialog
+            id={`${resource.collection}-${resource.id}`}
+            formats={citationFormats}
+            variant="button"
+            icon="quote"
+          />
+        )
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .tool {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: clamp(1rem, 1.5vw, 1.35rem);
+    background: color-mix(in srgb, var(--bg-solid) 68%, var(--bg));
+    transition: border-color 180ms ease, transform 180ms ease;
+  }
+
+  .tool:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+
+  .tool-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(12rem, 24vw, 18rem);
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    overflow: hidden;
+    background: var(--bg-raised);
+  }
+
+  .tool-visual.is-unpadded {
+    padding: 0;
+  }
+
+  .tool-visual.has-white-background {
+    background: #fff;
+  }
+
+  .tool-visual img {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .tool-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(1.25rem, 2.5vw, 1.8rem);
+  }
+
+  .tool-heading {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 1.3rem + 0.6vw, 1.95rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+  }
+
+  .status {
+    flex: 0 0 auto;
+    margin-top: 0.08rem;
+    padding: 0.32rem 0.62rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font: 650 0.7rem/1 var(--font-sans);
+    letter-spacing: 0.015em;
+  }
+
+  .status--wip {
+    color: #2764bd;
+    background: color-mix(in srgb, #2f74d0 10%, transparent);
+  }
+
+  .status--active {
+    color: #26734d;
+    background: color-mix(in srgb, #2d8a5d 10%, transparent);
+  }
+
+  .status--archived {
+    color: #a6531d;
+    background: color-mix(in srgb, #bf6428 10%, transparent);
+  }
+
+  :global(:root[data-theme='dark']) .status--wip {
+    color: #7da7ef;
+  }
+
+  :global(:root[data-theme='dark']) .status--active {
+    color: #70c996;
+  }
+
+  :global(:root[data-theme='dark']) .status--archived {
+    color: #ed985d;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    font-size: var(--font-size-copy);
+    line-height: 1.55;
+  }
+
+  .tool-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.15rem;
+  }
+
+  .tool-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    font: 600 0.84rem/1.25 var(--font-sans);
+  }
+
+  .tool-link:hover {
+    color: var(--accent-hover);
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tool {
+      transition: none;
+    }
+
+    .tool:hover {
+      transform: none;
+    }
+  }
+</style>

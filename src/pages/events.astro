@@ -1,0 +1,197 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EventMap from '../components/EventMap.astro';
+import PositionList from '../components/PositionList.astro';
+import TalkList from '../components/TalkList.astro';
+import EventList from '../components/EventList.astro';
+
+type TalkEntry = CollectionEntry<'talks'>;
+type AttendedEventEntry = CollectionEntry<'events'>;
+type EventPaperReference = AttendedEventEntry['data']['papers'][number];
+type ResolvedEventPaper = {
+  href: string;
+  title: string;
+};
+
+const [allTalks, allEvents, allPlaces, allPublications, allPositions, allVisits, allEducation] = await Promise.all([
+  getCollection('talks'),
+  getCollection('events'),
+  getCollection('places'),
+  getCollection('publications'),
+  getCollection('positions'),
+  getCollection('visits'),
+  getCollection('education'),
+]);
+const placesById = new Map(allPlaces.map((place) => [place.id, place.data]));
+const publicationsById = new Map(allPublications.map((publication) => [publication.id, publication.data]));
+const resolveEventPapers = (papers: EventPaperReference[]): ResolvedEventPaper[] =>
+  papers.flatMap((paper) => {
+    if ('url' in paper) {
+      return [{ href: paper.url, title: paper.label ?? 'Related material' }];
+    }
+
+    const publication = publicationsById.get(paper.publicationId);
+    const paperLink = publication?.links.find((link) => link.label.toLowerCase() === 'paper');
+    if (!publication || !paperLink) return [];
+    return [{ href: paperLink.url, title: publication.title }];
+  });
+
+const talks: TalkEntry[] = allTalks.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const sortedEvents = allEvents
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const eventItems = sortedEvents.map((event) => ({
+  event,
+  papers: resolveEventPapers(event.data.papers),
+}));
+
+const fmtMapDate = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' });
+const fmtMapRange = (dateStart: Date, dateEnd: Date, ongoing = false) =>
+  `${fmtMapDate.format(dateStart)} – ${ongoing ? 'Present' : fmtMapDate.format(dateEnd)}`;
+const talkPoints = talks.flatMap((talk) => {
+  const place = talk.data.mapPlace ? placesById.get(talk.data.mapPlace) : undefined;
+  if (!place) return [];
+  return [{
+    id: `map-talk-${talk.id}`,
+    title: talk.data.title,
+    kind: 'talk' as const,
+    location: place.label,
+    mapLocation: place.label,
+    detail: talk.data.event,
+    papers: [],
+    date: fmtMapDate.format(talk.data.date),
+    dateStartValue: talk.data.date.getTime(),
+    dateEndValue: talk.data.date.getTime(),
+    ...(place.coordinates ? { coordinates: place.coordinates } : {}),
+  }];
+});
+const eventPoints = sortedEvents.flatMap((event) => {
+  const place = event.data.mapPlace ? placesById.get(event.data.mapPlace) : undefined;
+  if (!place) return [];
+  return [{
+    id: `map-event-${event.id}`,
+    title: event.data.name,
+    kind: 'event' as const,
+    location: place.label,
+    mapLocation: place.label,
+    detail: event.data.location ?? place.label,
+    titleUrl: event.data.url,
+    papers: resolveEventPapers(event.data.papers),
+    date: fmtMapDate.format(event.data.date),
+    dateStartValue: event.data.date.getTime(),
+    dateEndValue: event.data.date.getTime(),
+    ...(place.coordinates ? { coordinates: place.coordinates } : {}),
+  }];
+});
+const positionPoints = [
+  ...allPositions.flatMap((position) => {
+    const place = placesById.get(position.data.mapPlace);
+    if (!place) return [];
+    return [{
+      id: `map-position-career-${position.id}`,
+      title: position.data.cvOrganization ?? position.data.organization,
+      kind: 'position' as const,
+      location: place.label,
+      mapLocation: place.label,
+      detail: position.data.title,
+      titleUrl: position.data.cvOrganizationUrl ?? position.data.organizationUrl,
+      papers: [],
+      date: fmtMapRange(position.data.dateStart, position.data.dateEnd, position.data.ongoing),
+      dateStartValue: position.data.dateStart.getTime(),
+      dateEndValue: position.data.dateEnd.getTime(),
+      ...(place.coordinates ? { coordinates: place.coordinates } : {}),
+    }];
+  }),
+  ...allVisits.flatMap((visit) => {
+    const place = placesById.get(visit.data.mapPlace);
+    if (!place) return [];
+    return [{
+      id: `map-position-visit-${visit.id}`,
+      title: visit.data.organization,
+      kind: 'position' as const,
+      location: place.label,
+      mapLocation: place.label,
+      detail: `Academic visit · Host: ${visit.data.host}`,
+      titleUrl: visit.data.organizationUrl,
+      papers: [],
+      date: fmtMapRange(visit.data.dateStart, visit.data.dateEnd),
+      dateStartValue: visit.data.dateStart.getTime(),
+      dateEndValue: visit.data.dateEnd.getTime(),
+      ...(place.coordinates ? { coordinates: place.coordinates } : {}),
+    }];
+  }),
+  ...allEducation.flatMap((education) => {
+    const place = placesById.get(education.data.mapPlace);
+    if (!place) return [];
+    return [{
+      id: `map-position-education-${education.id}`,
+      title: education.data.institution,
+      kind: 'position' as const,
+      location: place.label,
+      mapLocation: place.label,
+      detail: education.data.degree,
+      titleUrl: education.data.institutionUrl,
+      papers: [],
+      date: fmtMapRange(education.data.dateStart, education.data.dateEnd),
+      dateStartValue: education.data.dateStart.getTime(),
+      dateEndValue: education.data.dateEnd.getTime(),
+      ...(place.coordinates ? { coordinates: place.coordinates } : {}),
+    }];
+  }),
+];
+const mapPoints = [...talkPoints, ...eventPoints, ...positionPoints];
+---
+
+<BaseLayout title="Events" description="Talks, invited lectures and events attended by Gabriele Sarti">
+  <div class="page">
+    <p><i>Hover dots on the map to see talks, events and positions for the selected location. Zoom in/out for a better view.</i></p>
+    <br />
+    <EventMap points={mapPoints} />
+
+    <section class="block" aria-labelledby="positions">
+      <h2 id="positions">Positions</h2>
+      <PositionList positions={positionPoints} />
+    </section>
+
+    <section class="block" aria-labelledby="talks">
+      <h2 id="talks">Talks</h2>
+      <TalkList {talks} />
+    </section>
+
+    <section class="block" aria-labelledby="events-attended">
+      <h2 id="events-attended">Events attended</h2>
+      <EventList items={eventItems} />
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: 1rem 4rem;
+  }
+
+  .page-head {
+    margin-bottom: 1rem;
+  }
+
+  .page-head h1 {
+    margin-top: 0.3rem;
+  }
+
+  .block + .block {
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-strong);
+    padding-top: 2.25rem;
+  }
+
+  .block > h2 {
+    margin-bottom: 1.25rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 1.35rem + 0.7vw, 2.15rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+
+</style>

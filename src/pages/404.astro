@@ -1,0 +1,35 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const profile = await getEntry('profile', 'main');
+if (!profile) throw new Error('profile.yaml missing');
+const scholarUrl = profile.data.socials.find((social) => social.icon === 'scholar')?.url;
+if (!scholarUrl) throw new Error('Google Scholar social link missing from profile.yaml');
+---
+
+<BaseLayout title="Page not found">
+  <div class="nf">
+    <h1>Page not found</h1>
+    <p>
+      The page you're looking for doesn't exist or has moved. Try the
+      <a href="/">homepage</a>, <a href={scholarUrl}>publications</a>, or
+      <a href="/blog">blog</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .nf {
+    padding-block: 6rem;
+    max-width: 34rem;
+  }
+
+  .nf h1 {
+    margin-block: 0.4rem 0.8rem;
+  }
+
+  .nf p {
+    color: var(--text-muted);
+  }
+</style>

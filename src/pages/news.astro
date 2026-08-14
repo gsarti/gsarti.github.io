@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsList from '../components/NewsList.astro';
+
+const items = await getCollection('news');
+---
+
+<BaseLayout title="News" description="News archive — Gabriele Sarti">
+  <div class="page">
+    <header class="page-head">
+      <h1>News</h1>
+    </header>
+    <NewsList {items} variant="timeline" />
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: 2.75rem 4rem;
+  }
+
+  .page-head {
+    margin-bottom: 1.75rem;
+  }
+
+  .page-head h1 {
+    margin-top: 0.3rem;
+  }
+</style>

@@ -1,0 +1,51 @@
+- id: tinker-credits-2026
+  title: Research Grant for Tinker API Credits
+  organization: Thinking Machines
+  year: 2026
+  amount: USD 5,000
+- id: pangram-credits-2026
+  title: Research Grant for Pangram API Credits
+  organization: Pangram
+  year: 2026
+  amount: USD 5,000
+- id: google-cloud-credits-2026
+  title: Research Grant for Compute Credits
+  organization: Google Cloud
+  year: 2026
+  amount: USD 5,000
+- id: spar-mentorship-2026
+  title: Grant for Project Mentorship
+  organization: Supervised Program for Alignment Research
+  year: 2026
+  amount: USD 7,000
+- id: ainet-fellowship
+  title: AInet Fellowship
+  organization: Deutscher Akademischer Austauschdienst (DAAD)
+  year: 2025
+  amount: Visiting expenses
+- id: imminent-language-technology
+  title: Language Technology Grant
+  organization: Imminent Research Center
+  year: 2023
+  amount: EUR 20,000
+- id: escience-fellowship
+  title: eScience Fellowship
+  organization: Netherlands eScience Center
+  year: 2023
+  amount: EUR 2,000
+- id: nwo-indeep
+  title: NWO InDeep Consortium Grant
+  organization: Dutch Research Council (NWO)
+  year: 2021
+  amount: PhD salary and research budget
+- id: sissa-excellence
+  title: Data Science Excellence Fellowship
+  organization: International School of Advanced Studies (SISSA)
+  organizationShort: SISSA
+  year: 2018
+  amount: EUR 12,000
+- id: hydro-quebec-merit
+  title: Informatics Merit Scholarship
+  organization: Hydro-Québec
+  year: 2016
+  amount: EUR 1,000

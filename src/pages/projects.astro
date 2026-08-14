@@ -1,0 +1,267 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ToolCard from '../components/ToolCard.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const tools = (await getCollection('tools')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const models = (await getCollection('models')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const datasets = (await getCollection('datasets')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const publications = await getCollection('publications');
+const grants = await getCollection('grants');
+const publicationsById = new Map(publications.map((publication) => [publication.id, publication]));
+const toolsById = new Map(tools.map((tool) => [tool.id, tool]));
+const modelsById = new Map(models.map((model) => [model.id, model]));
+const datasetsById = new Map(datasets.map((dataset) => [dataset.id, dataset]));
+const sections = [
+  {
+    category: 'current',
+    title: 'Current Projects',
+    entries: projects.filter((project) => project.data.category === 'current'),
+  },
+  {
+    category: 'past',
+    title: 'Past Projects',
+    entries: projects.filter((project) => project.data.category === 'past'),
+  },
+  { category: 'tools', title: 'Tools', entries: tools },
+  { category: 'models', title: 'Models', entries: models },
+  { category: 'datasets', title: 'Datasets', entries: datasets },
+] as const;
+---
+
+<BaseLayout title="Projects" description="Projects by Gabriele Sarti">
+  <div class="page">
+    <nav class="project-tabs" aria-label="Project categories" role="tablist">
+      {
+        sections.map((section, index) => (
+          <button
+            class="project-tab"
+            type="button"
+            role="tab"
+            id={`tab-${section.category}`}
+            aria-controls={`projects-${section.category}`}
+            aria-selected={index === 0 ? 'true' : 'false'}
+            tabindex={index === 0 ? 0 : -1}
+            data-project-tab={section.category}
+          >
+            <span>{section.title}</span>
+          </button>
+        ))
+      }
+    </nav>
+    {
+      sections.map((section, index) => (
+        <section
+          class="project-section"
+          id={`projects-${section.category}`}
+          role="tabpanel"
+          aria-labelledby={`tab-${section.category}`}
+          hidden={index !== 0}
+          data-project-panel={section.category}
+        >
+          <h1 class="sr-only">{section.title}</h1>
+          <div
+            class:list={[
+              'project-list',
+              { 'resource-list': ['tools', 'models', 'datasets'].includes(section.category) },
+            ]}
+          >
+            {
+              section.category === 'tools' ||
+              section.category === 'models' ||
+              section.category === 'datasets'
+                ? section.entries.map((resource) => {
+                    const relatedPublications = resource.data.publicationIds
+                      .map((id) => publicationsById.get(id))
+                      .filter((publication) => publication !== undefined);
+                    return (
+                      <ToolCard
+                        resource={resource}
+                        relatedPublications={relatedPublications}
+                      />
+                    );
+                  })
+                : section.entries.map((project) => {
+                    const relatedPublications = project.data.publicationIds
+                      .map((id) => publicationsById.get(id))
+                      .filter((publication) => publication !== undefined);
+                    const relatedTools = project.data.toolIds
+                      .map((id) => toolsById.get(id))
+                      .filter((tool) => tool !== undefined)
+                      .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+                    const relatedModels = project.data.modelIds
+                      .map((id) => modelsById.get(id))
+                      .filter((model) => model !== undefined)
+                      .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+                    const relatedDatasets = project.data.datasetIds
+                      .map((id) => datasetsById.get(id))
+                      .filter((dataset) => dataset !== undefined)
+                      .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+                    return (
+                      <ProjectCard
+                        project={project}
+                        relatedPublications={relatedPublications}
+                        relatedTools={relatedTools}
+                        relatedModels={relatedModels}
+                        relatedDatasets={relatedDatasets}
+                        grants={grants}
+                        headingLevel="h2"
+                      />
+                    );
+                  })
+            }
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<script>
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-project-tab]'));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('[data-project-panel]'));
+
+  const activateTab = (category: string, updateHash = false) => {
+    tabs.forEach((tab) => {
+      const active = tab.dataset.projectTab === category;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.projectPanel !== category;
+    });
+
+    if (updateHash) {
+      history.replaceState(null, '', `#projects-${category}`);
+    }
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activateTab(tab.dataset.projectTab ?? '', true));
+    tab.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const direction = event.key === 'ArrowRight' ? 1 : -1;
+      const next = tabs[(index + direction + tabs.length) % tabs.length];
+      next.focus();
+      activateTab(next.dataset.projectTab ?? '', true);
+    });
+  });
+
+  const hashTarget = location.hash ? document.querySelector<HTMLElement>(location.hash) : null;
+  const hashPanel = hashTarget?.matches('[data-project-panel]')
+    ? hashTarget
+    : hashTarget?.closest<HTMLElement>('[data-project-panel]');
+  if (hashPanel?.dataset.projectPanel) {
+    activateTab(hashPanel.dataset.projectPanel);
+    if (hashTarget !== hashPanel) requestAnimationFrame(() => hashTarget?.scrollIntoView());
+  }
+</script>
+
+<style>
+  .page {
+    padding-block: clamp(2rem, 4vw, 3.5rem) 4rem;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .project-tabs {
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(1.35rem, 4vw, 3.25rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .project-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-tab {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    gap: 0.55rem;
+    padding: 0.15rem 0 0.85rem;
+    border: 0;
+    color: var(--text-muted);
+    background: transparent;
+    font: 600 clamp(1rem, 0.92rem + 0.3vw, 1.18rem)/1.2 var(--font-sans);
+    cursor: pointer;
+  }
+
+  .project-tab::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+  }
+
+  .project-tab:hover,
+  .project-tab[aria-selected='true'] {
+    color: var(--text);
+  }
+
+  .project-tab[aria-selected='true']::after {
+    transform: scaleX(1);
+  }
+
+  .project-section[hidden] {
+    display: none;
+  }
+
+  .project-list {
+    display: grid;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .resource-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 540px) {
+    .project-tabs {
+      gap: 0.8rem;
+    }
+
+    .project-tab {
+      font-size: 0.84rem;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .resource-list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

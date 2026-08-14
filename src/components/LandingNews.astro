@@ -1,0 +1,105 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import NewsList from './NewsList.astro';
+
+interface Props {
+  items: CollectionEntry<'news'>[];
+}
+
+const { items } = Astro.props;
+const sorted = [...items].sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const latest = sorted.slice(0, 3);
+const older = sorted.slice(3, 6);
+---
+
+<section id="news" class="landing-news">
+  <header class="news-head">
+    <h2>News</h2>
+    <a class="more" href="/news">All news <span aria-hidden="true">→</span></a>
+  </header>
+
+  <div class="latest-news">
+    <NewsList items={latest} variant="timeline" />
+  </div>
+
+  <div class="older-news">
+    <NewsList items={older} variant="timeline" />
+  </div>
+</section>
+
+<style>
+  .landing-news {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      'head head'
+      'latest older';
+    grid-template-rows: auto 1fr;
+    column-gap: clamp(2.5rem, 6vw, 5rem);
+    row-gap: 1.5rem;
+    padding-block: clamp(1.5rem, 3.5vw, 3rem);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .news-head {
+    grid-area: head;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-self: start;
+  }
+
+  .news-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 1.65rem + 1.4vw, 3.2rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .more {
+    display: inline-flex;
+    margin-top: 0;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid currentColor;
+    font-size: 0.85rem;
+    font-weight: 520;
+    white-space: nowrap;
+  }
+
+  .more:hover {
+    text-decoration: none;
+  }
+
+  .latest-news {
+    grid-area: latest;
+    min-width: 0;
+  }
+
+  .older-news {
+    grid-area: older;
+    min-width: 0;
+  }
+
+  @media (max-width: 760px) {
+    .landing-news {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        'head'
+        'latest'
+        'older';
+      grid-template-rows: auto;
+      gap: 2rem;
+    }
+
+    .older-news {
+      margin-top: -2rem;
+    }
+
+    .latest-news :global(.timeline li:last-child::after) {
+      display: block;
+    }
+
+  }
+</style>

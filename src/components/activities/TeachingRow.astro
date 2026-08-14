@@ -1,0 +1,90 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from '../Icon.astro';
+
+type Course = CollectionEntry<'teaching'>['data'];
+
+interface Props {
+  course: Course;
+}
+
+const { course: t } = Astro.props;
+
+const fmtMonth = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' });
+const range = (start: Date, end?: Date) =>
+  end ? `${fmtMonth.format(start)} – ${fmtMonth.format(end)}` : `${fmtMonth.format(start)} – present`;
+---
+
+<li class="row">
+  <div class="row-main">
+    <h3>{t.website ? <a href={t.website} target="_blank" rel="noopener">{t.course}</a> : t.course}</h3>
+    <p class="muted">
+      {t.degree} · {t.university}
+      {t.coInstructors.length > 0 && <> · with {t.coInstructors.join(', ')}</>}
+    </p>
+  </div>
+  <div class="row-side">
+    <span class="dates">{range(t.dateStart, t.dateEnd)}</span>
+    {
+      t.repository && (
+        <a class="repo" href={t.repository} target="_blank" rel="noopener" title="Course materials">
+          <Icon name="code" size={14} />
+        </a>
+      )
+    }
+  </div>
+</li>
+
+<style>
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding-block: 0.8rem;
+  }
+
+  .row + .row {
+    border-top: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 560;
+  }
+
+  .muted {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+  }
+
+  .row-side {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  .dates {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .repo {
+    color: var(--text-faint);
+  }
+
+  .repo:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    .row {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+  }
+</style>

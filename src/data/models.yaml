@@ -1,0 +1,64 @@
+- id: verbis-solvers
+  title: Italian Verbalized Rebus Solvers
+  date: 2024-06
+  summary: LLMs trained to solve verbalized rebus puzzles in Italian, as part of the EurekaRebus project.
+  image: verbis-solvers.png
+  padImage: false
+  links:
+    - label: Models
+      url: https://huggingface.co/collections/gsarti/verbalized-rebus-clic-it-2024
+    - label: Code
+      url: https://github.com/gsarti/verbalized-rebus
+    - label: Demo
+      url: https://huggingface.co/spaces/gsarti/verbalized-rebus-solver
+  publicationIds:
+    - non-verbis
+    - eureka-rebus-challenge
+- id: crossword-space
+  title: Italian Crossword Space
+  date: 2025-09
+  summary: A CLIP-style dual encoder for Italian crossword clues and answers, enabling semantic retrieval.
+  image: crossword-space.png
+  padImage: false
+  links:
+    - label: Model
+      url: https://huggingface.co/cruciverb-it/crossword-space-mpnet-base-ade
+    - label: Code
+      url: https://github.com/snizio/Crossword-Space
+  publicationIds:
+    - crossword-space
+    - cruciverb-it
+- id: clip-italian
+  title: CLIP-Italian
+  date: 2023-11
+  summary: A CLIP-style dual encoder for Italian text and images.
+  image: clip-italian.png
+  whiteBackground: true
+  links:
+    - label: Model
+      url: https://huggingface.co/gsarti/clip-italian
+    - label: Code
+      url: https://github.com/clip-italian/clip-italian
+    - label: Demo
+      url: https://huggingface.co/spaces/clip-italian/clip-italian-demo
+    - label: Video
+      url: https://www.youtube.com/watch?v=2jJLMeWU2nk
+    - label: Blog
+      url: https://medium.com/data-science/how-to-train-your-clip-45a451dcd303
+  publicationIds:
+    - clip-italian
+- id: it5
+  title: IT5
+  date: 2024-05
+  summary: A suite of Italian T5 models pre-trained on the mC4-IT corpus.
+  image: it5.png
+  padImage: false
+  links:
+    - label: Models
+      url: https://huggingface.co/collections/gsarti/it5-lrec-coling-2024
+    - label: Code
+      url: https://github.com/gsarti/it5
+    - label: Demo
+      url: https://huggingface.co/spaces/gsarti/it5-demo
+  publicationIds:
+    - it5

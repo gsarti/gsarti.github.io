@@ -1,0 +1,35 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CircuitRails from '../components/CircuitRails.astro';
+import BackToTop from '../components/BackToTop.astro';
+import MarginFootnotes from '../components/MarginFootnotes.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  person?: boolean;
+  prose?: boolean;
+}
+
+const { title, description, image, person, prose = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} {image} {person} />
+  </head>
+  <body class:list={{ 'has-prose-layout': prose }}>
+    <CircuitRails />
+    <Header />
+    <main class="container container--wide">
+      <slot />
+    </main>
+    <Footer />
+    <BackToTop />
+    <MarginFootnotes />
+  </body>
+</html>

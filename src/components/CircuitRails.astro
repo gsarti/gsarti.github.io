@@ -1,0 +1,913 @@
+<div class="circuit-rails" aria-hidden="true">
+  <svg class="rail rail-left" data-circuit-rail data-side="0" preserveAspectRatio="none">
+    <path class="main-trace"></path>
+    <g class="dead-ends"></g>
+    <circle class="success-node terminal-node" r="3.5"></circle>
+  </svg>
+
+  <svg class="rail rail-right" data-circuit-rail data-side="1" preserveAspectRatio="none">
+    <path class="main-trace"></path>
+    <g class="dead-ends"></g>
+    <circle class="success-node terminal-node" r="3.5"></circle>
+  </svg>
+</div>
+
+<div class="circuit-controls" data-circuit-controls>
+  <div class="circuit-panel" id="circuit-panel" hidden>
+    <div class="control-actions">
+      <button type="button" data-circuit-replay>
+        <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12a9 9 0 1 0 3-6.7M3 4v6h6"></path>
+        </svg>
+        Replay
+      </button>
+      <button type="button" data-circuit-new>
+        <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 7h-5V2M4 17h5v5M19 5a9 9 0 0 0-14.5 3M5 19a9 9 0 0 0 14.5-3"></path>
+        </svg>
+        New
+      </button>
+      <button type="button" data-circuit-pause aria-pressed="false">
+        <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path data-circuit-pause-icon d="M8 5v14M16 5v14"></path>
+        </svg>
+        <span data-circuit-pause-label>Pause</span>
+      </button>
+    </div>
+
+    <label class="control-field">
+      <span>Speed <output data-speed-output>1×</output></span>
+      <input
+        data-circuit-speed
+        type="range"
+        min="0"
+        max="8"
+        step="1"
+        value="4"
+        aria-label="Animation speed"
+        aria-valuetext="1×"
+      />
+    </label>
+
+    <label class="control-field">
+      <span>Forking <output data-fork-output>35%</output></span>
+      <input
+        data-circuit-forks
+        type="range"
+        min="5"
+        max="65"
+        step="1"
+        value="35"
+        aria-label="Forking rate"
+        aria-valuetext="35%"
+      />
+    </label>
+  </div>
+
+  <button
+    class="control-toggle"
+    type="button"
+    aria-label="Circuit controls"
+    title="Circuit controls"
+    aria-expanded="false"
+    aria-controls="circuit-panel"
+    data-circuit-toggle
+  >
+    <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+  .circuit-rails {
+    --circuit-site-width: calc(var(--wide-width) + var(--pad-inline) + var(--pad-inline));
+    --circuit-gutter: max(0px, calc((100vw - var(--circuit-site-width)) / 2));
+    --circuit-rail-width: max(var(--circuit-gutter), clamp(2.25rem, 3.6vw, 3.5rem));
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  :global(body.has-prose-layout) .circuit-rails {
+    --circuit-site-width: var(--content-width);
+  }
+
+  .rail {
+    position: absolute;
+    inset-block: 0;
+    width: var(--circuit-rail-width);
+    height: 100%;
+    overflow: visible;
+    color: var(--border-strong);
+  }
+
+  .rail-left {
+    left: 0;
+  }
+
+  .rail-right {
+    right: 0;
+  }
+
+  .main-trace,
+  .dead-ends :global(path),
+  .dead-ends :global(circle),
+  .success-node {
+    vector-effect: non-scaling-stroke;
+  }
+
+  .main-trace,
+  .dead-ends :global(path) {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .terminal-node,
+  .dead-ends :global(.branch-terminal) {
+    fill: var(--accent);
+    stroke: none;
+  }
+
+  .dead-ends :global(.dead-cross) {
+    stroke: var(--signal);
+    stroke-width: 1.35;
+  }
+
+  .circuit-controls {
+    position: fixed;
+    right: 1.15rem;
+    bottom: 1.15rem;
+    z-index: 60;
+    display: grid;
+    justify-items: end;
+    gap: 0.55rem;
+    font-family: var(--font-sans);
+  }
+
+  .control-toggle,
+  .control-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    background: color-mix(in srgb, var(--bg-solid) 92%, transparent);
+    font: 560 0.76rem/1 var(--font-sans);
+    cursor: pointer;
+    transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+  }
+
+  .control-toggle {
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    color: var(--accent-ink);
+    border-color: var(--accent);
+    background: var(--accent);
+    backdrop-filter: blur(10px);
+  }
+
+  .control-actions button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+  }
+
+  .control-toggle:hover,
+  .control-toggle[aria-expanded='true'] {
+    color: var(--accent-ink);
+    border-color: var(--accent-hover);
+    background: var(--accent-hover);
+  }
+
+  .control-icon {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .circuit-panel {
+    width: 16rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border-strong);
+    background: color-mix(in srgb, var(--bg-solid) 94%, transparent);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+  }
+
+  .control-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .control-actions button {
+    gap: 0.35rem;
+    min-height: 2rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .control-actions .control-icon {
+    width: 0.82rem;
+    height: 0.82rem;
+  }
+
+  .control-field {
+    display: grid;
+    gap: 0.2rem;
+    color: var(--text-muted);
+    font-size: 0.74rem;
+    line-height: 1.4;
+  }
+
+  .control-field + .control-field {
+    margin-top: 0.55rem;
+  }
+
+  .control-field span {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .control-field output {
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+  }
+
+  .control-field input {
+    width: 100%;
+    height: 1rem;
+    margin: 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  @media (max-width: 1080px) {
+    .circuit-rails,
+    .circuit-controls {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const PATH_WIDTH = 56;
+  const TERMINAL_RADIUS = 3.5;
+  const MIN_X = 7;
+  const MAX_X = 49;
+  const DEFAULT_FORK_PROBABILITY = 0.35;
+  const STOP_PROBABILITY = 0.22;
+  const FORK_CLEARANCE = 360;
+  const HEADER_PATH_GAP = 8;
+
+  type Random = () => number;
+  type Bounds = { min: number; max: number };
+  type DeadBranch = {
+    d: string;
+    startX: number;
+    startY: number;
+    endY: number;
+    endX: number;
+  };
+  type RenderedBranch = DeadBranch & {
+    path: SVGPathElement;
+    cross: SVGPathElement;
+    terminal: SVGCircleElement;
+  };
+  type Point = { x: number; y: number };
+  type PathSegment = {
+    axis: 'H' | 'V';
+    start: Point;
+    end: Point;
+    length: number;
+  };
+  type PathModel = {
+    fullD: string;
+    start: Point;
+    segments: PathSegment[];
+    totalLength: number;
+  };
+  type PartialPath = { d: string; tip: Point; direction: Point };
+  type DrawOptions = { force?: boolean; animate?: boolean; reseed?: boolean };
+  type CircuitSessionState = { paused: boolean; seeds: Record<string, string> };
+
+  const activeFrames = new WeakMap<SVGSVGElement, number>();
+  const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
+  const randomInt = (random: Random, min: number, max: number) =>
+    Math.floor(random() * (max - min + 1)) + min;
+  const progressBetween = (value: number, start: number, duration: number) =>
+    clamp((value - start) / duration, 0, 1);
+
+  const BASE_ANIMATION_SPEED = 0.2;
+  const SPEED_OPTIONS = [0.05, 0.08, 0.1, 0.15, 0.2, 0.3, 0.4, 0.6, 0.8];
+  const CIRCUIT_SESSION_KEY = 'circuit-rails-state';
+  const readCircuitSession = (): CircuitSessionState => {
+    try {
+      const stored = JSON.parse(sessionStorage.getItem(CIRCUIT_SESSION_KEY) ?? 'null');
+      return {
+        paused: stored?.paused === true,
+        seeds: stored?.seeds && typeof stored.seeds === 'object' ? stored.seeds : {},
+      };
+    } catch {
+      return { paused: false, seeds: {} };
+    }
+  };
+  const circuitSession = readCircuitSession();
+  const persistCircuitSession = () => {
+    try {
+      sessionStorage.setItem(CIRCUIT_SESSION_KEY, JSON.stringify(circuitSession));
+    } catch {
+      // The animation still works if storage is unavailable.
+    }
+  };
+  let animationSpeed = BASE_ANIMATION_SPEED;
+  let forkProbability = DEFAULT_FORK_PROBABILITY;
+  let animationPaused = circuitSession.paused;
+
+  const seededRandom = (seed: number): Random => {
+    let state = seed >>> 0;
+    return () => {
+      state += 0x6d2b79f5;
+      let value = state;
+      value = Math.imul(value ^ (value >>> 15), value | 1);
+      value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+      return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+    };
+  };
+
+  const newSeed = () => {
+    if (globalThis.crypto?.getRandomValues) {
+      return globalThis.crypto.getRandomValues(new Uint32Array(1))[0];
+    }
+    return (Date.now() * Math.random()) >>> 0;
+  };
+
+  const takeHorizontalStep = (
+    x: number,
+    bounds: Bounds,
+    random: Random,
+    xScale = 1,
+  ) => {
+    const leftRoom = (x - bounds.min) / xScale;
+    const rightRoom = (bounds.max - x) / xScale;
+    let direction = random() < 0.5 ? -1 : 1;
+
+    if (direction < 0 && leftRoom < 4) direction = 1;
+    if (direction > 0 && rightRoom < 4) direction = -1;
+
+    const room = direction < 0 ? leftRoom : rightRoom;
+    if (room < 3) return x;
+
+    const available = Math.floor(room);
+    const distance = randomInt(random, Math.min(4, available), Math.min(12, available));
+    return clamp(x + direction * distance * xScale, bounds.min, bounds.max);
+  };
+
+  const addCross = (group: SVGGElement, x: number, y: number) => {
+    const cross = document.createElementNS(SVG_NS, 'path');
+    const radius = 3.25;
+    cross.classList.add('dead-cross');
+    cross.setAttribute(
+      'd',
+      `M${x - radius} ${y - radius}L${x + radius} ${y + radius}`
+      + `M${x + radius} ${y - radius}L${x - radius} ${y + radius}`,
+    );
+    group.append(cross);
+    return cross;
+  };
+
+  const generateFork = (
+    forkX: number,
+    forkY: number,
+    random: Random,
+    bounds: Bounds,
+    xScale: number,
+  ) => {
+    const branchGap = 5 * xScale;
+    const leftBounds = { min: bounds.min, max: forkX - branchGap };
+    const rightBounds = { min: forkX + branchGap, max: bounds.max };
+    let leftX = clamp(
+      forkX - randomInt(random, 6, 10) * xScale,
+      leftBounds.min,
+      leftBounds.max,
+    );
+    let rightX = clamp(
+      forkX + randomInt(random, 6, 10) * xScale,
+      rightBounds.min,
+      rightBounds.max,
+    );
+    let y = forkY;
+
+    const leftCommands = [`H${leftX}`];
+    const rightCommands = [`H${rightX}`];
+    let deadSide: 'left' | 'right' = random() < 0.5 ? 'left' : 'right';
+
+    for (let generation = 0; generation < 7; generation += 1) {
+      y += randomInt(random, 17, 29);
+      leftCommands.push(`V${y}`);
+      rightCommands.push(`V${y}`);
+
+      if (generation >= 1) {
+        const leftStops = random() < STOP_PROBABILITY;
+        const rightStops = random() < STOP_PROBABILITY;
+
+        if (leftStops || rightStops || generation === 6) {
+          deadSide = leftStops && !rightStops
+            ? 'left'
+            : rightStops && !leftStops
+              ? 'right'
+              : random() < 0.5 ? 'left' : 'right';
+          break;
+        }
+      }
+
+      leftX = takeHorizontalStep(leftX, leftBounds, random, xScale);
+      rightX = takeHorizontalStep(rightX, rightBounds, random, xScale);
+      leftCommands.push(`H${leftX}`);
+      rightCommands.push(`H${rightX}`);
+    }
+
+    const deadCommands = deadSide === 'left' ? leftCommands : rightCommands;
+    const survivorCommands = deadSide === 'left' ? rightCommands : leftCommands;
+    const survivorX = deadSide === 'left' ? rightX : leftX;
+    const deadX = deadSide === 'left' ? leftX : rightX;
+
+    return {
+      survivorCommands,
+      survivorX,
+      endY: y,
+      deadBranch: {
+        d: `M${forkX} ${forkY}${deadCommands.join('')}`,
+        startX: forkX,
+        startY: forkY,
+        endY: y + TERMINAL_RADIUS,
+        endX: deadX,
+      } satisfies DeadBranch,
+    };
+  };
+
+  const renderDeadBranch = (group: SVGGElement, branchData: DeadBranch): RenderedBranch => {
+    const branch = document.createElementNS(SVG_NS, 'g');
+    branch.classList.add('dead-end');
+
+    const path = document.createElementNS(SVG_NS, 'path');
+    path.classList.add('dead-branch');
+    path.setAttribute('d', branchData.d);
+    branch.append(path);
+
+    const terminal = document.createElementNS(SVG_NS, 'circle');
+    terminal.classList.add('branch-terminal');
+    terminal.setAttribute('r', '3.5');
+    terminal.setAttribute('cx', String(branchData.startX));
+    terminal.setAttribute('cy', String(branchData.startY));
+    branch.append(terminal);
+
+    const cross = addCross(branch, branchData.endX, branchData.endY);
+    group.append(branch);
+    return { ...branchData, path, cross, terminal };
+  };
+
+  const clearElementStyles = (element: SVGElement) => {
+    element.style.removeProperty('stroke-dasharray');
+    element.style.removeProperty('stroke-dashoffset');
+    element.style.removeProperty('opacity');
+  };
+
+  const cancelRailAnimation = (svg: SVGSVGElement) => {
+    const frame = activeFrames.get(svg);
+    if (frame !== undefined) cancelAnimationFrame(frame);
+    activeFrames.delete(svg);
+  };
+
+  const setCirclePoint = (circle: SVGCircleElement, point: Point) => {
+    circle.setAttribute('cx', String(point.x));
+    circle.setAttribute('cy', String(point.y));
+  };
+
+  const formatCoordinate = (value: number) => String(Number(value.toFixed(3)));
+
+  const createPathModel = (fullD: string): PathModel => {
+    const tokens = fullD.match(/[MHV]|-?\d+(?:\.\d+)?/g) ?? [];
+    if (tokens[0] !== 'M' || tokens.length < 3) {
+      return { fullD, start: { x: 0, y: 0 }, segments: [], totalLength: 0 };
+    }
+
+    const start = { x: Number(tokens[1]), y: Number(tokens[2]) };
+    let point = { ...start };
+    let totalLength = 0;
+    const segments: PathSegment[] = [];
+
+    for (let index = 3; index < tokens.length;) {
+      const axis = tokens[index] as 'H' | 'V';
+      const value = Number(tokens[index + 1]);
+      index += 2;
+      if ((axis !== 'H' && axis !== 'V') || !Number.isFinite(value)) continue;
+
+      const end = axis === 'H' ? { x: value, y: point.y } : { x: point.x, y: value };
+      const length = Math.abs(axis === 'H' ? end.x - point.x : end.y - point.y);
+      segments.push({ axis, start: point, end, length });
+      totalLength += length;
+      point = end;
+    }
+
+    return { fullD, start, segments, totalLength };
+  };
+
+  const partialPath = (model: PathModel, progress: number): PartialPath => {
+    const startCommand = `M${formatCoordinate(model.start.x)} ${formatCoordinate(model.start.y)}`;
+    if (progress <= 0 || model.totalLength <= 0) {
+      return { d: startCommand, tip: model.start, direction: { x: 0, y: 0 } };
+    }
+
+    let remaining = model.totalLength * clamp(progress, 0, 1);
+    let d = startCommand;
+    let tip = model.start;
+    let direction = { x: 0, y: 1 };
+
+    for (const segment of model.segments) {
+      const segmentDirection = {
+        x: segment.axis === 'H' ? Math.sign(segment.end.x - segment.start.x) : 0,
+        y: segment.axis === 'V' ? Math.sign(segment.end.y - segment.start.y) : 0,
+      };
+
+      if (remaining >= segment.length - 0.0001) {
+        d += `${segment.axis}${formatCoordinate(
+          segment.axis === 'H' ? segment.end.x : segment.end.y,
+        )}`;
+        remaining = Math.max(0, remaining - segment.length);
+        tip = segment.end;
+        if (segment.length > 0) direction = segmentDirection;
+        if (remaining <= 0.0001) return { d, tip, direction };
+        continue;
+      }
+
+      const segmentProgress = segment.length > 0 ? remaining / segment.length : 0;
+      tip = {
+        x: segment.start.x + (segment.end.x - segment.start.x) * segmentProgress,
+        y: segment.start.y + (segment.end.y - segment.start.y) * segmentProgress,
+      };
+      d += `${segment.axis}${formatCoordinate(segment.axis === 'H' ? tip.x : tip.y)}`;
+      direction = segmentDirection;
+      return { d, tip, direction };
+    }
+
+    return { d: model.fullD, tip, direction };
+  };
+
+  const setTerminalAtTip = (circle: SVGCircleElement, partial: PartialPath) => {
+    const magnitude = Math.hypot(partial.direction.x, partial.direction.y);
+    if (magnitude < 0.01) setCirclePoint(circle, partial.tip);
+    else setCirclePoint(circle, {
+      x: partial.tip.x + (partial.direction.x / magnitude) * TERMINAL_RADIUS,
+      y: partial.tip.y + (partial.direction.y / magnitude) * TERMINAL_RADIUS,
+    });
+  };
+
+  const findLengthAtY = (model: PathModel, targetY: number) => {
+    let traversed = 0;
+    for (const segment of model.segments) {
+      if (
+        segment.axis === 'V'
+        && targetY >= Math.min(segment.start.y, segment.end.y)
+        && targetY <= Math.max(segment.start.y, segment.end.y)
+      ) return traversed + Math.abs(targetY - segment.start.y);
+      traversed += segment.length;
+    }
+    return model.totalLength;
+  };
+
+  const showStaticRail = (
+    main: SVGPathElement,
+    branches: RenderedBranch[],
+    success: SVGCircleElement,
+  ) => {
+    clearElementStyles(main);
+    const mainModel = createPathModel(main.getAttribute('d') ?? '');
+    main.setAttribute('d', mainModel.fullD);
+    setTerminalAtTip(success, partialPath(mainModel, 1));
+    success.style.removeProperty('opacity');
+
+    branches.forEach(({ path, cross, terminal }) => {
+      clearElementStyles(path);
+      const model = createPathModel(path.getAttribute('d') ?? '');
+      path.setAttribute('d', model.fullD);
+      cross.style.removeProperty('opacity');
+      terminal.style.opacity = '0';
+    });
+  };
+
+  const animateRail = (
+    svg: SVGSVGElement,
+    main: SVGPathElement,
+    branches: RenderedBranch[],
+    success: SVGCircleElement,
+  ) => {
+    cancelRailAnimation(svg);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      showStaticRail(main, branches, success);
+      return;
+    }
+
+    const mainModel = createPathModel(main.getAttribute('d') ?? '');
+    const mainLength = mainModel.totalLength;
+    const duration = clamp(mainLength * 0.72, 2200, 5200) / animationSpeed;
+    const initialDelay = 120 / animationSpeed;
+    const branchAnimations = branches.map((branch) => {
+      const model = createPathModel(branch.path.getAttribute('d') ?? '');
+      const length = model.totalLength;
+      const forkLength = findLengthAtY(mainModel, branch.startY);
+      return {
+        ...branch,
+        model,
+        length,
+        delay: initialDelay + duration * (forkLength / mainLength),
+        duration: Math.max(180 / animationSpeed, duration * (length / mainLength)),
+      };
+    });
+
+    const mainStart = partialPath(mainModel, 0);
+    main.setAttribute('d', mainStart.d);
+    success.style.opacity = '0';
+    setTerminalAtTip(success, mainStart);
+
+    branchAnimations.forEach(({ path, cross, terminal, model, startX, startY }) => {
+      path.setAttribute('d', partialPath(model, 0).d);
+      cross.style.opacity = '0';
+      terminal.style.opacity = '0';
+      terminal.setAttribute('cx', String(startX));
+      terminal.setAttribute('cy', String(startY));
+    });
+
+    const startedAt = performance.now();
+    let pausedAt: number | null = null;
+    let pausedDuration = 0;
+    const frame = (now: number) => {
+      if (animationPaused) {
+        if (pausedAt === null) pausedAt = now;
+        activeFrames.set(svg, requestAnimationFrame(frame));
+        return;
+      }
+      if (pausedAt !== null) {
+        pausedDuration += now - pausedAt;
+        pausedAt = null;
+      }
+
+      const elapsed = now - startedAt - pausedDuration;
+      const mainProgress = progressBetween(elapsed, initialDelay, duration);
+      const visibleMain = partialPath(mainModel, mainProgress);
+      main.setAttribute('d', visibleMain.d);
+      success.style.opacity = mainProgress > 0 ? '1' : '0';
+      setTerminalAtTip(success, visibleMain);
+
+      let branchesFinished = true;
+      branchAnimations.forEach(({ path, cross, terminal, model, delay, duration: branchDuration }) => {
+        const branchProgress = progressBetween(elapsed, delay, branchDuration);
+        const hasStarted = elapsed >= delay;
+        const hasFinished = branchProgress >= 1;
+        const visibleBranch = partialPath(model, branchProgress);
+
+        path.setAttribute('d', visibleBranch.d);
+        terminal.style.opacity = hasStarted && !hasFinished ? '1' : '0';
+        cross.style.opacity = hasFinished ? '1' : '0';
+        if (hasStarted && !hasFinished) {
+          setTerminalAtTip(terminal, visibleBranch);
+        }
+        if (!hasFinished) branchesFinished = false;
+      });
+
+      if (mainProgress >= 1 && branchesFinished) {
+        clearElementStyles(main);
+        main.setAttribute('d', mainModel.fullD);
+        setTerminalAtTip(success, partialPath(mainModel, 1));
+        branchAnimations.forEach(({ path, cross, terminal, model }) => {
+          clearElementStyles(path);
+          path.setAttribute('d', model.fullD);
+          cross.style.removeProperty('opacity');
+          terminal.style.opacity = '0';
+        });
+        activeFrames.delete(svg);
+        return;
+      }
+
+      activeFrames.set(svg, requestAnimationFrame(frame));
+    };
+
+    activeFrames.set(svg, requestAnimationFrame(frame));
+  };
+
+  const drawRail = (svg: SVGSVGElement, options: DrawOptions = {}) => {
+    const container = svg.closest<HTMLElement>('.circuit-rails');
+    const height = Math.max(1, Math.round(container?.getBoundingClientRect().height ?? 1));
+    const railWidth = Math.max(1, svg.getBoundingClientRect().width);
+    const widthKey = railWidth.toFixed(3);
+    const startY = Math.max(
+      0,
+      Math.round(
+        (document.querySelector<HTMLElement>('.site-header')?.offsetHeight ?? 0)
+        + HEADER_PATH_GAP,
+      ),
+    );
+    const main = svg.querySelector<SVGPathElement>('.main-trace');
+    const deadEnds = svg.querySelector<SVGGElement>('.dead-ends');
+    const success = svg.querySelector<SVGCircleElement>('.success-node');
+    if (!main || !deadEnds || !success) return;
+    if (
+      !options.force
+      && svg.dataset.rendered === 'true'
+      && svg.dataset.height === String(height)
+      && svg.dataset.width === widthKey
+      && svg.dataset.startY === String(startY)
+    ) return;
+
+    const wasAnimating = activeFrames.has(svg);
+    cancelRailAnimation(svg);
+    const railKey = svg.dataset.side ?? '0';
+    if (options.reseed) {
+      delete svg.dataset.seed;
+      delete circuitSession.seeds[railKey];
+    }
+    if (!svg.dataset.seed) {
+      svg.dataset.seed = circuitSession.seeds[railKey] ?? String(newSeed());
+    }
+    if (circuitSession.seeds[railKey] !== svg.dataset.seed) {
+      circuitSession.seeds[railKey] = svg.dataset.seed;
+      persistCircuitSession();
+    }
+    const random = seededRandom(Number(svg.dataset.seed));
+    const shouldAnimate = options.animate ?? (
+      (svg.dataset.rendered !== 'true' || wasAnimating) && !animationPaused
+    );
+
+    svg.style.height = `${height}px`;
+    svg.setAttribute('viewBox', `0 0 ${railWidth} ${height}`);
+    clearElementStyles(main);
+    clearElementStyles(success);
+    deadEnds.replaceChildren();
+
+    const dotY = Math.max(4, height - 6);
+    const finishY = Math.max(0, dotY - 3.5);
+    const originY = Math.min(startY, finishY);
+    const xScale = railWidth / PATH_WIDTH;
+    const fullBounds = { min: MIN_X * xScale, max: MAX_X * xScale };
+    const originX = railWidth / 2;
+    const path = [`M${originX} ${originY}`];
+    const deadBranches: DeadBranch[] = [];
+    let currentX = originX;
+    let currentY = originY;
+    let lastForkY = originY - FORK_CLEARANCE;
+    let forkCount = 0;
+
+    while (currentY < finishY) {
+      const denseStep = random() < 0.48;
+      currentY = Math.min(
+        finishY,
+        currentY + randomInt(random, denseStep ? 11 : 22, denseStep ? 20 : 38),
+      );
+      path.push(`V${currentY}`);
+      if (currentY >= finishY) break;
+
+      const hasForkRoom = currentX - fullBounds.min >= 15 * xScale
+        && fullBounds.max - currentX >= 15 * xScale;
+      const hasVerticalRoom = finishY - currentY > 250;
+      const hasClearance = currentY - lastForkY > FORK_CLEARANCE;
+      const shouldFork = hasForkRoom && hasVerticalRoom && hasClearance
+        && (
+          random() < forkProbability
+          || (forkCount === 0 && currentY > originY + (height - originY) * 0.28)
+        );
+
+      if (shouldFork) {
+        const fork = generateFork(currentX, currentY, random, fullBounds, xScale);
+        path.push(...fork.survivorCommands);
+        deadBranches.push(fork.deadBranch);
+        currentX = fork.survivorX;
+        currentY = fork.endY;
+        lastForkY = currentY;
+        forkCount += 1;
+        continue;
+      }
+
+      currentX = takeHorizontalStep(currentX, fullBounds, random, xScale);
+      path.push(`H${currentX}`);
+    }
+
+    main.setAttribute('d', path.join(''));
+    success.setAttribute('cx', String(currentX));
+    success.setAttribute('cy', String(dotY));
+    const renderedBranches = deadBranches.map((branch) => renderDeadBranch(deadEnds, branch));
+
+    if (shouldAnimate) animateRail(svg, main, renderedBranches, success);
+    else showStaticRail(main, renderedBranches, success);
+    svg.dataset.height = String(height);
+    svg.dataset.width = widthKey;
+    svg.dataset.startY = String(startY);
+    svg.dataset.rendered = 'true';
+  };
+
+  const rails = Array.from(document.querySelectorAll<SVGSVGElement>('[data-circuit-rail]'));
+  let redrawFrame = 0;
+  const redraw = () => {
+    cancelAnimationFrame(redrawFrame);
+    redrawFrame = requestAnimationFrame(() => rails.forEach((rail) => drawRail(rail)));
+  };
+
+  const replayRails = (reseed = false) => {
+    rails.forEach((rail) => drawRail(rail, { force: true, animate: true, reseed }));
+  };
+
+  redraw();
+  const observer = new ResizeObserver(redraw);
+  const railContainer = document.querySelector<HTMLElement>('.circuit-rails');
+  if (railContainer) observer.observe(railContainer);
+
+  const controls = document.querySelector<HTMLElement>('[data-circuit-controls]');
+  const panel = controls?.querySelector<HTMLElement>('.circuit-panel');
+  const toggle = controls?.querySelector<HTMLButtonElement>('[data-circuit-toggle]');
+  const replay = controls?.querySelector<HTMLButtonElement>('[data-circuit-replay]');
+  const newPaths = controls?.querySelector<HTMLButtonElement>('[data-circuit-new]');
+  const pause = controls?.querySelector<HTMLButtonElement>('[data-circuit-pause]');
+  const pauseIcon = pause?.querySelector<SVGPathElement>('[data-circuit-pause-icon]');
+  const pauseLabel = pause?.querySelector<HTMLElement>('[data-circuit-pause-label]');
+  const speedInput = controls?.querySelector<HTMLInputElement>('[data-circuit-speed]');
+  const speedOutput = controls?.querySelector<HTMLOutputElement>('[data-speed-output]');
+  const forkInput = controls?.querySelector<HTMLInputElement>('[data-circuit-forks]');
+  const forkOutput = controls?.querySelector<HTMLOutputElement>('[data-fork-output]');
+
+  const setPanelOpen = (open: boolean) => {
+    if (!panel || !toggle) return;
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+
+  toggle?.addEventListener('click', () => {
+    setPanelOpen(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+  const setAnimationPaused = (paused: boolean) => {
+    animationPaused = paused;
+    circuitSession.paused = paused;
+    persistCircuitSession();
+    pause?.setAttribute('aria-pressed', String(paused));
+    if (pauseLabel) pauseLabel.textContent = paused ? 'Resume' : 'Pause';
+    pauseIcon?.setAttribute('d', paused ? 'M8 5v14l11-7z' : 'M8 5v14M16 5v14');
+  };
+  setAnimationPaused(animationPaused);
+
+  replay?.addEventListener('click', () => {
+    setAnimationPaused(false);
+    replayRails();
+  });
+  newPaths?.addEventListener('click', () => {
+    setAnimationPaused(false);
+    replayRails(true);
+  });
+  pause?.addEventListener('click', () => setAnimationPaused(!animationPaused));
+
+  speedInput?.addEventListener('input', () => {
+    animationSpeed = SPEED_OPTIONS[Number(speedInput.value)] ?? BASE_ANIMATION_SPEED;
+    const relativeSpeed = animationSpeed / BASE_ANIMATION_SPEED;
+    const label = `${Number(relativeSpeed.toFixed(2))}×`;
+    speedInput.setAttribute('aria-valuetext', label);
+    if (speedOutput) speedOutput.value = label;
+  });
+  speedInput?.addEventListener('change', () => {
+    setAnimationPaused(false);
+    replayRails();
+  });
+
+  forkInput?.addEventListener('input', () => {
+    const label = `${forkInput.value}%`;
+    forkInput.setAttribute('aria-valuetext', label);
+    if (forkOutput) forkOutput.value = label;
+  });
+  forkInput?.addEventListener('change', () => {
+    forkProbability = Number(forkInput.value) / 100;
+    setAnimationPaused(false);
+    replayRails(true);
+  });
+
+  document.addEventListener('pointerdown', (event) => {
+    if (
+      controls
+      && toggle?.getAttribute('aria-expanded') === 'true'
+      && !controls.contains(event.target as Node)
+    ) setPanelOpen(false);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setPanelOpen(false);
+  });
+</script>

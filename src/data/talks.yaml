@@ -1,0 +1,666 @@
+- id: eamt-best-thesis-2026
+  title: "From Insights to Impact: Actionable Interpretability for Neural Machine Translation"
+  event: Best Thesis Award, Conference of the European Association for Machine Translation (EAMT)
+  location: Schouwburg & Concertzaal, Tilburg, The Netherlands
+  mapPlace: tilburg
+  date: 2026-06-18
+  summary: This presentation summarizes the main contributions of my PhD thesis, advocating for a user-centric perspective on interpretability research, aiming to translate theoretical advances in model understanding in practical benefits in trustworthiness and transparency for end users of these systems.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1R6e9cMAs6iK9s0m8vtD66TxPcfqu3ETUWIk19A-qOZI/edit?usp=sharing
+      kind: slides
+- id: dnai-llm-interp-2026
+  cv:
+    display: "University of Pisa, Mechanistic Interpretability of LLMs (Ph.D., host: Andrea Esuli), 2026."
+  title: "Interpretability for Language Models: Current Trends and Applications"
+  event: PhD Course on Mechanistic Interpretability, National PhD in AI for Society
+  location: Online (University of Pisa, Italy)
+  mapPlace: pisa
+  date: 2026-05-12
+  summary: In this presentation, I will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors. I will overview several application of LRMs for studying model behavior, and conclude with an overview of our efforts at NDIF to build scalable tooling for interpretabilit research.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1H89bvTaEuJdwq8iYR481wehSomnZJL6VbjsmZ39OCJc/edit?usp=sharing
+      kind: slides
+- id: mit-scaling-interp-2026
+  cv:
+    display: Algorithmic Alignment Group, MIT CSAIL. Boston, MA, USA. 2026
+  title: Scaling Interpretability for LLM Agents
+  event: Algorithmic Alignment Group Seminar
+  location: MIT CSAIL, Cambridge, MA, USA
+  mapPlace: boston
+  date: 2026-05-12
+  summary: Behavioral evaluations and interpretability offer complementary but disconnected views of large language models understanding. I begin by present a preliminary investigation combining behavioral evaluation with representational analysis to assess goal-directedness in LLM agents. Studying an LLM navigating grid worlds, we decode "cognitive maps" from model activations and show that many apparent behavioral failures are rational under the agent's imperfect internal beliefs. Finally, I outline an updated view of the NDIF ecosystem and highlight our vision for open-source infrastructure for democratizing white-box evaluations.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1fhHTZ_MLLwSKMZKOaWvH60IzNsBVP1OkHMSEa415WZQ/edit?usp=sharing
+      kind: slides
+- id: baulab-scaling-interp-2026
+  cv:
+    display: BauLab, Northeastern University. Boston, MA, USA. 2026.
+  title: Scaling Interpretability for LLM Agents
+  event: BauLab Group Seminar
+  location: Northeastern University, Boston, MA, USA
+  mapPlace: boston
+  date: 2026-03-27
+  summary: Evaluations and interpretability offer complementary but disconnected views of large language models understanding. This talk presents a research program aimed at bridging this gap across three threads. First, I describe PECoRe and MIRAGE frameworks for scalable context usage analyses in LLM generations, with applications to answer attribution in RAG settings. Second, I present a framework combining behavioral evaluation with representational analysis to assess goal-directedness in LLM agents. Studying an LLM navigating grid worlds, we decode cognitive maps from model activations and show that many apparent behavioral failures are rational under the agent's imperfect internal beliefs. Finally, I outline an updated view of the NDIF ecosystem and highlight our vision for open-source infrastructure for merging evals and interpretability workflows.
+  links:
+    - label: Code
+      url: https://github.com/ndif-team/inif
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1nnW5ynWvOlu_L5NLJN9R8_EaOylgR4OtLDF1M9-EeoU/edit?usp=sharing
+      kind: slides
+    - label: Video
+      url: https://www.youtube.com/watch?v=O2EIutqG57M
+      kind: video
+- id: ucl-llm-interp-2026
+  cv:
+    display: "University College London, Adv. Computational Linguistics (MSc., host: Mario Giulianelli), 2026."
+  title: "Interpretability for Language Models: Current Trends and Applications"
+  event: Invited Lecture, MSc Advanced Computational Linguistics, University College London (UCL)
+  location: Online (London, UK)
+  mapPlace: london
+  date: 2026-03-17
+  summary: In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will start discussing post-hoc attribution technique and their usage to identify prediction-relevant inputs, showcasing their usage within our PECoRe framework for context usage attribution, and its adaptation to produce internals-based citations in retrieval-augmented generation settings (MIRAGE). The final part will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1KTV22f30jCdaRaLPARFF19yfBM4qknsHdK6Ndt_NkgU/edit?usp=sharing
+      kind: slides
+- id: fbk-mt-2026
+  cv:
+    display: MT Group, Fondazione Bruno Kessler (FBK). Online. 2026.
+  title: Interpreting Context Usage in Generative Language Models
+  event: MT Group Seminar, Fondazione Bruno Kessler (FBK)
+  location: Online (Trento, Italy)
+  mapPlace: trento
+  date: 2026-03-12
+  summary: This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1qK5X7G5VhATmoE2J825A9csMvFLR9ZeprrMe7W5BuBw/edit?usp=drive_link
+      kind: slides
+- id: neural-mechanics-cs7180-attribution-2026
+  cv:
+    display: "Northeastern University, CS7810: Neural Mechanics (MSc., host: David Bau), 2026."
+    linkLabel: "CS7810: Neural Mechanics"
+    url: https://neural-mechanics.baulab.info/
+  title: "Attribution: Tracing Influence to Inputs and Model Components"
+  event: Invited Lecture, CS7810 - Neural Mechanics, Northeastern University
+  location: Northeastern University, Boston, MA, USA
+  mapPlace: boston
+  date: 2026-02-24
+  summary: Attribution methods are a family of techniques for tracing the influence of inputs and model components on a model's predictions. In this lecture, I will provide an overview of attribution methods, focusing in particular on shortcomings and practical applications of input attribution techniques, and their usage to analyze context usage in language models.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1xvOFpA6WCmUKsPuiKyYUl-WGRzF1dY1UBoYaYlnccs4/edit?usp=sharing
+      kind: slides
+- id: bu-context-usage-2026
+  cv:
+    display: Mueller Lab, Boston University. Boston, MA, USA. 2026.
+  title: Interpreting Context Usage in Generative Language Models
+  event: Seminar at Mueller Lab, Boston University
+  location: Boston University, Boston, MA, USA
+  mapPlace: boston
+  date: 2026-02-03
+  summary: This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1lSvIPFVqt0lAFRVtY0nq0EY8Q--UcDgNdyFm8NEugy4/edit?usp=sharing
+      kind: slides
+- id: uni-helsinki-attribution-2026
+  cv:
+    display: Language Technology Group, University of Helsinki. Online. 2026.
+  title: Interpreting Context Usage in Generative Language Models
+  event: Seminar at University of Helsinki
+  location: Online (Helsinki, Finland)
+  mapPlace: helsinki
+  date: 2026-01-22
+  summary: This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1g3XH3TYZ6jAFJvDMtNrEuxJsW79smIcs-1V5IzkghI8/edit?usp=sharing
+      kind: slides
+- id: dei-padua-interpretability-2025
+  cv:
+    display: Dept. of Engineering, University of Padua. Padua, IT. 2025.
+  title: "Interpretability for Language Models: Trends and Applications"
+  event: DEI Seminar, Università di Padova, Italy
+  location: Padova, Italy
+  mapPlace: padua
+  date: 2025-12-18
+  summary: This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1RSOBbNlwZEhnDuvMqk_EFv4Y2chNVj_OB5EhSskGzCg/edit?usp=sharing
+      kind: slides
+- id: phd-graduation-workshop-dec25
+  title: "From Insights to Impact: Actionable Interpretability for Neural Machine Translation"
+  event: Workshop on Actionable Interpretability for Language Models and Machine Translation Systems
+  location: University of Groningen, The Netherlands
+  mapPlace: groningen
+  date: 2025-12-11
+  summary: This presentation summarizes the main contributions of my PhD thesis, advocating for a user-centric perspective on interpretability research, aiming to translate theoretical advances in model understanding in practical benefits in trustworthiness and transparency for end users of these systems.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1H0Ua08LR9D0SiXSBxE3DiBRsvfdUOPLNx6haVo3C0fk/edit?usp=sharing
+      kind: slides
+- id: indeep-deloitte-masterclass-dec25
+  cv:
+    label: InDeep Masterclass
+    description: Interpreting LLMs and Other Deep Learning Models.
+    location: Deloitte Amsterdam
+  title: Interpreting LLMs and Other Deep Learning Models
+  event: InDeep Masterclass at Deloitte Amsterdam
+  location: Deloitte HQ, Amsterdam, The Netherlands
+  mapPlace: amsterdam
+  date: 2025-12-04
+  summary: This masterclass will feature a series of insightful presentations and a hands-on tutorial focused on explainability techniques for Large Language Models (LLMs) and other deep learning architectures. Participants will gain both insights and practical experience in interpreting and understanding the inner workings of modern AI systems. In particular, my presentation provides a general introduction to popular interpretability approaches for studying large language models. Particularly, we will focus on attributional methods to identify the influence of context on model predictions and mechanistic techniques to locate and intervene in model knowledge and behaviors.
+  links:
+    - label: Code
+      url: https://colab.research.google.com/drive/12m3r5rtBP-w_i-vPspTc8dWbyf6zzio1?usp=sharing
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1AoPD9mrV762MXqN28PO-feudycOhaN6ziQnR2gahTO8/edit?usp=sharing
+      kind: slides
+- id: xai-units-seminar-2025
+  cv:
+    display: "University of Trieste, Explainable and Neurosymbolic AI (MSc., host: Luca Bortolussi), 2025."
+  title: "Interpretability for Language Models: Current Trends and Applications"
+  event: Invited Lecture, MSc Course on Explainable AI, University of Trieste
+  location: Online (Trieste, Italy)
+  mapPlace: trieste
+  date: 2025-11-19
+  summary: In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will start discussing post-hoc attribution technique and their usage to identify prediction-relevant inputs, showcasing their usage within our PECoRe framework for context usage attribution, and its adaptation to produce internals-based citations in retrieval-augmented generation settings (MIRAGE). The final part will present core insight from recent mechanistic interpretability literature, focusing on the construction of replacement models to build concept attribution graphs and their practical usage for monitoring LLM behaviors.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1KTV22f30jCdaRaLPARFF19yfBM4qknsHdK6Ndt_NkgU/edit?usp=sharing
+      kind: slides
+- id: fbk-land-2025
+  cv:
+    display: LanD Group, Fondazione Bruno Kessler (FBK). Online. 2025.
+  title: Interpreting Context Usage in Generative Language Models
+  event: LanD Group Seminar, Fondazione Bruno Kessler (FBK)
+  location: Online (Trento, Italy)
+  mapPlace: trento
+  date: 2025-10-07
+  summary: This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1lI92ZezmbuUGFxz_exP8NoeQy1Yw63qPW0YNRJ7gtc0/edit?usp=sharing
+      kind: slides
+- id: circuits-inclow-2025
+  cv:
+    label: University of Groningen
+    description: Interpreting Latent Features in Large Language Models
+    location: Groningen
+  title: Interpreting Latent Features in Large Language Models
+  event: Paper Presentation at InCLoW Reading Group
+  location: University of Groningen, The Netherlands
+  mapPlace: groningen
+  date: 2025-05-22
+  summary: The presentation discusses interpreting latent features in large language models (LLMs). After an introduction on mechanistic interpretability fundamentals, including feature superposition and sparse autoencoders, I discuss recent work by the Anthropic interpretability team (Ameisen et al. 2025, Lindsey et al. 2025) for extracting circuits of interpretable features from trained LLMs. Real-world investigations of Claude mechanisms, such as multi-step reasoning and multilinguality, are also analyzed.
+  links:
+    - label: PDF
+      url: https://transformer-circuits.pub/2025/attribution-graphs/biology.html
+      kind: pdf
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1lW6jfw-pduh1Otld9yjFpjgxvjP80dCUPNjwSh_Tgiw/edit?usp=sharing
+      kind: slides
+- id: dfki-saarland-qe4pe-2025
+  cv:
+    label: DFKI Saarbrücken
+    description: "QE4PE: Word-level Quality Estimation for Human Post-Editing"
+    location: Online
+  title: "QE4PE: Word-level Quality Estimation for Human Post-Editing"
+  event: Invited Talk at DFKI Saarbrücken
+  location: Online (Saarbrücken, Germany)
+  mapPlace: saarbrucken
+  date: 2025-04-15
+  summary: Word-level quality estimation (QE) detects erroneous spans in machine translations, which can direct and facilitate human post-editing. While the accuracy of word-level QE systems has been assessed extensively, their usability and downstream influence on the speed, quality and editing choices of human post-editing remain understudied. Our QE4PE study investigates the impact of word-level QE on machine translation (MT) post-editing in a realistic setting involving 42 professional post-editors across two translation directions. We compare four error-span highlight modalities, including supervised and uncertainty-based word-level QE methods, for identifying potential errors in the outputs of a state-of-the-art neural MT model. Post-editing effort and productivity are estimated by behavioral logs, while quality improvements are assessed by word- and segment-level human annotation. We find that domain, language and editors' speed are critical factors in determining highlights' effectiveness, with modest differences between human-made and automated QE highlights underlining a gap between accuracy and usability in professional workflows.
+  links:
+    - label: Code
+      url: https://github.com/gsarti/qe4pe
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1wgD3q19ECrqt8j59Mn4h4fpdti_YeJMFolzt84ewFwk/edit?usp=sharing
+      kind: slides
+- id: llm-xai-rug-fse-seminar-2025
+  cv:
+    display: "University of Groningen, Trustworthy and Explainable AI (MSc., host: Marco Zullich), 2025."
+  title: "Interpretability for Language Models: Current Trends and Applications"
+  event: Invited Lecture, MSc Course on Trustworthy and Explainable AI, University of Groningen
+  location: University of Groningen, The Netherlands
+  mapPlace: groningen
+  date: 2025-03-24
+  summary: In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will focus specifically on post-hoc attribution technique and their usage to identify relevant input and model components, showcasing their usage with our Inseq open-source toolkit. A practical application of attribution techniques will be presented with the PECoRe data-driven framework for context usage attribution and its adaptation to produce internals-based citations for model answers in retrieval-augmented generation settings (MIRAGE).
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1uid4lkMgk2qgnkbHByM6ZoAhg4M9kdIigHAjruvaxgE/edit?usp=sharing
+      kind: slides
+- id: aniti-2025
+  cv:
+    display: ANITI and DEEL Groups, IRT Saint-Exupéry. Toulouse, FR. 2025.
+  title: Interpreting Context Usage in Generative Language Models
+  event: ANITI Seminar
+  location: IRT Saint Exupéry, Toulouse, France
+  mapPlace: toulouse
+  date: 2025-03-11
+  summary: This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1wgD3q19ECrqt8j59Mn4h4fpdti_YeJMFolzt84ewFwk/edit?usp=sharing
+      kind: slides
+- id: ai2s-talk-2024
+  cv:
+    label: Artificial Intelligence Student Society (AI2S)
+    description: "Aprire la scatola nera dei modelli del linguaggio: rischi e opportunità"
+    location: Trieste
+  title: "Aprire la scatola nera dei modelli del linguaggio: rischi e opportunità"
+  event: AI2S Talk - Tra logica e misteri dell'Intelligenza Artificiale
+  eventUrl: https://www.ai2s.it/events/ai-talks-2024-912
+  location: Hangar Teatri, Trieste, Italy
+  mapPlace: trieste
+  date: 2024-12-09
+  summary: Questo intervento sarà mirato a demistificare il funzionamento dei modelli del linguaggio (Large Language Models), ed evidenziare come lo studio di questi sistemi come 'artefatti cognitivi' possa contribuire a una migliore comprensione dei meccanismi di ragionamento (umani e non), e dei bias nella società che ci circonda.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1XSpF1QhjIbzBvZ87v_b_MaO2lWMSoHnVNRzoUbUxXt4/edit?usp=sharing
+      kind: slides
+- id: verbalized-rebus-clic2024
+  title: "Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses"
+  event: Oral Presentation, CLiC-it 2024 - Italian Conference on Computational Linguistics
+  location: Pisa, Italy
+  mapPlace: pisa
+  date: 2024-12-05
+  summary: Oral presentation at CLiC-it 2024
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1-R9-uT9L69m12BqWxjbEiXImNOspgx3z40qteU78Axw/edit?usp=sharing
+      kind: slides
+- id: sapienza-data-science-phd-course-2024
+  cv:
+    display: "Sapienza University of Rome, Explainable AI (Ph.D., host: Simone Scardapane), 2024."
+  title: "Interpretability for Language Models: Current Trends and Applications"
+  event: Seminar, PhD Course on XAI, Sapienza University of Rome
+  location: Online (Rome, Italy)
+  mapPlace: rome
+  date: 2024-11-05
+  summary: In this presentation, I will provide an overview of the interpretability research landscape and describe various promising methods for exploring and controlling the inner mechanisms of generative language models. I will focus specifically on post-hoc attribution technique and their usage to identify relevant input and model components, showcasing their usage with our Inseq open-source toolkit. A practical application of attribution techniques will be presented with the PECoRe data-driven framework for context usage attribution and its adaptation to produce internals-based citations for model answers in retrieval-augmented generation settings (MIRAGE).
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1BmSntnLg-LnKbgwUZFJRfyGOTsBIJrZgVIngSPCTSgk/edit?usp=sharing
+      kind: slides
+- id: cis-lmu-inseq-pecore-2024
+  cv:
+    display: Center for Information and Language Processing (CIS), LMU Munich. Munich, DE. 2024.
+  title: Interpreting Context Usage in Generative Language Models with Inseq, PECoRe and MIRAGE
+  event: CIS LMU Seminar
+  location: Ludwig Maximilian University of Munich, Bayern, Germany
+  mapPlace: munich
+  date: 2024-07-16
+  summary: This presentation focuses on applying post-hoc interpretability techniques to analyze how language models (LMs) use input information throughout the generation process. We briefly introduce Inseq, our open-source toolkit designed to simplify advanced feature attribution analyses for LMs. Then, our Plausibility Evaluation of Context Reliance (PECoRe) interpretability framework is introduced to conduct data-driven analyses of context usage in LMs. In conclusion, we showcase how PECoRe can easily be adapted to retrieval-augmented generation (RAG) settings to produce internals-based citations for model answers. Our proposed Model Internals for RAG Explanations (MIRAGE) method achieves citation quality comparable to supervised answer validators with no additional training, producing citations that are faithful to actual context usage during generation.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1dUkeJoRrpK0edKlxyoAdy_03TxsrQd78HxR0AObVfmM/edit?usp=sharing
+      kind: slides
+- id: polito-inseq-pecore-2024
+  cv:
+    display: "Politecnico di Torino, Explainable and Trustworthy AI (MSc., host: Eliana Pastor), 2024."
+  title: Interpreting Context Usage in Generative Language Models with Inseq and PECoRe
+  event: Politecnico di Torino Invited Talk
+  location: Politecnico di Torino, Piedmont, Italy
+  mapPlace: turin
+  date: 2024-05-20
+  summary: This talk discusses the challenges and opportunities in conducting interpretability analyses of generative language models. We begin by presenting Inseq, an open-source toolkit for advanced feature attribution analyses of language models. The usage of Inseq is illustrated through examples of state-of-the-art approaches contrastive attribution, input dependence and locating factual knowledge in intermediate model representations. Then, we introduce Plausibility Evaluation of Context Reliance (PECoRe), an end-to-end interpretability framework using model internals  to detect context-dependent spans in model generations and trace their prediction back to salient tokens in the available context. The usage of PECoRe is showcased on various generative tasks, including machine translation, story generation and retrieval-augmented question answering.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1NYjoq9kvYs7Rr233Ys1YPZhCRzCLwHO3KIAMElYsqkY/edit#slide=id.p
+      kind: slides
+- id: area-pecore-2024
+  cv:
+    display: Laboratory of Data Engineering (LADE), Area Science Park. Trieste, IT. 2024.
+  title: Quantifying the Plausibility of Context Reliance in Neural Machine Translation
+  event: Area Science Park Seminar
+  location: Area Science Park, Trieste, Italy
+  mapPlace: trieste
+  date: 2024-05-17
+  summary: This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented.
+  links:
+    - label: Code
+      url: https://github.com/gsarti/pecore
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1ubX5TkSkUuamx5NHaoisMkoM5LY0ku7TeMkqkloXMJ4/edit?usp=sharing
+      kind: slides
+- id: gronlp-rg-pecore
+  title: Quantifying the Plausibility of Context Reliance in Neural Machine Translation
+  event: GroNLP Reading Group
+  location: University of Groningen, The Netherlands
+  mapPlace: groningen
+  date: 2024-04-26
+  summary: This talk presents the PECoRe framework for quantifying the plausibility of context reliance in neural machine translation. The framework is applied to a case study on the impact of context on the translation of gendered pronouns and other contextual phenomena in English-to-French translation. Finally, the online demo allowing users to try PECoRe with any generative language model is presented.
+  links:
+    - label: Code
+      url: https://github.com/gsarti/pecore
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1iWCfX9Sietu6tXJgFxvoOB5vtwsTpFmcc120OWUBTAg/edit?usp=sharing
+      kind: slides
+- id: sheffield-seminar-2024
+  cv:
+    display: SheffieldNLP, University of Sheffield. Online. 2024.
+  title: "Post-hoc Interpretability for Generative Language Models: Explaining Context Usage in Transformers"
+  event: SheffieldNLP Invited Talk
+  location: Online
+  mapPlace: sheffield
+  date: 2024-03-01
+  summary: This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution. Finally, the PECoRe framework is presented as a mean to evaluate the plausibility of context usage in language models.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1gTmQpFeonVOCSDM9uh0bQlabCvslxwdK-D32twj3lo0/edit?usp=sharing
+      kind: slides
+- id: indeep-masterclass-nov23
+  cv:
+    label: InDeep Masterclass
+    description: Explaining Foundation Models.
+    location: University of Amsterdam
+  title: Explaining Language Models with Inseq
+  event: InDeep Masterclass - Explaining Foundation Models
+  location: University of Amsterdam, The Netherlands
+  mapPlace: amsterdam
+  date: 2023-11-02
+  summary: In recent years, Transformer-based language models have achieved remarkable progress in most language generation and understanding tasks. However, the internal computations of these models are hardly interpretable due to their highly nonlinear structure, hindering their usage for mission-critical applications requiring trustworthiness and transparency guarantees. This presentation will introduce interpretability methods used for tracing the predictions of language models back to their inputs and discuss how these can be used to gain insights into model biases and behaviors. Several concrete examples of language model attributions will be presented throughout the presentation using the Inseq interpretability library.
+  links:
+    - label: Code
+      url: https://colab.research.google.com/drive/1pWhAS-S9_pbSqJYNUXkbszX8XbB0qPN0?usp=sharing
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1hWsb679XMt02aDc0YoPsSJ98WNRxLcmSHALuUY5LyfE/edit?usp=sharing
+      kind: slides
+- id: escience-signlp-seminar-oct23
+  cv:
+    display: Netherlands eScience Center. Amsterdam, NL. 2023.
+  title: Post-hoc Interpretability for Language Models
+  event: eScience Center SIG-NLP Seminar
+  location: eScience Center, Amsterdam, The Netherlands
+  mapPlace: amsterdam
+  date: 2023-10-26
+  summary: This talk discusses the challenges of interpreting generative language models and presents Inseq, a toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution. Finally, the PECoRe framework is presented as a mean to evaluate the plausibility of context usage in language models.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1odm8--A5CCjof_gTiYV6WuYs6T1EXHURGCcqcpxBQq0/edit?usp=sharing
+      kind: slides
+- id: restcl-2023
+  cv:
+    display: REST-CL, Pompeu Fabra University. Tarragona, ES. 2023.
+  title: "Post-hoc Interpretability for NLG & Inseq: an Interpretability Toolkit for Sequence Generation Models"
+  event: Tutorial at REST-CL, Universitat Pompeu Fabra
+  location: L'Arboç, Tarragona, Spain
+  mapPlace: arboc
+  date: 2023-06-30
+  summary: In recent years, Transformer-based language models have achieved remarkable progress in most language generation and understanding tasks. However, the internal computations of these models are hardly interpretable due to their highly nonlinear structure, hindering their usage for mission-critical applications requiring trustworthiness and transparency guarantees. This presentation will introduce interpretability methods used for tracing the predictions of language models back to their inputs and discuss how these can be used to gain insights into model biases and behaviors. Several concrete examples of language model attributions will be presented throughout the presentation using the Inseq interpretability library.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1rbvgFuGxjXAi-ORFkIVkDUkSr4T_NVkWsh5_ZwzpvTs/edit?usp=sharing
+      kind: slides
+- id: cosmo-units-2023
+  cv:
+    display: AI-Lab, University of Trieste. Trieste, IT. 2023.
+  title: Post-hoc Interpretability for Neural Language Models
+  event: Invited Talk at COSMO Seminars, AI-Lab UniTS
+  location: University of Trieste, Italy
+  mapPlace: trieste
+  date: 2023-06-01
+  summary: In recent years, Transformer-based language models have achieved remarkable progress in most language generation and understanding tasks. However, the internal computations of these models are hardly interpretable due to their highly nonlinear structure, hindering their usage for mission-critical applications requiring trustworthiness and transparency guarantees. This presentation will introduce interpretability methods used for tracing the predictions of language models back to their inputs and discuss how these can be used to gain insights into model biases and behaviors. Several concrete examples of language model attributions will be presented throughout the presentation using the Inseq interpretability library.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1VHqCJA_nJX9Xrxa6t_xpH9-W9L_MkTiQcS7fiWQdnpo/edit?usp=sharing
+      kind: slides
+- id: ailc-lcl-2023
+  cv:
+    display: University of Pisa, AILC Lectures on Computational Linguistics (with Alessio Miaschi), 2023.
+  title: Explaining Neural Language Models from Internal Representations to Model Predictions
+  event: Lab at AILC Lectures on Computational Linguistics 2023
+  location: University of Pisa, Italy
+  mapPlace: pisa
+  date: 2023-05-31
+  summary: As language models become increasingly complex and sophisticated, the processes leading to their predictions are growing increasingly difficult to understand. Research in NLP interpretability focuses on explaining the rationales driving model predictions and is crucial for building trust and transparency in the usage of these systems in real-world scenarios. In this laboratory, we will explore various techniques for analyzing Neural Language Models, such as feature attribution methods and diagnostic classifiers. Besides common approaches to inspect models’ internal representations, we will also introduce prompting techniques to elicit model responses and motivate their usage as alternative methods for the behavioral study of model generations.
+  links:
+    - label: Lab Materials
+      url: https://github.com/gsarti/lcl23-xnlm-lab
+      kind: code
+- id: ailo-xai-2023
+  title: Post-hoc Interpretability for Neural Language Models
+  event: AILo Talk at RUG Bernoulli Institute
+  location: University of Groningen, The Netherlands
+  mapPlace: groningen
+  date: 2023-05-23
+  summary: In recent years, Transformer-based language models have achieved remarkable progress in most language generation and understanding tasks. However, the internal computations of these models are hardly interpretable due to their highly nonlinear structure, hindering their usage for mission-critical applications requiring trustworthiness and transparency guarantees. This presentation will introduce interpretability methods used for tracing the predictions of language models back to their inputs and discuss how these can be used to gain insights into model biases and behaviors. Throughout the presentation, several concrete examples of language model attributions will be presented using the Inseq interpretability library.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1nvJU86clyIA2vKCjrHzxQmznlnZC7VrTU0vED2dfAfY/edit?usp=sharing
+      kind: slides
+- id: sapienzanlp-seminar-2023
+  cv:
+    label: Sapienza University of Rome
+    description: An Interpretability Toolkit for Language Models
+    location: Rome
+  title: "Inseq: An Interpretability Toolkit for Sequence Generation Models"
+  event: SapienzaNLP Invited Talk
+  location: Sapienza University of Rome, Italy
+  mapPlace: rome
+  date: 2023-04-06
+  summary: This talk introduces the Inseq toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution, tuned lenses and causal mediation analysis.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1kUerbFWHP2cUHEcHVIDVZ9Heo587-SoUsifs0JaCt4M/edit?usp=sharing
+      kind: slides
+- id: indeep-meeting-mar23
+  cv:
+    label: Radboud University
+    description: Advanced Interpretability for Language Models
+    location: Nijmegen
+  title: "Advanced XAI Techniques and Inseq: An Interpretability Toolkit for Sequence Generation Models"
+  event: InDeep Consortium Meeting - March 2023
+  location: Radboud University, Nijmegen, The Netherlands
+  mapPlace: nijmegen
+  date: 2023-03-23
+  summary: This talk introduces the Inseq toolkit for interpreting sequence generation models. The usage of Inseq is illustrated with examples introducing state-of-the-art approaches for interpreting language models such as contrastive attribution, tuned lenses and causal mediation analysis.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1-m22Zy-H04eGgn-JnHZpx-VxWR8zDBKQjzfOGyM7u_o/edit?usp=sharing
+      kind: slides
+- id: gronlp-rg-inseq
+  cv:
+    display: GroNLP, University of Groningen. Groningen, NL. 2023.
+  title: "Introducing Inseq: An Interpretability Toolkit for Sequence Generation Models"
+  event: GroNLP Reading Group
+  location: University of Groningen, The Netherlands
+  mapPlace: groningen
+  date: 2023-03-10
+  summary: After motivating the usage of interpretability methods in NLP, this talk introduces the Inseq toolkit for interpreting sequence generation models. The usage of Inseq is illustrated on two case studies related to gender bias in machine translation and locating factual knowledge withing GPT-2 representations.
+  links:
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Slides
+      url: https://docs.google.com/presentation/d/1lErvs3vPi-NGifK0lWATupakrSrdM1wqLiRBdRBZDdo/edit?usp=sharing
+      kind: slides
+    - label: Video
+      url: https://www.youtube.com/watch?v=REPx6nT4g8w&feature=youtu.be
+      kind: video
+- id: tech-talk-translated-2022
+  cv:
+    label: Translated S.r.l. Seminar
+    description: Towards User-centric Interpretability of NLP Models
+    location: Online
+  title: Towards User-centric Interpretability of NLP Models
+  event: Tech Talk at Translated
+  location: Online
+  mapPlace: rome
+  date: 2022-05-18
+  summary: With the astounding advances of artificial intelligence in recent years, the field of interpretability research has emerged as a fundamental effort to ensure the development of robust AI systems aligned with human values. In this talk, two perspectives on AI interpretability will be presented alongside two case studies in natural language processing. The first study leverages behavioral data and probing tasks to study the perception and encoding of linguistic complexity in humans and language models. The second introduces a user-centric interpretability perspective for neural machine translation to improve post-editing productivity and enjoyability. The need for such application-driven approaches will be emphasized in light of current challenges in faithfully evaluating advances in this field of study.
+  links:
+    - label: Slides
+      url: https://docs.google.com/presentation/d/17rKndb-ELmy-5CJuZ5mI1JteT93ZiTdkNWCuyMGMdnw/edit?usp=sharing
+      kind: slides
+    - label: Slideshow
+      url: https://docs.google.com/presentation/d/e/2PACX-1vTyBIEmMjcy4baTQ8GdRTfk1pssoAgM2OpZCRCmESLJNYWum_Dm48yUN3rW9dMsvh0lDk5XLq1_8isB/pub?start=false&loop=false&delayms=10000
+      kind: pdf
+- id: xai4debugging21
+  cv:
+    label: NeurIPS XAI4Debugging WS
+    description: Interpretable Interactive Neural Machine Translation
+    location: Online
+  title: Empowering Human Translators via Interpretable Interactive Neural Machine Translation
+  event: XAI4Debugging Workshop at NeurIPS 2021
+  location: Online
+  mapPlace: online
+  date: 2021-12-14
+  summary: Discussing the potential applications of interpretability research to the field of neural machine translation.
+  links:
+    - label: PDF
+      url: https://drive.google.com/file/d/15ckqvAgRezLVmEbEaj34_7FKwV4S_AuH/view?usp=sharing
+      kind: pdf
+    - label: Slides
+      url: https://drive.google.com/file/d/11t2Fa_QPkWnE9HFFUxewS1EQbC_PdKtX/view?usp=sharing
+      kind: slides
+    - label: Video
+      url: https://recorder-v3.slideslive.com/?share=53196&s=d859ffde-cf97-4797-8605-a2f5c72f24f6
+      kind: video
+- id: aperitivo-bocconi
+  cv:
+    label: Bocconi University
+    description: Linguistic Complexity in Humans and Language Models
+    location: Online
+  title: Characterizing Linguistic Complexity in Humans and Language Models
+  event: Invited talk at the Coding Aperitivo of the MilaNLP Group, Bocconi University, Italy
+  location: Online (Milan, Italy)
+  mapPlace: milan
+  date: 2021-11-05
+  summary: Presenting my work on studying different metrics of linguistic complexity and how they correlate with linguistic phenomena and learned representations in neural language models
+  links:
+    - label: Slides
+      url: https://drive.google.com/file/d/1yjcWNis7Ill5UadmurjP0OyvPr9HEVyB/view?usp=sharing
+      kind: slides
+- id: neural-lm
+  cv:
+    label: University of Trieste
+    description: "Language Models: the New Frontier of Language Understanding"
+    location: Trieste
+  title: "Neural Language Models: the New Frontier of Natural Language Understanding"
+  event: StaTalk 2019
+  location: University of Trieste, Italy
+  mapPlace: trieste
+  date: 2019-11-22
+  summary: An overview of the latest advances in the field of NLP, with a focus on neural models and language understanding.
+  links:
+    - label: Slides
+      url: https://drive.google.com/open?id=1e176ELPg4nU37Piaapw4bChEHLKBMWgz
+      kind: slides
+- id: literary-ordnance
+  cv:
+    label: Trieste Science Fiction Festival
+    description: "The Literary Ordnance: When the Writer is an AI"
+    location: Trieste
+  title: "The Literary Ordnance: When the Writer is an AI"
+  event: Trieste Science+Fiction Festival
+  eventUrl: https://www.sciencefictionfestival.org/futurologia
+  location: Teatro Miela, Trieste, Italy
+  mapPlace: trieste
+  date: 2019-10-31
+  summary: Discussing the applications of AI and NLP in the fields of literature and digital humanities.
+  links:
+    - label: Slides
+      url: https://drive.google.com/open?id=1ddRr3glgxEbNOH1bbFeHXe5HLk63FdY0
+      kind: slides
+- id: inquisitive-mind-reviewer-2025
+  cv:
+    label: The Inquisitive Mind Magazine
+    description: Peer reviewer
+    location: ""
+  title: Peer reviewer
+  event: The Inquisitive Mind Magazine
+  date: 2025-01-01
+  summary: Science communication
+- id: trieste-next-panel-2025
+  cv:
+    label: Trieste Next
+    description: "Inside the Algorithm: Transparency and Impact of Generative AI"
+    location: Trieste
+  title: "Inside the Algorithm: Transparency and Impact of Generative AI"
+  event: Trieste Next
+  date: 2025-09-01
+  location: Trieste, Italy
+  mapPlace: trieste
+  summary: Science communication panel
+- id: trieste-next-aitalo-svevo-2019
+  cv:
+    label: Trieste Next
+    description: "AI-Italo Svevo: Lettere da un'intelligenza artificiale. Live demo"
+    location: Trieste
+  title: "AI-Italo Svevo: Lettere da un'intelligenza artificiale"
+  event: Trieste Next
+  date: 2019-09-01
+  location: Trieste, Italy
+  mapPlace: trieste
+  summary: Live demo
+- id: aqpc-education-ai-2018
+  cv:
+    label: 38th AQPC Symposium
+    description: The Educational Impact of Artificial Intelligence
+    location: Saint-Hyacinthe
+  title: The Educational Impact of Artificial Intelligence
+  event: 38th AQPC Symposium
+  date: 2018-06-01
+  location: Saint-Hyacinthe, QC, Canada
+  mapPlace: saint-hyacinthe

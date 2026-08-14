@@ -1,0 +1,241 @@
+---
+import Icon from './Icon.astro';
+
+interface PositionItem {
+  id: string;
+  title: string;
+  titleUrl?: string;
+  detail: string;
+  location: string;
+  date: string;
+  dateStartValue: number;
+}
+
+interface Props {
+  positions: PositionItem[];
+}
+
+const { positions } = Astro.props;
+const sortedPositions = [...positions].sort((a, b) => b.dateStartValue - a.dateStartValue);
+const recentPositions = sortedPositions.slice(0, 6);
+const previousPositions = sortedPositions.slice(6);
+const splitColumns = <T,>(items: T[]) => {
+  const midpoint = Math.ceil(items.length / 2);
+  return items.length > midpoint ? [items.slice(0, midpoint), items.slice(midpoint)] : [items];
+};
+const recentColumns = splitColumns(recentPositions);
+const previousColumns = splitColumns(previousPositions);
+---
+
+<div class:list={['position-columns', { 'is-single': recentColumns.length === 1 }]}>
+  {
+    recentColumns.map((column) => (
+      <ol class="position-timeline">
+        {column.map((position) => (
+          <li class="position" id={position.id.replace('map-', '')}>
+            <p class="date">{position.date}</p>
+            <div class="position-body">
+              <h3 class="title">
+                {position.titleUrl ? (
+                  <a href={position.titleUrl} target="_blank" rel="noopener">{position.title}</a>
+                ) : (
+                  position.title
+                )}
+              </h3>
+              <p class="detail">{position.detail}</p>
+              <p class="location">
+                <Icon name="location" size={12} /> {position.location}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    ))
+  }
+</div>
+
+{
+  previousPositions.length > 0 && (
+    <details class="position-more">
+      <summary>See earlier positions ({previousPositions.length})</summary>
+      <div class:list={['position-columns', { 'is-single': previousColumns.length === 1 }]}>
+        {previousColumns.map((column) => (
+          <ol class="position-timeline">
+            {column.map((position) => (
+              <li class="position" id={position.id.replace('map-', '')}>
+                <p class="date">{position.date}</p>
+                <div class="position-body">
+                  <h3 class="title">
+                    {position.titleUrl ? (
+                      <a href={position.titleUrl} target="_blank" rel="noopener">{position.title}</a>
+                    ) : (
+                      position.title
+                    )}
+                  </h3>
+                  <p class="detail">{position.detail}</p>
+                  <p class="location">
+                    <Icon name="location" size={12} /> {position.location}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        ))}
+      </div>
+    </details>
+  )
+}
+
+<style>
+  .position-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .position-columns.is-single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .position-timeline {
+    overflow: visible;
+    margin: 0;
+    padding: 0 0 0 2.15rem;
+    list-style: none;
+  }
+
+  .position {
+    --position-dot: #ad7d0b;
+    position: relative;
+    padding-block: 0 1.65rem;
+    scroll-margin-top: 5rem;
+  }
+
+  :global(:root[data-theme='dark']) .position {
+    --position-dot: #e1b64a;
+  }
+
+  .position::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0.3rem;
+    left: -2.03rem;
+    width: 0.72rem;
+    height: 0.72rem;
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    background: var(--position-dot);
+    box-shadow: 0 0 0 1px var(--position-dot);
+  }
+
+  .position::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0.86rem;
+    bottom: -0.3rem;
+    left: -1.71rem;
+    width: 1px;
+    background: var(--border-strong);
+  }
+
+  .position:last-child {
+    padding-bottom: 0;
+  }
+
+  .position:last-child::after {
+    display: none;
+  }
+
+  .date {
+    color: var(--text);
+    font: 600 var(--font-size-copy)/1.25 var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  .position-body {
+    margin-top: 0.38rem;
+  }
+
+  .title {
+    font-size: var(--font-size-copy);
+    font-weight: 560;
+    line-height: 1.45;
+  }
+
+  .detail {
+    margin-top: 0.18rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    width: fit-content;
+    margin-top: 0.28rem;
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .position-more {
+    margin-top: 1.35rem;
+  }
+
+  .position-more summary {
+    width: fit-content;
+    margin-left: 2.15rem;
+    padding: 0.25rem 0;
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 530;
+    cursor: pointer;
+  }
+
+  .position-more summary:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .position-more[open] > summary {
+    margin-bottom: 1.35rem;
+  }
+
+  @media (max-width: 760px) {
+    .position-columns {
+      grid-template-columns: minmax(0, 1fr);
+      column-gap: 0;
+    }
+
+    .position-columns > .position-timeline:first-child:not(:last-child) > :global(.position:last-child)::after {
+      display: block;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .position-timeline {
+      padding-left: 1.8rem;
+    }
+
+    .position::before {
+      left: -1.68rem;
+    }
+
+    .position::after {
+      left: -1.36rem;
+    }
+
+    .position-more {
+      margin-left: 0;
+    }
+
+    .position-more summary {
+      margin-left: 1.8rem;
+    }
+  }
+</style>

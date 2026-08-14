@@ -1,0 +1,71 @@
+---
+/**
+ * Small organization logo chips (from src/assets/logos/) with an icon
+ * fallback, used in the homepage Positions/Education columns. Joint
+ * institutions (e.g. UniTS & SISSA) list several logos.
+ */
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+
+interface Props {
+  logos?: string[];
+  fallback: string;
+}
+
+const { logos = [], fallback } = Astro.props;
+
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/logos/*.{png,jpg,svg,webp}', {
+  eager: true,
+});
+const images = logos
+  .map((logo) => files[`../assets/logos/${logo}`]?.default)
+  .filter((img): img is ImageMetadata => Boolean(img));
+---
+
+<span class="org-logos">
+  {
+    images.length > 0 ? (
+      images.map((src) => (
+        <span class="org-logo">
+          <Image {src} alt="" width={64} loading="lazy" />
+        </span>
+      ))
+    ) : (
+      <span class="org-logo">
+        <Icon name={fallback} size={15} />
+      </span>
+    )
+  }
+</span>
+
+<style>
+  .org-logos {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    width: 1.9rem;
+    flex-shrink: 0;
+  }
+
+  .org-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--text-faint);
+    overflow: hidden;
+  }
+
+  .org-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 2px;
+  }
+</style>

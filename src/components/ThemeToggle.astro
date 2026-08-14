@@ -1,0 +1,52 @@
+---
+import Icon from './Icon.astro';
+---
+
+<button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+  <span class="icon-sun"><Icon name="sun" size={17} /></span>
+  <span class="icon-moon"><Icon name="moon" size={17} /></span>
+</button>
+
+<style>
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 120ms ease, transform 160ms ease;
+  }
+
+  button:hover {
+    color: var(--accent);
+    transform: rotate(12deg);
+  }
+
+  .icon-moon,
+  :global([data-theme='dark']) .icon-sun {
+    display: none;
+  }
+
+  :global([data-theme='dark']) .icon-moon {
+    display: inline-flex;
+  }
+
+  .icon-sun {
+    display: inline-flex;
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
+</script>

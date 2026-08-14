@@ -1,0 +1,73 @@
+# Presentation choices for the generated CV. Factual content lives in the
+# domain files beside this one; this file only controls grouping and pagination.
+publicationCategoryOrder:
+  - journal
+  - conference
+  - workshop
+  - preprint
+  - manuscript
+  - edited
+publicationCategoryLabels:
+  journal: Journal Articles
+  conference: Conference Proceedings
+  workshop: Workshop Proceedings
+  preprint: Preprints
+  manuscript: Manuscripts
+  edited: Edited Works
+
+dissemination:
+  invitedLectures:
+    - title: "Interpretability for Language Models: Current Trends and Applications"
+      eventIds:
+        - dnai-llm-interp-2026
+        - ucl-llm-interp-2026
+        - xai-units-seminar-2025
+        - llm-xai-rug-fse-seminar-2025
+        - sapienza-data-science-phd-course-2024
+    - title: Interpreting Context Usage in Language Models
+      eventIds:
+        - neural-mechanics-cs7180-attribution-2026
+        - polito-inseq-pecore-2024
+        - ailc-lcl-2023
+  academicSeminars:
+    - title: Scaling Interpretability for LLM Agents
+      eventIds:
+        - baulab-scaling-interp-2026
+        - mit-scaling-interp-2026
+    - title: Interpreting Context Usage in Generative Language Models
+      eventIds:
+        - fbk-mt-2026
+        - bu-context-usage-2026
+        - uni-helsinki-attribution-2026
+        - dei-padua-interpretability-2025
+        - fbk-land-2025
+        - aniti-2025
+        - cis-lmu-inseq-pecore-2024
+        - area-pecore-2024
+        - sheffield-seminar-2024
+        - escience-signlp-seminar-oct23
+        - restcl-2023
+        - cosmo-units-2023
+        - gronlp-rg-inseq
+  otherPresentations:
+    - circuits-inclow-2025
+    - dfki-saarland-qe4pe-2025
+    - sapienzanlp-seminar-2023
+    - indeep-meeting-mar23
+    - xai4debugging21
+    - aperitivo-bocconi
+    - neural-lm
+    - aqpc-education-ai-2018
+  scienceCommunication:
+    - inquisitive-mind-reviewer-2025
+    - trieste-next-panel-2025
+    - ai2s-talk-2024
+    - trieste-next-aitalo-svevo-2019
+    - literary-ordnance
+  industrialSeminars:
+    - indeep-deloitte-masterclass-dec25
+    - indeep-masterclass-nov23
+    - tech-talk-translated-2022
+
+pageBreakBeforeSections:
+  - Publications

@@ -1,0 +1,50 @@
+name: Gabriele Sarti
+currentPositionId: northeastern-postdoc
+website: https://gsarti.com
+emails:
+  - gabriele.sarti996@gmail.com
+  - g.sarti@northeastern.edu
+address:
+  street: 02115 Boston, MA, USA
+socials:
+  - label: Email
+    icon: email
+    url: mailto:gabriele.sarti996@gmail.com
+  - label: GitHub
+    icon: github
+    url: https://github.com/gsarti
+  - label: Google Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?user=sK0B_08AAAAJ
+  - label: Semantic Scholar
+    icon: semantic-scholar
+    url: https://www.semanticscholar.org/author/1897770594
+  - label: Hugging Face
+    icon: huggingface
+    url: https://huggingface.co/gsarti
+  - label: Bluesky
+    icon: bluesky
+    url: https://bsky.app/profile/gsarti.com
+  - label: X / Twitter
+    icon: twitter
+    url: https://twitter.com/gsarti_
+  - label: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/in/gabrielesarti/
+bio: |-
+  Welcome to my website! 👋 I am a postdoc in the <a href="https://baulab.info" class="neu-red">BauLab at Northeastern University</a>, working on interpretability interfaces and scalable white-box monitoring in the <a href="https://ndif.us" class="ndif-gradient">National Deep Inference Fabric (NDIF)</a> project.
+
+  I completed my PhD in NLP at the University of Groningen, where I worked on [actionable interpretability for machine translation](https://gsarti.com/phd-thesis/) as a member of [InCLoW](https://inclow-lm.github.io/), [GroNLP](https://www.rug.nl/research/clcg/research/cl/) and the [InDeep consortium](https://projects.illc.uva.nl/indeep/). Before that, I was a applied scientist intern at [Amazon Translate](https://www.amazon.science/research-areas/conversational-ai-natural-language-processing) and a research scientist at [Aindo](https://www.aindo.com).
+
+  My research focuses on open tools, methods and interface to bridge the gap between interpretability research and model evaluations, and make white-box auditing a practical part of how we evaluate frontier AI. This is especially important as behavioural tests [fail to surface unverbalized behaviors](https://www.apolloresearch.ai/governance/the-need-for-deeper-white-box-access-to-maintain-state-of-the-art-evaluations-for-loss-of-control-threats/), and are [increasingly inadequate](https://www.far.ai/news/ai-deception-white-box) as models get more capable.
+
+  Your [(anonymous) constructive feedback](https://www.admonymous.co/gsarti) is always welcome! 🙂
+interests:
+  - name: Faithful LLM Reasoning
+    icon: comment
+  - name: Mechanistic Interpretability
+    icon: search
+  - name: User Modeling and Personalization
+    icon: handshake
+  - name: White-box Agent Auditing
+    icon: eye

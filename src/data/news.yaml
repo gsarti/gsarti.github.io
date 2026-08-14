@@ -1,0 +1,69 @@
+- date: 2026-06-01
+  label: June 2026
+  text: I am co-organizing the [BlackboxNLP Workshop](https://blackboxnlp.github.io/2025/) at EMNLP 2026! Participate in our [reproducibility challenge](https://blackboxnlp.github.io/2026/reproducibility/)! 🔍
+- date: 2026-06-01
+  label: June 2026
+  text: I worked with talented mentees as part of the [Spring'26 SPAR Program](https://sparai.org) on the project "[Monitoring and Attributing Implicit Personalization in Conversational Agents](https://sparai.org/projects/sp26/recx8Hxs0HQW6Sgkg), and will be a mentor for the [CBAI Summer Fellowship](https://www.cbai.ai/gabriele-sarti) as well! 🌱
+- date: 2026-04-14
+  label: April 2026
+  text: My PhD thesis on [Actionable Interpretability for Machine Translation](https://gsarti.com/phd-thesis/) was awarded the [2025 Best Dissertation Award](https://eamt.org/2026/04/14/2025-anthony-c-clarke-award-for-the-eamt-best-thesis-awardee-announcement/) by the [European Association for Machine Translation](https://eamt.org)! Excited to present my work in Tilburg in June 🏆
+- date: 2026-01-01
+  label: January 2026
+  text: I started a postdoctoral position at Northeastern University as a member of the [BauLab](https://baulab.info). Very excited to work with the [NDIF team](https://ndif.us) on building cutting-edge tools for interpretability research! 🔍
+- date: 2025-12-01
+  label: December 2025
+  text: I graduated cum laude with my PhD in Natural Language Processing from the University of Groningen! 🎓 My thesis on [Actionable Interpretability for Machine Translation](https://gsarti.com/phd-thesis/) is now available online. Huge thanks to my supervisors [Arianna Bisazza](http://www.cs.rug.nl/~bisazza/), [Malvina Nissim](https://malvinanissim.github.io/) and [Grzegorz Chrupała](https://grzegorz.chrupala.me) for their support during these years.
+- date: 2025-02-01
+  label: February 2025
+  text: I am visiting the [IRT Saint-Exupéry](https://www.irt-saintexupery.com/) in Toulouse, France, to collaborate on an interpretability project with the [DEEL team](https://www.irt-saintexupery.com/deel-le-programme-en-intelligence-artificielle-robuste-et-explicable-entre-dans-sa-phase-2/).
+- date: 2023-05-01
+  label: May 2023
+  text: I was awarded two research grants from the [Imminent Research Center](https://imminent.translated.com/) and the [Amsterdam eScience Center](https://www.esciencecenter.nl/fellowship-programme/gabriele-sarti/) to fund the development of the Inseq library and my future research on machine translation.
+- date: 2023-02-01
+  label: February 2023
+  text: "[Inseq](https://inseq.readthedocs.io), our open-source toolkit for post-hoc interpretability of generative language models, is now available on [Github](https://github.com/inseq-team/inseq)! 🐛 We also have a [demo paper](https://arxiv.org/abs/2302.13942) with some usage examples."
+- date: 2022-07-01
+  label: July to Sep, 2022
+  text: Spent the summer at Amazon AWS New York working as an Applied Scientist Intern with the [Amazon Translate](https://aws.amazon.com/translate/) team, working with [Georgiana Dinu](https://www.linkedin.com/in/georgiana-dinu-b7b1695/), [Maria Nădejde](http://maria.nadejde.com/), [Xing Niu](https://www.linkedin.com/in/xing-niu/) and [Benjamin Hsu](https://www.linkedin.com/in/benjamin-h-77451966/).
+- date: 2022-05-23
+  label: May 23-30, 2022
+  text: Hosted [Michael Carl](https://www.researchgate.net/profile/Michael-Carl) at the University of Groningen, with talks about translation processes and interpretability for machine translation.
+- date: 2021-09-01
+  label: Sep 1, 2021
+  text: "Starting a PhD in interpretable neural machine translation at the worderful [GroNLP](https://www.rug.nl/research/clcg/research/cl/) group under the supervision of [Arianna Bisazza](http://www.cs.rug.nl/~bisazza/), [Malvina Nissim](https://malvinanissim.github.io/) and [Grzegorz Chrupała](https://grzegorz.chrupala.me), as a part of the NWO-funded consortium [InDeep: Interpreting Deep Learning Models for Text and Sound](https://interpretingdl.github.io)."
+- date: 2021-07-31
+  label: Jul 31, 2021
+  text: Last day of work at [Aindo](https://www.aindo.com). In the last months I worked on structured prediction from clinical reports, few-shot cross-lingual transfer for neural QA models, GNN for molecular properties prediction, neural recommender systems and sketch-to-image generation with GANs.
+- date: 2021-07-23
+  label: Jul 23, 2021
+  text: Participated in the [HuggingFace JAX/Flax Community Week](https://discuss.huggingface.co/t/open-to-the-community-community-week-using-jax-flax-for-nlp-cv/7104) building the first [CLIP image-text model for Italian](https://huggingface.co/clip-italian/clip-italian) (demo [here](https://huggingface.co/spaces/clip-italian/clip-italian-demo)) and the first [T5 seq2seq model pre-trained on Italian](https://huggingface.co/gsarti/t5-base-it). I also cleaned the largest available Italian corpus to date, the Italian split of [mc4](https://huggingface.co/datasets/mc4) (full size after cleaning ~103M docs, 41B words, 215Gb), making it available [on the HuggingFace Hub](https://huggingface.co/datasets/gsarti/clean_mc4_it).
+- date: 2021-01-01
+  label: Jan 1, 2021
+  text: Started working full-time as ML research scientist for [Aindo](https://www.aindo.com/).
+- date: 2020-12-11
+  label: Dec 11, 2020
+  text: Graduated cum laude from the Data Science MSc at the University of Trieste and SISSA with my thesis [Interpreting Neural Langauge Models for Linguistic Complexity Assessment](https://gsarti.com/msc-thesis/), under the supervision of Felice dell'Orletta and Davide Crepaldi.
+- date: 2020-10-19
+  label: Oct 19, 2020
+  text: Developed and open-sourced [LambdaBert](https://github.com/gsarti/lambda-bert), a BERT implementation based on [lambda layers](https://openreview.net/forum?id=xTJEN-ggl1b) instead of self-attention. Viral on [Made with ML](https://twitter.com/madewithml/status/1318533780630499332).
+- date: 2020-09-28
+  label: Sep 28, 2020
+  text: Attended the "Deep Learning Theories in Neuroscience" session at the Oxford Virtual Autumn School in Neuroscience.
+- date: 2020-05-08
+  label: May 8, 2020
+  text: Organizing the [AI, Stats & COVID-19](https://www.units.it/news/ai-stats-covid-19) event with AI2S, with more than 100 participants from around the world.
+- date: 2020-03-22
+  label: Mar 22, 2020
+  text: Officially founded [AI2S](https://www.ai2s.it/), the first AI student society in Friuli-Venezia Giulia.
+- date: 2020-03-01
+  label: Mar to Jun, 2020
+  text: Main developer for the [Covid-19 Semantic Browser](https://github.com/gsarti/covid-papers-browser), a joint project by [AILC](https://www.ai-lc.it/en/) and [Area Science Park](https://www.areasciencepark.it/), covered in the news [by](https://www.ai-lc.it/en/covid-19-browser-2/) [many](https://www.units.it/news/covid-19-tre-studenti-di-units-elaborano-un-semantic-browser) [sources](http://futuro24.blog.rainews.it/2020/06/19/futuro24-innovazione-dalla-ricerca-sul-coronavirus/), including the [NLP Newsletter by Sebastian Ruder](http://newsletter.ruder.io/issues/covid-19-edition-236509) and the Anthony Goldbloom talk at the [Stanford HAI conference on COVID-19 and AI](https://hai.stanford.edu/video-archive-covid-19-and-ai-virtual-conference)
+- date: 2020-02-13
+  label: Feb 13, 2020
+  text: Presented the *"Hey Siri, what's computational linguistics"* interactive talk at [SISSA Student Day 2020](https://www.ai-lc.it/en/ailc-sissa-student-day-2020-2/).
+- date: 2020-02-10
+  label: Feb 10-14, 2020
+  text: Attended the course "Eye-tracking Methods for Cognitive Science" by Elizabeth Schotter at SISSA.
+- date: 2019-09-01
+  label: Sep to Dec, 2019
+  text: Internship at the [ItaliaNLP Lab](http://www.italianlp.it/) of the [Institute for Computational Linguistics ILC-CNR](http://www.ilc.cnr.it/) in Pisa. Worked under the supervision of Felice Dell'Orletta on linguistic complexity assessment with neural language models.

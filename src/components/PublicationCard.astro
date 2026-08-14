@@ -1,0 +1,351 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import LinkChips from './LinkChips.astro';
+import CiteDialog from './CiteDialog.astro';
+import { highlightAuthor } from '../lib/utils';
+import {
+  contributionMarker,
+  displayedAuthors,
+  publicationToCitationFormats,
+} from '../lib/publications';
+
+interface Props {
+  pub: CollectionEntry<'publications'>;
+  /** Hide the thumbnail (used on the compact home list). */
+  compact?: boolean;
+  /** Render as a self-contained visual tile (used for selected work). */
+  showcase?: boolean;
+}
+
+const { pub, compact = false, showcase = false } = Astro.props;
+const { data } = pub;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/publications/*.{gif,png,jpg,jpeg,webp}',
+  { eager: true }
+);
+const imageExtensions = ['gif', 'png', 'jpg', 'jpeg', 'webp'];
+const configuredThumb = data.image
+  ? images[`../assets/publications/${data.image}`]?.default
+  : undefined;
+const conventionThumb = imageExtensions
+  .map((extension) => images[`../assets/publications/${pub.id}.${extension}`]?.default)
+  .find((image) => image !== undefined);
+const thumb = configuredThumb ?? conventionThumb;
+
+const labelIncludes = (link: (typeof data.links)[number], term: string) =>
+  link.label.toLowerCase().includes(term);
+const paperLink =
+  data.links.find((link) => link.label.toLowerCase() === 'paper') ??
+  data.links.find((link) => labelIncludes(link, 'arxiv'));
+const publicationLinks = data.links;
+
+const TYPE_LABEL: Record<string, string> = {
+  conference: 'Conference',
+  journal: 'Journal',
+  workshop: 'Workshop',
+  preprint: 'Preprint',
+  thesis: 'Thesis',
+  edited: 'Edited work',
+};
+
+const displayAuthors = displayedAuthors(pub);
+const authorsHtml = displayAuthors
+  .map((author, index) => {
+    const isEtAl = typeof author !== 'string';
+    const separator = index === 0 ? '' : isEtAl ? ' ' : ', ';
+    if (isEtAl) {
+      const includeSelf = author.includeSelf ? ' (incl. Gabriele Sarti)' : '';
+      return `${separator}<span class="et-al">et al.</span>${includeSelf}`;
+    }
+    const marker = contributionMarker(pub, author);
+    return (
+      separator +
+      highlightAuthor(author) +
+      (marker ? '<span class="author-contribution-marker">' + marker + '</span>' : '')
+    );
+  })
+  .join('');
+const citationFormats = publicationToCitationFormats(pub);
+---
+
+<article class:list={['pub', { showcase, 'no-thumb': !thumb }]} id={pub.id} data-pub-type={data.type}>
+  <div class="pub-body">
+    <header class="pub-head">
+      <span class="badge" title={data.venue}>{data.venueShort ?? TYPE_LABEL[data.type]}</span>
+      <span class="year">{data.date.getFullYear()}</span>
+    </header>
+    <h3 class="title">{data.title}</h3>
+    <p class="authors" set:html={authorsHtml} />
+    {data.note && !showcase && <p class="note">{data.note}</p>}
+    {
+      data.abstract && !showcase && (
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>{data.abstract}</p>
+        </details>
+      )
+    }
+    <footer class="pub-links">
+      <LinkChips links={publicationLinks} variant={showcase ? 'buttons' : 'chips'} />
+      <CiteDialog id={pub.id} formats={citationFormats} variant={showcase ? 'button' : 'chip'} />
+    </footer>
+    {showcase && data.abstract && <p class="showcase-abstract">{data.abstract}</p>}
+  </div>
+  {
+    thumb && !compact && (
+      <a class="thumb" href={paperLink?.url ?? publicationLinks[0]?.url} tabindex="-1" aria-hidden="true">
+        <Image
+          src={thumb}
+          alt=""
+          width={800}
+          loading="lazy"
+          style={`--thumb-ratio: ${thumb.width / thumb.height}`}
+        />
+      </a>
+    )
+  }
+</article>
+
+<style>
+  .pub {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.25rem;
+    padding-block: 1.35rem;
+    scroll-margin-top: 5rem;
+  }
+
+  .pub + .pub {
+    border-top: 1px solid var(--border);
+  }
+
+  .pub-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    border-radius: 5px;
+    padding: 0.12rem 0.45rem;
+  }
+
+  .year {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .title {
+    font-size: 1.02rem;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+  }
+
+  .authors {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 0.55rem;
+  }
+
+  .authors :global(strong) {
+    color: var(--text);
+    font-weight: 560;
+  }
+
+  .authors :global(.author-contribution-marker) {
+    color: var(--accent);
+  }
+
+  .note {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    margin-top: -0.35rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .abstract {
+    margin-bottom: 0.65rem;
+    font-size: 0.88rem;
+  }
+
+  .abstract summary {
+    cursor: pointer;
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    font-weight: 520;
+    width: fit-content;
+  }
+
+  .abstract summary:hover {
+    color: var(--accent);
+  }
+
+  .abstract p {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+  }
+
+  .thumb {
+    align-self: center;
+    width: 9.5rem;
+  }
+
+  .thumb img {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+
+  .thumb:hover img {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  /* Homepage research rows follow the reference's image + explanatory text structure. */
+  .pub.showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: center;
+    padding-block: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  .pub.showcase.no-thumb {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .showcase .pub-body {
+    padding: 0;
+  }
+
+  .showcase .title {
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 1.1rem + 0.6vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.18;
+    letter-spacing: -0.035em;
+    margin-bottom: 0.65rem;
+    text-wrap: balance;
+  }
+
+  .showcase .thumb {
+    order: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0 clamp(0.7rem, 1.5vw, 1.1rem);
+    overflow: hidden;
+    border: 0;
+    background: transparent;
+  }
+
+  .showcase .thumb img {
+    width: min(100%, calc(500px * var(--thumb-ratio)));
+    height: auto;
+    aspect-ratio: var(--thumb-ratio);
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border: 0;
+    border-radius: 5%;
+    filter: saturate(0.86) contrast(0.98);
+    transition: filter 180ms ease;
+  }
+
+  .showcase:hover .thumb img {
+    transform: none;
+    box-shadow: none;
+    filter: saturate(1) contrast(1.01);
+  }
+
+  .showcase + .showcase {
+    border-top: 1px solid var(--border);
+  }
+
+  .showcase .pub-links {
+    gap: 0.45rem;
+    margin-block: 0.8rem;
+  }
+
+  .showcase .authors {
+    font-size: var(--font-size-copy);
+    line-height: 1.5;
+  }
+
+  .showcase .showcase-abstract {
+    max-width: 42rem;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  /* Highlight the target publication when deep-linked via #slug */
+  .pub:target {
+    animation: flash 1.8s ease 1;
+  }
+
+  @keyframes flash {
+    0%,
+    60% {
+      background: var(--accent-subtle);
+      box-shadow: 0 0 0 8px var(--accent-subtle);
+    }
+    100% {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .pub.showcase {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.25rem;
+    }
+
+    .showcase .thumb {
+      height: clamp(13rem, 64vw, 19rem);
+    }
+
+    .showcase .thumb img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      aspect-ratio: auto;
+      object-fit: contain;
+      border-radius: 5%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .pub {
+      grid-template-columns: 1fr;
+    }
+
+    .pub:not(.showcase) .thumb {
+      display: none;
+    }
+  }
+</style>

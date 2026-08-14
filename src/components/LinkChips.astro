@@ -1,0 +1,108 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  links: { label: string; url: string; kind: string }[];
+  variant?: 'chips' | 'inline' | 'buttons';
+}
+
+const { links, variant = 'chips' } = Astro.props;
+---
+
+{
+  links.length > 0 && (
+    <ul class:list={['chips', { inline: variant === 'inline', buttons: variant === 'buttons' }]}>
+      {links.map((l) => (
+        <li>
+          <a href={l.url} target={l.url.startsWith('/') ? undefined : '_blank'} rel="noopener">
+            {variant !== 'inline' && <Icon name={l.kind === 'other' ? 'link' : l.kind} size={14} />}
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.15rem 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+  }
+
+  a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+    text-decoration: none;
+  }
+
+  .inline {
+    align-items: center;
+    gap: 0;
+  }
+
+  .inline li {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .inline li:not(:last-child)::after {
+    content: '/';
+    margin-inline: 0.45rem;
+    color: var(--text-faint);
+    font: 400 1rem/1 var(--font-sans);
+  }
+
+  .inline a {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    color: var(--accent);
+    background: transparent;
+    font: 500 0.84rem/1.5 var(--font-mono);
+  }
+
+  .inline a:hover {
+    color: var(--accent-hover);
+    background: transparent;
+    text-decoration: underline;
+  }
+
+  .buttons {
+    gap: 0.45rem;
+  }
+
+  .buttons a {
+    min-height: 2rem;
+    padding: 0.34rem 0.66rem;
+    border: 0;
+    border-radius: 6px;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    font: 600 0.82rem/1.25 var(--font-sans);
+  }
+
+  .buttons a:hover {
+    color: var(--accent-hover);
+    border-color: transparent;
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+    text-decoration: none;
+  }
+</style>

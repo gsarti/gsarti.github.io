@@ -1,0 +1,167 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from '../Icon.astro';
+
+type AttendedEventEntry = CollectionEntry<'events'>;
+
+interface Props {
+  event: AttendedEventEntry;
+  papers: {
+    href: string;
+    title: string;
+  }[];
+}
+
+const { event, papers } = Astro.props;
+const e = event.data;
+const fmtDate = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+---
+
+<li class="row" id={`event-${event.id}`}>
+  <time class="dates" datetime={e.date.toISOString()}>{fmtDate.format(e.date)}</time>
+  <div class="row-main">
+    <h3>
+      <span class="event-name">
+        {e.url ? <a href={e.url} target="_blank" rel="noopener">{e.name}</a> : e.name}
+      </span>
+      <span class="paper-links">
+        {
+          papers.map((paper) => (
+            <a
+              class="paper"
+              href={paper.href}
+              target={paper.href.startsWith('/') ? undefined : '_blank'}
+              rel={paper.href.startsWith('/') ? undefined : 'noopener'}
+              title={paper.title}
+              aria-label={`Open ${paper.title}`}
+            >
+              <Icon name="pdf" size={12} />
+            </a>
+          ))
+        }
+      </span>
+    </h3>
+    {e.description && <p class="muted">{e.description}</p>}
+    {
+      e.location && (
+        <p class="location">
+          <Icon name="location" size={12} /> {e.location}
+        </p>
+      )
+    }
+  </div>
+</li>
+
+<style>
+  .row {
+    position: relative;
+    padding-block: 0 1.65rem;
+    scroll-margin-top: 5rem;
+  }
+
+  .row::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0.3rem;
+    left: -2.03rem;
+    width: 0.72rem;
+    height: 0.72rem;
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 1px var(--signal);
+  }
+
+  .row::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0.86rem;
+    bottom: -0.3rem;
+    left: -1.71rem;
+    width: 1px;
+    background: var(--border-strong);
+  }
+
+  .row:last-child {
+    padding-bottom: 0;
+  }
+
+  .row:last-child::after {
+    display: none;
+  }
+
+  .dates {
+    color: var(--text);
+    font: 600 var(--font-size-copy)/1.25 var(--font-display);
+    font-variant-numeric: normal;
+    letter-spacing: -0.015em;
+  }
+
+  .row-main {
+    margin-top: 0.38rem;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    font-size: var(--font-size-copy);
+    font-weight: 560;
+    line-height: 1.45;
+  }
+
+  .paper-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .muted {
+    margin-top: 0.18rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    width: fit-content;
+    margin-top: 0.28rem;
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .paper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.45rem;
+    height: 1.45rem;
+    border: 1px solid var(--border);
+    color: var(--text-faint);
+  }
+
+  .paper:hover,
+  .paper:focus-visible {
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 560px) {
+    .row::before {
+      left: -1.68rem;
+    }
+
+    .row::after {
+      left: -1.36rem;
+    }
+  }
+</style>

@@ -1,0 +1,1209 @@
+- id: calamita
+  title: "Challenging the Abilities of Large Language Models in Italian: a Community Initiative"
+  authors:
+    - Malvina Nissim
+    - Danilo Croce
+    - Viviana Patti
+    - Pierpaolo Basile
+    - Giuseppe Attanasio
+    - Elio Musacchio
+    - Matteo Rinaldi
+    - Federico Borazio
+    - Maria Francis
+    - Jacopo Gili
+    - Daniel Scalena
+    - Begoña Altuna
+    - Ekhi Azurmendi
+    - Valerio Basile
+    - Luisa Bentivogli
+    - Arianna Bisazza
+    - Marianna Bolognesi
+    - Dominique Brunato
+    - Tommaso Caselli
+    - Silvia Casola
+    - Maria Cassese
+    - Mauro Cettolo
+    - Claudia Collacciani
+    - Leonardo De Cosmo
+    - Maria Pia Di Buono
+    - Andrea Esuli
+    - Julen Etxaniz
+    - Chiara Ferrando
+    - Alessia Fidelangeli
+    - Simona Frenda
+    - Achille Fusco
+    - Marco Gaido
+    - Andrea Galassi
+    - Federico Galli
+    - Luca Giordano
+    - Mattia Goffetti
+    - Itziar Gonzalez-Dios
+    - Lorenzo Gregori
+    - Giulia Grundler
+    - Sandro Iannaccone
+    - Chunyang Jiang
+    - Moreno La Quatra
+    - Francesca Lagioia
+    - Soda Marem Lo
+    - Marco Madeddu
+    - Bernardo Magnini
+    - Raffaele Manna
+    - Fabio Mercorio
+    - Paola Merlo
+    - Arianna Muti
+    - Vivi Nastase
+    - Matteo Negri
+    - Dario Onorati
+    - Elena Palmieri
+    - Sara Papi
+    - Lucia Passaro
+    - Giulia Pensa
+    - Andrea Piergentili
+    - Daniele Potertì
+    - Giovanni Puccetti
+    - Federico Ranaldi
+    - Leonardo Ranaldi
+    - Andrea Amelio Ravelli
+    - Martina Rosola
+    - Elena Sofia Ruzzetti
+    - Giuseppe Samo
+    - Andrea Santilli
+    - Piera Santin
+    - Gabriele Sarti
+    - Giovanni Sartor
+    - Beatrice Savoldi
+    - Antonio Serino
+    - Andrea Seveso
+    - Lucia Siciliani
+    - Paolo Torroni
+    - Rossella Varvara
+    - Andrea Zaninello
+    - Asya Zanollo
+    - Fabio Massimo Zanzotto
+    - Kamyar Zeinalipour
+    - Andrea Zugarini
+  contributions:
+    - authors:
+        - Malvina Nissim
+        - Danilo Croce
+        - Viviana Patti
+        - Pierpaolo Basile
+      label: Equal contribution
+  authorDisplay:
+    cv:
+      head: 4
+      tail: 0
+      includeSelf: true
+  date: 2026-01-01
+  type: journal
+  status: forthcoming
+  venue: Italian Journal of Computational Linguistics (IJCoL)
+  venueShort: IJCoL 2026
+  citation:
+    volume: "12"
+    issue: "1"
+    containerTitle: Italian Journal of Computational Linguistics
+  links:
+    - label: Paper
+      url: https://journals.openedition.org/ijcol/1813
+      kind: pdf
+- id: humanitys-last-exam
+  title: A benchmark of expert-level academic questions to assess AI capabilities
+  authors:
+    - Center for AI Safety
+    - Scale AI
+    - Humanity's Last Exam Contributors
+  authorDisplay:
+    cv:
+      head: 3
+      tail: 0
+      includeSelf: true
+  date: 2026-01-28
+  type: journal
+  venue: Nature
+  venueShort: Nature 2026
+  citation:
+    doi: 10.1038/s41586-025-09962-4
+    volume: "649"
+    issue: "8099"
+    pages: 1139-1146
+    publisher: Springer Science and Business Media LLC
+    corporateAuthors:
+      - Center for AI Safety
+      - Scale AI
+      - Humanity's Last Exam Contributors
+  links:
+    - label: Paper
+      url: https://doi.org/10.1038/s41586-025-09962-4
+      kind: pdf
+- id: qe4pe
+  title: "QE4PE: Word-level Quality Estimation for Human Post-Editing"
+  authors:
+    - Gabriele Sarti
+    - Vilém Zouhar
+    - Grzegorz Chrupała
+    - Ana Guerberof-Arenas
+    - Malvina Nissim
+    - Arianna Bisazza
+  date: 2025-10-29
+  type: journal
+  venue: Transactions of the Association of Computational Linguistics (TACL)
+  venueShort: TACL 2025
+  citation:
+    doi: 10.1162/tacl.a.46
+    volume: "13"
+    pages: 1410-1435
+    publisher: MIT Press
+    containerTitle: Transactions of the Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://doi.org/10.1162/TACL.a.46
+      kind: pdf
+- id: byt5-mt
+  title: Are Character-level Translations Worth the Wait? Comparing ByT5 and mT5 for Machine Translation
+  authors:
+    - Lukas Edman
+    - Gabriele Sarti
+    - Antonio Toral
+    - Gertjan van Noord
+    - Arianna Bisazza
+  date: 2024-04-16
+  type: journal
+  venue: Transactions of the Association for Computational Linguistics (TACL)
+  venueShort: TACL 2024
+  citation:
+    doi: 10.1162/tacl_a_00651
+    volume: "12"
+    pages: 392-410
+    publisher: MIT Press
+    containerTitle: Transactions of the Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://doi.org/10.1162/tacl_a_00651
+      kind: pdf
+- id: italian-lm-probing
+  title: Probing Linguistic Knowledge in Italian Neural Language Models across Language Varieties
+  authors:
+    - Alessio Miaschi
+    - Gabriele Sarti
+    - Dominique Brunato
+    - Felice Dell'Orletta
+    - Giulia Venturi
+  date: 2022-07-01
+  type: journal
+  venue: Italian Journal of Computational Linguistics (IJCoL)
+  venueShort: IJCoL 2022
+  citation:
+    volume: "8"
+    issue: "1"
+    containerTitle: Italian Journal of Computational Linguistics
+  links:
+    - label: Paper
+      url: https://journals.openedition.org/ijcol/965
+      kind: pdf
+- id: etc-nlg
+  title: "ETC-NLG: End-to-end Topic-Conditioned Natural Language Generation"
+  authors:
+    - Ginevra Carbone
+    - Gabriele Sarti
+  date: 2020-12-01
+  type: journal
+  venue: Italian Journal of Computational Linguistics (IJCoL)
+  venueShort: IJCoL 2020
+  citation:
+    volume: "6"
+    issue: "2"
+    containerTitle: Italian Journal of Computational Linguistics
+  links:
+    - label: Paper
+      url: https://journals.openedition.org/ijcol/728
+      kind: pdf
+- id: goal-directedness
+  featuredOrder: 4
+  title: A Behavioural and Representational Evaluation of Goal-Directedness in Language Model Agents
+  authors:
+    - Raghu Arghal
+    - Fade Chen
+    - Niall Dalton
+    - Evgenii Kortukov
+    - Calum McNamara
+    - Angelos Nalmpantis
+    - Moksh Nirvaan
+    - Gabriele Sarti
+    - Mario Giulianelli
+  contributions:
+    - authors:
+        - Raghu Arghal
+        - Fade Chen
+        - Niall Dalton
+        - Evgenii Kortukov
+        - Calum McNamara
+        - Angelos Nalmpantis
+        - Moksh Nirvaan
+      label: Alphabetical order
+  date: 2026-02-09
+  type: conference
+  venue: International Conference on Machine Learning (ICML)
+  venueShort: ICML 2026
+  citation:
+    containerTitle: Proceedings of the 43rd International Conference on Machine Learning
+  abstract: We propose a framework for evaluating goal-directedness that integrates behavioural evaluation with
+    interpretability-based analyses of models' internal representations. As a case study, we examine
+    an LLM agent navigating a 2D grid world toward a goal state. Behaviourally, we evaluate the
+    agent against an optimal policy across varying grid sizes, obstacle densities, and goal
+    structures, finding that performance scales with task difficulty while remaining robust to
+    difficulty-preserving transformations and complex goal structures. We then use probing methods
+    to decode the agent's internal representations of the environment state and its multi-step
+    action plans. We find that the LLM agent non-linearly encodes a coarse spatial map of the
+    environment, preserving approximate task-relevant cues about its position and the goal location;
+    that its actions are broadly consistent with these internal representations; and that reasoning
+    reorganises them, shifting from broader environment structural cues toward information
+    supporting immediate action selection.
+  links:
+    - label: Paper
+      url: https://openreview.net/forum?id=OqYz3v9111
+      kind: pdf
+    - label: Code
+      url: https://github.com/SPAR-Telos/interp
+      kind: code
+    - label: Dataset
+      url: https://huggingface.co/project-telos
+      kind: dataset
+    - label: Demo
+      url: https://huggingface.co/spaces/project-telos/trace-viewer
+      kind: demo
+- id: interpreto
+  title: "Interpreto: An Explainability Library for Transformers"
+  authors:
+    - Antonin Poché
+    - Thomas Mullor
+    - Gabriele Sarti
+    - Frédéric Boisnard
+    - Corentin Friedrich
+    - Charlotte Claye
+    - Francois Hoofd
+    - Raphael Bernas
+    - Nicholas Asher
+    - Celine Hudelot
+    - Fanny Jourdan
+  contributions:
+    - authors:
+        - Antonin Poché
+        - Fanny Jourdan
+      label: Equal contribution
+  authorDisplay:
+    cv:
+      head: 3
+      tail: 1
+  date: 2026-07-01
+  type: conference
+  venue: "Annual Meeting of the Association for Computational Linguistics: System Demonstrations (ACL
+    Demo)"
+  venueShort: ACL 2026
+  citation:
+    containerTitle: "Proceedings of the 64th Annual Meeting of the Association for Computational
+      Linguistics (Volume 3: System Demonstrations)"
+    doi: 10.18653/v1/2026.acl-demo.1
+    pages: 1-13
+    publisher: Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2026.acl-demo.1/
+      kind: pdf
+    - label: ArXiv
+      url: https://arxiv.org/abs/2512.09730
+      kind: pdf
+- id: steering-litmt
+  featuredOrder: 5
+  title: Steering Large Language Models for Machine Translation Personalization
+  authors:
+    - Daniel Scalena
+    - Gabriele Sarti
+    - Arianna Bisazza
+    - Elisabetta Fersini
+    - Malvina Nissim
+  contributions:
+    - authors:
+        - Daniel Scalena
+        - Gabriele Sarti
+      label: Equal contribution
+  date: 2026-03-24
+  type: conference
+  venue: Conference of the European Chapter of the Association for Computational Linguistics (EACL)
+  venueShort: EACL 2026
+  citation:
+    containerTitle: Proceedings of the 19th Conference of the European Chapter of the Association for
+      Computational Linguistics (Volume 1)
+    doi: 10.18653/v1/2026.eacl-long.217
+    pages: 4681-4701
+    publisher: Association for Computational Linguistics
+  abstract: We explore various strategies for personalizing automatically generated translations when few examples are
+    available, with a focus on the challenging domain of literary translation. After showing that classifiers can
+    detect personalized translations with high accuracy, we evaluate various
+    prompting strategies and inference-time interventions for steering model generations towards a
+    personalized style, with a particular focus on contrastive steering with sparse autoencoder
+    (SAE) latents to identify salient personalization properties. We demonstrate that contrastive
+    SAE steering yields robust style conditioning and translation quality, resulting in higher
+    inference-time computational efficiency than prompting approaches. We further examine the impact
+    of steering on model activations, finding that layers encoding personalization properties are
+    impacted similarly by prompting and SAE steering, suggesting a similar mechanism at play.
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2026.eacl-long.217/
+      kind: pdf
+    - label: Code
+      url: https://github.com/DanielSc4/steering-for-personalization
+      kind: code
+- id: qe-disagreement
+  title: Unsupervised Word-level Quality Estimation for Machine Translation Through the Lens of
+    Annotators (Dis)agreement
+  authors:
+    - Gabriele Sarti
+    - Vilém Zouhar
+    - Malvina Nissim
+    - Arianna Bisazza
+  date: 2025-11-01
+  type: conference
+  venue: Conference on Empirical Methods for Natural Language Processing (EMNLP)
+  venueShort: EMNLP 2025
+  citation:
+    doi: 10.18653/v1/2025.emnlp-main.924
+    pages: 18320-18337
+    publisher: Association for Computational Linguistics
+    containerTitle: Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
+  distinction: Top 15%
+  links:
+    - label: Paper
+      url: https://doi.org/10.18653/v1/2025.emnlp-main.924
+      kind: pdf
+- id: bridging-logic-learning
+  title: "Bridging Logic and Learning: Decoding Temporal Logic Embeddings via Transformers"
+  authors:
+    - Sara Candussio
+    - Gaia Saveri
+    - Gabriele Sarti
+    - Luca Bortolussi
+  date: 2025-09-27
+  type: conference
+  venue: European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in
+    Databases (ECML-PKDD)
+  venueShort: ECML-PKDD 2025
+  citation:
+    doi: 10.1007/978-3-032-06096-9_1
+    pages: 3-18
+    publisher: Springer Nature Switzerland
+    containerTitle: European Conference on Machine Learning and Principles and Practice of Knowledge
+      Discovery in Databases
+  links:
+    - label: Paper
+      url: https://doi.org/10.1007/978-3-032-06096-9_1
+      kind: pdf
+- id: noiser
+  title: "Noiser: Bounded Input Perturbations for Attributing Large Language Models"
+  authors:
+    - Mohammad Reza Ghasemi Madani
+    - Aryo Pradipta Gema
+    - Yu Zhao
+    - Gabriele Sarti
+    - Pasquale Minervini
+    - Andrea Passerini
+  date: 2025-07-08
+  type: conference
+  venue: Conference on Language Modeling (COLM)
+  venueShort: COLM 2025
+  citation:
+    containerTitle: Conference on Language Modeling
+  links:
+    - label: Paper
+      url: https://openreview.net/forum?id=17yFbHmblo
+      kind: pdf
+    - label: ArXiv
+      url: https://arxiv.org/abs/2504.02911
+      kind: pdf
+- id: mirage
+  featuredOrder: 6
+  title: Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation
+  authors:
+    - Jirui Qi
+    - Gabriele Sarti
+    - Raquel Fernández
+    - Arianna Bisazza
+  contributions:
+    - authors:
+        - Jirui Qi
+        - Gabriele Sarti
+      label: Equal contribution
+  date: 2024-11-01
+  type: conference
+  venue: Conference on Empirical Methods for Natural Language Processing (EMNLP)
+  venueShort: EMNLP 2024
+  citation:
+    containerTitle: Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing
+    doi: 10.18653/v1/2024.emnlp-main.347
+    pages: 6037-6053
+    publisher: Association for Computational Linguistics
+  abstract: We present MIRAGE — Model Internals-based RAG
+    Explanations — a plug-and-play approach using model internals for faithful answer attribution in
+    RAG applications. MIRAGE detects context-sensitive answer tokens and pairs them with retrieved
+    documents contributing to their prediction via saliency methods. We evaluate our proposed
+    approach on a multilingual extractive QA dataset, finding high agreement with human answer
+    attribution. On open-ended QA, MIRAGE achieves citation quality and efficiency comparable to
+    self-citation while also allowing for a finer-grained control of attribution parameters. Our
+    qualitative evaluation highlights the faithfulness of MIRAGE's attributions and underscores the
+    promising application of model internals for RAG answer attribution.
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2024.emnlp-main.347/
+      kind: pdf
+    - label: Code
+      url: https://github.com/Betswish/MIRAGE
+      kind: code
+    - label: Demo
+      url: https://huggingface.co/spaces/gsarti/mirage
+      kind: demo
+- id: pecore
+  featuredOrder: 7
+  title: Quantifying the Plausibility of Context Reliance in Neural Machine Translation
+  authors:
+    - Gabriele Sarti
+    - Grzegorz Chrupała
+    - Malvina Nissim
+    - Arianna Bisazza
+  date: 2024-01-16
+  type: conference
+  venue: International Conference on Learning Representations (ICLR)
+  venueShort: ICLR 2024
+  citation:
+    containerTitle: International Conference on Learning Representations
+    pages: 25526--25554
+  abstract: We introduce Plausibility Evaluation of Context
+    Reliance (PECoRe), an end-to-end interpretability framework designed to quantify context usage in language models'
+    generations. Our approach leverages model internals to (i) contrastively identify context-sensitive target tokens
+    in generated texts and (ii) link them to contextual cues justifying their prediction. We use PECoRe to quantify the
+    plausibility of context-aware machine translation models, comparing model rationales with human annotations across
+    several discourse-level phenomena. Finally, we apply our method to unannotated model translations to identify
+    context-mediated predictions and highlight instances of (im)plausible context usage throughout generation.
+  links:
+    - label: Paper
+      url: https://proceedings.iclr.cc/paper_files/paper/2024/hash/6d3040941a2d57ead4043556a70dd728-Abstract-Conference.html
+      kind: pdf
+    - label: Code
+      url: https://github.com/gsarti/pecore
+      kind: code
+    - label: Demo
+      url: https://huggingface.co/spaces/gsarti/pecore
+      kind: demo
+- id: decoderlens
+  title: "DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers"
+  authors:
+    - Anna Langedijk
+    - Hosein Mohebbi
+    - Gabriele Sarti
+    - Willem Zuidema
+    - Jaap Jumelet
+  date: 2024-06-01
+  type: conference
+  venue: Findings of the Association for Computational Linguistics (NAACL)
+  venueShort: NAACL 2024
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2024.findings-naacl.296/
+      kind: pdf
+  citation:
+    doi: 10.18653/v1/2024.findings-naacl.296
+    pages: 4764-4780
+    publisher: Association for Computational Linguistics
+- id: it5
+  title: "IT5: Text-to-text Pretraining for Italian Language Understanding and Generation"
+  authors:
+    - Gabriele Sarti
+    - Malvina Nissim
+  date: 2024-05-01
+  type: conference
+  venue: Joint International Conference on Computational Linguistics, Language Resources and
+    Evaluation (LREC-COLING)
+  venueShort: LREC-COLING 2024
+  citation:
+    containerTitle: Joint International Conference on Computational Linguistics, Language Resources and Evaluation
+    pages: 9422-9433
+    publisher: ELRA and ICCL
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2024.lrec-main.823/
+      kind: pdf
+- id: inseq
+  featuredOrder: 9
+  title: "Inseq: An Interpretability Toolkit for Sequence Generation Models"
+  authors:
+    - Gabriele Sarti
+    - Nils Feldhus
+    - Ludwig Sickert
+    - Oskar van der Wal
+    - Malvina Nissim
+    - Arianna Bisazza
+  date: 2023-07-01
+  type: conference
+  venue: "Annual Meeting of the Association for Computational Linguistics: System Demonstrations (ACL
+    Demo)"
+  venueShort: ACL 2023
+  citation:
+    containerTitle: "Proceedings of the 61st Annual Meeting of the Association for Computational
+      Linguistics (Volume 3: System Demonstrations)"
+    doi: 10.18653/v1/2023.acl-demo.40
+    pages: 421-435
+    publisher: Association for Computational Linguistics
+  abstract: Inseq is a Python library to democratize access to
+    interpretability analyses of sequence generation models. It enables intuitive and optimized
+    extraction of models' internal information and feature importance scores for popular
+    decoder-only and encoder-decoder Transformers architectures. We showcase its potential by
+    adopting it to highlight gender biases in machine translation models and locate factual
+    knowledge inside GPT-2. Thanks to its extensible interface supporting cutting-edge techniques
+    such as contrastive feature attribution, Inseq can drive future advances in explainable natural
+    language generation, centralizing good practices and enabling fair and reproducible model
+    evaluations.
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2023.acl-demo.40/
+      kind: pdf
+    - label: Code
+      url: https://github.com/inseq-team/inseq
+      kind: code
+    - label: Materials
+      url: https://inseq.readthedocs.io/
+      kind: website
+- id: ramp
+  title: "RAMP: Retrieval and Attribute-Marking Enhanced Prompting for Attribute-Controlled Translation"
+  authors:
+    - Gabriele Sarti
+    - Phu Mon Htut
+    - Xing Niu
+    - Benjamin Hsu
+    - Anna Currey
+    - Georgiana Dinu
+    - Maria Nadejde
+  date: 2023-07-01
+  type: conference
+  venue: Annual Meeting of the Association for Computational Linguistics (ACL)
+  venueShort: ACL 2023
+  citation:
+    containerTitle: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics
+    doi: 10.18653/v1/2023.acl-short.126
+    pages: 1476-1490
+    publisher: Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2023.acl-short.126/
+      kind: pdf
+- id: divemt
+  title: "DivEMT: Neural Machine Translation Post-Editing Effort Across Typologically Diverse Languages"
+  authors:
+    - Gabriele Sarti
+    - Arianna Bisazza
+    - Ana Guerberof-Arenas
+    - Antonio Toral
+  date: 2022-12-01
+  type: conference
+  venue: Conference on Empirical Methods for Natural Language Processing (EMNLP)
+  venueShort: EMNLP 2022
+  citation:
+    containerTitle: Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing
+    doi: 10.18653/v1/2022.emnlp-main.532
+    pages: 7795-7816
+    publisher: Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2022.emnlp-main.532/
+      kind: pdf
+- id: stl-kernel-alignment
+  title: "Distilling Formal Logic into Neural Spaces: A Kernel Alignment Approach for Signal Temporal
+    Logic"
+  authors:
+    - Sara Candussio
+    - Gabriele Sarti
+    - Gaia Saveri
+    - Luca Bortolussi
+  date: 2026-03-05
+  type: workshop
+  status: forthcoming
+  venue: International Conference on Neurosymbolic Learning and Reasoning (NeSy)
+  venueShort: NeSy 2026
+  citation:
+    containerTitle: International Conference on Neurosymbolic Learning and Reasoning
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2603.05198
+      kind: pdf
+- id: tigro-fadeit
+  title: "TiGRO at FadeIT: E Pluribus Unum - A Multi-task Approach to Fallacy Detection and Span
+    Identification"
+  authors:
+    - Stefano Atzeni
+    - Gabriele Sarti
+    - Tommaso Caselli
+    - Malvina Nissim
+  date: 2026-04-16
+  type: workshop
+  venue: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
+    (EVALITA)
+  venueShort: EVALITA 2026
+  citation:
+    containerTitle: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
+  links:
+    - label: Paper
+      url: https://apa.dipsco.unitn.it/evalita2026/17.pdf
+      kind: pdf
+- id: cruciverb-it
+  title: "Cruciverb-IT@ EVALITA 2026: Overview of the Crossword Solving in Italian Task"
+  authors:
+    - Cristiano Ciaccio
+    - Gabriele Sarti
+    - Alessio Miaschi
+    - Felice Dell'Orletta
+    - Malvina Nissim
+  date: 2026-04-16
+  type: workshop
+  venue: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
+    (EVALITA)
+  venueShort: EVALITA 2026
+  citation:
+    containerTitle: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
+  links:
+    - label: Paper
+      url: https://apa.dipsco.unitn.it/evalita2026/62.pdf
+      kind: pdf
+- id: reveal-bangla
+  title: "Reveal-Bangla: A Dataset for Cross-Lingual Multi-Step Reasoning Evaluation"
+  authors:
+    - Khondoker Ittehadul Islam
+    - Gabriele Sarti
+  date: 2025-12-01
+  type: workshop
+  venue: Proceedings of the Second Workshop on Bangla Language Processing (BLP)
+  venueShort: BLP 2025
+  citation:
+    containerTitle: Proceedings of the Second Workshop on Bangla Language Processing
+    doi: 10.18653/v1/2025.banglalp-1.3
+    pages: 31-43
+    publisher: Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2025.banglalp-1.3/
+      kind: pdf
+- id: blackbox-shared-task
+  title: "Findings of the BlackboxNLP 2025 Shared Task: Localizing Circuits and Causal Variables in
+    Language Models"
+  authors:
+    - Dana Arad
+    - Yonatan Belinkov
+    - Hanjie Chen
+    - Najoung Kim
+    - Hosein Mohebbi
+    - Aaron Mueller
+    - Gabriele Sarti
+    - Martin Tutek
+  date: 2025-11-01
+  type: workshop
+  venue: "Proceedings of the 8th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
+  venueShort: BlackboxNLP 2025
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2025.blackboxnlp-1.32/
+      kind: pdf
+  citation:
+    doi: 10.18653/v1/2025.blackboxnlp-1.32
+    pages: 543-552
+    publisher: Association for Computational Linguistics
+- id: crossword-space
+  title: "Crossword Space: Latent Manifold Learning for Italian Crosswords and Beyond"
+  authors:
+    - Cristiano Ciaccio
+    - Gabriele Sarti
+    - Alessio Miaschi
+    - Felice Dell'Orletta
+  date: 2025-09-01
+  type: workshop
+  venue: Proceedings of the 11th Italian Conference on Computational Linguistics (CLiC-it)
+  venueShort: CLiC-it 2025
+  citation:
+    containerTitle: Proceedings of the 11th Italian Conference on Computational Linguistics
+    pages: 245-255
+    publisher: CEUR Workshop Proceedings
+  awardIds:
+    - clicit-2025-best-paper
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2025.clicit-1.26/
+      kind: pdf
+- id: non-verbis
+  title: "Non Verbis, Sed Rebus: Large Language Models Are Weak Solvers of Italian Rebuses"
+  authors:
+    - Gabriele Sarti
+    - Tommaso Caselli
+    - Malvina Nissim
+    - Arianna Bisazza
+  date: 2024-12-01
+  type: workshop
+  venue: Proceedings of the 10th Italian Conference on Computational Linguistics (CLiC-it)
+  venueShort: CLiC-it 2024
+  citation:
+    containerTitle: Proceedings of the 10th Italian Conference on Computational Linguistics
+    pages: 888-897
+    publisher: CEUR Workshop Proceedings
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2024.clicit-1.96/
+      kind: pdf
+- id: eureka-rebus-challenge
+  title: "EurekaRebus - Verbalized Rebus Solving with LLMs: A CALAMITA Challenge"
+  authors:
+    - Gabriele Sarti
+    - Tommaso Caselli
+    - Arianna Bisazza
+    - Malvina Nissim
+  date: 2024-12-01
+  type: workshop
+  venue: Proceedings of the Tenth Italian Conference on Computational Linguistics (CLiC-it 2024)
+  venueShort: CLiC-it 2024
+  citation:
+    containerTitle: Proceedings of the Tenth Italian Conference on Computational Linguistics (CLiC-it 2024)
+    pages: 1202-1208
+    publisher: CEUR Workshop Proceedings
+  abstract: >-
+    Language games can be valuable resources for testing the ability of large language models
+    (LLMs) to conduct challenging multi-step, knowledge-intensive inferences while respecting
+    predefined constraints. Our proposed challenge prompts LLMs to reason step-by-step to solve
+    verbalized variants of rebus games recently introduced with the EurekaRebus dataset. Verbalized
+    rebuses replace visual cues with crossword definitions to create an encrypted first pass, making
+    the problem entirely text-based. We introduce a simplified task variant with word length hints
+    and adopt a comprehensive set of metrics to obtain a granular overview of models' performance in
+    knowledge recall, constraints adherence, and re-segmentation abilities across reasoning steps.
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2024.clicit-1.132/
+      kind: pdf
+- id: activation-composition
+  title: Multi-property Steering of Large Language Models with Dynamic Activation Composition
+  authors:
+    - Daniel Scalena
+    - Gabriele Sarti
+    - Malvina Nissim
+  date: 2024-11-01
+  type: workshop
+  venue: "Proceedings of the 7th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
+  venueShort: BlackboxNLP 2024
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2024.blackboxnlp-1.34/
+      kind: pdf
+  citation:
+    doi: 10.18653/v1/2024.blackboxnlp-1.34
+    pages: 577-603
+    publisher: Association for Computational Linguistics
+- id: inseq-xai
+  title: Democratizing Advanced Attribution Analyses of Generative Language Models with the Inseq Toolkit
+  authors:
+    - Gabriele Sarti
+    - Nils Feldhus
+    - Jirui Qi
+    - Malvina Nissim
+    - Arianna Bisazza
+  date: 2024-10-19
+  type: workshop
+  venue: "Proceedings of the 2nd World Conference on Explainable AI (xAI): System Demonstrations"
+  venueShort: xAI 2024
+  citation:
+    containerTitle: "Proceedings of the 2nd World Conference on Explainable AI: System Demonstrations"
+  links:
+    - label: Paper
+      url: https://ceur-ws.org/Vol-3793/paper_37.pdf
+      kind: pdf
+- id: clip-italian
+  title: Contrastive Language-Image Pre-training for the Italian Language
+  authors:
+    - Federico Bianchi
+    - Giuseppe Attanasio
+    - Raphael Pisoni
+    - Silvia Terragni
+    - Gabriele Sarti
+    - Dario Balestri
+  date: 2023-11-01
+  type: workshop
+  venue: Proceedings of the 9th Italian Conference on Computational Linguistics (CLiC-it)
+  venueShort: CLiC-it 2023
+  citation:
+    containerTitle: Proceedings of the 9th Italian Conference on Computational Linguistics
+    pages: 78-85
+    publisher: CEUR Workshop Proceedings
+  awardIds:
+    - clicit-2023-best-paper
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2023.clicit-1.11/
+      kind: pdf
+    - label: ArXiv
+      url: https://arxiv.org/abs/2108.08688
+      kind: pdf
+- id: that-looks-hard
+  title: "That Looks Hard: Characterizing Linguistic Complexity in Humans and Language Models"
+  authors:
+    - Gabriele Sarti
+    - Dominique Brunato
+    - Felice Dell'Orletta
+  date: 2021-06-01
+  type: workshop
+  venue: Workshop on Cognitive Modeling and Computational Linguistics (CMCL)
+  venueShort: CMCL 2021
+  citation:
+    containerTitle: Workshop on Cognitive Modeling and Computational Linguistics
+    doi: 10.18653/v1/2021.cmcl-1.5
+    pages: 48-60
+    publisher: Association for Computational Linguistics
+  distinction: Best paper award runner-up
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2021.cmcl-1.5/
+      kind: pdf
+- id: teaching-nlp
+  title: "Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students"
+  authors:
+    - Ludovica Pannitto
+    - Lucia Busso
+    - Claudia Roberta Combei
+    - Lucio Messina
+    - Alessio Miaschi
+    - Gabriele Sarti
+    - Malvina Nissim
+  date: 2021-06-01
+  type: workshop
+  venue: Proceedings of the Fifth Workshop on Teaching NLP
+  venueShort: TeachingNLP 2021
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2021.teachingnlp-1.26/
+      kind: pdf
+  citation:
+    doi: 10.18653/v1/2021.teachingnlp-1.26
+    pages: 160-170
+    publisher: Association for Computational Linguistics
+- id: italian-transformers
+  title: Italian Transformers Under the Linguistic Lens
+  authors:
+    - Alessio Miaschi
+    - Gabriele Sarti
+    - Dominique Brunato
+    - Felice Dell'Orletta
+    - Giulia Venturi
+  date: 2020-03-01
+  type: workshop
+  venue: Proceedings of the 7th Italian Conference on Computational Linguistics (CLiC-it)
+  venueShort: CLiC-it 2020
+  citation:
+    containerTitle: Proceedings of the 7th Italian Conference on Computational Linguistics
+    pages: 237-243
+    publisher: CEUR Workshop Proceedings
+  distinction: Best paper award runner-up
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2020.clicit-1.37/
+      kind: pdf
+- id: acceptability-multitask
+  title: Improving Complexity and Acceptability Prediction with Multi-task Learning on Self-Supervised
+    Annotations
+  authors:
+    - Gabriele Sarti
+  date: 2020-12-09
+  type: workshop
+  venue: Proceedings of the Seventh Evaluation Campaign of Natural Language Processing and Speech
+    Tools for Italian (EVALITA)
+  venueShort: EVALITA 2020
+  citation:
+    containerTitle: Proceedings of the Seventh Evaluation Campaign of Natural Language Processing and
+      Speech Tools for Italian
+  distinction: Best system award
+  links:
+    - label: Paper
+      url: https://ceur-ws.org/Vol-2765/paper92.pdf
+      kind: pdf
+    - label: ArXiv
+      url: https://arxiv.org/abs/2011.05197
+      kind: pdf
+- id: demistifying-entropy
+  title: "Demystifying Entropy-based Selection for Chain-of-Thought Compression in Large Reasoning Models"
+  authors:
+    - Sara Candussio
+    - Daniel Scalena
+    - Luca Bortolussi
+    - Elisabetta Fersini
+    - Malvina Nissim
+    - Gabriele Sarti
+  contributions:
+    - authors:
+      - Sara Candussio
+      - Daniel Scalena
+      label: Equal contribution
+  date: 2026-07-20
+  type: preprint
+  venue: CoRR/2607.28707
+  venueShort: Under Review
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2607.28707
+      kind: pdf
+- id: commitment-boundary
+  featuredOrder: 1
+  title: "Beyond the Commitment Boundary: Probing Epiphenomenal Chain-of-Thought in Large Reasoning
+    Models"
+  authors:
+    - Daniel Scalena
+    - Sara Candussio
+    - Luca Bortolussi
+    - Elisabetta Fersini
+    - Malvina Nissim
+    - Gabriele Sarti
+  contributions:
+    - authors:
+        - Daniel Scalena
+        - Sara Candussio
+      label: Equal contribution
+  date: 2026-06-11
+  type: preprint
+  venue: CoRR/2606.13603
+  venueShort: Under Review
+  abstract: We estimate CoT steps causal importance via early exit and use this measure to
+    study how answers form across the reasoning traces of several model families. Across diverse
+    tasks, we find that reasoning typically crosses a commitment boundary—a sharp transition from
+    transient intermediate guesses to a stable, high-confidence answer. This transition often
+    happens in a single step, well before the model's reasoning block ends, and is followed by
+    epiphenomenal CoT steps that leave the final answer probability unaltered. Using attention
+    probes, we show that answer-formation stages can be linearly decoded from intermediate reasoning
+    steps with high accuracy and generalize robustly to unseen reasoning tasks. We exploit this
+    signal to early-exit reasoning blocks at the commitment boundary, reducing the length of CoTs up
+    to 55% on average with negligible impact on model performance.
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2606.13603
+      kind: pdf
+    - label: Code
+      url: https://github.com/DanielSc4/Commitment-Boundary
+      kind: code
+- id: future-probes
+  featuredOrder: 2
+  title: Predicting Future Behaviors in Reasoning Models Enables Better Steering
+  authors:
+    - Evgenii Kortukov
+    - Piotr Komorowski
+    - Florian Klein
+    - Paula Engl
+    - Gabriele Sarti
+    - Seong Joon Oh
+    - Sebastian Lapuschkin
+    - Wojciech Samek
+  date: 2026-06-09
+  type: preprint
+  venue: CoRR/2606.11172
+  venueShort: Under Review
+  abstract: Prior steering work implicitly relies on internal features that detect
+    behavior in already generated text, and these are poor predictors of future behavioral outcomes. Instead, we train
+    activation probes to predict future behavior likelihoods from intermediate reasoning steps.
+    These probes predict the most likely behavior with 64%–91% accuracy, revealing a separate type
+    of internal prediction features. Building on these prediction features, we introduce a
+    text-level steering method, Future Probe Controlled Generation. FPCG samples multiple candidate
+    sentences and chooses the best one according to a probe predicting the future behavior
+    likelihood. This enables steering with almost no output quality degradation. FPCG also enables
+    steering in several evaluations where activation steering fails.
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2606.11172
+      kind: pdf
+    - label: Code
+      url: https://github.com/kortukov/future_probes
+      kind: code
+    - label: Demo
+      url: https://behavior-distributions-demo.github.io/
+      kind: demo
+    - label: Materials
+      url: https://huggingface.co/future-probes
+      kind: website
+- id: topics-sociodemographics
+  title: "Topics as Proxies for Sociodemographics: How Conversational Context Affects LLM Answers"
+  authors:
+    - Vera Neplenbroek
+    - Gabriele Sarti
+    - Arianna Bisazza
+    - Raquel Fernández
+  date: 2026-06-01
+  type: preprint
+  venue: CoRR/2606.02776
+  venueShort: Preprint 2026
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2606.02776
+      kind: pdf
+- id: agents-of-chaos
+  featuredOrder: 3
+  title: Agents of Chaos
+  authors:
+    - Natalie Shapira
+    - Chris Wendler
+    - Avery Yen
+    - Gabriele Sarti
+    - Koyena Pal
+    - Olivia Floody
+    - Adam Belfki
+    - Alex Loftus
+    - Aditya Ratan Jannali
+    - Nikhil Prakash
+    - Jasmine Cui
+    - Giordano Rogers
+    - Jannik Brinkmann
+    - Can Rager
+    - Amir Zur
+    - Michael Ripa
+    - Aruna Sankaranarayanan
+    - David Atkinson
+    - Rohit Gandikota
+    - Jaden Fiotto-Kaufman
+    - EunJeong Hwang
+    - Hadas Orgad
+    - P Sam Sahil
+    - Negev Taglicht
+    - Tomer Shabtay
+    - Atai Ambus
+    - Nitay Alon
+    - Shiri Oron
+    - Ayelet Gordon-Tapiero
+    - Yotam Kaplan
+    - Vered Shwartz
+    - Tamar Rott Shaham
+    - Christoph Riedl
+    - Reuth Mirsky
+    - Maarten Sap
+    - David Manheim
+    - Tomer Ullman
+    - David Bau
+  authorDisplay:
+    web:
+      head: 4
+      tail: 8
+    cv:
+      head: 4
+      tail: 1
+  date: 2026-02-23
+  type: preprint
+  venue: CoRR/2602.20021
+  venueShort: Tech Report
+  abstract: Agents of Chaos is an exploratory red-teaming study of autonomous language-model-powered agents
+    deployed in a live lab environment with persistent memory, email accounts, messaging applications
+    access, file systems, and shell execution. Over a two-week period, twenty AI researchers
+    interacted with the agents under benign and adversarial conditions. Focusing on failures
+    emerging from the integration of language models with autonomy, tool use, and multi-party
+    communication, we document eleven representative case studies. Observed behaviors include
+    unauthorized compliance with non-owners, disclosure of sensitive information, execution of
+    destructive system-level actions, denial-of-service conditions, uncontrolled resource
+    consumption, identity spoofing vulnerabilities, cross-agent propagation of unsafe practices, and
+    partial system takeover. Our findings establish the existence of security-, privacy-, and
+    governance-relevant vulnerabilities in realistic deployment settings.
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2602.20021
+      kind: pdf
+    - label: Report
+      url: https://agentsofchaos.baulab.info/
+      kind: demo
+    - label: Logs
+      url: https://agentsofchaos.baulab.info/logs.html
+      kind: website
+- id: transformer-primer
+  featuredOrder: 8
+  title: A Primer on the Inner Workings of Transformer-based Language Models
+  authors:
+    - Javier Ferrando
+    - Gabriele Sarti
+    - Arianna Bisazza
+    - Marta R. Costa-jussà
+  date: 2024-04-30
+  type: preprint
+  venue: CoRR/2405.00208
+  venueShort: Survey
+  abstract: The rapid progress of research aimed at interpreting the inner workings of advanced
+    language models has highlighted a need for contextualizing the insights gained from years of
+    work in this area. This primer provides a concise technical introduction to the current
+    techniques used to interpret the inner workings of Transformer-based language models, focusing
+    on the generative decoder-only architecture. We conclude by presenting a comprehensive overview
+    of the known internal mechanisms implemented by these models, uncovering connections across
+    popular approaches and active research directions in this area.
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2405.00208
+      kind: pdf
+- id: phd-thesis
+  title: "From Insights to Impact: Actionable Interpretability for Neural Machine Translation"
+  authors:
+    - Gabriele Sarti
+  date: 2025-12-11
+  type: thesis
+  venue: Ph.D. Thesis, University of Groningen
+  venueShort: Ph.D. Thesis
+  citation:
+    school: University of Groningen
+    thesisType: phd
+  abstract: "This dissertation aims to bridge the gap between method-centric interpretability research
+    and outcome-centric real-world machine translation applications. We develop novel methods to
+    understand and control language model generation, then study how to integrate these advances
+    effectively into human translation workflows. Our research spans three interconnected
+    macro-themes: understanding how language models exploit contextual information during
+    generation, controlling model generation for personalized translation outputs, and integrating
+    interpretability insights into human translation workflows."
+  distinction: Cum Laude
+  awardIds:
+    - eamt-best-thesis
+  links:
+    - label: Paper
+      url: https://gsarti.com/phd-thesis/
+      kind: website
+    - label: PDF
+      url: /files/gabriele_sarti_from_insights_to_impact.pdf
+      kind: pdf
+    - label: RUG Page
+      url: https://hdl.handle.net/11370/97754e4b-f978-477e-a394-83f67cca257c
+      kind: website
+    - label: Quarto Template
+      url: https://github.com/gsarti/phd-thesis
+      kind: code
+- id: msc-thesis
+  title: Interpreting Neural Language Models for Linguistic Complexity Assessment
+  authors:
+    - Gabriele Sarti
+  date: 2020-12-01
+  type: thesis
+  venue: MSc. Thesis in Data Science, University of Trieste
+  venueShort: MSc. Thesis
+  citation:
+    school: University of Trieste
+    thesisType: masters
+  awardIds:
+    - ailc-best-msc-thesis
+  links:
+    - label: Paper
+      url: https://gsarti.com/msc-thesis/introduction.html
+      kind: website
+- id: blackboxnlp-2025-proceedings
+  title: "Proceedings of the 8th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
+  authors:
+    - Yonatan Belinkov
+    - Aaron Mueller
+    - Najoung Kim
+    - Hosein Mohebbi
+    - Hanjie Chen
+    - Dana Arad
+    - Gabriele Sarti
+  date: 2025-11-01
+  type: edited
+  venueShort: BlackboxNLP 2025
+  citation:
+    publisher: Association for Computational Linguistics
+    containerTitle: Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://aclanthology.org/volumes/2025.blackboxnlp-1/
+      kind: pdf

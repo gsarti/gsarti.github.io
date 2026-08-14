@@ -1,0 +1,155 @@
+<style is:global>
+  .prose section[data-footnotes] {
+    margin-top: 2.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .prose section[data-footnotes] > ol {
+    padding-left: 1.35rem;
+  }
+
+  .prose section[data-footnotes] > h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .prose section[data-footnotes] li + li {
+    margin-top: 0.65rem;
+  }
+
+  @media (min-width: 80rem) {
+    .prose[data-margin-footnotes] {
+      position: relative;
+    }
+
+    .prose[data-margin-footnotes] section[data-footnotes] {
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: calc(100% + 2rem);
+      width: min(14rem, calc((100vw - var(--content-width)) / 2 - 3rem));
+      margin: 0;
+      padding: 0;
+      border: 0;
+      z-index: 25;
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
+    .prose[data-margin-footnotes] section[data-footnotes] > ol {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      counter-reset: margin-footnote;
+    }
+
+    .prose[data-margin-footnotes] section[data-footnotes] li {
+      position: absolute;
+      inset-inline: 0;
+      top: var(--margin-footnote-top, 0);
+      margin: 0;
+      padding: 0.05rem 0 0.05rem 0.8rem;
+      border-left: 1px solid var(--border-strong);
+      background: var(--bg);
+      box-shadow: 0 0 0 0.4rem var(--bg);
+      list-style: none;
+      counter-increment: margin-footnote;
+    }
+
+    .prose[data-margin-footnotes] section[data-footnotes] li::before {
+      content: counter(margin-footnote);
+      position: absolute;
+      inset-inline-end: calc(100% + 0.45rem);
+      top: 0.02rem;
+      color: var(--accent);
+      background: var(--bg);
+      box-shadow: 0 0 0 0.12rem var(--bg);
+      font: 600 0.82rem/1.4 var(--font-display);
+    }
+
+    .prose[data-margin-footnotes] section[data-footnotes] li > p {
+      margin: 0;
+    }
+
+    .prose[data-margin-footnotes] section[data-footnotes] [data-footnote-backref] {
+      font-size: 0.75em;
+      opacity: 0.65;
+    }
+  }
+</style>
+
+<script>
+  const wideFootnoteLayout = window.matchMedia('(min-width: 80rem)');
+  let footnoteLayoutFrame = 0;
+
+  const resetMarginFootnotes = (prose: HTMLElement) => {
+    delete prose.dataset.marginFootnotes;
+    prose.style.removeProperty('min-height');
+    prose.querySelectorAll<HTMLElement>('section[data-footnotes] li').forEach((note) => {
+      note.style.removeProperty('--margin-footnote-top');
+    });
+  };
+
+  const layoutMarginFootnotes = (prose: HTMLElement) => {
+    const footnoteSection = prose.querySelector<HTMLElement>('section[data-footnotes]');
+    if (!footnoteSection || !wideFootnoteLayout.matches) {
+      resetMarginFootnotes(prose);
+      return;
+    }
+
+    const notes = Array.from(footnoteSection.querySelectorAll<HTMLElement>('li[id]'));
+    const references = Array.from(prose.querySelectorAll<HTMLAnchorElement>('[data-footnote-ref]'));
+    if (!notes.length || !references.length) return;
+
+    resetMarginFootnotes(prose);
+
+    const proseRect = prose.getBoundingClientRect();
+    const contentElements = Array.from(prose.children).filter((element) => element !== footnoteSection);
+    const lastContentElement = contentElements.at(-1);
+    const contentBottom = lastContentElement
+      ? lastContentElement.getBoundingClientRect().bottom - proseRect.top
+      : prose.scrollHeight;
+
+    prose.dataset.marginFootnotes = '';
+
+    let previousBottom = 0;
+    notes.forEach((note, index) => {
+      const reference = references.find((candidate) => {
+        const targetId = decodeURIComponent(candidate.hash).replace(/^#/, '');
+        return targetId === note.id;
+      }) ?? references[index];
+
+      if (!reference) return;
+
+      const referenceTop = reference.getBoundingClientRect().top - proseRect.top;
+      const noteTop = Math.max(referenceTop, previousBottom ? previousBottom + 12 : 0);
+      note.style.setProperty('--margin-footnote-top', `${noteTop}px`);
+      previousBottom = noteTop + note.getBoundingClientRect().height;
+    });
+
+    prose.style.minHeight = `${Math.max(contentBottom, previousBottom)}px`;
+  };
+
+  const scheduleMarginFootnotes = () => {
+    cancelAnimationFrame(footnoteLayoutFrame);
+    footnoteLayoutFrame = requestAnimationFrame(() => {
+      document.querySelectorAll<HTMLElement>('.prose').forEach(layoutMarginFootnotes);
+    });
+  };
+
+  scheduleMarginFootnotes();
+  window.addEventListener('load', scheduleMarginFootnotes, { once: true });
+  window.addEventListener('resize', scheduleMarginFootnotes, { passive: true });
+  wideFootnoteLayout.addEventListener('change', scheduleMarginFootnotes);
+  document.fonts?.ready.then(scheduleMarginFootnotes);
+</script>

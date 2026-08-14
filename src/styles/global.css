@@ -1,0 +1,375 @@
+/* ------------------------------------------------------------------ */
+/* Design tokens — gsarti.com / research field-notes system            */
+/* ------------------------------------------------------------------ */
+
+:root {
+  /* palette — warm paper, technical ink, bright signal colours */
+  --bg: #f2f1eb;
+  --bg-raised: #e9e8e0;
+  --bg-solid: #f7f6f1;
+  --text: #171a18;
+  --text-muted: #555c57;
+  --text-faint: #858b86;
+  --border: #d8d8cf;
+  --border-strong: #bfc1b7;
+  --accent: #4356d7;
+  --accent-hover: #2739b7;
+  --accent-ink: #ffffff;
+  --accent-subtle: rgba(67, 86, 215, 0.09);
+  --signal: #f0643c;
+  --signal-subtle: rgba(240, 100, 60, 0.1);
+  --shadow: 6px 6px 0 rgba(23, 26, 24, 0.1);
+
+  /* type */
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  --font-mono: 'SFMono-Regular', 'Cascadia Code', 'Liberation Mono', Menlo, monospace;
+  --font-size-copy: clamp(0.96rem, 0.92rem + 0.18vw, 1.02rem);
+  --leading-copy: 1.7;
+  --leading-prose: 1.65;
+  --tracking-tight: -0.035em;
+  --tracking-wide: 0.12em;
+
+  /* layout */
+  --content-width: 50rem;
+  --wide-width: 74rem;
+  --pad-inline: clamp(1rem, 3vw, 2rem);
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #111411;
+  --bg-raised: #1c211d;
+  --bg-solid: #171b18;
+  --text: #eff1e9;
+  --text-muted: #a9b0aa;
+  --text-faint: color-mix(in srgb, var(--text-muted) 70%, transparent);
+  --border: #303630;
+  --border-strong: #485048;
+  --accent: #9aa9ff;
+  --accent-hover: #bdc6ff;
+  --accent-ink: #111411;
+  --accent-subtle: rgba(154, 169, 255, 0.12);
+  --signal: #ff7a55;
+  --signal-subtle: rgba(255, 122, 85, 0.12);
+  --shadow: 6px 6px 0 rgba(0, 0, 0, 0.35);
+
+  color-scheme: dark;
+}
+
+/* ------------------------------------------------------------------ */
+/* Reset & base                                                        */
+/* ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  position: relative;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: var(--leading-prose);
+  font-feature-settings: 'cv05' 1; /* Inter: open lowercase l */
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+/* A very faint drafting grid keeps the paper-like texture without competing
+   with the content. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--border) 48%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--border) 35%, transparent) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+  opacity: 0.18;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* The hidden attribute must win over any component display rule
+   (e.g. cards with display:grid toggled by the publication filters). */
+[hidden] {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* Typography                                                          */
+/* ------------------------------------------------------------------ */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 640;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.95rem + 1.25vw, 3.2rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 1.08rem;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+code,
+pre {
+  font-family: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  padding: 0.08em 0.3em;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.28rem;
+  background: color-mix(in srgb, var(--bg-raised) 58%, transparent);
+  color: inherit;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+::selection {
+  color: var(--text);
+  background: color-mix(in srgb, var(--signal) 34%, transparent);
+}
+
+/* NDIF brand gradient text (used in the bio via profile.yaml inline HTML) */
+.ndif-gradient {
+  font-weight: 650;
+  color: #838cc1; /* fallback + decoration color */
+  background-image: linear-gradient(90deg, #b875b1 0, #838cc1 50%, #4ea3d1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a.ndif-gradient:hover {
+  text-decoration-color: #838cc1;
+}
+
+/* Northeastern red for the BauLab mention in the bio */
+.neu-red {
+  font-weight: 650;
+  color: #d61629;
+}
+
+a.neu-red:hover {
+  color: #b01222;
+}
+
+:root[data-theme='dark'] .neu-red {
+  color: #f04a5a; /* brightened for contrast on dark background */
+}
+
+:root[data-theme='dark'] a.neu-red:hover {
+  color: #ff6b79;
+}
+
+/* Small-caps tracked label above sections */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 560;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* ------------------------------------------------------------------ */
+/* Layout primitives                                                   */
+/* ------------------------------------------------------------------ */
+
+.container {
+  width: 100%;
+  max-width: calc(var(--content-width) + 2 * var(--pad-inline));
+  margin-inline: auto;
+  padding-inline: var(--pad-inline);
+}
+
+.container--wide {
+  max-width: calc(var(--wide-width) + 2 * var(--pad-inline));
+}
+
+body > main.container--wide {
+  background: color-mix(in srgb, var(--bg) 91%, transparent);
+}
+
+body.has-prose-layout > main.container--wide {
+  background: transparent;
+}
+
+/* Full-bleed hairline rules (thomasfel-style): the line runs the whole
+   viewport width regardless of the content column. */
+.rule-below {
+  position: relative;
+}
+
+.rule-below::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Shared editorial page heading. */
+.page-head {
+  position: relative;
+  padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(2rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.page-head .eyebrow {
+  margin-bottom: 0.9rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Prose (MDX/blog content)                                            */
+/* ------------------------------------------------------------------ */
+
+.prose > * + * {
+  margin-top: 1.1em;
+}
+
+.prose h2 {
+  margin-top: 1.5em;
+}
+
+.prose h3 {
+  margin-top: 1.5em;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+}
+
+.prose li + li {
+  margin-top: 0.35em;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--border-strong);
+  padding-left: 1em;
+  color: var(--text-muted);
+}
+
+.prose img {
+  margin-inline: auto;
+  border-radius: 6px;
+}
+
+.prose pre {
+  padding: 1em 1.25em;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  line-height: 1.55;
+}
+
+.prose figcaption,
+.prose em > small {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-block: 2.5em;
+}
+
+.prose table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.4em 0.75em;
+  text-align: left;
+}

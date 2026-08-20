@@ -487,6 +487,9 @@ const yearRange = (start: Date, end: Date, ongoing = false) => {
       margin-top: 2.35rem;
     }
 
+    .pub-list > :global(.pub:nth-child(n + 5)) {
+      display: none;
+    }
   }
 
   @media (max-width: 560px) {
@@ -499,6 +502,7 @@ const yearRange = (start: Date, end: Date, ongoing = false) => {
     .identity-copy {
       width: 100%;
       min-width: 0;
+      text-align: center;
     }
 
     .identity-copy h1 {
@@ -507,8 +511,20 @@ const yearRange = (start: Date, end: Date, ongoing = false) => {
       line-height: 0.9;
     }
 
+    .affiliation {
+      margin-inline: auto;
+    }
+
+    .affiliation :global(a) {
+      align-items: center;
+    }
+
     .social-row {
       margin-top: -0.15rem;
+    }
+
+    .social-row :global(.social) {
+      justify-content: center;
     }
 
     .portrait-frame {

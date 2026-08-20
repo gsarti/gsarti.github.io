@@ -273,6 +273,9 @@ const onlineTemplateIndex = plottedGroups.length;
             <span data-map-tooltip-summary>
               {countSummary(group.talkCount, group.eventCount, group.positionCount, true)}
             </span>
+            <button class="map-tooltip-close" type="button" data-map-tooltip-close aria-label="Close location details">
+              <Icon name="close" size={16} />
+            </button>
           </div>
           <ul class="map-tooltip-list">
             {group.items.map((item) => (
@@ -905,6 +908,10 @@ const onlineTemplateIndex = plottedGroups.length;
     line-height: 1.4;
   }
 
+  .map-tooltip-close {
+    display: none;
+  }
+
   .map-tooltip-list {
     display: grid;
     gap: 0.5rem;
@@ -1008,18 +1015,32 @@ const onlineTemplateIndex = plottedGroups.length;
     .map-toolbar {
       align-items: flex-start;
       flex-wrap: wrap;
-      gap: 0.45rem 1rem;
+      gap: 0.35rem;
+    }
+
+    .map-zoom-controls {
+      width: auto;
+    }
+
+    .map-zoom-controls button {
+      width: 2.75rem;
+      height: 2.75rem;
     }
 
     .map-legend {
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 0.45rem 1rem;
+      width: 100%;
+      justify-content: space-between;
+      gap: 0.35rem;
+    }
+
+    .map-filter {
+      min-height: 2.75rem;
+      padding-inline: 0.25rem;
     }
 
     .map-point {
-      width: 1.35rem;
-      height: 1.35rem;
+      width: 2.75rem;
+      height: 2.75rem;
     }
 
     .map-point-dot {
@@ -1028,8 +1049,74 @@ const onlineTemplateIndex = plottedGroups.length;
     }
 
     .map-online-point {
-      width: 2.65rem;
-      height: 2.65rem;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .map-tooltip {
+      position: fixed;
+      top: auto !important;
+      right: 0.75rem;
+      bottom: max(0.75rem, env(safe-area-inset-bottom));
+      left: 0.75rem !important;
+      z-index: 70;
+      width: auto;
+      max-width: none;
+      max-height: min(58dvh, 30rem);
+      padding: 1rem 1rem max(1rem, env(safe-area-inset-bottom));
+      border-radius: 0.85rem 0.85rem 0 0;
+      box-shadow: 0 -0.35rem 1.5rem color-mix(in srgb, var(--text) 18%, transparent);
+      transform: none !important;
+    }
+
+    .map-tooltip-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 0.2rem 0.75rem;
+    }
+
+    .map-tooltip-head strong {
+      font-size: 1rem;
+    }
+
+    .map-tooltip-head span {
+      grid-column: 1;
+      font-size: 0.75rem;
+    }
+
+    .map-tooltip-close {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: -0.65rem -0.65rem 0 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .map-tooltip-list {
+      gap: 0.75rem;
+    }
+
+    .map-tooltip-item b {
+      font-size: 0.86rem;
+    }
+
+    .map-tooltip-item small {
+      font-size: 0.74rem;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .map-year-tick:nth-child(even) b {
+      display: none;
     }
   }
 </style>
@@ -1073,6 +1160,7 @@ const onlineTemplateIndex = plottedGroups.length;
         positionCount > 0 ? `${positionCount} ${positionCount === 1 ? (titleCase ? 'Position' : 'position') : (titleCase ? 'Positions' : 'positions')}` : '',
       ].filter(Boolean).join(titleCase ? ' · ' : ', ');
       let pinnedPoint: HTMLButtonElement | null = null;
+      let suppressNextPointFocus = false;
       const activeKinds: Record<MapKind, boolean> = { talk: true, event: true, position: true };
       const timelineMin = Number(timeline.dataset.mapTimelineMin);
       const timelineMax = Number(timeline.dataset.mapTimelineMax);
@@ -1170,6 +1258,15 @@ const onlineTemplateIndex = plottedGroups.length;
         const summary = visibleSummary(talkCount, eventCount, positionCount, true);
         const summaryElement = tooltip.querySelector<HTMLElement>('[data-map-tooltip-summary]');
         if (summaryElement) summaryElement.textContent = summary;
+
+        const closeButton = tooltip.querySelector<HTMLButtonElement>('[data-map-tooltip-close]');
+        closeButton?.addEventListener('click', () => {
+          const pointToFocus = pinnedPoint;
+          suppressNextPointFocus = Boolean(pointToFocus);
+          unpinPoint();
+          hideTooltip();
+          pointToFocus?.focus();
+        });
 
         tooltip.hidden = false;
         positionTooltip(point);
@@ -1363,6 +1460,10 @@ const onlineTemplateIndex = plottedGroups.length;
           if (!pinnedPoint || pinnedPoint === point) showTooltip(point);
         });
         point.addEventListener('focus', () => {
+          if (suppressNextPointFocus) {
+            suppressNextPointFocus = false;
+            return;
+          }
           if (!pinnedPoint || pinnedPoint === point) showTooltip(point);
         });
         point.addEventListener('mouseleave', () => {

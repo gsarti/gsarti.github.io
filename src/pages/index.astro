@@ -160,7 +160,9 @@ const yearRange = (start: Date, end: Date, ongoing = false) => {
     layout="stacked"
   >
     <div class="pub-list">
-      {selectedPubs.map((pub) => <PublicationCard {pub} showcase />)}
+      {
+        selectedPubs.map((pub) => <PublicationCard {pub} showcase />)
+      }
     </div>
   </Section>
 
@@ -450,9 +452,13 @@ const yearRange = (start: Date, end: Date, ongoing = false) => {
   }
 
   @media (max-width: 720px) {
+    .hero {
+      padding-block: 1.25rem 1.75rem;
+    }
+
     .hero-main {
       grid-template-columns: 1fr;
-      gap: 1.75rem;
+      gap: 1.4rem;
     }
 
     .identity {
@@ -477,25 +483,91 @@ const yearRange = (start: Date, end: Date, ongoing = false) => {
 
     .profile-grid {
       grid-template-columns: 1fr;
+      gap: 1.75rem;
+      margin-top: 2.35rem;
     }
 
   }
 
   @media (max-width: 560px) {
     .identity {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.9rem;
+      align-items: start;
+    }
+
+    .identity-copy {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .identity-copy h1 {
+      max-width: none;
+      font-size: clamp(2.5rem, 12.5vw, 3rem);
+      line-height: 0.9;
     }
 
     .social-row {
-      margin-top: -0.65rem;
+      margin-top: -0.15rem;
     }
 
     .portrait-frame {
-      width: min(64vw, 13rem);
+      justify-self: center;
+      width: 9.25rem;
+    }
+
+    .portrait-frame::before,
+    .portrait-frame::after {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .portrait-frame::before {
+      top: -0.35rem;
+      left: -0.35rem;
+    }
+
+    .portrait-frame::after {
+      right: -0.35rem;
+      bottom: -0.35rem;
+    }
+
+    .role {
+      margin-top: 0.65rem;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .affiliation {
+      margin-top: 0.35rem;
+      font-size: 0.86rem;
+      line-height: 1.4;
+    }
+
+    .bio {
+      line-height: 1.62;
     }
 
     .focus-list {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .identity-copy h1 {
+      font-size: 2.4rem;
+    }
+
+    .portrait-frame {
+      width: 8.75rem;
+    }
+
+    .role {
+      font-size: 0.92rem;
+    }
+
+    .affiliation {
+      font-size: 0.8rem;
     }
   }
 </style>

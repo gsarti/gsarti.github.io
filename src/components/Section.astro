@@ -133,6 +133,17 @@ const moreIsExternal = moreHref?.startsWith('http') ?? false;
 
     .stacked .section-head {
       max-width: none;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 1rem;
+      row-gap: 0.65rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .stacked .section-head {
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 </style>

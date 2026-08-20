@@ -107,78 +107,96 @@ const cover = data.image ? images[`../assets/projects/${data.image}`]?.default :
           {data.links.length > 0 && (
             <div class="visual-details">
               <h5>Explore</h5>
-              <LinkChips links={data.links} variant="buttons" />
+              <LinkChips links={data.links} variant="buttons" mobileLimit={2} />
             </div>
           )}
         </div>
       )
     }
 
-    <aside class="project-details" aria-label={`${data.title} details`}>
-      <h4>Project details</h4>
-      {
-        fundingItems.length > 0 && (
-          <div class="detail-group funding-group">
-            <h5>Funding</h5>
-            <ul class="funding-list">
-              {fundingItems.map((item) =>
-                item.kind === 'grant' ? (
-                  <li>
-                    <span>{item.grant.data.title}</span>
-                    <small>{item.grant.data.organizationShort ?? item.grant.data.organization}, {item.grant.data.year}</small>
-                  </li>
-                ) : (
-                  <li>
-                    <span>{item.title}</span>
-                    {item.source && <small>{item.source}</small>}
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-        )
-      }
-      {
-        data.period && (
-          <div class="detail-group period-group">
-            <h5>Period</h5>
-            <p>{data.period}</p>
-          </div>
-        )
-      }
-      {
-        data.collaborators.length > 0 && (
-          <div class="detail-group collaborators-group">
-            <h5>Collaborators</h5>
-            <p>{data.collaborators.join(', ')}</p>
-          </div>
-        )
-      }
-      {
-        !cover && data.links.length > 0 && (
-          <div class="detail-group explore-group">
-            <h5>Explore</h5>
-            <LinkChips links={data.links} variant="buttons" />
-          </div>
-        )
-      }
-      {
-        data.tags.length > 0 && (
-          <div class="detail-group focus-group">
-            <h5>Topics</h5>
-            <p>{data.tags.join(' · ')}</p>
-          </div>
-        )
-      }
-    </aside>
+    <details class="project-details-shell" data-mobile-collapsible open>
+      <summary class="mobile-disclosure-summary">Project details</summary>
+      <aside class="project-details" aria-label={`${data.title} details`}>
+        <h4>Project details</h4>
+        {
+          fundingItems.length > 0 && (
+            <div class="detail-group funding-group">
+              <h5>Funding</h5>
+              <ul class="funding-list">
+                {fundingItems.map((item) =>
+                  item.kind === 'grant' ? (
+                    <li>
+                      <span>{item.grant.data.title}</span>
+                      <small>{item.grant.data.organizationShort ?? item.grant.data.organization}, {item.grant.data.year}</small>
+                    </li>
+                  ) : (
+                    <li>
+                      <span>{item.title}</span>
+                      {item.source && <small>{item.source}</small>}
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+          )
+        }
+        {
+          data.period && (
+            <div class="detail-group period-group">
+              <h5>Period</h5>
+              <p>{data.period}</p>
+            </div>
+          )
+        }
+        {
+          data.collaborators.length > 0 && (
+            <div class="detail-group collaborators-group">
+              <h5>Collaborators</h5>
+              <p>{data.collaborators.join(', ')}</p>
+            </div>
+          )
+        }
+        {
+          !cover && data.links.length > 0 && (
+            <div class="detail-group explore-group">
+              <h5>Explore</h5>
+              <LinkChips links={data.links} variant="buttons" />
+            </div>
+          )
+        }
+        {
+          cover && data.links.length > 2 && (
+            <div class="detail-group mobile-extra-links">
+              <h5>More links</h5>
+              <LinkChips links={data.links.slice(2)} variant="buttons" />
+            </div>
+          )
+        }
+        {
+          data.tags.length > 0 && (
+            <div class="detail-group focus-group">
+              <h5>Topics</h5>
+              <p>{data.tags.join(' · ')}</p>
+            </div>
+          )
+        }
+      </aside>
+    </details>
   </div>
 
-  {data.description && <div class="description" set:html={marked.parse(data.description)} />}
+  {
+    data.description && (
+      <details class="project-description-shell" data-mobile-collapsible open>
+        <summary class="mobile-disclosure-summary">About this project</summary>
+        <div class="description" set:html={marked.parse(data.description)} />
+      </details>
+    )
+  }
 
   {(projectPublications.length > 0 || relatedResourceSections.some(({ entries }) => entries.length > 0)) && (
     <div class="related-sections">
       {projectPublications.length > 0 && (
-        <details class="related-section" open>
+        <details class="related-section" data-mobile-collapsible open>
           <summary>
             <span>Publications</span>
             <span
@@ -369,6 +387,18 @@ const cover = data.image ? images[`../assets/projects/${data.image}`]?.default :
     padding: clamp(1rem, 2vw, 1.35rem);
     border-radius: 0.85rem;
     background: var(--bg-raised);
+  }
+
+  .project-details-shell {
+    min-width: 0;
+  }
+
+  .mobile-disclosure-summary {
+    display: none;
+  }
+
+  .detail-group.mobile-extra-links {
+    display: none;
   }
 
   .visual-details {
@@ -648,10 +678,71 @@ const cover = data.image ? images[`../assets/projects/${data.image}`]?.default :
 
     .project-details {
       display: flex;
+      margin-top: 0.75rem;
     }
 
-    .description {
+    .mobile-disclosure-summary {
+      display: flex;
+      align-items: center;
+      min-height: 2.75rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      font: 680 0.9rem/1.25 var(--font-sans);
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .mobile-disclosure-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mobile-disclosure-summary::after {
+      content: '+';
+      margin-left: auto;
+      color: var(--text-faint);
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    details[open] > .mobile-disclosure-summary::after {
+      content: '−';
+    }
+
+    .project-description-shell {
+      margin-top: 0.8rem;
+    }
+
+    .project-description-shell .description {
+      margin-top: 0.8rem;
       font-size: 0.9rem;
+    }
+
+    .detail-group.mobile-extra-links {
+      display: grid;
+    }
+
+    .related-section summary {
+      min-height: 2.75rem;
+      padding-block: 0.55rem;
     }
   }
 </style>
+
+<script>
+  const setProjectDisclosureMode = (mobile: boolean) => {
+    document.querySelectorAll<HTMLDetailsElement>('[data-mobile-collapsible]').forEach((details) => {
+      if (details.dataset.mobileDisclosureReady === 'true') return;
+      details.open = !mobile;
+      details.dataset.mobileDisclosureReady = 'true';
+    });
+  };
+
+  const mobileProjectQuery = window.matchMedia('(max-width: 580px)');
+  setProjectDisclosureMode(mobileProjectQuery.matches);
+  mobileProjectQuery.addEventListener('change', (event) => {
+    document.querySelectorAll<HTMLDetailsElement>('[data-mobile-collapsible]').forEach((details) => {
+      details.open = !event.matches;
+    });
+  });
+</script>

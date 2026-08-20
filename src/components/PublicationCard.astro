@@ -70,7 +70,11 @@ const authorsHtml = displayAuthors
 const citationFormats = publicationToCitationFormats(pub);
 ---
 
-<article class:list={['pub', { showcase, 'no-thumb': !thumb }]} id={pub.id} data-pub-type={data.type}>
+<article
+  class:list={['pub', { showcase, 'no-thumb': !thumb }]}
+  id={pub.id}
+  data-pub-type={data.type}
+>
   <div class="pub-body">
     <header class="pub-head">
       <span class="badge" title={data.venue}>{data.venueShort ?? TYPE_LABEL[data.type]}</span>
@@ -91,7 +95,17 @@ const citationFormats = publicationToCitationFormats(pub);
       <LinkChips links={publicationLinks} variant={showcase ? 'buttons' : 'chips'} />
       <CiteDialog id={pub.id} formats={citationFormats} variant={showcase ? 'button' : 'chip'} />
     </footer>
-    {showcase && data.abstract && <p class="showcase-abstract">{data.abstract}</p>}
+    {
+      showcase && data.abstract && (
+        <>
+          <p class="showcase-abstract showcase-abstract--full">{data.abstract}</p>
+          <details class="showcase-abstract showcase-abstract--mobile">
+            <summary>Abstract</summary>
+            <p>{data.abstract}</p>
+          </details>
+        </>
+      )
+    }
   </div>
   {
     thumb && !compact && (
@@ -301,6 +315,10 @@ const citationFormats = publicationToCitationFormats(pub);
     line-height: 1.65;
   }
 
+  .showcase-abstract--mobile {
+    display: none;
+  }
+
   /* Highlight the target publication when deep-linked via #slug */
   .pub:target {
     animation: flash 1.8s ease 1;
@@ -337,6 +355,48 @@ const citationFormats = publicationToCitationFormats(pub);
       object-fit: contain;
       border-radius: 5%;
     }
+
+    .showcase-abstract--full {
+      display: none;
+    }
+
+    .showcase-abstract--mobile {
+      display: block;
+      margin-top: 0.85rem;
+    }
+
+    .showcase-abstract--mobile summary {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 2.75rem;
+      color: var(--accent);
+      font: 620 0.82rem/1.25 var(--font-sans);
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .showcase-abstract--mobile summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .showcase-abstract--mobile summary::after {
+      content: '+';
+      margin-left: 0.45rem;
+      color: var(--text-faint);
+      font-size: 1rem;
+    }
+
+    .showcase-abstract--mobile[open] summary::after {
+      content: '−';
+    }
+
+    .showcase-abstract--mobile p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.62;
+    }
+
   }
 
   @media (max-width: 640px) {

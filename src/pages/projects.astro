@@ -41,24 +41,27 @@ const sections = [
 
 <BaseLayout title="Projects" description="Projects by Gabriele Sarti">
   <div class="page">
-    <nav class="project-tabs" aria-label="Project categories" role="tablist">
-      {
-        sections.map((section, index) => (
-          <button
-            class="project-tab"
-            type="button"
-            role="tab"
-            id={`tab-${section.category}`}
-            aria-controls={`projects-${section.category}`}
-            aria-selected={index === 0 ? 'true' : 'false'}
-            tabindex={index === 0 ? 0 : -1}
-            data-project-tab={section.category}
-          >
-            <span>{section.title}</span>
-          </button>
-        ))
-      }
-    </nav>
+    <div class="project-tabs-shell" data-project-tabs-shell data-can-scroll-right="true">
+      <nav class="project-tabs" aria-label="Project categories" role="tablist">
+        {
+          sections.map((section, index) => (
+            <button
+              class="project-tab"
+              type="button"
+              role="tab"
+              id={`tab-${section.category}`}
+              aria-controls={`projects-${section.category}`}
+              aria-selected={index === 0 ? 'true' : 'false'}
+              tabindex={index === 0 ? 0 : -1}
+              data-project-tab={section.category}
+            >
+              <span>{section.title}</span>
+              <small>{section.entries.length}</small>
+            </button>
+          ))
+        }
+      </nav>
+    </div>
     {
       sections.map((section, index) => (
         <section
@@ -130,6 +133,15 @@ const sections = [
 <script>
   const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-project-tab]'));
   const panels = Array.from(document.querySelectorAll<HTMLElement>('[data-project-panel]'));
+  const tabList = document.querySelector<HTMLElement>('.project-tabs');
+  const tabShell = document.querySelector<HTMLElement>('[data-project-tabs-shell]');
+
+  const updateTabOverflow = () => {
+    if (!tabList || !tabShell) return;
+    const maxScroll = Math.max(0, tabList.scrollWidth - tabList.clientWidth);
+    tabShell.dataset.canScrollLeft = String(tabList.scrollLeft > 2);
+    tabShell.dataset.canScrollRight = String(tabList.scrollLeft < maxScroll - 2);
+  };
 
   const activateTab = (category: string, updateHash = false) => {
     tabs.forEach((tab) => {
@@ -145,6 +157,10 @@ const sections = [
     if (updateHash) {
       history.replaceState(null, '', `#projects-${category}`);
     }
+
+    const activeTab = tabs.find((tab) => tab.dataset.projectTab === category);
+    activeTab?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    requestAnimationFrame(updateTabOverflow);
   };
 
   tabs.forEach((tab, index) => {
@@ -167,6 +183,10 @@ const sections = [
     activateTab(hashPanel.dataset.projectPanel);
     if (hashTarget !== hashPanel) requestAnimationFrame(() => hashTarget?.scrollIntoView());
   }
+
+  tabList?.addEventListener('scroll', updateTabOverflow, { passive: true });
+  window.addEventListener('resize', updateTabOverflow, { passive: true });
+  requestAnimationFrame(updateTabOverflow);
 </script>
 
 <style>
@@ -186,13 +206,21 @@ const sections = [
     border: 0;
   }
 
+  .project-tabs-shell {
+    position: relative;
+    display: flex;
+    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
   .project-tabs {
     display: flex;
+    width: 100%;
     align-items: flex-end;
     gap: clamp(1.35rem, 4vw, 3.25rem);
-    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
     border-bottom: 1px solid var(--border);
     overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline proximity;
     scrollbar-width: none;
   }
 
@@ -206,12 +234,19 @@ const sections = [
     flex: 0 0 auto;
     align-items: baseline;
     gap: 0.55rem;
-    padding: 0.15rem 0 0.85rem;
+    min-height: 2.75rem;
+    padding: 0.35rem 0 0.65rem;
     border: 0;
     color: var(--text-muted);
     background: transparent;
     font: 600 clamp(1rem, 0.92rem + 0.3vw, 1.18rem)/1.2 var(--font-sans);
     cursor: pointer;
+    scroll-snap-align: center;
+  }
+
+  .project-tab small {
+    color: var(--text-faint);
+    font: 500 0.68rem/1 var(--font-mono);
   }
 
   .project-tab::after {
@@ -250,8 +285,50 @@ const sections = [
   }
 
   @media (max-width: 540px) {
+    .page {
+      padding-top: 1.15rem;
+    }
+
+    .project-tabs-shell {
+      position: sticky;
+      top: 3.5rem;
+      z-index: 24;
+      margin-inline: calc(-1 * var(--pad-inline));
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      backdrop-filter: blur(14px);
+    }
+
+    .project-tabs-shell::before,
+    .project-tabs-shell::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 1px;
+      z-index: 2;
+      width: 2.25rem;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 140ms ease;
+    }
+
+    .project-tabs-shell::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--bg) 15%, transparent);
+    }
+
+    .project-tabs-shell::after {
+      right: 0;
+      background: linear-gradient(-90deg, var(--bg) 15%, transparent);
+    }
+
+    .project-tabs-shell[data-can-scroll-left='true']::before,
+    .project-tabs-shell[data-can-scroll-right='true']::after {
+      opacity: 1;
+    }
+
     .project-tabs {
       gap: 0.8rem;
+      padding-inline: var(--pad-inline) 2.5rem;
     }
 
     .project-tab {

@@ -373,3 +373,11 @@ body.has-prose-layout > main.container--wide {
   padding: 0.4em 0.75em;
   text-align: left;
 }
+
+@media (max-width: 760px) {
+  .rule-below::after {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+}

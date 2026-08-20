@@ -4,16 +4,17 @@ import Icon from './Icon.astro';
 interface Props {
   links: { label: string; url: string; kind: string }[];
   variant?: 'chips' | 'inline' | 'buttons';
+  mobileLimit?: number;
 }
 
-const { links, variant = 'chips' } = Astro.props;
+const { links, variant = 'chips', mobileLimit } = Astro.props;
 ---
 
 {
   links.length > 0 && (
     <ul class:list={['chips', { inline: variant === 'inline', buttons: variant === 'buttons' }]}>
-      {links.map((l) => (
-        <li>
+      {links.map((l, index) => (
+        <li class:list={{ 'mobile-secondary': mobileLimit !== undefined && index >= mobileLimit }}>
           <a href={l.url} target={l.url.startsWith('/') ? undefined : '_blank'} rel="noopener">
             {variant !== 'inline' && <Icon name={l.kind === 'other' ? 'link' : l.kind} size={14} />}
             {l.label}
@@ -104,5 +105,11 @@ const { links, variant = 'chips' } = Astro.props;
     border-color: transparent;
     background: color-mix(in srgb, var(--accent) 15%, transparent);
     text-decoration: none;
+  }
+
+  @media (max-width: 580px) {
+    .mobile-secondary {
+      display: none;
+    }
   }
 </style>

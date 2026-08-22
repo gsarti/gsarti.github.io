@@ -268,6 +268,16 @@ const onlineTemplateIndex = plottedGroups.length;
     {
       tooltipGroups.map((group, index) => (
         <template id={`map-location-${index}`}>
+          <button
+            class="map-tooltip-sheet-toggle"
+            type="button"
+            data-map-tooltip-toggle
+            aria-expanded="false"
+            hidden
+          >
+            <i aria-hidden="true"></i>
+            <span data-map-tooltip-toggle-label>Show all entries</span>
+          </button>
           <div class="map-tooltip-head">
             <strong>{group.location}</strong>
             <span data-map-tooltip-summary>
@@ -895,6 +905,10 @@ const onlineTemplateIndex = plottedGroups.length;
     gap: 1rem;
   }
 
+  .map-tooltip-sheet-toggle {
+    display: none;
+  }
+
   .map-tooltip-head strong {
     font-size: 0.88rem;
     font-weight: 620;
@@ -1064,9 +1078,58 @@ const onlineTemplateIndex = plottedGroups.length;
       max-width: none;
       max-height: min(58dvh, 30rem);
       padding: 1rem 1rem max(1rem, env(safe-area-inset-bottom));
-      border-radius: 0.85rem 0.85rem 0 0;
+      border-radius: 0.85rem;
       box-shadow: 0 -0.35rem 1.5rem color-mix(in srgb, var(--text) 18%, transparent);
+      overflow: hidden;
       transform: none !important;
+    }
+
+    .map-tooltip.is-compact {
+      max-height: min(46dvh, 22rem);
+      touch-action: none;
+      user-select: none;
+    }
+
+    .map-tooltip.is-expanded {
+      display: flex;
+      height: min(78dvh, 40rem);
+      max-height: min(78dvh, 40rem);
+      flex-direction: column;
+    }
+
+    .map-tooltip-sheet-toggle:not([hidden]) {
+      display: inline-flex;
+      flex: none;
+      align-items: center;
+      align-self: center;
+      min-height: 2.35rem;
+      margin: -0.72rem 0 0.35rem;
+      padding: 0.25rem 0.75rem;
+      border: 0;
+      background: transparent;
+      color: var(--text-muted);
+      font: inherit;
+      font-size: 0.7rem;
+      cursor: pointer;
+      touch-action: none;
+    }
+
+    .map-tooltip-sheet-toggle i {
+      width: 1.8rem;
+      height: 0.2rem;
+      margin-right: 0.45rem;
+      border-radius: 999px;
+      background: var(--border-strong);
+    }
+
+    .map-tooltip-sheet-toggle:hover,
+    .map-tooltip-sheet-toggle:focus-visible {
+      color: var(--accent);
+    }
+
+    .map-tooltip-sheet-toggle:focus-visible {
+      outline: 1px solid var(--accent);
+      outline-offset: -0.15rem;
     }
 
     .map-tooltip-head {
@@ -1102,7 +1165,28 @@ const onlineTemplateIndex = plottedGroups.length;
     }
 
     .map-tooltip-list {
+      min-height: 0;
       gap: 0.75rem;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .map-tooltip.is-compact[data-map-preview-count='1'] .map-tooltip-list li:nth-child(n + 2),
+    .map-tooltip.is-compact[data-map-preview-count='2'] .map-tooltip-list li:nth-child(n + 3) {
+      display: none;
+    }
+
+    .map-tooltip.is-compact .map-tooltip-item b {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    .map-tooltip.is-compact .map-tooltip-item small {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .map-tooltip-item b {
@@ -1179,6 +1263,9 @@ const onlineTemplateIndex = plottedGroups.length;
       let dragY = 0;
       let dragViewX = 0;
       let dragViewY = 0;
+      let mobileSheetExpanded = false;
+      let sheetSwipeStart: { pointerId: number; x: number; y: number } | null = null;
+      const mobileSheetQuery = window.matchMedia('(max-width: 560px)');
 
       const formatTimelineDate = (monthIndex: number) => timelineFormatter.format(
         new Date(Math.floor(monthIndex / 12), monthIndex % 12, 1)
@@ -1233,6 +1320,28 @@ const onlineTemplateIndex = plottedGroups.length;
         });
       };
 
+      const renderMobileSheet = (expanded = mobileSheetExpanded) => {
+        const itemCount = tooltip.querySelectorAll('[data-map-kind]').length;
+        const previewCount = window.innerHeight <= 680 ? 1 : 2;
+        const canExpand = mobileSheetQuery.matches && itemCount > previewCount;
+        const toggle = tooltip.querySelector<HTMLButtonElement>('[data-map-tooltip-toggle]');
+        const label = tooltip.querySelector<HTMLElement>('[data-map-tooltip-toggle-label]');
+
+        mobileSheetExpanded = canExpand && expanded;
+        tooltip.dataset.mapPreviewCount = String(previewCount);
+        tooltip.classList.toggle('is-compact', canExpand && !mobileSheetExpanded);
+        tooltip.classList.toggle('is-expanded', mobileSheetExpanded);
+
+        if (!toggle) return;
+        toggle.hidden = !canExpand;
+        toggle.setAttribute('aria-expanded', String(mobileSheetExpanded));
+        if (label) {
+          label.textContent = mobileSheetExpanded
+            ? `Show latest ${previewCount === 1 ? 'entry' : `${previewCount} entries`}`
+            : `Show all ${itemCount} entries`;
+        }
+      };
+
       const showTooltip = (point: HTMLButtonElement) => {
         const template = getPointTemplate(point);
         if (!template) return;
@@ -1258,6 +1367,9 @@ const onlineTemplateIndex = plottedGroups.length;
         const summary = visibleSummary(talkCount, eventCount, positionCount, true);
         const summaryElement = tooltip.querySelector<HTMLElement>('[data-map-tooltip-summary]');
         if (summaryElement) summaryElement.textContent = summary;
+
+        mobileSheetExpanded = false;
+        renderMobileSheet(false);
 
         const closeButton = tooltip.querySelector<HTMLButtonElement>('[data-map-tooltip-close]');
         closeButton?.addEventListener('click', () => {
@@ -1411,6 +1523,45 @@ const onlineTemplateIndex = plottedGroups.length;
       rangeStart.addEventListener('input', () => updateTimeline('start'));
       rangeEnd.addEventListener('input', () => updateTimeline('end'));
 
+      tooltip.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element) || !target.closest('[data-map-tooltip-toggle]')) return;
+        renderMobileSheet(!mobileSheetExpanded);
+      });
+
+      tooltip.addEventListener('pointerdown', (event) => {
+        if (!mobileSheetQuery.matches) return;
+        sheetSwipeStart = {
+          pointerId: event.pointerId,
+          x: event.clientX,
+          y: event.clientY,
+        };
+        if (!mobileSheetExpanded) tooltip.setPointerCapture(event.pointerId);
+      });
+
+      tooltip.addEventListener('pointerup', (event) => {
+        if (!sheetSwipeStart || event.pointerId !== sheetSwipeStart.pointerId) return;
+        const deltaX = event.clientX - sheetSwipeStart.x;
+        const deltaY = event.clientY - sheetSwipeStart.y;
+        sheetSwipeStart = null;
+        if (tooltip.hasPointerCapture(event.pointerId)) tooltip.releasePointerCapture(event.pointerId);
+        if (Math.abs(deltaY) < 48 || Math.abs(deltaY) <= Math.abs(deltaX) * 1.25) return;
+
+        if (deltaY < 0 && !mobileSheetExpanded) {
+          renderMobileSheet(true);
+          return;
+        }
+
+        const list = tooltip.querySelector<HTMLElement>('.map-tooltip-list');
+        if (deltaY > 0 && mobileSheetExpanded && (!list || list.scrollTop <= 0)) {
+          renderMobileSheet(false);
+        }
+      });
+
+      tooltip.addEventListener('pointercancel', () => {
+        sheetSwipeStart = null;
+      });
+
       viewport.addEventListener('wheel', (event) => {
         if (!event.ctrlKey && !event.metaKey) return;
         event.preventDefault();
@@ -1451,7 +1602,13 @@ const onlineTemplateIndex = plottedGroups.length;
       viewport.addEventListener('pointerup', finishDragging);
       viewport.addEventListener('pointercancel', finishDragging);
 
-      new ResizeObserver(renderMapView).observe(viewport);
+      new ResizeObserver(() => {
+        renderMapView();
+        if (!tooltip.hidden) renderMobileSheet(mobileSheetExpanded);
+      }).observe(viewport);
+      window.addEventListener('resize', () => {
+        if (!tooltip.hidden) renderMobileSheet(mobileSheetExpanded);
+      });
       renderTimeline();
       renderMapView();
 

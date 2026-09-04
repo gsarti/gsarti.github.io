@@ -614,6 +614,31 @@
     - label: Paper
       url: https://aclanthology.org/2022.emnlp-main.532/
       kind: pdf
+- id: demistifying-entropy
+  title: "Demystifying Entropy-based Selection for Chain-of-Thought Compression in Large Reasoning Models"
+  authors:
+    - Sara Candussio
+    - Daniel Scalena
+    - Luca Bortolussi
+    - Elisabetta Fersini
+    - Malvina Nissim
+    - Gabriele Sarti
+  contributions:
+    - authors:
+      - Sara Candussio
+      - Daniel Scalena
+      label: Equal contribution
+  date: 2027-01-01
+  type: workshop
+  status: forthcoming
+  venue: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
+  venueShort: BlackboxNLP 2027
+  citation:
+    containerTitle: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2607.28707
+      kind: pdf
 - id: stl-kernel-alignment
   title: "Distilling Formal Logic into Neural Spaces: A Kernel Alignment Approach for Signal Temporal
     Logic"
@@ -927,27 +952,269 @@
     - label: ArXiv
       url: https://arxiv.org/abs/2011.05197
       kind: pdf
-- id: demistifying-entropy
-  title: "Demystifying Entropy-based Selection for Chain-of-Thought Compression in Large Reasoning Models"
+- id: last-translation-benchmark
+  title: Last Translation Benchmark
   authors:
-    - Sara Candussio
-    - Daniel Scalena
-    - Luca Bortolussi
-    - Elisabetta Fersini
-    - Malvina Nissim
+    - Vilém Zouhar
+    - Niyati Bafna
+    - Mukund Choudhary
+    - Maike Züfle
+    - Sara Rajaee
+    - Pinzhen Chen
+    - Jannis Vamvas
+    - Sara Papi
+    - Ona de Gibert
+    - Bhavitvya Malik
+    - Eliya Habba
+    - Orfeas Menis Mastromichalakis
+    - Patrícia Schmidtová
+    - Michelle Wastl
+    - Sheriff Issaka
+    - Leshem Choshen
+    - Stella Biderman
+    - Antonis Anastasopoulos
+    - Jan Niehues
+    - Rico Sennrich
+    - Mrinmaya Sachan
+    - Ondřej Bojar
+    - Kenton Murray
+    - Jörg Tiedemann
+    - Alham Fikri Aji
+    - Philipp Koehn
+    - Christof Monz
+    - Alexandra Birch
+    - Sowmya Vajjala
+    - Chalamalasetti Kranti
+    - Cristina España-Bonet
+    - Nobin Sarwar
+    - David Kaczér
+    - Shunta Asano
+    - Malik Marmonier
+    - Daban Q. Jaff
+    - Vaisakhi Mishra
+    - Hend Al- Khalifa
     - Gabriele Sarti
-  contributions:
-    - authors:
-      - Sara Candussio
-      - Daniel Scalena
-      label: Equal contribution
-  date: 2026-07-20
+    - Sourajit Saha
+    - Nils Rehlinger
+    - Juan Daniel Cuervo Villa
+    - Jonathan Tonglet
+    - Saugata Purkayastha
+    - Dominik Macháček
+    - Jagannathan Ramanujam
+    - Heejin Do
+    - Zuzana Nadova
+    - Fred Philippy
+    - Fabian Retkowski
+    - Maria Lymperaiou
+    - Silvia Casola
+    - Hanna Yukhymenko
+    - Shubhashis Roy Dipta
+    - Sangwon Ryu
+    - Andrés Jerez
+    - Ron Keinan
+    - Shuaib Shuaib Yusuf
+    - Avantica Vempati
+    - Maria Carmen Staiano
+    - Sukannya Purkayastha
+    - Adrian Cosma
+    - Vitalii Babenko
+    - Erivan Inan
+    - Aviral Nigam
+    - Wafa Aissa
+    - Fatima Haouari
+    - Venkata Prasanth Kumar Gummadi
+    - Mehdi Jafarzadeh
+    - Valentin Scourneau
+    - Lukas Edman
+    - Kaiser Sun
+    - Shaomu Tan
+    - Mohammad Sadegh Gholizadeh
+    - Johannes-Rudolf David
+    - Dipankar Srirag
+    - Javier García Gilabert
+    - Ruta Binkyte
+    - Manar Ali
+    - Ana-Maria Bucur
+    - Sabry E. Farrag
+    - Youssef Saber
+    - Yihong Liu
+    - Jean Maillard
+    - Cojocaru Nicoleta
+    - Xiaochuang Yuan
+    - Sina Ahmadi
+    - Philipp Mondorf
+    - Kaustubh Dhole
+    - Roman Wixinger
+    - Shenbin Qian
+    - Manuel Tuor
+    - Sergey Troshin
+    - Jonathan Yahav
+    - Fida Mohammad Thoker
+    - Amir Arsalan Rezapour
+    - Lance Calvin Lim Gamboa
+    - Manon Reusens
+    - Kätriin Kukk
+    - Koel Dutta Chowdhury
+    - Giuseppe Gallipoli
+    - Christian Hoang
+    - Shaswati Saha
+    - Seth Aycock
+    - Jan Kocoń
+    - Bo Chen
+    - Linh Vu
+    - Vatsal Venkatkrishna
+    - Arafat Ahsan
+    - Luan Thanh Nguyen
+    - Hassan Soliman
+    - Daryna Dementieva
+    - Theresia Veronika Rampisela
+    - Ngoc Quynh Tram Do
+    - Marius Huber
+    - Kazuki Egashira
+    - Azmine Toushik Wasi
+    - Vladislav Poritski
+    - Mike Zhang
+    - Deep Shah
+    - Paul Gavrikov
+    - Luis Frentzen Salim
+    - David Africa
+    - R. Damanhuri
+    - Bello Umar Bello
+    - Anumit Garg
+    - Gengyu Rao
+    - Pawan Sasanka Ammanamanchi
+    - Kamile Dementaviciute
+    - Andrianos Michail
+    - L D M S Sai Teja
+    - Dawei Zhu
+    - Yi Fan
+    - Wei Liu
+    - Farhan Farsi
+    - Elias Herranen
+    - Sankalan Pal Chowdhury
+    - Karen Sanchez
+    - Farzad Shami
+    - Ashok Urlana
+    - Zimu Wang
+    - Tomasz Limisiewicz
+    - Priyaranjan Pattnayak
+    - Marii Ojastu
+    - Hongbin Na
+    - Emilian Radoi
+    - Chenyi Zhao
+    - Carlos Hinojosa
+    - Andrea Gregor de Varda
+    - Zaid Alyafeai
+    - Reem Alzahrani
+    - Nehal Kathrotia
+    - Alex Flückiger
+    - Ulysses Sekai Tully Carr
+    - Jimson Paulo Layacan
+    - Guy Kaplan
+    - Ritwik Tiwari
+    - Rishit Dagli
+    - Oksana Volchek
+    - Isaac R Caswell
+    - Bowen Yi
+    - Blanka Kövér
+    - Amir Hossein Yari
+    - Aicha Chorana
+    - Zhengxiang Wang
+    - Selja Keränen
+    - Samuel Simko
+    - Joy Olusanya
+    - Jenny Chim
+    - Enzo Doyen
+    - Vivek Harsha Lakkamaneni
+    - Sophia Conrad
+    - Pouya Sadeghi
+    - Panayiotis Panayiotou
+    - Luis Lara
+    - Jannatul Nayem
+    - Eran Yahav
+    - Debanshu Das
+    - Antonia Karamolegkou
+    - Anmol Goel
+    - Aishik Mandal
+    - Tommaso Cerruti
+    - Raoyuan Zhao
+    - Mykola Haltiuk
+    - Thura Aung
+    - Naser Almousa
+    - Amir Hossein Kargaran
+    - Rachel Bawden
+    - Qiaoyuan Zheng
+    - Mateusz Lango
+    - Beni Egressy
+    - Fidel Rodríguez Velásquez
+    - Natchapon Jongwiriyanurak
+    - Minh Ngoc Do
+    - Marco Gaido
+    - Lena Libon
+    - Dzmitry Kuzmin
+    - Badal Nyalang
+    - Antoine Taroni
+    - Andrei Niculae
+    - Abdulaziz Nura Kani
+    - Rushikesh Zawar
+    - Marek Šuppa
+    - Beatrice Savoldi
+    - Andreas Simons
+    - Rayyan Merchant
+    - Ilai Yaron Levy
+    - Francesco Pinto
+    - Ziyi Yang
+    - Yolanda Xavier
+    - Samuel Frontull
+    - Muhammad Ravi Shulthan Habibi
+    - Kenneth Enevoldsen
+    - Harris Abdul Majid
+    - Francesca Padovani
+    - Tim Graf
+    - Tatiana Bielakova
+    - Sharifa Djurabaeva
+    - Shaoxiong Ji
+    - Raia Abu Ahmad
+    - Pavel Stepachev
+    - Jirui Qi
+    - Ayush Sunil Munot
+    - Alireza Pakniat
+    - Ayla Rigouts Terryn
+    - Yuxing Lu
+    - Yurii Paniv
+    - Xiyan Fu
+    - Tosin Adewumi
+    - Sunisth Kumar
+    - Stéphane J. P. S. Thunus
+    - Shree Harsha Bokkahalli Satish
+    - Shayan Bali
+    - Prakhar Gupta
+    - Papa Abdou Karim Karou Diallo
+    - Matija Akrap
+    - Marko Culjak
+    - Kristýna Onderková
+    - Joseph Attieh
+    - Esrael Teferi Tensay
+    - Elisabeth Fittschen
+    - Benoît Sagot
+    - Jingwei Ni
+    - Yu Fan
+  authorDisplay:
+    web:
+      head: 6
+      tail: 0
+      includeSelf: true
+    cv:
+      head: 6
+      tail: 0
+      includeSelf: true
+  date: 2026-09-03
   type: preprint
-  venue: CoRR/2607.28707
-  venueShort: Under Review
+  venue: CoRR/2609.04173
+  venueShort: Preprint 2026
   links:
     - label: Paper
-      url: https://arxiv.org/abs/2607.28707
+      url: https://arxiv.org/abs/2609.04173
       kind: pdf
 - id: commitment-boundary
   featuredOrder: 1

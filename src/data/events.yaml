@@ -1,3 +1,15 @@
+- id: efais2026
+  name: European Frontier AI Safety Day (EFAIS) 2026
+  date: 2026-09-05
+  url: https://safeaigermany.org/efais2026
+  location: Berlin, Germany
+  mapPlace: berlin
+- id: aletheias-quest-final
+  name: Aletheia's Quest Final Event
+  date: 2026-08-25
+  url: https://aletheias-quest.github.io/
+  location: Boston, MA, USA
+  mapPlace: boston
 - id: nemi26
   name: NEMI 2026
   date: 2026-08-14

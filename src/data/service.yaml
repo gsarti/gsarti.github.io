@@ -7,6 +7,10 @@
   dateStart: 2026
   dateEnd: 2026
 - role: Area Chair
+  venue: AAAI Conference on Artificial Intelligence (AAAI), Alignment Track
+  dateStart: 2027
+  dateEnd: 2027
+- role: Area Chair
   venue: ICML/NeurIPS Workshop on Mechanistic Interpretability
   dateStart: 2026
   ongoing: true

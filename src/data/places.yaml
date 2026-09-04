@@ -11,6 +11,10 @@
   label: Boston, MA, USA
   coordinates: [-71.0589, 42.3601]
 
+- id: berlin
+  label: Berlin, Germany
+  coordinates: [13.405, 52.52]
+
 - id: padua
   label: Padua, Italy
   coordinates: [11.8768, 45.4064]

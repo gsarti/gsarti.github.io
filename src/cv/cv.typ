@@ -92,23 +92,19 @@
 }
 
 #let visit-entry(entry) = {
-  let organization = get(entry, "organization", default: "")
-  let url = get(entry, "organizationUrl")
-  let dates = date-range(entry)
   let description = get(entry, "description")
   let description-url = get(entry, "descriptionUrl")
   let host = get(entry, "host")
-  let location = get(entry, "location")
 
-  block(below: 8.5pt)[
-    #text(weight: "bold")[#maybe-link(organization, url)], #dates.
-    #if description != none {
-      [ #maybe-link(description, description-url)]
+  timeline-entry(
+    entry,
+    title-override: if host != none { [Hosted by #host] } else { [] },
+    description-override: if description != none {
+      maybe-link(description, description-url)
       if not description.ends-with(".") { [.] }
-    }
-    #if host != none { [ Hosted by #host.] }
-    #if location != none { [ #location.] }
-  ]
+    } else { [] },
+    spacing: 14pt,
+  )
 }
 
 #let year-span(entries) = {
@@ -193,8 +189,17 @@
       #text(size: 11.5pt, weight: "bold")[#role]
     ]
     for entry in entries.filter(entry => get(entry, "role") == role) {
+      let venue = get(entry, "venue", default: "")
+      let label = get(entry, "linkLabel", default: venue)
+      let parts = if label != "" { venue.split(label) } else { () }
       block(below: 6pt)[
-        #get(entry, "venue"), #service-period(entry)
+        #if parts.len() == 2 {
+          parts.first()
+          maybe-link(label, get(entry, "url"))
+          parts.last()
+        } else {
+          venue
+        }, #service-period(entry)
       ]
     }
   }
@@ -206,7 +211,7 @@
     let has-terminal-punctuation = (
       title.ends-with(".") or title.ends-with("?") or title.ends-with("!")
     )
-    block(below: 4pt)[
+    block(below: 5.5pt)[
       #text(weight: "bold")[#get(entry, "outlet")],
       #maybe-link(title, get(entry, "url"))#if not has-terminal-punctuation { [.] }
       #get(entry, "year").
@@ -359,12 +364,12 @@
 #let title = section-label("awards", "Awards")
 #break-before(title)
 #cv-heading(title)
-#compact-list(awards, gap: 4pt)
+#compact-list(awards, gap: 5.5pt)
 
 #let title = section-label("grants", "Scholarships and Grants")
 #break-before(title)
 #cv-heading(title)
-#compact-list(grants, gap: 4pt)
+#compact-list(grants, gap: 5.5pt)
 
 #let title = section-label("publications", "Publications")
 #break-before(title)

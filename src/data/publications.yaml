@@ -97,7 +97,7 @@
   date: 2026-01-01
   type: journal
   status: forthcoming
-  venue: Italian Journal of Computational Linguistics (IJCoL)
+  venue: "Italian J. of Computational Linguistics (IJCoL)"
   venueShort: IJCoL 2026
   citation:
     volume: "12"
@@ -147,7 +147,7 @@
     - Arianna Bisazza
   date: 2025-10-29
   type: journal
-  venue: Transactions of the Association of Computational Linguistics (TACL)
+  venue: "Transactions of the ACL (TACL)"
   venueShort: TACL 2025
   citation:
     doi: 10.1162/tacl.a.46
@@ -169,7 +169,7 @@
     - Arianna Bisazza
   date: 2024-04-16
   type: journal
-  venue: Transactions of the Association for Computational Linguistics (TACL)
+  venue: "Transactions of the ACL (TACL)"
   venueShort: TACL 2024
   citation:
     doi: 10.1162/tacl_a_00651
@@ -191,7 +191,7 @@
     - Giulia Venturi
   date: 2022-07-01
   type: journal
-  venue: Italian Journal of Computational Linguistics (IJCoL)
+  venue: "Italian J. of Computational Linguistics (IJCoL)"
   venueShort: IJCoL 2022
   citation:
     volume: "8"
@@ -208,7 +208,7 @@
     - Gabriele Sarti
   date: 2020-12-01
   type: journal
-  venue: Italian Journal of Computational Linguistics (IJCoL)
+  venue: "Italian J. of Computational Linguistics (IJCoL)"
   venueShort: IJCoL 2020
   citation:
     volume: "6"
@@ -297,8 +297,7 @@
       tail: 1
   date: 2026-07-01
   type: conference
-  venue: "Annual Meeting of the Association for Computational Linguistics: System Demonstrations (ACL
-    Demo)"
+  venue: "Annual Meeting of the ACL: System Demonstrations (ACL Demo)"
   venueShort: ACL 2026
   citation:
     containerTitle: "Proceedings of the 64th Annual Meeting of the Association for Computational
@@ -329,7 +328,7 @@
       label: Equal contribution
   date: 2026-03-24
   type: conference
-  venue: Conference of the European Chapter of the Association for Computational Linguistics (EACL)
+  venue: "Conference of the European Chapter of the ACL (EACL)"
   venueShort: EACL 2026
   citation:
     containerTitle: Proceedings of the 19th Conference of the European Chapter of the Association for
@@ -364,7 +363,7 @@
     - Arianna Bisazza
   date: 2025-11-01
   type: conference
-  venue: Conference on Empirical Methods for Natural Language Processing (EMNLP)
+  venue: "Empirical Methods in Natural Language Processing (EMNLP)"
   venueShort: EMNLP 2025
   citation:
     doi: 10.18653/v1/2025.emnlp-main.924
@@ -385,8 +384,7 @@
     - Luca Bortolussi
   date: 2025-09-27
   type: conference
-  venue: European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in
-    Databases (ECML-PKDD)
+  venue: "European Conference on Machine Learning and Knowledge Discovery in Databases (ECML-PKDD)"
   venueShort: ECML-PKDD 2025
   citation:
     doi: 10.1007/978-3-032-06096-9_1
@@ -435,7 +433,7 @@
       label: Equal contribution
   date: 2024-11-01
   type: conference
-  venue: Conference on Empirical Methods for Natural Language Processing (EMNLP)
+  venue: "Empirical Methods in Natural Language Processing (EMNLP)"
   venueShort: EMNLP 2024
   citation:
     containerTitle: Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing
@@ -543,8 +541,7 @@
     - Arianna Bisazza
   date: 2023-07-01
   type: conference
-  venue: "Annual Meeting of the Association for Computational Linguistics: System Demonstrations (ACL
-    Demo)"
+  venue: "Annual Meeting of the ACL: System Demonstrations (ACL Demo)"
   venueShort: ACL 2023
   citation:
     containerTitle: "Proceedings of the 61st Annual Meeting of the Association for Computational
@@ -583,7 +580,7 @@
     - Maria Nadejde
   date: 2023-07-01
   type: conference
-  venue: Annual Meeting of the Association for Computational Linguistics (ACL)
+  venue: "Annual Meeting of the ACL"
   venueShort: ACL 2023
   citation:
     containerTitle: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics
@@ -603,7 +600,7 @@
     - Antonio Toral
   date: 2022-12-01
   type: conference
-  venue: Conference on Empirical Methods for Natural Language Processing (EMNLP)
+  venue: "Empirical Methods in Natural Language Processing (EMNLP)"
   venueShort: EMNLP 2022
   citation:
     containerTitle: Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing
@@ -628,13 +625,13 @@
       - Sara Candussio
       - Daniel Scalena
       label: Equal contribution
-  date: 2027-01-01
+  date: 2026-01-01
   type: workshop
   status: forthcoming
-  venue: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
-  venueShort: BlackboxNLP 2027
+  venue: "Proceedings of the 9th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
+  venueShort: BlackboxNLP 2026
   citation:
-    containerTitle: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
+    containerTitle: "Proceedings of the 9th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
   links:
     - label: Paper
       url: https://arxiv.org/abs/2607.28707
@@ -668,8 +665,7 @@
     - Malvina Nissim
   date: 2026-04-16
   type: workshop
-  venue: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
-    (EVALITA)
+  venue: "9th Evaluation Campaign of Natural Language Processing Tools for Italian (EVALITA)"
   venueShort: EVALITA 2026
   citation:
     containerTitle: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
@@ -687,8 +683,7 @@
     - Malvina Nissim
   date: 2026-04-16
   type: workshop
-  venue: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
-    (EVALITA)
+  venue: "9th Evaluation Campaign of Natural Language Processing Tools for Italian (EVALITA)"
   venueShort: EVALITA 2026
   citation:
     containerTitle: Proceedings of the 9th Evaluation Campaign of Natural Language Processing Tools for Italian
@@ -703,7 +698,7 @@
     - Gabriele Sarti
   date: 2025-12-01
   type: workshop
-  venue: Proceedings of the Second Workshop on Bangla Language Processing (BLP)
+  venue: "Second Workshop on Bangla Language Processing (BLP)"
   venueShort: BLP 2025
   citation:
     containerTitle: Proceedings of the Second Workshop on Bangla Language Processing
@@ -834,7 +829,7 @@
     - Arianna Bisazza
   date: 2024-10-19
   type: workshop
-  venue: "Proceedings of the 2nd World Conference on Explainable AI (xAI): System Demonstrations"
+  venue: "2nd World Conference on Explainable AI (xAI): System Demonstrations"
   venueShort: xAI 2024
   citation:
     containerTitle: "Proceedings of the 2nd World Conference on Explainable AI: System Demonstrations"
@@ -900,7 +895,7 @@
     - Malvina Nissim
   date: 2021-06-01
   type: workshop
-  venue: Proceedings of the Fifth Workshop on Teaching NLP
+  venue: "Fifth Workshop on Teaching NLP"
   venueShort: TeachingNLP 2021
   links:
     - label: Paper
@@ -908,6 +903,7 @@
       kind: pdf
   citation:
     doi: 10.18653/v1/2021.teachingnlp-1.26
+    containerTitle: Proceedings of the Fifth Workshop on Teaching NLP
     pages: 160-170
     publisher: Association for Computational Linguistics
 - id: italian-transformers
@@ -1409,9 +1405,10 @@
     - Gabriele Sarti
   date: 2025-12-11
   type: thesis
-  venue: Ph.D. Thesis, University of Groningen
+  venue: "PhD Thesis, Univ. of Groningen"
   venueShort: Ph.D. Thesis
   citation:
+    containerTitle: Ph.D. Thesis, University of Groningen
     school: University of Groningen
     thesisType: phd
   abstract: "This dissertation aims to bridge the gap between method-centric interpretability research

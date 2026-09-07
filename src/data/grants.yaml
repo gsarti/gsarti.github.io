@@ -34,10 +34,10 @@
   year: 2023
   amount: EUR 2,000
 - id: nwo-indeep
-  title: NWO InDeep Consortium Grant
+  title: InDeep Grant
   organization: Dutch Research Council (NWO)
   year: 2021
-  amount: PhD salary and research budget
+  amount: PhD salary & research budget
 - id: sissa-excellence
   title: Data Science Excellence Fellowship
   organization: International School of Advanced Studies (SISSA)

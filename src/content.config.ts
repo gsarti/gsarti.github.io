@@ -249,6 +249,8 @@ const service = defineCollection({
   schema: z.object({
     role: z.string(),
     venue: z.string(),
+    url: z.string().optional(),
+    linkLabel: z.string().optional(),
     dateStart: z.number().int().optional(),
     dateEnd: z.number().int().optional(),
     ongoing: z.boolean().default(false),

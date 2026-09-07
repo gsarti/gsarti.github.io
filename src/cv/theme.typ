@@ -264,6 +264,7 @@
   title-override: none,
   description-override: none,
   dates-override: none,
+  spacing: 12pt,
 ) = {
   let organization = first-of(
     entry,
@@ -287,7 +288,7 @@
     ("cvOrganizationUrl", "url", "organizationUrl", "institutionUrl"),
   )
 
-  block(below: 12pt, breakable: false)[
+  block(below: spacing, breakable: false)[
     #grid(
       columns: (1fr, auto),
       row-gutter: 5.5pt,
@@ -544,7 +545,8 @@
     #grid(
       columns: (2.75em, 1fr),
       column-gutter: 0pt,
-      [#if label != "" { [[#label]] }],
+      // Hang labels slightly into the margin to preserve the text's line width.
+      [#if label != "" { move(dx: -5.5pt)[[#label]] }],
       [
         #set par(leading: 0.62em)
         #render-publication-authors(publication). “#maybe-link(title, destination)”.

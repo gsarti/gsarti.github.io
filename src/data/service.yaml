@@ -1,6 +1,12 @@
 - role: Organizing Committee
-  venue: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
+  venue: "EMNLP BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
   dateStart: 2025
+  dateEnd: 2026
+- role: Organizing Committee
+  venue: NDIF Aletheia's Quest Competition on LLM Lie Detection
+  url: https://aletheias-quest.github.io
+  linkLabel: Aletheia's Quest
+  dateStart: 2026
   dateEnd: 2026
 - role: Organizing Committee
   venue: EVALITA Shared Task on Automatic Italian Crossword Solving (Cruciverb-IT)
@@ -47,7 +53,7 @@
   dateStart: 2025
   dateEnd: 2026
 - role: Academic Paper Reviewer
-  venue: EMNLP Workshop on Analyzing and Interpreting Neural Networks for NLP (BlackboxNLP)
+  venue: "EMNLP BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
   dateStart: 2023
   dateEnd: 2025
 - role: Academic Paper Reviewer

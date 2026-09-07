@@ -160,7 +160,7 @@
 - id: indeep-deloitte-masterclass-dec25
   cv:
     label: InDeep Masterclass
-    description: Interpreting LLMs and Other Deep Learning Models.
+    description: Interpreting LLMs and Other Deep Learning Models
     location: Deloitte Amsterdam
   title: Interpreting LLMs and Other Deep Learning Models
   event: InDeep Masterclass at Deloitte Amsterdam
@@ -274,7 +274,7 @@
       kind: slides
 - id: ai2s-talk-2024
   cv:
-    label: Artificial Intelligence Student Society (AI2S)
+    label: AI2S
     description: "Aprire la scatola nera dei modelli del linguaggio: rischi e opportunità"
     location: Trieste
   title: "Aprire la scatola nera dei modelli del linguaggio: rischi e opportunità"
@@ -393,7 +393,7 @@
 - id: indeep-masterclass-nov23
   cv:
     label: InDeep Masterclass
-    description: Explaining Foundation Models.
+    description: Explaining Foundation Models
     location: University of Amsterdam
   title: Explaining Language Models with Inseq
   event: InDeep Masterclass - Explaining Foundation Models

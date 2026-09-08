@@ -83,7 +83,11 @@ for (const publication of publications) {
   const paperLinks = (publication.links ?? []).filter(
     (link) => link.label.toLowerCase() === 'paper'
   );
-  if (paperLinks.length !== 1) {
+  if (publication.status === 'forthcoming' && paperLinks.length > 1) {
+    fail(
+      `forthcoming publication "${publication.id}" must have at most one Paper link (found ${paperLinks.length})`
+    );
+  } else if (publication.status !== 'forthcoming' && paperLinks.length !== 1) {
     fail(
       `publication "${publication.id}" must have exactly one Paper link (found ${paperLinks.length})`
     );

@@ -186,6 +186,7 @@
     - eureka-rebus-challenge
     - crossword-space
     - cruciverb-it
+    - reading-between-clues
   datasetIds:
     - eureka-rebus
     - cruciverb-it

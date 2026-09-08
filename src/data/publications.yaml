@@ -611,6 +611,23 @@
     - label: Paper
       url: https://aclanthology.org/2022.emnlp-main.532/
       kind: pdf
+- id: reading-between-clues
+  title: "Reading Between the Clues: A Fine-Grained Analysis of Italian Crossword Solving Systems"
+  authors:
+    - Cristiano Ciaccio
+    - Asya Zanollo
+    - Alessio Miaschi
+    - Gabriele Sarti
+    - Felice Dell'Orletta
+    - Malvina Nissim
+  date: 2026-07-17
+  type: workshop
+  status: forthcoming
+  venue: Proceedings of the 12th Italian Conference on Computational Linguistics (CLiC-it)
+  venueShort: CLiC-it 2026
+  citation:
+    containerTitle: Proceedings of the 12th Italian Conference on Computational Linguistics
+    publisher: CEUR Workshop Proceedings
 - id: demistifying-entropy
   title: "Demystifying Entropy-based Selection for Chain-of-Thought Compression in Large Reasoning Models"
   authors:

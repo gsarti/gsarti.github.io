@@ -1,0 +1,78 @@
+name: Merge Dependabot updates
+
+on:
+  workflow_run:
+    workflows: [Validate pull request]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+  statuses: read
+  actions: write
+
+jobs:
+  merge:
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # This privileged workflow never checks out or executes pull request code.
+      - name: Verify the Dependabot pull request
+        id: pull-request
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            const repository = context.repo;
+            const candidates = await github.paginate(
+              github.rest.repos.listPullRequestsAssociatedWithCommit,
+              { ...repository, commit_sha: run.head_sha }
+            );
+            for (const candidate of candidates) {
+              const { data: pr } = await github.rest.pulls.get({
+                ...repository,
+                pull_number: candidate.number,
+              });
+              if (
+                pr.state !== 'open' || pr.draft ||
+                pr.user.login !== 'dependabot[bot]' ||
+                pr.head.repo?.full_name !== process.env.GITHUB_REPOSITORY ||
+                pr.head.sha !== run.head_sha ||
+                pr.base.ref !== 'master'
+              ) continue;
+
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                ...repository,
+                pull_number: pr.number,
+              });
+              const allowedFiles = new Set(['package.json', 'package-lock.json']);
+              if (!files.length || files.some(file =>
+                !allowedFiles.has(file.filename) || file.status !== 'modified'
+              )) {
+                core.info(`PR #${pr.number} needs manual review: changes outside npm dependency files.`);
+                continue;
+              }
+
+              core.setOutput('number', pr.number);
+              core.setOutput('sha', pr.head.sha);
+              return;
+            }
+            core.info('No current Dependabot dependency PR matches this successful build.');
+
+      - name: Wait for checks, merge, and deploy
+        if: steps.pull-request.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ steps.pull-request.outputs.number }}
+          PR_SHA: ${{ steps.pull-request.outputs.sha }}
+        run: |
+          gh pr checks "$PR_NUMBER" --watch --fail-fast --interval 10
+          gh pr merge "$PR_NUMBER" --squash --match-head-commit "$PR_SHA"
+          # GITHUB_TOKEN merges do not trigger push workflows; dispatch explicitly.
+          gh workflow run deploy.yml --ref master

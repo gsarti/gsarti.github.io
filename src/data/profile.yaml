@@ -1,11 +1,11 @@
 name: Gabriele Sarti
-currentPositionId: northeastern-postdoc
+currentPositionId: parallax-technical-director
 website: https://gsarti.com
 emails:
   - gabriele.sarti996@gmail.com
-  - g.sarti@northeastern.edu
+  - gsarti@parallx.ai
 address:
-  street: 02115 Boston, MA, USA
+  street: CB2 3HX Cambridge, United Kingdom
 socials:
   - label: Email
     icon: email
@@ -32,11 +32,11 @@ socials:
     icon: linkedin
     url: https://www.linkedin.com/in/gabrielesarti/
 bio: |-
-  Welcome to my website! 👋 I am a postdoc in the <a href="https://baulab.info" class="neu-red">BauLab at Northeastern University</a>, working on interpretability interfaces and scalable white-box monitoring in the <a href="https://ndif.us" class="ndif-gradient">National Deep Inference Fabric (NDIF)</a> project.
+  Welcome to my website! 👋 I am co-founder and technical director at [Parallax](https://parallx.ai), a non-profit research organisation working to make white-box auditing a standard component of frontier AI evaluations.
 
-  I completed my PhD in NLP at the University of Groningen, where I worked on [actionable interpretability for machine translation](https://gsarti.com/phd-thesis/) as a member of [InCLoW](https://inclow-lm.github.io/), [GroNLP](https://www.rug.nl/research/clcg/research/cl/) and the [InDeep consortium](https://projects.illc.uva.nl/indeep/). Before that, I was a applied scientist intern at [Amazon Translate](https://www.amazon.science/research-areas/conversational-ai-natural-language-processing) and a research scientist at [Aindo](https://www.aindo.com).
+  Previously, I was a postdoctoral researcher at the [Bau Lab at Northeastern University](https://baulab.info), working on interpretability interfaces and scalable white-box monitoring for the [National Deep Inference Fabric (NDIF)](https://ndif.us) project. I completed my PhD in NLP at the University of Groningen, where I worked on [actionable interpretability for machine translation](https://gsarti.com/phd-thesis/) as a member of [InCLoW](https://inclow-lm.github.io/), [GroNLP](https://www.rug.nl/research/clcg/research/cl/) and the [InDeep consortium](https://projects.illc.uva.nl/indeep/). Before that, I was an applied scientist intern at [Amazon Translate](https://www.amazon.science/research-areas/conversational-ai-natural-language-processing) and a research scientist at [Aindo](https://www.aindo.com).
 
-  My research focuses on open tools, methods and interface to bridge the gap between interpretability research and model evaluations, and make white-box auditing a practical part of how we evaluate frontier AI. This is especially important as behavioural tests [fail to surface unverbalized behaviors](https://www.apolloresearch.ai/governance/the-need-for-deeper-white-box-access-to-maintain-state-of-the-art-evaluations-for-loss-of-control-threats/), and are [increasingly inadequate](https://www.far.ai/news/ai-deception-white-box) as models get more capable.
+  At Parallax, we work on open tools, methods and interfaces to bridge the gap between interpretability research and model evaluations, and make white-box auditing a practical part of how we evaluate frontier AI. This is especially important as behavioural tests [fail to surface unverbalized behaviors](https://www.apolloresearch.ai/governance/the-need-for-deeper-white-box-access-to-maintain-state-of-the-art-evaluations-for-loss-of-control-threats/), and are [increasingly inadequate](https://www.far.ai/news/ai-deception-white-box) as models get more capable. If this resonates with you, check out our [open positions](https://parallx.ai/careers) and [research agenda](https://parallx.ai/about)!
 
   Your [(anonymous) constructive feedback](https://www.admonymous.co/gsarti) is always welcome! 🙂
 interests:

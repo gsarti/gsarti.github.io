@@ -32,6 +32,7 @@ if (!currentPositionEntry) {
 const currentPosition = currentPositionEntry.data;
 const hero = currentPosition.homepagePresentation;
 if (!hero) throw new Error(`Homepage presentation missing for position "${p.currentPositionId}"`);
+const affiliationDetail = [hero.lab, hero.department].filter(Boolean).join(', ');
 const scholarUrl = p.socials.find((social) => social.icon === 'scholar')?.url;
 if (!scholarUrl) throw new Error('Google Scholar social link missing from profile.yaml');
 const homepagePositions = positionEntries
@@ -39,17 +40,17 @@ const homepagePositions = positionEntries
   .sort(
     (a, b) =>
       b.data.dateStart.getTime() - a.data.dateStart.getTime() ||
-      b.data.dateEnd.getTime() - a.data.dateEnd.getTime()
+      (b.data.dateEnd ?? b.data.dateStart).getTime() - (a.data.dateEnd ?? a.data.dateStart).getTime()
   )
   .map((position) => position.data);
 const homepageEducation = educationEntries
   .filter((education) => education.data.homepage)
   .map((education) => education.data);
 
-const yearRange = (start: Date, end: Date, ongoing = false) => {
+const yearRange = (start: Date, end: Date | undefined, ongoing = false) => {
   const first = start.getUTCFullYear();
   if (ongoing) return `${first} - Ongoing`;
-  const last = end.getUTCFullYear();
+  const last = (end ?? start).getUTCFullYear();
   return first === last ? String(first) : `${first} - ${last}`;
 };
 ---
@@ -65,8 +66,8 @@ const yearRange = (start: Date, end: Date, ongoing = false) => {
           <h1>{p.name}</h1>
           <p class="role">{hero.role}</p>
           <p class="affiliation">
-            <a href={hero.labUrl} target="_blank" rel="noopener">
-              <span class="affiliation-primary">{hero.lab}, {hero.department}</span>
+            <a href={hero.labUrl ?? currentPosition.organizationUrl} target="_blank" rel="noopener">
+              {affiliationDetail && <span class="affiliation-primary">{affiliationDetail}</span>}
               <span class="affiliation-university">{currentPosition.organization}</span>
             </a>
           </p>

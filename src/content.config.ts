@@ -266,6 +266,7 @@ const careerEntryBase = z.object({
 const positions = defineCollection({
   loader: yamlArray('src/data/positions.yaml'),
   schema: careerEntryBase.extend({
+    dateEnd: z.coerce.date().optional(),
     organization: z.string(),
     organizationUrl: z.string().optional(),
     cvOrganization: z.string().optional(),
@@ -279,15 +280,18 @@ const positions = defineCollection({
     homepagePresentation: z
       .object({
         role: z.string(),
-        lab: z.string(),
-        labUrl: z.string().url(),
-        department: z.string(),
+        lab: z.string().optional(),
+        labUrl: z.string().url().optional(),
+        department: z.string().optional(),
       })
       .optional(),
     logos: z.array(z.string()).default([]),
     description: z.string().optional(),
     descriptionLinks: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
     hosts: z.array(z.string()).default([]),
+  }).refine((position) => position.ongoing || position.dateEnd !== undefined, {
+    message: 'Completed positions require an end date',
+    path: ['dateEnd'],
   }),
 });
 

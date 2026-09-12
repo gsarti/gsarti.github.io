@@ -292,7 +292,7 @@
 #let current-positions = positions.filter(
   entry => get(entry, "ongoing", default: false),
 )
-#let industrial-positions = positions.filter(
+#let previous-positions = positions.filter(
   entry => not get(entry, "ongoing", default: false),
 )
 #let dissemination = get(presentation, "dissemination", default: (:))
@@ -336,8 +336,7 @@
 #let title = section-label("experience", "Experience")
 #break-before(title)
 #cv-heading(title)
-#cv-subheading(section-label("industrialExperience", "Industrial Experience"))
-#for entry in industrial-positions {
+#for entry in previous-positions {
   timeline-entry(
     entry,
     title-override: position-title(entry),

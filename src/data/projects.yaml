@@ -42,10 +42,10 @@
     I collaborated in the organization of [Aletheia's Quest](https://aletheias-quest.github.io/), a competition designed to move AI lie detection beyond methods tailored to a single model or behavior. In the first phase, pre-selected red teams produced diverse deception datasets and trained model organisms to lie in specific undisclosed scenarios. During the main competition, blue teams developed unified detectors for deception detection with either black-box access or privileged white-box access to weights and activations through [NNsight and NDIF](https://ndif.us/). Reproducible baselines and a public [validation leaderboard](https://huggingface.co/spaces/NDIF/aletheias-leaderboard) allowed participants to obtain live feedback for their submissions. At the end of the competition, final methods were evaluated on held-out red teams datasets using OOD AUROC as the main success metric. The competition adopted explicit safeguards against organism-specific shortcuts and additional recognition for scientific novelty and computational scalability.
 - id: ndif-ecosystem
   title: "The NDIF Ecosystem: Open-source Tools and Infrastructure for Interpretability Research"
-  category: current
+  category: past
   summary: A suite of tools for supporting interpretability research on deep neural networks
   date: 2026-01
-  period: "2026 - Current"
+  period: "Jan – Oct 2026"
   funding:
     - title: "NSF Award #2408455"
       source: "US National Science Foundation, 2024"
@@ -77,7 +77,7 @@
       kind: website
   image: ndif-ecosystem.png
   description: |-
-    As a member of the [National Deep Inference Fabric (NDIF)](https://ndif.us) team, I collaborated to the development of a suite of open-source tools and infrastructure to support large-scale interpretability research on LLMs. The NDIF ecosystem is based on [NNsight](https://nnsight.net), a library built on PyTorch to simplify internal inspection and interventions on deep learning models, with first-class support for LLMs and remote execution capabilities on the NDIF server. [NNterp](https://ndif-team.github.io/nnterp/) extends NNsight with standardized naming and efficient implementations of common methods in interpretability research, and the [NDIF Workbench](https://workbench.ndif.us) is a web-based interface for prototyping and exploration, supporting interpretability educators. I personally contributed to the initial version of [NDIF Skills](https://github.com/ndif-team/skills) to facilitate AI-assisted interpretability research, and to the development of the [Interpretability Interchange Format (INIF)](https://github.com/ndif-team/inif) to enhance the reproducibility and portability of interpretability artifacts.
+    During my postdoc with the [National Deep Inference Fabric (NDIF)](https://ndif.us) team, I contributed to the development of a suite of open-source tools and infrastructure to support large-scale interpretability research on LLMs. The NDIF ecosystem is based on [NNsight](https://nnsight.net), a library built on PyTorch to simplify internal inspection and interventions on deep learning models, with first-class support for LLMs and remote execution capabilities on the NDIF server. [NNterp](https://ndif-team.github.io/nnterp/) extends NNsight with standardized naming and efficient implementations of common methods in interpretability research, and the [NDIF Workbench](https://workbench.ndif.us) is a web-based interface for prototyping and exploration, supporting interpretability educators. I personally contributed to the initial version of [NDIF Skills](https://github.com/ndif-team/skills) to facilitate AI-assisted interpretability research, and to the development of the [Interpretability Interchange Format (INIF)](https://github.com/ndif-team/inif) to enhance the reproducibility and portability of interpretability artifacts.
   toolIds:
     - ndif-skills
     - inif

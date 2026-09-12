@@ -103,7 +103,7 @@
   if start-value == "" {
     ""
   } else if ongoing and not expected-end {
-    start-value + "-"
+    start-value + " – Present"
   } else if end-value == "" {
     start-value
   } else if compact and start-value == end-value {

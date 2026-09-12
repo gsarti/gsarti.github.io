@@ -1,3 +1,14 @@
+- id: parallax-technical-director
+  organization: Parallax
+  organizationUrl: https://parallx.ai/
+  location: London, UK
+  mapPlace: london-uk
+  title: Co-founder and Technical Director
+  homepagePresentation:
+    role: Co-founder and Technical Director
+  dateStart: 2026-10-01
+  ongoing: true
+  description: Building open infrastructure and scalable methods for white-box auditing of frontier AI systems.
 - id: northeastern-postdoc
   organization: Northeastern University
   organizationUrl: https://www.northeastern.edu/
@@ -12,9 +23,7 @@
     labUrl: https://baulab.info/
     department: Khoury College of Computer Sciences
   dateStart: 2026-01-01
-  dateEnd: 2026-12-31
-  ongoing: true
-  expectedEnd: true
+  dateEnd: 2026-10-15
   homepage: true
   logos:
     - northeastern.png

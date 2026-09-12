@@ -1,5 +1,8 @@
 # Presentation choices for the generated CV. Factual content lives in the
 # domain files beside this one; this file only controls grouping and pagination.
+sectionLabels:
+  experience: Professional Experience
+
 publicationCategoryOrder:
   - journal
   - conference

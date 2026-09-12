@@ -48,8 +48,8 @@ const eventItems = sortedEvents.map((event) => ({
 }));
 
 const fmtMapDate = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' });
-const fmtMapRange = (dateStart: Date, dateEnd: Date, ongoing = false) =>
-  `${fmtMapDate.format(dateStart)} – ${ongoing ? 'Present' : fmtMapDate.format(dateEnd)}`;
+const fmtMapRange = (dateStart: Date, dateEnd: Date | undefined, ongoing = false) =>
+  `${fmtMapDate.format(dateStart)} – ${ongoing ? 'Present' : fmtMapDate.format(dateEnd ?? dateStart)}`;
 const talkPoints = talks.flatMap((talk) => {
   const place = talk.data.mapPlace ? placesById.get(talk.data.mapPlace) : undefined;
   if (!place) return [];
@@ -100,7 +100,7 @@ const positionPoints = [
       papers: [],
       date: fmtMapRange(position.data.dateStart, position.data.dateEnd, position.data.ongoing),
       dateStartValue: position.data.dateStart.getTime(),
-      dateEndValue: position.data.dateEnd.getTime(),
+      dateEndValue: position.data.dateEnd?.getTime() ?? Math.max(Date.now(), position.data.dateStart.getTime()),
       ...(place.coordinates ? { coordinates: place.coordinates } : {}),
     }];
   }),

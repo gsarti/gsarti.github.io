@@ -1,3 +1,11 @@
+- id: eagxberlin-ai-auditing-2026
+  title: AI auditing beyond behavior
+  event: EAGxBerlin 2026
+  eventUrl: https://www.effectivealtruism.org/ea-global/events/eagxberlin-2026
+  location: Berlin, Germany
+  mapPlace: berlin
+  date: 2026-11-13 # Conference start date; exact session date to be confirmed.
+  summary: Workshop with Walter Laurito and Kieron Kretschmar of Cadenza Labs. Exact session date to be confirmed (conference runs 13–15 November 2026).
 - id: eamt-best-thesis-2026
   title: "From Insights to Impact: Actionable Interpretability for Neural Machine Translation"
   event: Best Thesis Award, Conference of the European Association for Machine Translation (EAMT)

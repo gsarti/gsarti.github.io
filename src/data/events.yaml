@@ -5,6 +5,13 @@
   location: Berlin, Germany
   mapPlace: berlin
   description: Workshop speaker
+- id: evaleval2026
+  name: "EvalEval Micro Conference: Embedding Evaluators in Practice"
+  date: 2026-10-24
+  url: https://evalevalai.com/events/2026-embedded-evaluators-microconference/
+  location: Online
+  mapPlace: online
+  description: Online attendance
 - id: efais2026
   name: European Frontier AI Safety Day (EFAIS) 2026
   date: 2026-09-05

@@ -5,6 +5,15 @@
   location: Berlin, Germany
   mapPlace: berlin
   description: Workshop speaker
+- id: emnlp26
+  name: EMNLP 2026
+  date: 2026-10-24
+  url: https://2026.emnlp.org/
+  location: Budapest, Hungary
+  mapPlace: budapest
+  description: BlackboxNLP co-organizer, poster at BlackboxNLP
+  papers:
+    - publicationId: demistifying-entropy
 - id: evaleval2026
   name: "EvalEval Micro Conference: Embedding Evaluators in Practice"
   date: 2026-10-24

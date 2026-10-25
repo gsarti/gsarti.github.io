@@ -15,6 +15,10 @@
   label: Berlin, Germany
   coordinates: [13.405, 52.52]
 
+- id: budapest
+  label: Budapest, Hungary
+  coordinates: [19.04045, 47.49835]
+
 - id: padua
   label: Padua, Italy
   coordinates: [11.8768, 45.4064]

@@ -232,6 +232,7 @@ const advising = defineCollection({
     name: z.string(),
     level: z.enum(['phd', 'msc', 'bsc']),
     description: z.string(),
+    additionalRole: z.string().optional(),
     dateStart: z.coerce.date(),
     dateEnd: z.coerce.date().optional(),
     ongoing: z.boolean().default(false),

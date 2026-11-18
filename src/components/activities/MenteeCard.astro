@@ -37,6 +37,7 @@ const range = (start: Date, end?: Date) =>
       <h3>{s.website ? <a href={s.website} target="_blank" rel="noopener">{s.name}</a> : s.name}</h3>
       <p class="program">
         {s.programUrl ? <a href={s.programUrl} target="_blank" rel="noopener">{s.description}</a> : s.description}
+        {s.additionalRole && ` and ${s.additionalRole}`}
       </p>
       <p class="dates">{range(s.dateStart, s.dateEnd)}</p>
     </div>

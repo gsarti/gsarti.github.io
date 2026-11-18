@@ -188,8 +188,12 @@ export function publicationToCitationFormats(
     data.authors.length > leadAuthors.length
       ? `${renderedLeadAuthors.join(', ')} et al.`
       : joinHumanList(renderedLeadAuthors);
-  const venueLabel = data.venueShort ?? [data.venue, year].filter(Boolean).join(' ');
-  const parenthetical = [informalAuthors, venueLabel].filter(Boolean).join(', ');
+  const status = data.status ?? (data.type === 'preprint' ? 'preprint' : 'published');
+  const venueOrYear =
+    status === 'published'
+      ? data.venueShort ?? [data.venue, year].filter(Boolean).join(' ')
+      : year;
+  const parenthetical = [informalAuthors, venueOrYear].filter(Boolean).join(', ');
   const informalValue = `${linkedTitle} (${parenthetical})`;
 
   return {

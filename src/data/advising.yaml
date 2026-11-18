@@ -25,9 +25,11 @@
 - id: jacopo-zacchigna-spar
   name: Jacopo Zacchigna
   level: msc
-  description: SPAR Spring '26 Fellow
+  description: SPAR Spring '26
+  additionalRole: Parallax Fellow
   dateStart: 2026-02-15
   dateEnd: 2026-07-01
+  ongoing: true
   projectName: Monitoring and Attributing Implicit Personalization in Conversational Agents
   website: https://www.linkedin.com/in/jacopo-zacchigna/
   programUrl: https://sparai.org/
@@ -101,6 +103,7 @@
   name: Rohan Kathuria
   level: bsc
   description: CBAI '26 Summer Fellow
+  additionalRole: Parallax Fellow
   dateStart: 2026-06-01
   dateEnd: 2026-09-01
   ongoing: true

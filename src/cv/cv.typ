@@ -157,6 +157,7 @@
     let name = get(entry, "name", default: "")
     let description = get(entry, "description", default: "")
     let co-supervisors = as-array(get(entry, "coSupervisors"))
+    let additional-role = get(entry, "additionalRole")
     let year = if get(entry, "ongoing", default: false) {
       date-year(get(entry, "dateStart")) + "–"
     } else {
@@ -168,7 +169,7 @@
       ""
     }
     block(below: 7.5pt)[
-      #name, #description#co-supervision, #year
+      #name, #description#co-supervision#if additional-role != none { [ and #additional-role] }, #year
     ]
   }
 }

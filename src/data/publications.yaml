@@ -218,8 +218,24 @@
     - label: Paper
       url: https://journals.openedition.org/ijcol/728
       kind: pdf
+- id: topics-sociodemographics
+  title: "Topics as Proxies for Sociodemographics: How Conversational Context Affects LLM Answers"
+  authors:
+    - Vera Neplenbroek
+    - Gabriele Sarti
+    - Arianna Bisazza
+    - Raquel Fernández
+  date: 2027-03-09
+  type: conference
+  status: forthcoming
+  venue: Findings of the Association for Computational Linguistics (EACL)
+  venueShort: EACL Findings 2027
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2606.02776
+      kind: pdf
 - id: goal-directedness
-  featuredOrder: 4
+  featuredOrder: 5
   title: A Behavioural and Representational Evaluation of Goal-Directedness in Language Model Agents
   authors:
     - Raghu Arghal
@@ -313,7 +329,7 @@
       url: https://arxiv.org/abs/2512.09730
       kind: pdf
 - id: steering-litmt
-  featuredOrder: 5
+  featuredOrder: 6
   title: Steering Large Language Models for Machine Translation Personalization
   authors:
     - Daniel Scalena
@@ -419,7 +435,7 @@
       url: https://arxiv.org/abs/2504.02911
       kind: pdf
 - id: mirage
-  featuredOrder: 6
+  featuredOrder: 7
   title: Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation
   authors:
     - Jirui Qi
@@ -460,7 +476,7 @@
       url: https://huggingface.co/spaces/gsarti/mirage
       kind: demo
 - id: pecore
-  featuredOrder: 7
+  featuredOrder: 8
   title: Quantifying the Plausibility of Context Reliance in Neural Machine Translation
   authors:
     - Gabriele Sarti
@@ -530,7 +546,7 @@
       url: https://aclanthology.org/2024.lrec-main.823/
       kind: pdf
 - id: inseq
-  featuredOrder: 9
+  featuredOrder: 10
   title: "Inseq: An Interpretability Toolkit for Sequence Generation Models"
   authors:
     - Gabriele Sarti
@@ -628,6 +644,10 @@
   citation:
     containerTitle: Proceedings of the 12th Italian Conference on Computational Linguistics
     publisher: CEUR Workshop Proceedings
+  links:
+    - label: Paper
+      url: https://clic2026.unipa.it/wp-content/uploads/2026/09/24_main_long.pdf
+      kind: pdf
 - id: demistifying-entropy
   title: "Demystifying Entropy-based Selection for Chain-of-Thought Compression in Large Reasoning Models"
   authors:
@@ -976,6 +996,37 @@
     - label: ArXiv
       url: https://arxiv.org/abs/2011.05197
       kind: pdf
+- id: goal-encoding
+  featuredOrder: 1
+  title: Goal Encoding in LLMs
+  authors:
+    - Arnab Sen Sharma
+    - Eric Todd
+    - Sheridan Feucht
+    - Andy Arditi
+    - Rohit Gandikota
+    - Natalie Shapira
+    - Gabriele Sarti
+    - Constanza Fierro
+    - Lisa Schut
+    - David Bau
+  date: 2026-11-12
+  type: preprint
+  venue: CoRR/2611.17297
+  venueShort: Under Review
+  abstract: In multi-step coding tasks, we identify a small set of attention heads that encode the next
+    sub-goal before the model starts writing the code for it. We can use this encoding to read out
+    the upcoming action in natural language, or patch it into another coding context to make the
+    model carry out the same action in a different programming language. We find evidence that the
+    model sustains the sub-goal throughout generation by re-reading the task specification and
+    comparing it with the progress made so far.
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2611.17297
+      kind: pdf
+    - label: Project page
+      url: https://goals.baulab.info/
+      kind: website
 - id: last-translation-benchmark
   title: Last Translation Benchmark
   authors:
@@ -1241,7 +1292,7 @@
       url: https://arxiv.org/abs/2609.04173
       kind: pdf
 - id: commitment-boundary
-  featuredOrder: 1
+  featuredOrder: 2
   title: "Beyond the Commitment Boundary: Probing Epiphenomenal Chain-of-Thought in Large Reasoning
     Models"
   authors:
@@ -1278,7 +1329,7 @@
       url: https://github.com/DanielSc4/Commitment-Boundary
       kind: code
 - id: future-probes
-  featuredOrder: 2
+  featuredOrder: 3
   title: Predicting Future Behaviors in Reasoning Models Enables Better Steering
   authors:
     - Evgenii Kortukov
@@ -1315,23 +1366,8 @@
     - label: Materials
       url: https://huggingface.co/future-probes
       kind: website
-- id: topics-sociodemographics
-  title: "Topics as Proxies for Sociodemographics: How Conversational Context Affects LLM Answers"
-  authors:
-    - Vera Neplenbroek
-    - Gabriele Sarti
-    - Arianna Bisazza
-    - Raquel Fernández
-  date: 2026-06-01
-  type: preprint
-  venue: CoRR/2606.02776
-  venueShort: Preprint 2026
-  links:
-    - label: Paper
-      url: https://arxiv.org/abs/2606.02776
-      kind: pdf
 - id: agents-of-chaos
-  featuredOrder: 3
+  featuredOrder: 4
   title: Agents of Chaos
   authors:
     - Natalie Shapira
@@ -1405,7 +1441,7 @@
       url: https://agentsofchaos.baulab.info/logs.html
       kind: website
 - id: transformer-primer
-  featuredOrder: 8
+  featuredOrder: 9
   title: A Primer on the Inner Workings of Transformer-based Language Models
   authors:
     - Javier Ferrando
@@ -1479,6 +1515,28 @@
     - label: Paper
       url: https://gsarti.com/msc-thesis/introduction.html
       kind: website
+- id: blackboxnlp-2026-proceedings
+  title: "Proceedings of the 9th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
+  authors:
+    - Dana Arad
+    - Yonatan Belinkov
+    - Hanjie Chen
+    - Nils Feldhus
+    - Aaron Mueller
+    - Hosein Mohebbi
+    - Gabriele Sarti
+    - Martin Tutek
+  date: 2026-10-29
+  type: edited
+  venueShort: BlackboxNLP 2026
+  citation:
+    doi: 10.18653/2026.blackboxnlp-1.0
+    publisher: Association for Computational Linguistics
+    containerTitle: Association for Computational Linguistics
+  links:
+    - label: Paper
+      url: https://aclanthology.org/2026.blackboxnlp-1.0/
+      kind: pdf
 - id: blackboxnlp-2025-proceedings
   title: "Proceedings of the 8th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP"
   authors:

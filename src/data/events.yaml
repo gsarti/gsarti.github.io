@@ -1,3 +1,10 @@
+- id: ae-global-summit-2026
+  name: AE Global Summit 2026
+  date: 2026-11-25
+  url: https://www.algopreneurship.org/
+  location: Friends House, London, UK
+  mapPlace: london
+  description: Pitch Parallax at the AE Global Summit Startup Competition.
 - id: eagxberlin2026
   name: EAGxBerlin 2026
   date: 2026-11-13
